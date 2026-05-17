@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">Fragment Shader：逐像素的小程序</div>
+
+  <div class="row center gap-24" style="margin-top:56px">
+    <div class="col center card" style="width:430px;height:250px;justify-content:center">
+      <div style="font-size:58px;color:#58a6ff">▲</div>
+      <div class="card-title" style="margin-top:10px">全屏三角形</div>
+      <div class="card-desc" style="text-align:center;margin-top:6px">宿主程序让 GPU<br>画一个盖满屏的三角形</div>
+    </div>
+    <div class="accent" style="font-size:52px">→</div>
+    <div class="col center card" style="width:470px;height:250px;justify-content:center;border-color:#58a6ff">
+      <div style="font-size:58px;color:#58a6ff">▦</div>
+      <div class="card-title accent" style="margin-top:10px">每像素跑一次 Shader</div>
+      <div class="card-desc" style="text-align:center;margin-top:6px">两百万像素<br>两百万次并行执行</div>
+    </div>
+    <div class="accent" style="font-size:52px">→</div>
+    <div class="col center card" style="width:430px;height:250px;justify-content:center">
+      <div style="font-size:58px;color:#58a6ff">◉</div>
+      <div class="card-title" style="margin-top:10px">输出一个颜色</div>
+      <div class="card-desc" style="text-align:center;margin-top:6px">这片海的每个像素<br>都是这样算出来的</div>
+    </div>
+  </div>
+
+  <div class="row center gap-40" style="margin-top:56px">
+    <div class="card col" style="width:760px;padding:28px 34px">
+      <div class="card-title accent" style="font-size:30px">每次执行 · 输入</div>
+      <div class="card-desc" style="margin-top:10px;font-size:26px">该像素在屏幕上的坐标 fragCoord</div>
+    </div>
+    <div class="accent" style="font-size:44px">⟶</div>
+    <div class="card col" style="width:760px;padding:28px 34px">
+      <div class="card-title accent" style="font-size:30px">每次执行 · 输出</div>
+      <div class="card-desc" style="margin-top:10px;font-size:26px">一个 RGBA 颜色 fragColor</div>
+    </div>
+  </div>
+
+  <div class="subtitle" style="margin-top:46px">整片海洋的逻辑，全部写在这一个 fragment shader 函数里</div>
+</div>
+</body></html>

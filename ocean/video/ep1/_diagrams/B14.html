@@ -1,0 +1,44 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title-row">
+    <div class="title">上集小结：一片海的"形状"</div>
+    <div class="underline" style="width:360px"></div>
+  </div>
+
+  <div class="card" style="margin-top:40px;padding:36px 40px">
+    <div class="card-title accent" style="margin-bottom:24px">海浪几何的完整链路</div>
+    <div class="row" style="align-items:center;flex-wrap:wrap;gap:14px 10px">
+      <div class="col center" style="background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px 20px">
+        <div style="font-size:24px;font-weight:700">hash</div><div class="muted" style="font-size:19px">可重复随机</div></div>
+      <div class="accent" style="font-size:30px">→</div>
+      <div class="col center" style="background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px 20px">
+        <div style="font-size:24px;font-weight:700">value noise</div><div class="muted" style="font-size:19px">平滑随机</div></div>
+      <div class="accent" style="font-size:30px">→</div>
+      <div class="col center" style="background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px 20px">
+        <div style="font-size:24px;font-weight:700">FBM</div><div class="muted" style="font-size:19px">多尺度叠加</div></div>
+      <div class="accent" style="font-size:30px">→</div>
+      <div class="col center" style="background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px 20px">
+        <div style="font-size:24px;font-weight:700">sea_octave</div><div class="muted" style="font-size:19px">锐化波峰</div></div>
+      <div class="accent" style="font-size:30px">→</div>
+      <div class="col center" style="background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px 20px">
+        <div style="font-size:24px;font-weight:700">map</div><div class="muted" style="font-size:19px">完整高度场</div></div>
+      <div class="accent" style="font-size:30px">→</div>
+      <div class="col center" style="background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px 20px">
+        <div style="font-size:24px;font-weight:700">光线步进</div><div class="muted" style="font-size:19px">找到交点</div></div>
+      <div class="accent" style="font-size:30px">→</div>
+      <div class="col center" style="background:#0d2236;border:1px solid #58a6ff;border-radius:10px;padding:14px 20px">
+        <div class="accent" style="font-size:24px;font-weight:700">法线</div><div class="muted" style="font-size:19px">水面朝向</div></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:28px;padding:30px 40px;border-color:#3fb950">
+    <div class="card-title green">下集预告 · 从几何到画面</div>
+    <div class="card-desc" style="margin-top:14px;font-size:26px;line-height:1.8">
+      我们已经有了交点的<b>位置</b>和<b>法线</b>。下集把这些几何信息变成真实的画面：<br>
+      天空颜色 · 漫反射 · 高光 · 菲涅尔反射与折射 · 水色合成 · 抗锯齿<br>
+      —— 最后，用一个小章节总结<b class="accent">业界海洋渲染的主流技术与新方向</b>。
+    </div>
+  </div>
+</div>
+</body></html>

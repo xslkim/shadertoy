@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="tag">业界小章节</div>
+  <div class="title" style="margin-top:14px">业界海洋渲染：这个 Shader 的位置</div>
+
+  <div class="row grow gap-32" style="margin-top:40px;align-items:center">
+    <!-- Seascape 定位 -->
+    <div class="col card" style="width:760px;height:540px">
+      <div class="card-title accent">Seascape = 纯过程式方案</div>
+      <div class="col gap-14" style="margin-top:22px">
+        <div class="bullet"><div class="dot" style="background:#3fb950"></div><div>几百行代码，零美术资源</div></div>
+        <div class="bullet"><div class="dot" style="background:#3fb950"></div><div>跨平台，适合演示 / 网页 / 学习</div></div>
+        <div class="bullet"><div class="dot" style="background:#3fb950"></div><div>FBM 高度场 + 光线步进</div></div>
+        <div style="height:1px;background:#30363d;margin:6px 0"></div>
+        <div class="bullet"><div class="dot" style="background:#f85149"></div><div>高度场 —— 浪头无法拍碎卷曲</div></div>
+        <div class="bullet"><div class="dot" style="background:#f85149"></div><div>逐像素步进，大场景开销大</div></div>
+        <div class="bullet"><div class="dot" style="background:#f85149"></div><div>非物理，靠经验参数调出"神似"</div></div>
+      </div>
+    </div>
+    <!-- 工业级三块 -->
+    <div class="col" style="width:840px;gap:20px">
+      <div class="subtitle" style="text-align:left;margin:0">工业级海洋，通常分三块来做：</div>
+      <div class="card row" style="align-items:center;gap:22px;padding:24px 30px">
+        <div class="badge" style="background:#1f6feb">1</div>
+        <div class="col"><div class="card-title" style="font-size:28px">波形生成</div>
+          <div class="card-desc" style="font-size:22px">Gerstner 波 / FFT 频谱法</div></div>
+      </div>
+      <div class="card row" style="align-items:center;gap:22px;padding:24px 30px">
+        <div class="badge" style="background:#1f6feb">2</div>
+        <div class="col"><div class="card-title" style="font-size:28px">表面着色</div>
+          <div class="card-desc" style="font-size:22px">反射 / 折射 / 菲涅尔 / 散射</div></div>
+      </div>
+      <div class="card row" style="align-items:center;gap:22px;padding:24px 30px">
+        <div class="badge" style="background:#1f6feb">3</div>
+        <div class="col"><div class="card-title" style="font-size:28px">细节与交互</div>
+          <div class="card-desc" style="font-size:22px">泡沫 / 焦散 / 浪与物体交互</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

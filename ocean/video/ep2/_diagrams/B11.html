@@ -1,0 +1,46 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title-row">
+    <div class="title">完整渲染流程回顾</div>
+    <div class="underline" style="width:320px"></div>
+  </div>
+
+  <div class="col center gap-14" style="margin-top:44px">
+    <div class="row center gap-16">
+      <div class="col center" style="background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px 26px">
+        <div style="font-size:25px;font-weight:700">① 一个像素</div><div class="muted" style="font-size:20px">从这里开始</div></div>
+      <div class="accent" style="font-size:30px">→</div>
+      <div class="col center" style="background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px 26px">
+        <div style="font-size:25px;font-weight:700">② 相机射线</div><div class="muted" style="font-size:20px">射出 rd</div></div>
+      <div class="accent" style="font-size:30px">→</div>
+      <div class="col center" style="background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px 26px">
+        <div style="font-size:25px;font-weight:700">③ 光线步进</div><div class="muted" style="font-size:20px">高度场求交</div></div>
+      <div class="accent" style="font-size:30px">→</div>
+      <div class="col center" style="background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px 26px">
+        <div style="font-size:25px;font-weight:700">④ 求法线</div><div class="muted" style="font-size:20px">水面朝向</div></div>
+    </div>
+    <div class="accent" style="font-size:28px">↓</div>
+    <div class="row center gap-16">
+      <div class="col center" style="background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px 26px">
+        <div style="font-size:25px;font-weight:700">⑤ 天空 / 漫反射 / 高光</div><div class="muted" style="font-size:20px">基础光照</div></div>
+      <div class="accent" style="font-size:30px">→</div>
+      <div class="col center" style="background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px 26px">
+        <div style="font-size:25px;font-weight:700">⑥ 菲涅尔混合</div><div class="muted" style="font-size:20px">反射 + 折射</div></div>
+      <div class="accent" style="font-size:30px">→</div>
+      <div class="col center" style="background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px 26px">
+        <div style="font-size:25px;font-weight:700">⑦ 9× 抗锯齿 + 调色</div><div class="muted" style="font-size:20px">后处理</div></div>
+      <div class="accent" style="font-size:30px">→</div>
+      <div class="col center" style="background:#0d2236;border:1px solid #58a6ff;border-radius:10px;padding:16px 26px">
+        <div class="accent" style="font-size:25px;font-weight:700">⑧ 像素颜色</div><div class="muted" style="font-size:20px">输出</div></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:46px;padding:30px 40px;border-color:#3fb950">
+    <div class="card-title green" style="text-align:center">几百行代码 · 一片完整的海</div>
+    <div class="card-desc" style="text-align:center;margin-top:10px;font-size:25px">
+      没有网格、没有贴图、没有美术资源 —— 全部由数学函数实时算出
+    </div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css">
+<style>
+.core-cpu { width:120px; height:120px; background:#1f6feb; border-radius:10px; }
+.core-gpu { width:46px; height:46px; background:#3fb950; border-radius:6px; }
+.grid-gpu { display:flex; flex-wrap:wrap; gap:8px; width:594px; }
+</style></head><body>
+<div class="page">
+  <div class="title">画面是谁算出来的？GPU 与 Shader</div>
+
+  <div class="row grow gap-40" style="margin-top:40px;align-items:center">
+    <div class="card col" style="width:760px;height:560px">
+      <div class="card-title" style="text-align:center">CPU</div>
+      <div class="card-desc" style="text-align:center;margin-bottom:24px">少量大核心 · 擅长串行复杂任务</div>
+      <div class="row center grow gap-24" style="flex-wrap:wrap">
+        <div class="core-cpu"></div><div class="core-cpu"></div>
+        <div class="core-cpu"></div><div class="core-cpu"></div>
+        <div class="core-cpu"></div><div class="core-cpu"></div>
+      </div>
+    </div>
+    <div class="card col" style="width:880px;height:560px;border-color:#3fb950">
+      <div class="card-title green" style="text-align:center">GPU</div>
+      <div class="card-desc" style="text-align:center;margin-bottom:24px">成千上万小核心 · 同一段程序并行跑海量数据</div>
+      <div class="row center grow">
+        <div class="grid-gpu">
+          <!-- 99 个小核心 -->
+          <div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div>
+          <div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div>
+          <div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div>
+          <div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div>
+          <div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div>
+          <div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div>
+          <div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div><div class="core-gpu"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="code" style="margin-top:32px;align-self:center;font-size:25px;text-align:center">
+一帧 1080p 画面 = 2,073,600 个像素　·　每个像素的颜色都能独立计算　·　这正是 GPU 的主场</div>
+</div>
+</body></html>

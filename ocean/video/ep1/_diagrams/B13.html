@@ -1,0 +1,52 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">求法线：从坡度得到水面朝向</div>
+
+  <div class="row grow gap-40" style="margin-top:36px;align-items:center">
+    <!-- 左：原理图 -->
+    <div class="col" style="width:980px;gap:16px">
+      <div class="card-title accent">在交点附近采样高度，比较坡度</div>
+      <svg width="900" height="420" viewBox="0 0 900 420">
+        <!-- 水面曲线 -->
+        <path d="M40,300 C160,180 280,180 400,270 C520,360 640,150 760,210 C810,234 850,250 870,255"
+              fill="none" stroke="#58a6ff" stroke-width="4"/>
+        <!-- 交点 P -->
+        <circle cx="400" cy="270" r="10" fill="#fff"/>
+        <text x="400" y="320" fill="#8b949e" font-size="22" text-anchor="middle" class="label">交点 P</text>
+        <!-- x- 与 x+ 采样 -->
+        <circle cx="300" cy="222" r="8" fill="#d29922"/>
+        <text x="300" y="205" fill="#d29922" font-size="20" text-anchor="middle" class="mono">x−</text>
+        <circle cx="500" cy="300" r="8" fill="#d29922"/>
+        <text x="505" y="290" fill="#d29922" font-size="20" class="mono">x+</text>
+        <line x1="300" y1="222" x2="500" y2="300" stroke="#d29922" stroke-width="2.5" stroke-dasharray="6 5"/>
+        <text x="560" y="270" fill="#d29922" font-size="20" class="label">这个方向的坡度</text>
+        <!-- 法线 -->
+        <line x1="400" y1="270" x2="368" y2="120" stroke="#ffa657" stroke-width="6" marker-end="url(#nm)"/>
+        <text x="300" y="110" fill="#ffa657" font-size="24" class="mono" font-weight="700">n 法线</text>
+        <defs><marker id="nm" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#ffa657"/></marker></defs>
+      </svg>
+    </div>
+
+    <!-- 右：步骤 -->
+    <div class="col" style="width:760px;gap:20px">
+      <div class="step">
+        <div class="step-h">① 高度场只给"高度"</div>
+        <div class="step-d">法线（朝向）需要从水面的<b>倾斜程度</b>推出来</div>
+      </div>
+      <div class="step">
+        <div class="step-h">② 沿 x、z 各挪一小步</div>
+        <div class="step-d">采样附近的高度，看它怎么变化，得到两个方向的坡度</div>
+      </div>
+      <div class="step">
+        <div class="step-h">③ 坡度组合成法线</div>
+        <div class="step-d">把 x、z 两个方向的斜率拼成一个向量，归一化即为法线</div>
+      </div>
+      <div class="step">
+        <div class="step-h">④ 步长随距离变大</div>
+        <div class="step-d">远处用更粗的采样，避免水面细节闪烁（aliasing）</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

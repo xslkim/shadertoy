@@ -1,0 +1,46 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">sea_octave：把噪声拧成真实的海浪</div>
+  <div class="subtitle" style="margin-top:8px">普通噪声是圆滚的山丘，而真实海浪 —— 浪谷圆、浪尖尖</div>
+
+  <div class="row center gap-16" style="margin-top:48px;align-items:center">
+    <!-- step 1 -->
+    <div class="col card center" style="width:480px;height:420px">
+      <div class="card-title" style="font-size:26px;color:#8b949e">① 普通噪声</div>
+      <svg width="400" height="200" viewBox="0 0 400 200" style="margin-top:20px">
+        <path d="M10,150 C60,70 110,70 160,140 C210,200 260,70 310,90 C350,105 380,150 390,130"
+              fill="none" stroke="#8b949e" stroke-width="4"/>
+      </svg>
+      <div class="card-desc" style="text-align:center;margin-top:14px">圆滚滚的起伏<br>像一片小山丘</div>
+    </div>
+    <div class="accent" style="font-size:46px">→</div>
+    <!-- step 2 -->
+    <div class="col card center" style="width:480px;height:420px">
+      <div class="card-title accent" style="font-size:26px">② 1 − abs(sin)</div>
+      <svg width="400" height="200" viewBox="0 0 400 200" style="margin-top:20px">
+        <path d="M10,180 Q55,40 100,180 Q145,40 190,180 Q235,40 280,180 Q325,40 370,180 L390,150"
+              fill="none" stroke="#58a6ff" stroke-width="4"/>
+      </svg>
+      <div class="card-desc" style="text-align:center;margin-top:14px">绝对值制造出<br>一道道 V 形尖脊</div>
+    </div>
+    <div class="accent" style="font-size:46px">→</div>
+    <!-- step 3 -->
+    <div class="col card center" style="width:480px;height:420px;border-color:#3fb950">
+      <div class="card-title green" style="font-size:26px">③ pow(·, choppy)</div>
+      <svg width="400" height="200" viewBox="0 0 400 200" style="margin-top:20px">
+        <path d="M10,185 L70,185 Q95,40 120,185 L180,185 Q205,40 230,185 L290,185 Q315,40 340,185 L390,185"
+              fill="none" stroke="#3fb950" stroke-width="4"/>
+      </svg>
+      <div class="card-desc" style="text-align:center;margin-top:14px">choppy 指数锐化波峰<br>尖浪谷圆，像被风吹过</div>
+    </div>
+  </div>
+
+  <div class="row center" style="margin-top:34px">
+    <div class="card row" style="width:1300px;align-items:center;gap:20px;padding:22px 32px">
+      <div style="font-size:32px">🌊</div>
+      <div class="card-desc" style="font-size:25px">choppy 越大，浪越尖锐 —— 这一步是整个海洋"神似"的<b class="accent">艺术核心</b></div>
+    </div>
+  </div>
+</div>
+</body></html>

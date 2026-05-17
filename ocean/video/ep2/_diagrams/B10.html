@@ -1,0 +1,47 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">抗锯齿与色调调整</div>
+
+  <div class="row grow gap-32" style="margin-top:44px;align-items:stretch">
+    <!-- 抗锯齿 -->
+    <div class="card col" style="width:840px">
+      <div class="card-title accent">① 抗锯齿：每像素采样 9 次</div>
+      <div class="card-desc" style="margin:6px 0 18px">海浪边缘又细又密，直接渲染会有锯齿和闪烁</div>
+      <svg width="760" height="320" viewBox="0 0 760 320">
+        <!-- 一个像素被分成 3x3 -->
+        <rect x="240" y="40" width="280" height="280" fill="none" stroke="#30363d" stroke-width="2"/>
+        <line x1="240" y1="133" x2="520" y2="133" stroke="#30363d" stroke-width="1.5"/>
+        <line x1="240" y1="226" x2="520" y2="226" stroke="#30363d" stroke-width="1.5"/>
+        <line x1="333" y1="40" x2="333" y2="320" stroke="#30363d" stroke-width="1.5"/>
+        <line x1="426" y1="40" x2="426" y2="320" stroke="#30363d" stroke-width="1.5"/>
+        <g fill="#58a6ff">
+          <circle cx="286" cy="86" r="9"/><circle cx="380" cy="86" r="9"/><circle cx="473" cy="86" r="9"/>
+          <circle cx="286" cy="180" r="9"/><circle cx="380" cy="180" r="9"/><circle cx="473" cy="180" r="9"/>
+          <circle cx="286" cy="273" r="9"/><circle cx="380" cy="273" r="9"/><circle cx="473" cy="273" r="9"/>
+        </g>
+        <text x="380" y="20" fill="#8b949e" font-size="21" text-anchor="middle" class="label">一个像素</text>
+      </svg>
+      <div class="card-desc" style="font-size:23px;margin-top:6px">取 9 个略错开位置的颜色，<b>求平均</b> —— 边缘变柔和</div>
+    </div>
+    <!-- 色调 -->
+    <div class="card col" style="width:840px;border-color:#3fb950">
+      <div class="card-title green">② 色调调整</div>
+      <div class="card-desc" style="margin:6px 0 18px">对最终颜色取一个 0.65 次方</div>
+      <div class="code" style="margin:10px 0 22px;text-align:center;font-size:26px">color = <span class="fn">pow</span>(color, <span class="num">0.65</span>)</div>
+      <div class="row gap-24" style="align-items:center">
+        <div class="col center" style="flex:1">
+          <div style="width:100%;height:90px;border-radius:8px;background:linear-gradient(90deg,#0a1828,#1a3a5a)"></div>
+          <div class="muted" style="font-size:22px;margin-top:10px">原始（偏暗）</div>
+        </div>
+        <div class="accent" style="font-size:34px">→</div>
+        <div class="col center" style="flex:1">
+          <div style="width:100%;height:90px;border-radius:8px;background:linear-gradient(90deg,#1e3a52,#4d7da8)"></div>
+          <div style="font-size:22px;margin-top:10px;color:#e6edf3">提亮、增对比</div>
+        </div>
+      </div>
+      <div class="card-desc" style="font-size:23px;margin-top:18px">让画面更亮、对比更舒服 —— 一步艺术化的调色</div>
+    </div>
+  </div>
+</div>
+</body></html>

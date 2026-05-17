@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">随机的起点：hash 函数</div>
+  <div class="subtitle" style="margin-top:8px">海浪看起来随机，但 shader 需要的是"可重复的随机"</div>
+
+  <div class="row center gap-16" style="margin-top:50px">
+    <div class="col center card" style="width:330px;height:200px;justify-content:center">
+      <div class="card-title" style="font-size:30px">输入坐标</div>
+      <div class="mono accent" style="font-size:30px;margin-top:10px">p = (x, z)</div>
+    </div>
+    <div class="accent" style="font-size:44px">→</div>
+    <div class="col center card" style="width:380px;height:200px;justify-content:center">
+      <div class="card-title" style="font-size:28px">点乘魔法常数</div>
+      <div class="mono" style="font-size:23px;margin-top:10px;color:#8b949e">dot(p, vec2(127.1, 311.7))</div>
+    </div>
+    <div class="accent" style="font-size:44px">→</div>
+    <div class="col center card" style="width:300px;height:200px;justify-content:center">
+      <div class="card-title" style="font-size:28px">取 sin · 放大</div>
+      <div class="mono" style="font-size:23px;margin-top:10px;color:#8b949e">sin(·) × 大数</div>
+    </div>
+    <div class="accent" style="font-size:44px">→</div>
+    <div class="col center card" style="width:330px;height:200px;justify-content:center;border-color:#3fb950">
+      <div class="card-title green" style="font-size:28px">取小数部分</div>
+      <div class="mono" style="font-size:24px;margin-top:10px">fract(·) → 0~1</div>
+    </div>
+  </div>
+
+  <div class="code" style="margin-top:50px;align-self:center;width:1320px;font-size:26px"><span class="kw">float</span> <span class="fn">hash</span>(<span class="kw">vec2</span> p) {
+    <span class="kw">float</span> h = <span class="fn">dot</span>(p, <span class="fn">vec2</span>(<span class="num">127.1</span>, <span class="num">311.7</span>));
+    <span class="kw">return</span> <span class="fn">fract</span>(<span class="fn">sin</span>(h) * <span class="num">43758.5453</span>);   <span class="com">// 混乱，但完全确定</span>
+}</div>
+
+  <div class="row center" style="margin-top:36px">
+    <div class="card row" style="width:1320px;align-items:center;gap:20px;padding:22px 32px">
+      <div style="font-size:34px">🔑</div>
+      <div class="card-desc" style="font-size:25px"><b class="accent">关键</b>：同一个坐标，永远得到同一个值 —— 画面才不会每帧乱闪</div>
+    </div>
+  </div>
+</div>
+</body></html>

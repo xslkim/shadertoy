@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">getSeaColor：合成最终水色</div>
+
+  <div class="col center gap-20" style="margin-top:46px">
+    <!-- 步骤 1 -->
+    <div class="card row" style="width:1500px;align-items:center;gap:28px;padding:24px 34px">
+      <div class="badge">1</div>
+      <div class="col" style="width:430px">
+        <div class="card-title" style="font-size:30px">按菲涅尔混合</div>
+        <div class="card-desc" style="font-size:22px">掠射角 → 反射占比更大</div>
+      </div>
+      <div class="code small grow">color = <span class="fn">mix</span>(refracted, reflected, fresnel);</div>
+    </div>
+    <div class="accent" style="font-size:30px">+</div>
+    <!-- 步骤 2 -->
+    <div class="card row" style="width:1500px;align-items:center;gap:28px;padding:24px 34px">
+      <div class="badge">2</div>
+      <div class="col" style="width:430px">
+        <div class="card-title" style="font-size:30px">叠加波高水色</div>
+        <div class="card-desc" style="font-size:22px">浪峰更亮，且随距离衰减</div>
+      </div>
+      <div class="code small grow">color += 水色 * (波高) * atten;</div>
+    </div>
+    <div class="accent" style="font-size:30px">+</div>
+    <!-- 步骤 3 -->
+    <div class="card row" style="width:1500px;align-items:center;gap:28px;padding:24px 34px">
+      <div class="badge">3</div>
+      <div class="col" style="width:430px">
+        <div class="card-title" style="font-size:30px">加上太阳高光</div>
+        <div class="card-desc" style="font-size:22px">那一粒耀眼的反光</div>
+      </div>
+      <div class="code small grow">color += <span class="fn">specular</span>(n, l, eye, <span class="num">60.0</span>);</div>
+    </div>
+    <div class="accent" style="font-size:34px">↓</div>
+    <div class="card row center" style="width:1500px;border-color:#3fb950;padding:22px">
+      <div class="card-title green" style="font-size:30px">一个像素的水色，完成</div>
+    </div>
+  </div>
+</div>
+</body></html>

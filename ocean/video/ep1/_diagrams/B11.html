@@ -1,0 +1,56 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">map：把多层波浪累加成高度场</div>
+
+  <div class="row grow gap-40" style="margin-top:36px;align-items:center">
+    <!-- 左：octave 叠加 -->
+    <div class="col" style="width:900px;gap:14px">
+      <div class="card-title accent" style="margin-bottom:6px">循环叠加多层 sea_octave</div>
+      <div class="row card" style="align-items:center;gap:20px;padding:18px 24px">
+        <div class="badge" style="background:#1f6feb">1</div>
+        <div class="col grow"><div style="font-size:24px;font-weight:700">大涌浪</div>
+          <div class="muted" style="font-size:21px">低频率 · 高振幅 —— 定轮廓</div></div>
+        <svg width="180" height="46"><path d="M5,30 Q47,8 90,30 Q133,52 175,30" fill="none" stroke="#58a6ff" stroke-width="3"/></svg>
+      </div>
+      <div class="row card" style="align-items:center;gap:20px;padding:18px 24px">
+        <div class="badge" style="background:#1f6feb">2</div>
+        <div class="col grow"><div style="font-size:24px;font-weight:700">中等的波</div>
+          <div class="muted" style="font-size:21px">频率 ×1.9 · 振幅 ×0.22</div></div>
+        <svg width="180" height="46"><path d="M5,28 Q26,12 47,28 Q68,44 89,28 Q110,12 131,28 Q152,44 175,28" fill="none" stroke="#58a6ff" stroke-width="3"/></svg>
+      </div>
+      <div class="row card" style="align-items:center;gap:20px;padding:18px 24px">
+        <div class="badge" style="background:#1f6feb">3</div>
+        <div class="col grow"><div style="font-size:24px;font-weight:700">细碎涟漪</div>
+          <div class="muted" style="font-size:21px">频率更高 · 振幅更小 —— 加细节</div></div>
+        <svg width="180" height="46"><path d="M5,26 Q15,16 25,26 Q35,36 45,26 Q55,16 65,26 Q75,36 85,26 Q95,16 105,26 Q115,36 125,26 Q135,16 145,26 Q155,36 165,26 L175,26" fill="none" stroke="#58a6ff" stroke-width="3"/></svg>
+      </div>
+      <div class="row center" style="margin-top:6px"><div class="accent" style="font-size:34px">↓ 累加 ↓</div></div>
+      <div class="card row" style="align-items:center;gap:20px;padding:18px 24px;border-color:#3fb950">
+        <div style="font-size:24px;font-weight:700;color:#3fb950;width:120px">完整海面</div>
+        <svg width="380" height="56"><path d="M5,32 Q30,12 52,30 Q60,36 70,24 Q95,2 120,28 Q130,40 142,30 Q170,10 195,32 Q205,42 218,30 Q245,8 270,30 Q280,40 292,26 Q318,6 345,30 Q358,40 375,30" fill="none" stroke="#3fb950" stroke-width="3"/></svg>
+      </div>
+    </div>
+
+    <!-- 右：代码 -->
+    <div class="col" style="width:840px;gap:18px">
+      <div class="code small"><span class="kw">float</span> <span class="fn">map</span>(<span class="kw">vec3</span> p) {
+    <span class="kw">vec2</span> uv = p.xz;
+    <span class="kw">float</span> freq = SEA_FREQ, amp = SEA_HEIGHT;
+    <span class="kw">float</span> h = <span class="num">0.0</span>;
+    <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; ITER; i++) {
+        h += <span class="fn">sea_octave</span>(uv*freq, choppy) * amp;
+        uv  *= octave_m;   <span class="com">// 旋转，错开各层</span>
+        freq *= <span class="num">1.9</span>;       <span class="com">// 频率变高</span>
+        amp  *= <span class="num">0.22</span>;      <span class="com">// 振幅变小</span>
+    }
+    <span class="kw">return</span> p.y - h;   <span class="com">// 点到水面的高度差</span>
+}</div>
+      <div class="step">
+        <div class="step-h">返回值的含义</div>
+        <div class="step-d">&gt; 0：点在水面之上　·　&lt; 0：点在水面之下　·　= 0：正好在水面</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

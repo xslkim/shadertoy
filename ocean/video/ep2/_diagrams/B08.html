@@ -1,0 +1,50 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">水色的两个来源：反射与折射</div>
+
+  <div class="row grow gap-32" style="margin-top:44px;align-items:stretch">
+    <!-- 反射 -->
+    <div class="card col" style="width:840px;border-color:#58a6ff">
+      <div class="card-title accent">① 反射 Reflected</div>
+      <div class="card-desc" style="margin:6px 0 16px">水面像镜子，映出天空</div>
+      <svg width="760" height="280" viewBox="0 0 760 280">
+        <line x1="40" y1="200" x2="720" y2="200" stroke="#58a6ff" stroke-width="3"/>
+        <circle cx="380" cy="200" r="8" fill="#fff"/>
+        <line x1="380" y1="200" x2="380" y2="120" stroke="#ffa657" stroke-width="3" marker-end="url(#r1)"/>
+        <text x="396" y="150" fill="#ffa657" font-size="20" class="mono">n</text>
+        <line x1="170" y1="60" x2="380" y2="200" stroke="#e6edf3" stroke-width="3" marker-end="url(#r2)"/>
+        <text x="160" y="50" fill="#e6edf3" font-size="20" class="mono">视线</text>
+        <line x1="380" y1="200" x2="590" y2="60" stroke="#58a6ff" stroke-width="3" marker-end="url(#r3)"/>
+        <text x="560" y="48" fill="#58a6ff" font-size="20" class="mono">反射方向</text>
+        <text x="380" y="250" fill="#8b949e" font-size="21" text-anchor="middle" class="label">用 getSkyColor 查这个方向的天空颜色</text>
+        <defs>
+          <marker id="r1" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#ffa657"/></marker>
+          <marker id="r2" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#e6edf3"/></marker>
+          <marker id="r3" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#58a6ff"/></marker>
+        </defs>
+      </svg>
+      <div class="code small" style="margin-top:10px">getSkyColor(<span class="fn">reflect</span>(eye, n))</div>
+    </div>
+    <!-- 折射 -->
+    <div class="card col" style="width:840px;border-color:#3fb950">
+      <div class="card-title green">② 折射 Refracted</div>
+      <div class="card-desc" style="margin:6px 0 16px">水体自己的颜色</div>
+      <svg width="760" height="280" viewBox="0 0 760 280">
+        <line x1="40" y1="80" x2="720" y2="80" stroke="#3fb950" stroke-width="3"/>
+        <rect x="40" y="80" width="680" height="160" fill="#0d2236"/>
+        <g stroke="#3fb950" stroke-width="3">
+          <line x1="300" y1="80" x2="340" y2="220" marker-end="url(#g1)"/>
+          <line x1="420" y1="80" x2="390" y2="220" marker-end="url(#g1)"/>
+        </g>
+        <text x="380" y="200" fill="#a5d6ff" font-size="22" text-anchor="middle" class="label">深蓝底色</text>
+        <text x="380" y="262" fill="#8b949e" font-size="21" text-anchor="middle" class="label">深蓝底色 + 一点漫反射的水色</text>
+        <defs><marker id="g1" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#3fb950"/></marker></defs>
+      </svg>
+      <div class="code small" style="margin-top:10px">SEA_BASE + <span class="fn">diffuse</span>(...) * 水色</div>
+    </div>
+  </div>
+
+  <div class="subtitle" style="margin-top:32px">一个是天空给的，一个是水体自己的 —— 下一步，把它们混合起来</div>
+</div>
+</body></html>

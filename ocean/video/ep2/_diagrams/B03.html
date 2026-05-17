@@ -1,0 +1,48 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">相机：每个像素射出一条光线</div>
+
+  <div class="col center" style="margin-top:30px">
+    <svg width="1500" height="470" viewBox="0 0 1500 470">
+      <!-- 海面 -->
+      <path d="M0,380 Q150,355 300,375 Q450,395 600,372 Q750,350 900,374 Q1050,396 1200,372 Q1350,352 1500,375 L1500,470 L0,470 Z"
+            fill="#0d2236" stroke="#58a6ff" stroke-width="3"/>
+      <!-- 相机 -->
+      <g transform="translate(180,170)">
+        <path d="M0,-34 L62,0 L0,34 Z" fill="#e6edf3"/>
+        <text x="-10" y="70" fill="#8b949e" font-size="23" text-anchor="middle" class="label">相机</text>
+        <text x="-10" y="98" fill="#8b949e" font-size="20" text-anchor="middle" class="label">水面上方 3.5</text>
+      </g>
+      <!-- 前进箭头 -->
+      <line x1="120" y1="270" x2="320" y2="270" stroke="#3fb950" stroke-width="4" marker-end="url(#fa)"/>
+      <text x="220" y="300" fill="#3fb950" font-size="22" text-anchor="middle" class="label">随时间前移</text>
+      <!-- 屏幕 -->
+      <rect x="560" y="80" width="40" height="280" fill="#58a6ff" fill-opacity="0.12" stroke="#8b949e" stroke-width="2"/>
+      <text x="580" y="60" fill="#8b949e" font-size="20" text-anchor="middle" class="label">屏幕</text>
+      <!-- 射线扇 -->
+      <g stroke="#58a6ff" stroke-width="2.5">
+        <line x1="242" y1="170" x2="1380" y2="95"  marker-end="url(#ra)"/>
+        <line x1="242" y1="170" x2="1400" y2="230" marker-end="url(#ra)"/>
+        <line x1="242" y1="170" x2="1360" y2="360" marker-end="url(#ra)"/>
+      </g>
+      <text x="980" y="150" fill="#58a6ff" font-size="22" class="mono">每像素一条射线 rd</text>
+      <defs>
+        <marker id="fa" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#3fb950"/></marker>
+        <marker id="ra" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#58a6ff"/></marker>
+      </defs>
+    </svg>
+  </div>
+
+  <div class="row center gap-32" style="margin-top:24px">
+    <div class="step" style="width:680px">
+      <div class="step-h">射线方向由像素位置决定</div>
+      <div class="step-d">屏幕中心朝正前方，越靠边缘的像素，射线越向外散开</div>
+    </div>
+    <div class="step" style="width:680px">
+      <div class="step-h">fromEuler：让画面像在船上</div>
+      <div class="step-d">用三个欧拉角生成旋转矩阵，角度随 sin 摆动 → 镜头轻轻晃</div>
+    </div>
+  </div>
+</div>
+</body></html>

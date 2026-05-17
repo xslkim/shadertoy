@@ -1,0 +1,51 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">天空：射线打到了哪里</div>
+
+  <div class="row grow gap-40" style="margin-top:40px;align-items:center">
+    <!-- 左：射线分流 -->
+    <div class="col" style="width:880px;gap:18px">
+      <svg width="820" height="440" viewBox="0 0 820 440">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#3f6fd6"/>
+            <stop offset="0.6" stop-color="#7fa8e0"/>
+            <stop offset="1" stop-color="#cdd9e8"/>
+          </linearGradient>
+        </defs>
+        <rect x="40" y="30" width="740" height="240" fill="url(#sky)" rx="8"/>
+        <rect x="40" y="270" width="740" height="140" fill="#0d2236" rx="8"/>
+        <line x1="40" y1="270" x2="780" y2="270" stroke="#58a6ff" stroke-width="3"/>
+        <!-- 相机点 -->
+        <circle cx="120" cy="320" r="9" fill="#e6edf3"/>
+        <!-- 朝上的射线 = 天空 -->
+        <line x1="120" y1="320" x2="430" y2="70" stroke="#58a6ff" stroke-width="3" marker-end="url(#k)"/>
+        <text x="300" y="150" fill="#fff" font-size="22" class="label" transform="rotate(-39 300 150)">射线朝上 → 天空</text>
+        <!-- 朝下的射线 = 海面 -->
+        <line x1="120" y1="320" x2="470" y2="375" stroke="#3fb950" stroke-width="3" marker-end="url(#k2)"/>
+        <text x="300" y="365" fill="#3fb950" font-size="22" class="label">射线朝下 → 海面</text>
+        <defs>
+          <marker id="k" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#58a6ff"/></marker>
+          <marker id="k2" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#3fb950"/></marker>
+        </defs>
+      </svg>
+    </div>
+    <!-- 右：getSkyColor -->
+    <div class="col" style="width:760px;gap:20px">
+      <div class="card">
+        <div class="card-title accent">getSkyColor(射线方向)</div>
+        <div class="card-desc" style="margin-top:12px;line-height:1.7">
+          根据射线<b>朝上的程度</b>做一个颜色渐变：<br>
+          · 靠近地平线 —— 偏亮、偏暖<br>
+          · 越往天顶 —— 越蓝、越深
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-h">这个函数还会再出场</div>
+        <div class="step-d">水面的反射，也是用 getSkyColor 查询"反射方向看到的天空"</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,48 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">光线怎么找到水面：二分式逼近</div>
+
+  <svg width="1660" height="540" viewBox="0 0 1660 540" style="margin-top:24px;align-self:center">
+    <!-- 水面 -->
+    <path d="M40,360 Q200,320 360,355 Q520,388 680,350 Q840,315 1000,352 Q1160,386 1320,350 Q1480,320 1620,352"
+          fill="#0d2d44" stroke="#58a6ff" stroke-width="4"/>
+    <path d="M40,360 Q200,320 360,355 Q520,388 680,350 Q840,315 1000,352 Q1160,386 1320,350 Q1480,320 1620,352 L1620,540 L40,540 Z"
+          fill="#0d2236" opacity="0.6"/>
+    <text x="1500" y="410" fill="#58a6ff" font-size="24" class="label">水面</text>
+    <!-- 相机 -->
+    <path d="M40,150 L95,180 L40,210 Z" fill="#e6edf3"/>
+    <text x="40" y="245" fill="#8b949e" font-size="22" class="label">相机</text>
+    <!-- 射线 -->
+    <line x1="80" y1="180" x2="1560" y2="470" stroke="#30363d" stroke-width="3" stroke-dasharray="9 8"/>
+    <!-- 近点 tm（水面之上）-->
+    <circle cx="300" cy="223" r="13" fill="#3fb950"/>
+    <text x="300" y="195" fill="#3fb950" font-size="23" text-anchor="middle" class="mono">tm</text>
+    <text x="300" y="172" fill="#3fb950" font-size="20" text-anchor="middle" class="label">水面之上 h&gt;0</text>
+    <!-- 远点 tx（水面之下）-->
+    <circle cx="1380" cy="436" r="13" fill="#f85149"/>
+    <text x="1380" y="478" fill="#f85149" font-size="23" text-anchor="middle" class="mono">tx</text>
+    <text x="1380" y="503" fill="#f85149" font-size="20" text-anchor="middle" class="label">水面之下 h&lt;0</text>
+    <!-- 中间猜测点 -->
+    <circle cx="840" cy="330" r="11" fill="#d29922"/>
+    <text x="840" y="300" fill="#d29922" font-size="22" text-anchor="middle" class="mono">猜测点</text>
+    <line x1="840" y1="330" x2="840" y2="343" stroke="#d29922" stroke-width="2" stroke-dasharray="3 3"/>
+    <text x="840" y="270" fill="#8b949e" font-size="20" text-anchor="middle" class="label">按高度差插值</text>
+  </svg>
+
+  <div class="row center gap-24" style="margin-top:14px">
+    <div class="step" style="width:500px">
+      <div class="step-h">① 取近 / 远两点</div>
+      <div class="step-d">近点在水面之上，远点在水面之下，交点必在两点之间</div>
+    </div>
+    <div class="step" style="width:500px">
+      <div class="step-h">② 按高度差猜中点</div>
+      <div class="step-d">根据两点离水面的高度，插值出一个最可能的交点</div>
+    </div>
+    <div class="step" style="width:500px">
+      <div class="step-h">③ 缩小区间，重复</div>
+      <div class="step-d">判断猜测点在水上还是水下，替换对应端点，约 8 次即收敛</div>
+    </div>
+  </div>
+</div>
+</body></html>

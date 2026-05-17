@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">从随机点到平滑噪声</div>
+
+  <div class="row grow gap-32" style="margin-top:40px;align-items:stretch">
+    <!-- 直接 hash -->
+    <div class="card col" style="width:840px">
+      <div class="card-title red">直接用 hash：雪花噪点</div>
+      <div class="card-desc" style="margin:6px 0 14px">每个点各自随机，相邻两点毫无关系</div>
+      <svg width="760" height="320" viewBox="0 0 760 320">
+        <polyline points="20,160 50,40 80,250 110,90 140,290 170,60 200,210 230,30 260,270 290,120 320,240 350,70 380,180 410,300 440,50 470,230 500,100 530,280 560,40 590,200 620,140 650,260 680,80 710,220 740,110"
+                  fill="none" stroke="#f85149" stroke-width="2.5"/>
+        <text x="380" y="305" fill="#8b949e" font-size="21" text-anchor="middle" class="label">值在剧烈乱跳 —— 像电视雪花，不像水</text>
+      </svg>
+    </div>
+    <!-- value noise -->
+    <div class="card col" style="width:840px;border-color:#3fb950">
+      <div class="card-title green">value noise：格点 + 平滑插值</div>
+      <div class="card-desc" style="margin:6px 0 14px">只在整数格点放随机值，中间平滑过渡</div>
+      <svg width="760" height="320" viewBox="0 0 760 320">
+        <!-- 整数格点竖线 -->
+        <g stroke="#30363d" stroke-width="2" stroke-dasharray="4 5">
+          <line x1="60" y1="30" x2="60" y2="280"/><line x1="235" y1="30" x2="235" y2="280"/>
+          <line x1="410" y1="30" x2="410" y2="280"/><line x1="585" y1="30" x2="585" y2="280"/>
+          <line x1="720" y1="30" x2="720" y2="280"/>
+        </g>
+        <!-- 平滑曲线 -->
+        <path d="M60,90 C120,90 175,240 235,240 C295,240 350,70 410,70 C470,70 525,200 585,200 C640,200 685,120 720,120"
+              fill="none" stroke="#3fb950" stroke-width="4"/>
+        <!-- 格点随机值 -->
+        <g fill="#3fb950">
+          <circle cx="60" cy="90" r="8"/><circle cx="235" cy="240" r="8"/><circle cx="410" cy="70" r="8"/>
+          <circle cx="585" cy="200" r="8"/><circle cx="720" cy="120" r="8"/>
+        </g>
+        <text x="390" y="305" fill="#8b949e" font-size="21" text-anchor="middle" class="label">格点取随机值，用平滑曲线连起来 —— 连续、自然</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="subtitle" style="margin-top:32px">平滑插值用一条 S 形曲线　f·f·(3−2f)　过渡，避免任何硬边 —— 这就是海浪的基本积木</div>
+</div>
+</body></html>

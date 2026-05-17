@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">这片海的本质：一个数学函数</div>
+
+  <div class="row grow gap-32" style="margin-top:44px;align-items:stretch">
+    <!-- 传统 -->
+    <div class="card col" style="width:840px">
+      <div class="card-title" style="color:#8b949e">传统 3D：网格 Mesh</div>
+      <div class="card-desc" style="margin:8px 0 16px">成千上万个三角形拼成水面，顶点逐帧移动</div>
+      <svg width="760" height="320" viewBox="0 0 760 320">
+        <g stroke="#8b949e" stroke-width="1.5" fill="none">
+          <path d="M40,210 L160,170 L280,200 L400,150 L520,185 L640,140 L720,175"/>
+          <path d="M40,260 L160,225 L280,255 L400,205 L520,240 L640,195 L720,230"/>
+          <path d="M40,210 L40,260 M160,170 L160,225 M280,200 L280,255 M400,150 L400,205 M520,185 L520,240 M640,140 L640,195 M720,175 L720,230"/>
+          <path d="M40,210 L160,225 M160,170 L280,255 M280,200 L400,205 M400,150 L520,240 M520,185 L640,195 M640,140 L720,230"/>
+        </g>
+        <g fill="#8b949e">
+          <circle cx="40" cy="210" r="5"/><circle cx="160" cy="170" r="5"/><circle cx="280" cy="200" r="5"/><circle cx="400" cy="150" r="5"/><circle cx="520" cy="185" r="5"/><circle cx="640" cy="140" r="5"/><circle cx="720" cy="175" r="5"/>
+        </g>
+        <text x="380" y="300" fill="#8b949e" font-size="22" text-anchor="middle" class="label">每个顶点都要存储、传输、逐帧更新</text>
+      </svg>
+    </div>
+    <!-- Seascape -->
+    <div class="card col" style="width:840px;border-color:#58a6ff">
+      <div class="card-title accent">Seascape：高度函数</div>
+      <div class="card-desc" style="margin:8px 0 16px">没有网格、没有顶点，只有一个函数</div>
+      <div class="formula" style="font-size:42px;margin:8px 0 18px">y = h(x, z)</div>
+      <svg width="760" height="190" viewBox="0 0 760 190">
+        <path d="M30,120 C90,60 150,60 210,110 S330,170 390,110 S510,55 570,105 S690,160 740,110"
+              fill="none" stroke="#58a6ff" stroke-width="4"/>
+        <text x="385" y="175" fill="#8b949e" font-size="22" text-anchor="middle" class="label">给定水平位置 (x,z)，函数直接给出水面高度 y</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="subtitle" style="margin-top:34px">水面的"形状"，完全由这个函数定义 —— 设计好这个函数，就有了一片海</div>
+</div>
+</body></html>

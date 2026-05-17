@@ -1,0 +1,51 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">FFT 海洋：电影与 3A 的频谱法</div>
+
+  <div class="row center gap-16" style="margin-top:44px">
+    <div class="col center card" style="width:380px;height:240px;justify-content:center">
+      <div style="font-size:46px">🌬️</div>
+      <div class="card-title" style="font-size:26px;margin-top:8px">海浪频谱</div>
+      <div class="card-desc" style="text-align:center;font-size:21px;margin-top:6px">风把能量分布到<br>各种波长与方向</div>
+    </div>
+    <div class="accent" style="font-size:40px">→</div>
+    <div class="col center card" style="width:380px;height:240px;justify-content:center">
+      <div style="font-size:46px">🎲</div>
+      <div class="card-title" style="font-size:26px;margin-top:8px">频域随机场</div>
+      <div class="card-desc" style="text-align:center;font-size:21px;margin-top:6px">在频率空间生成<br>符合频谱的随机数据</div>
+    </div>
+    <div class="accent" style="font-size:40px">→</div>
+    <div class="col center card" style="width:380px;height:240px;justify-content:center;border-color:#58a6ff">
+      <div style="font-size:46px">🔁</div>
+      <div class="card-title accent" style="font-size:26px;margin-top:8px">逆 FFT</div>
+      <div class="card-desc" style="text-align:center;font-size:21px;margin-top:6px">变换回空间域<br>GPU 上即可实时</div>
+    </div>
+    <div class="accent" style="font-size:40px">→</div>
+    <div class="col center card" style="width:380px;height:240px;justify-content:center;border-color:#3fb950">
+      <div style="font-size:46px">🌊</div>
+      <div class="card-title green" style="font-size:26px;margin-top:8px">真实高度场</div>
+      <div class="card-desc" style="text-align:center;font-size:21px;margin-top:6px">可平铺，铺满整片海</div>
+    </div>
+  </div>
+
+  <div class="row center gap-32" style="margin-top:46px">
+    <div class="card col" style="width:760px">
+      <div class="card-title accent">为什么它更真实</div>
+      <div class="card-desc" style="margin-top:12px;line-height:1.7">
+        真实海浪服从统计<b>频谱</b>（如 Phillips 谱）。<br>
+        FFT 一次性合成所有尺度的波，<br>
+        抓住的是海面真正的统计规律 —— 远胜几道 Gerstner 波。
+      </div>
+    </div>
+    <div class="card col" style="width:760px;border-color:#3fb950">
+      <div class="card-title green">业界地位</div>
+      <div class="card-desc" style="margin-top:12px;line-height:1.7">
+        理论源自 Tessendorf 的经典论文，<br>
+        《泰坦尼克号》时代已用于电影。<br>
+        如今 UE5 水系统、大量 3A 大作都建立在它之上。
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

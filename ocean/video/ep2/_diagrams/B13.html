@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">Gerstner 波：游戏里的经典做法</div>
+
+  <div class="col center" style="margin-top:32px">
+    <div class="card-title accent" style="margin-bottom:14px">多道正弦波叠加 = 起伏的海面</div>
+    <svg width="1560" height="380" viewBox="0 0 1560 380">
+      <!-- 三道分波 -->
+      <path d="M40,70 Q170,30 300,70 Q430,110 560,70 Q690,30 820,70 Q950,110 1080,70 Q1210,30 1340,70 Q1430,98 1520,70"
+            fill="none" stroke="#8b949e" stroke-width="2.5"/>
+      <text x="1535" y="76" fill="#8b949e" font-size="20" class="label">波 1</text>
+      <path d="M40,160 Q105,135 170,160 Q235,185 300,160 Q365,135 430,160 Q495,185 560,160 Q625,135 690,160 Q755,185 820,160 Q885,135 950,160 Q1015,185 1080,160 Q1145,135 1210,160 Q1275,185 1340,160 Q1405,135 1470,160 L1520,160"
+            fill="none" stroke="#8b949e" stroke-width="2.5"/>
+      <text x="1535" y="166" fill="#8b949e" font-size="20" class="label">波 2</text>
+      <path d="M40,250 Q73,233 106,250 Q139,267 172,250 Q205,233 238,250 Q271,267 304,250 Q337,233 370,250 Q403,267 436,250 Q469,233 502,250 Q535,267 568,250 Q601,233 634,250 Q667,267 700,250 Q733,233 766,250 Q799,267 832,250 Q865,233 898,250 Q931,267 964,250 Q997,233 1030,250 Q1063,267 1096,250 Q1129,233 1162,250 Q1195,267 1228,250 Q1261,233 1294,250 Q1327,267 1360,250 Q1393,233 1426,250 Q1459,267 1492,250 L1520,250"
+            fill="none" stroke="#8b949e" stroke-width="2.5"/>
+      <text x="1535" y="256" fill="#8b949e" font-size="20" class="label">波 3</text>
+      <!-- 累加结果（尖峰圆谷）-->
+      <path d="M40,340 Q90,300 140,332 Q160,344 185,318 Q260,255 330,330 Q360,355 392,320 Q460,260 530,335 Q558,358 590,322 Q660,258 730,332 Q760,356 790,322 Q860,262 930,334 Q958,357 990,322 Q1060,260 1130,332 Q1158,356 1190,322 Q1260,262 1330,334 Q1390,358 1460,330 L1520,338"
+            fill="none" stroke="#3fb950" stroke-width="4"/>
+      <text x="1535" y="340" fill="#3fb950" font-size="20" class="label">叠加</text>
+    </svg>
+  </div>
+
+  <div class="row center gap-24" style="margin-top:30px">
+    <div class="step" style="width:480px">
+      <div class="step-h">尖峰圆谷</div>
+      <div class="step-d">Gerstner 波还让顶点横向移动，浪峰变尖、浪谷变圆，更像真浪</div>
+    </div>
+    <div class="step" style="width:480px;border-left-color:#3fb950">
+      <div class="step-h">便宜 · 可控 · 美术友好</div>
+      <div class="step-d">几十年来是游戏的主力做法，用在一张真实水面网格上</div>
+    </div>
+    <div class="step" style="width:480px;border-left-color:#f85149">
+      <div class="step-h">局限</div>
+      <div class="step-d">几道波，凑不出真实海面在所有尺度上的丰富细节</div>
+    </div>
+  </div>
+</div>
+</body></html>

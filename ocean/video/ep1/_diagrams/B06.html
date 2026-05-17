@@ -1,0 +1,53 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">高度场：用"高度"描述整片水面</div>
+
+  <div class="col center" style="margin-top:30px;gap:10px">
+    <div class="card-title accent">把海面想成一张水平网格，每个网格点上有一个高度值</div>
+    <svg width="1560" height="380" viewBox="0 0 1560 380">
+      <line x1="60" y1="320" x2="1500" y2="320" stroke="#30363d" stroke-width="2"/>
+      <text x="1505" y="326" fill="#8b949e" font-size="22" class="mono">x,z</text>
+      <!-- 水面高度曲线 -->
+      <path d="M70,210 C190,90 290,90 410,200 S630,310 750,205 S970,80 1090,190 S1310,300 1470,200"
+            fill="none" stroke="#58a6ff" stroke-width="5"/>
+      <!-- 采样点 + 竖虚线 + 高度标注 -->
+      <g>
+        <line x1="230" y1="124" x2="230" y2="320" stroke="#3fb950" stroke-width="2" stroke-dasharray="5 5"/>
+        <circle cx="230" cy="124" r="8" fill="#3fb950"/><text x="230" y="105" fill="#3fb950" font-size="22" text-anchor="middle" class="mono">h₁</text>
+        <line x1="520" y1="268" x2="520" y2="320" stroke="#3fb950" stroke-width="2" stroke-dasharray="5 5"/>
+        <circle cx="520" cy="268" r="8" fill="#3fb950"/><text x="520" y="252" fill="#3fb950" font-size="22" text-anchor="middle" class="mono">h₂</text>
+        <line x1="820" y1="150" x2="820" y2="320" stroke="#3fb950" stroke-width="2" stroke-dasharray="5 5"/>
+        <circle cx="820" cy="150" r="8" fill="#3fb950"/><text x="820" y="132" fill="#3fb950" font-size="22" text-anchor="middle" class="mono">h₃</text>
+        <line x1="1120" y1="178" x2="1120" y2="320" stroke="#3fb950" stroke-width="2" stroke-dasharray="5 5"/>
+        <circle cx="1120" cy="178" r="8" fill="#3fb950"/><text x="1120" y="160" fill="#3fb950" font-size="22" text-anchor="middle" class="mono">h₄</text>
+      </g>
+      <text x="780" y="358" fill="#8b949e" font-size="22" text-anchor="middle" class="label">高度连起来，就是起伏的水面 —— 这就是"高度场 / heightfield"</text>
+    </svg>
+  </div>
+
+  <div class="row center gap-32" style="margin-top:26px">
+    <div class="card row" style="width:880px;align-items:center;gap:24px;border-color:#f85149">
+      <svg width="150" height="120" viewBox="0 0 150 120">
+        <path d="M20,100 Q40,30 85,30 Q120,30 120,62 Q120,86 96,86 Q80,86 82,70"
+              fill="none" stroke="#f85149" stroke-width="4"/>
+        <text x="128" y="44" fill="#f85149" font-size="40" font-weight="800">✗</text>
+      </svg>
+      <div class="col">
+        <div class="card-title red" style="font-size:28px">高度场的限制</div>
+        <div class="card-desc" style="font-size:23px;margin-top:6px">一个位置只能有一个高度，所以浪头<b>无法卷曲</b>、无法拍碎</div>
+      </div>
+    </div>
+    <div class="card row" style="width:880px;align-items:center;gap:24px;border-color:#3fb950">
+      <svg width="150" height="120" viewBox="0 0 150 120">
+        <path d="M15,90 Q45,40 75,65 Q105,90 135,45" fill="none" stroke="#3fb950" stroke-width="4"/>
+        <text x="60" y="40" fill="#3fb950" font-size="40" font-weight="800">✓</text>
+      </svg>
+      <div class="col">
+        <div class="card-title green" style="font-size:28px">但它足够好</div>
+        <div class="card-desc" style="font-size:23px;margin-top:6px">对开阔海面的<b>涌浪</b>表现极佳，而且计算非常快</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>
