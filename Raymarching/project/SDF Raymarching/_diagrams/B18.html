@@ -1,0 +1,38 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">抗锯齿、雾效与 Gamma 校正</div>
+
+  <div class="col gap-24" style="margin-top:44px">
+    <div class="card row" style="gap:36px;align-items:center;padding:26px 34px">
+      <div class="col" style="width:330px">
+        <div class="card-title accent" style="font-size:32px">超采样抗锯齿</div>
+        <div class="card-desc" style="font-size:22px;margin-top:6px">每像素在子像素位置采样 2×2 次<br>AA 宏控制质量，低端硬件可关闭</div>
+      </div>
+      <div class="code small grow"><span class="kw">for</span> (<span class="kw">int</span> m=<span class="num">0</span>; m&lt;AA; m++)
+<span class="kw">for</span> (<span class="kw">int</span> n=<span class="num">0</span>; n&lt;AA; n++)
+    col += <span class="fn">render</span>(ro, <span class="fn">rdOffset</span>(m,n));
+col /= <span class="fn">float</span>(AA*AA);   <span class="com">// 取平均</span></div>
+    </div>
+
+    <div class="card row" style="gap:36px;align-items:center;padding:26px 34px">
+      <div class="col" style="width:330px">
+        <div class="card-title accent" style="font-size:32px">大气透视雾效</div>
+        <div class="card-desc" style="font-size:22px;margin-top:6px">距离 t 的三次方指数衰减<br>远处物体自然消隐，无生硬截断</div>
+      </div>
+      <div class="code small grow"><span class="com">// 距离越远，混入背景色越多</span>
+col = <span class="fn">mix</span>(col, bgColor,
+    <span class="num">1.0</span> - <span class="fn">exp</span>(-<span class="num">0.0001</span>*t*t*t));</div>
+    </div>
+
+    <div class="card row" style="gap:36px;align-items:center;padding:26px 34px">
+      <div class="col" style="width:330px">
+        <div class="card-title accent" style="font-size:32px">Gamma 校正</div>
+        <div class="card-desc" style="font-size:22px;margin-top:6px">线性空间光照 → sRGB 显示空间<br>不做校正画面会偏暗、颜色失真</div>
+      </div>
+      <div class="code small grow"><span class="com">// 显示器假设输入是 gamma 2.2 编码</span>
+col = <span class="fn">pow</span>(col, <span class="fn">vec3</span>(<span class="num">1.0</span> / <span class="num">2.2</span>));</div>
+    </div>
+  </div>
+</div>
+</body></html>

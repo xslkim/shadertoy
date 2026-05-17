@@ -1,0 +1,2347 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.26200 - AMD64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\xsl\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\local\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Users\\xsl\\bin"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\Java\\jdk-17\\bin"
+        - "C:\\VulkanSDK\\1.4.321.1\\Bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\TortoiseSVN\\bin"
+        - "C:\\Program Files\\TortoiseGit\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit"
+        - "C:\\Program Files\\dotnet"
+        - "C:\\Users\\xsl\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\nodejs"
+        - "C:\\Program Files\\GitHub CLI"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312\\Scripts"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Trae CN\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\xsl\\.dotnet\\tools"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\xsl\\AppData\\Roaming\\npm"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\CodeBuddy CN\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\xsl\\.lmstudio\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Android\\Sdk\\build-tools\\34.0.0"
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Users\\xsl\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Program Files\\nodejs"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin\\vendor_perl"
+        - "C:\\Program Files\\Git\\usr\\bin\\core_perl"
+        - "C:\\Users\\xsl\\AppData\\Roaming\\Claude\\local-agent-mode-sessions\\skills-plugin\\ac922d91-0e2f-4370-a387-37bc3771c9e9\\0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.19+164abd434
+      鐢熸垚鍚姩鏃堕棿涓?2026/5/17 13:16:45銆?
+      
+      鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\shadertoy\\Raymarching\\build\\CMakeFiles\\4.1.0-rc4\\CompilerIdC\\CompilerIdC.vcxproj鈥?榛樿鐩爣)銆?
+      PrepareForBuild:
+        姝ｅ湪鍒涘缓鐩綍鈥淒ebug\\鈥濄€?
+        宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+        姝ｅ湪鍒涘缓鐩綍鈥淒ebug\\CompilerIdC.tlog\\鈥濄€?
+      InitializeBuildStatus:
+        姝ｅ湪鍒涘缓鈥淒ebug\\CompilerIdC.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+        姝ｅ湪瀵光€淒ebug\\CompilerIdC.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> D:\\shadertoy\\Raymarching\\build\\CMakeFiles\\4.1.0-rc4\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        姝ｅ湪鍒犻櫎鏂囦欢鈥淒ebug\\CompilerIdC.tlog\\unsuccessfulbuild鈥濄€?
+        姝ｅ湪瀵光€淒ebug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+      宸插畬鎴愮敓鎴愰」鐩€淒:\\shadertoy\\Raymarching\\build\\CMakeFiles\\4.1.0-rc4\\CompilerIdC\\CompilerIdC.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+      
+      宸叉垚鍔熺敓鎴愩€?
+          0 涓鍛?
+          0 涓敊璇?
+      
+      宸茬敤鏃堕棿 00:00:00.70
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        D:/shadertoy/Raymarching/build/CMakeFiles/4.1.0-rc4/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/"
+      - "C:/Users/xsl/bin/"
+      - "C:/Program Files/Git/mingw64/bin/"
+      - "C:/Program Files/Git/usr/local/bin/"
+      - "C:/Program Files/Git/usr/bin/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files/Java/jdk-17/bin/"
+      - "C:/VulkanSDK/1.4.321.1/Bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/TortoiseSVN/bin/"
+      - "C:/Program Files/TortoiseGit/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/platform-tools/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/GitHub CLI/"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/xsl/AppData/Local/Programs/Trae CN/bin/"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/xsl/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/xsl/.dotnet/tools/"
+      - "C:/Users/xsl/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/xsl/AppData/Roaming/npm/"
+      - "C:/Users/xsl/AppData/Local/Programs/CodeBuddy CN/bin/"
+      - "C:/Users/xsl/AppData/Local/Programs/cursor/resources/app/bin/"
+      - "C:/Users/xsl/AppData/Local/Programs/Ollama/"
+      - "C:/Users/xsl/.lmstudio/bin/"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/build-tools/34.0.0/"
+      - "C:/Program Files/7-Zip/"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WinGet/Packages/Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe/"
+      - "C:/Program Files/Git/usr/bin/vendor_perl/"
+      - "C:/Program Files/Git/usr/bin/core_perl/"
+      - "C:/Users/xsl/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/ac922d91-0e2f-4370-a387-37bc3771c9e9/0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\xsl\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\local\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Users\\xsl\\bin"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\Java\\jdk-17\\bin"
+        - "C:\\VulkanSDK\\1.4.321.1\\Bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\TortoiseSVN\\bin"
+        - "C:\\Program Files\\TortoiseGit\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit"
+        - "C:\\Program Files\\dotnet"
+        - "C:\\Users\\xsl\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\nodejs"
+        - "C:\\Program Files\\GitHub CLI"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312\\Scripts"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Trae CN\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\xsl\\.dotnet\\tools"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\xsl\\AppData\\Roaming\\npm"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\CodeBuddy CN\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\xsl\\.lmstudio\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Android\\Sdk\\build-tools\\34.0.0"
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Users\\xsl\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Program Files\\nodejs"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin\\vendor_perl"
+        - "C:\\Program Files\\Git\\usr\\bin\\core_perl"
+        - "C:\\Users\\xsl\\AppData\\Roaming\\Claude\\local-agent-mode-sessions\\skills-plugin\\ac922d91-0e2f-4370-a387-37bc3771c9e9\\0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/"
+      - "C:/Users/xsl/bin/"
+      - "C:/Program Files/Git/mingw64/bin/"
+      - "C:/Program Files/Git/usr/local/bin/"
+      - "C:/Program Files/Git/usr/bin/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files/Java/jdk-17/bin/"
+      - "C:/VulkanSDK/1.4.321.1/Bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/TortoiseSVN/bin/"
+      - "C:/Program Files/TortoiseGit/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/platform-tools/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/GitHub CLI/"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/xsl/AppData/Local/Programs/Trae CN/bin/"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/xsl/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/xsl/.dotnet/tools/"
+      - "C:/Users/xsl/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/xsl/AppData/Roaming/npm/"
+      - "C:/Users/xsl/AppData/Local/Programs/CodeBuddy CN/bin/"
+      - "C:/Users/xsl/AppData/Local/Programs/cursor/resources/app/bin/"
+      - "C:/Users/xsl/AppData/Local/Programs/Ollama/"
+      - "C:/Users/xsl/.lmstudio/bin/"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/build-tools/34.0.0/"
+      - "C:/Program Files/7-Zip/"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WinGet/Packages/Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe/"
+      - "C:/Program Files/Git/usr/bin/vendor_perl/"
+      - "C:/Program Files/Git/usr/bin/core_perl/"
+      - "C:/Users/xsl/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/ac922d91-0e2f-4370-a387-37bc3771c9e9/0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/lld-link"
+      - "C:/Users/xsl/bin/lld-link.com"
+      - "C:/Users/xsl/bin/lld-link.exe"
+      - "C:/Users/xsl/bin/lld-link"
+      - "C:/Program Files/Git/mingw64/bin/lld-link.com"
+      - "C:/Program Files/Git/mingw64/bin/lld-link.exe"
+      - "C:/Program Files/Git/mingw64/bin/lld-link"
+      - "C:/Program Files/Git/usr/local/bin/lld-link.com"
+      - "C:/Program Files/Git/usr/local/bin/lld-link.exe"
+      - "C:/Program Files/Git/usr/local/bin/lld-link"
+      - "C:/Program Files/Git/usr/bin/lld-link.com"
+      - "C:/Program Files/Git/usr/bin/lld-link.exe"
+      - "C:/Program Files/Git/usr/bin/lld-link"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link"
+      - "C:/Program Files/Java/jdk-17/bin/lld-link.com"
+      - "C:/Program Files/Java/jdk-17/bin/lld-link.exe"
+      - "C:/Program Files/Java/jdk-17/bin/lld-link"
+      - "C:/VulkanSDK/1.4.321.1/Bin/lld-link.com"
+      - "C:/VulkanSDK/1.4.321.1/Bin/lld-link.exe"
+      - "C:/VulkanSDK/1.4.321.1/Bin/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link"
+      - "C:/Program Files/Git/cmd/lld-link.com"
+      - "C:/Program Files/Git/cmd/lld-link.exe"
+      - "C:/Program Files/Git/cmd/lld-link"
+      - "C:/Program Files/TortoiseSVN/bin/lld-link.com"
+      - "C:/Program Files/TortoiseSVN/bin/lld-link.exe"
+      - "C:/Program Files/TortoiseSVN/bin/lld-link"
+      - "C:/Program Files/TortoiseGit/bin/lld-link.com"
+      - "C:/Program Files/TortoiseGit/bin/lld-link.exe"
+      - "C:/Program Files/TortoiseGit/bin/lld-link"
+      - "C:/Program Files/CMake/bin/lld-link.com"
+      - "C:/Program Files/CMake/bin/lld-link.exe"
+      - "C:/Program Files/CMake/bin/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link"
+      - "C:/Program Files/dotnet/lld-link.com"
+      - "C:/Program Files/dotnet/lld-link.exe"
+      - "C:/Program Files/dotnet/lld-link"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/platform-tools/lld-link.com"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/platform-tools/lld-link.exe"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/platform-tools/lld-link"
+      - "C:/ProgramData/chocolatey/bin/lld-link.com"
+      - "C:/ProgramData/chocolatey/bin/lld-link.exe"
+      - "C:/ProgramData/chocolatey/bin/lld-link"
+      - "C:/Program Files/nodejs/lld-link.com"
+      - "C:/Program Files/nodejs/lld-link.exe"
+      - "C:/Program Files/nodejs/lld-link"
+      - "C:/Program Files/GitHub CLI/lld-link.com"
+      - "C:/Program Files/GitHub CLI/lld-link.exe"
+      - "C:/Program Files/GitHub CLI/lld-link"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/Scripts/lld-link.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/Scripts/lld-link.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/Scripts/lld-link"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/lld-link.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/lld-link.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/lld-link"
+      - "C:/Users/xsl/AppData/Local/Programs/Trae CN/bin/lld-link.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Trae CN/bin/lld-link.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Trae CN/bin/lld-link"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Users/xsl/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Microsoft VS Code/bin/lld-link"
+      - "C:/Users/xsl/.dotnet/tools/lld-link.com"
+      - "C:/Users/xsl/.dotnet/tools/lld-link.exe"
+      - "C:/Users/xsl/.dotnet/tools/lld-link"
+      - "C:/Users/xsl/AppData/Local/Programs/Antigravity/bin/lld-link.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Antigravity/bin/lld-link.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Antigravity/bin/lld-link"
+      - "C:/Users/xsl/AppData/Roaming/npm/lld-link.com"
+      - "C:/Users/xsl/AppData/Roaming/npm/lld-link.exe"
+      - "C:/Users/xsl/AppData/Roaming/npm/lld-link"
+      - "C:/Users/xsl/AppData/Local/Programs/CodeBuddy CN/bin/lld-link.com"
+      - "C:/Users/xsl/AppData/Local/Programs/CodeBuddy CN/bin/lld-link.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/CodeBuddy CN/bin/lld-link"
+      - "C:/Users/xsl/AppData/Local/Programs/cursor/resources/app/bin/lld-link.com"
+      - "C:/Users/xsl/AppData/Local/Programs/cursor/resources/app/bin/lld-link.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/cursor/resources/app/bin/lld-link"
+      - "C:/Users/xsl/AppData/Local/Programs/Ollama/lld-link.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Ollama/lld-link.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Ollama/lld-link"
+      - "C:/Users/xsl/.lmstudio/bin/lld-link.com"
+      - "C:/Users/xsl/.lmstudio/bin/lld-link.exe"
+      - "C:/Users/xsl/.lmstudio/bin/lld-link"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/build-tools/34.0.0/lld-link.com"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/build-tools/34.0.0/lld-link.exe"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/build-tools/34.0.0/lld-link"
+      - "C:/Program Files/7-Zip/lld-link.com"
+      - "C:/Program Files/7-Zip/lld-link.exe"
+      - "C:/Program Files/7-Zip/lld-link"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WinGet/Packages/Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe/lld-link.com"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WinGet/Packages/Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe/lld-link.exe"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WinGet/Packages/Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe/lld-link"
+      - "C:/Program Files/Git/usr/bin/vendor_perl/lld-link.com"
+      - "C:/Program Files/Git/usr/bin/vendor_perl/lld-link.exe"
+      - "C:/Program Files/Git/usr/bin/vendor_perl/lld-link"
+      - "C:/Program Files/Git/usr/bin/core_perl/lld-link.com"
+      - "C:/Program Files/Git/usr/bin/core_perl/lld-link.exe"
+      - "C:/Program Files/Git/usr/bin/core_perl/lld-link"
+      - "C:/Users/xsl/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/ac922d91-0e2f-4370-a387-37bc3771c9e9/0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e/bin/lld-link.com"
+      - "C:/Users/xsl/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/ac922d91-0e2f-4370-a387-37bc3771c9e9/0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e/bin/lld-link.exe"
+      - "C:/Users/xsl/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/ac922d91-0e2f-4370-a387-37bc3771c9e9/0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e/bin/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\xsl\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\local\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Users\\xsl\\bin"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\Java\\jdk-17\\bin"
+        - "C:\\VulkanSDK\\1.4.321.1\\Bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\TortoiseSVN\\bin"
+        - "C:\\Program Files\\TortoiseGit\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit"
+        - "C:\\Program Files\\dotnet"
+        - "C:\\Users\\xsl\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\nodejs"
+        - "C:\\Program Files\\GitHub CLI"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312\\Scripts"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Trae CN\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\xsl\\.dotnet\\tools"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\xsl\\AppData\\Roaming\\npm"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\CodeBuddy CN\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\xsl\\.lmstudio\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Android\\Sdk\\build-tools\\34.0.0"
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Users\\xsl\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Program Files\\nodejs"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin\\vendor_perl"
+        - "C:\\Program Files\\Git\\usr\\bin\\core_perl"
+        - "C:\\Users\\xsl\\AppData\\Roaming\\Claude\\local-agent-mode-sessions\\skills-plugin\\ac922d91-0e2f-4370-a387-37bc3771c9e9\\0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/"
+      - "C:/Users/xsl/bin/"
+      - "C:/Program Files/Git/mingw64/bin/"
+      - "C:/Program Files/Git/usr/local/bin/"
+      - "C:/Program Files/Git/usr/bin/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files/Java/jdk-17/bin/"
+      - "C:/VulkanSDK/1.4.321.1/Bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/TortoiseSVN/bin/"
+      - "C:/Program Files/TortoiseGit/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/platform-tools/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/GitHub CLI/"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/xsl/AppData/Local/Programs/Trae CN/bin/"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/xsl/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/xsl/.dotnet/tools/"
+      - "C:/Users/xsl/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/xsl/AppData/Roaming/npm/"
+      - "C:/Users/xsl/AppData/Local/Programs/CodeBuddy CN/bin/"
+      - "C:/Users/xsl/AppData/Local/Programs/cursor/resources/app/bin/"
+      - "C:/Users/xsl/AppData/Local/Programs/Ollama/"
+      - "C:/Users/xsl/.lmstudio/bin/"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/build-tools/34.0.0/"
+      - "C:/Program Files/7-Zip/"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WinGet/Packages/Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe/"
+      - "C:/Program Files/Git/usr/bin/vendor_perl/"
+      - "C:/Program Files/Git/usr/bin/core_perl/"
+      - "C:/Users/xsl/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/ac922d91-0e2f-4370-a387-37bc3771c9e9/0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\xsl\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\local\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Users\\xsl\\bin"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\Java\\jdk-17\\bin"
+        - "C:\\VulkanSDK\\1.4.321.1\\Bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\TortoiseSVN\\bin"
+        - "C:\\Program Files\\TortoiseGit\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit"
+        - "C:\\Program Files\\dotnet"
+        - "C:\\Users\\xsl\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\nodejs"
+        - "C:\\Program Files\\GitHub CLI"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312\\Scripts"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Trae CN\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\xsl\\.dotnet\\tools"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\xsl\\AppData\\Roaming\\npm"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\CodeBuddy CN\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\xsl\\.lmstudio\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Android\\Sdk\\build-tools\\34.0.0"
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Users\\xsl\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Program Files\\nodejs"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin\\vendor_perl"
+        - "C:\\Program Files\\Git\\usr\\bin\\core_perl"
+        - "C:\\Users\\xsl\\AppData\\Roaming\\Claude\\local-agent-mode-sessions\\skills-plugin\\ac922d91-0e2f-4370-a387-37bc3771c9e9\\0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_MT"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "mt"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/"
+      - "C:/Users/xsl/bin/"
+      - "C:/Program Files/Git/mingw64/bin/"
+      - "C:/Program Files/Git/usr/local/bin/"
+      - "C:/Program Files/Git/usr/bin/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files/Java/jdk-17/bin/"
+      - "C:/VulkanSDK/1.4.321.1/Bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/TortoiseSVN/bin/"
+      - "C:/Program Files/TortoiseGit/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/platform-tools/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/GitHub CLI/"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/xsl/AppData/Local/Programs/Trae CN/bin/"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/xsl/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/xsl/.dotnet/tools/"
+      - "C:/Users/xsl/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/xsl/AppData/Roaming/npm/"
+      - "C:/Users/xsl/AppData/Local/Programs/CodeBuddy CN/bin/"
+      - "C:/Users/xsl/AppData/Local/Programs/cursor/resources/app/bin/"
+      - "C:/Users/xsl/AppData/Local/Programs/Ollama/"
+      - "C:/Users/xsl/.lmstudio/bin/"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/build-tools/34.0.0/"
+      - "C:/Program Files/7-Zip/"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WinGet/Packages/Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe/"
+      - "C:/Program Files/Git/usr/bin/vendor_perl/"
+      - "C:/Program Files/Git/usr/bin/core_perl/"
+      - "C:/Users/xsl/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/ac922d91-0e2f-4370-a387-37bc3771c9e9/0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/mt.com"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/mt.exe"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/mt"
+      - "C:/Users/xsl/bin/mt.com"
+      - "C:/Users/xsl/bin/mt.exe"
+      - "C:/Users/xsl/bin/mt"
+      - "C:/Program Files/Git/mingw64/bin/mt.com"
+      - "C:/Program Files/Git/mingw64/bin/mt.exe"
+      - "C:/Program Files/Git/mingw64/bin/mt"
+      - "C:/Program Files/Git/usr/local/bin/mt.com"
+      - "C:/Program Files/Git/usr/local/bin/mt.exe"
+      - "C:/Program Files/Git/usr/local/bin/mt"
+      - "C:/Program Files/Git/usr/bin/mt.com"
+      - "C:/Program Files/Git/usr/bin/mt.exe"
+      - "C:/Program Files/Git/usr/bin/mt"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/mt.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/mt.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/mt"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/mt.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/mt.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/mt"
+      - "C:/Program Files/Java/jdk-17/bin/mt.com"
+      - "C:/Program Files/Java/jdk-17/bin/mt.exe"
+      - "C:/Program Files/Java/jdk-17/bin/mt"
+      - "C:/VulkanSDK/1.4.321.1/Bin/mt.com"
+      - "C:/VulkanSDK/1.4.321.1/Bin/mt.exe"
+      - "C:/VulkanSDK/1.4.321.1/Bin/mt"
+      - "C:/Windows/System32/mt.com"
+      - "C:/Windows/System32/mt.exe"
+      - "C:/Windows/System32/mt"
+      - "C:/Windows/mt.com"
+      - "C:/Windows/mt.exe"
+      - "C:/Windows/mt"
+      - "C:/Windows/System32/wbem/mt.com"
+      - "C:/Windows/System32/wbem/mt.exe"
+      - "C:/Windows/System32/wbem/mt"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt"
+      - "C:/Windows/System32/OpenSSH/mt.com"
+      - "C:/Windows/System32/OpenSSH/mt.exe"
+      - "C:/Windows/System32/OpenSSH/mt"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/mt.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/mt.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/mt"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt"
+      - "C:/Program Files/Git/cmd/mt.com"
+      - "C:/Program Files/Git/cmd/mt.exe"
+      - "C:/Program Files/Git/cmd/mt"
+      - "C:/Program Files/TortoiseSVN/bin/mt.com"
+      - "C:/Program Files/TortoiseSVN/bin/mt.exe"
+      - "C:/Program Files/TortoiseSVN/bin/mt"
+      - "C:/Program Files/TortoiseGit/bin/mt.com"
+      - "C:/Program Files/TortoiseGit/bin/mt.exe"
+      - "C:/Program Files/TortoiseGit/bin/mt"
+      - "C:/Program Files/CMake/bin/mt.com"
+      - "C:/Program Files/CMake/bin/mt.exe"
+      - "C:/Program Files/CMake/bin/mt"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt"
+      - "C:/Program Files/dotnet/mt.com"
+      - "C:/Program Files/dotnet/mt.exe"
+      - "C:/Program Files/dotnet/mt"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/platform-tools/mt.com"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/platform-tools/mt.exe"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/platform-tools/mt"
+      - "C:/ProgramData/chocolatey/bin/mt.com"
+      - "C:/ProgramData/chocolatey/bin/mt.exe"
+      - "C:/ProgramData/chocolatey/bin/mt"
+      - "C:/Program Files/nodejs/mt.com"
+      - "C:/Program Files/nodejs/mt.exe"
+      - "C:/Program Files/nodejs/mt"
+      - "C:/Program Files/GitHub CLI/mt.com"
+      - "C:/Program Files/GitHub CLI/mt.exe"
+      - "C:/Program Files/GitHub CLI/mt"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/Scripts/mt.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/Scripts/mt.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/Scripts/mt"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/mt.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/mt.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/mt"
+      - "C:/Users/xsl/AppData/Local/Programs/Trae CN/bin/mt.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Trae CN/bin/mt.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Trae CN/bin/mt"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WindowsApps/mt.com"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WindowsApps/mt.exe"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WindowsApps/mt"
+      - "C:/Users/xsl/AppData/Local/Programs/Microsoft VS Code/bin/mt.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Microsoft VS Code/bin/mt.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Microsoft VS Code/bin/mt"
+      - "C:/Users/xsl/.dotnet/tools/mt.com"
+      - "C:/Users/xsl/.dotnet/tools/mt.exe"
+      - "C:/Users/xsl/.dotnet/tools/mt"
+      - "C:/Users/xsl/AppData/Local/Programs/Antigravity/bin/mt.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Antigravity/bin/mt.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Antigravity/bin/mt"
+      - "C:/Users/xsl/AppData/Roaming/npm/mt.com"
+      - "C:/Users/xsl/AppData/Roaming/npm/mt.exe"
+      - "C:/Users/xsl/AppData/Roaming/npm/mt"
+      - "C:/Users/xsl/AppData/Local/Programs/CodeBuddy CN/bin/mt.com"
+      - "C:/Users/xsl/AppData/Local/Programs/CodeBuddy CN/bin/mt.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/CodeBuddy CN/bin/mt"
+      - "C:/Users/xsl/AppData/Local/Programs/cursor/resources/app/bin/mt.com"
+      - "C:/Users/xsl/AppData/Local/Programs/cursor/resources/app/bin/mt.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/cursor/resources/app/bin/mt"
+      - "C:/Users/xsl/AppData/Local/Programs/Ollama/mt.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Ollama/mt.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Ollama/mt"
+      - "C:/Users/xsl/.lmstudio/bin/mt.com"
+      - "C:/Users/xsl/.lmstudio/bin/mt.exe"
+      - "C:/Users/xsl/.lmstudio/bin/mt"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/build-tools/34.0.0/mt.com"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/build-tools/34.0.0/mt.exe"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/build-tools/34.0.0/mt"
+      - "C:/Program Files/7-Zip/mt.com"
+      - "C:/Program Files/7-Zip/mt.exe"
+      - "C:/Program Files/7-Zip/mt"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WinGet/Packages/Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe/mt.com"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WinGet/Packages/Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe/mt.exe"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WinGet/Packages/Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe/mt"
+      - "C:/Program Files/Git/usr/bin/vendor_perl/mt.com"
+      - "C:/Program Files/Git/usr/bin/vendor_perl/mt.exe"
+      - "C:/Program Files/Git/usr/bin/vendor_perl/mt"
+      - "C:/Program Files/Git/usr/bin/core_perl/mt.com"
+      - "C:/Program Files/Git/usr/bin/core_perl/mt.exe"
+      - "C:/Program Files/Git/usr/bin/core_perl/mt"
+      - "C:/Users/xsl/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/ac922d91-0e2f-4370-a387-37bc3771c9e9/0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e/bin/mt.com"
+      - "C:/Users/xsl/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/ac922d91-0e2f-4370-a387-37bc3771c9e9/0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e/bin/mt.exe"
+      - "C:/Users/xsl/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/ac922d91-0e2f-4370-a387-37bc3771c9e9/0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e/bin/mt"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\xsl\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\local\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Users\\xsl\\bin"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\Java\\jdk-17\\bin"
+        - "C:\\VulkanSDK\\1.4.321.1\\Bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\TortoiseSVN\\bin"
+        - "C:\\Program Files\\TortoiseGit\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit"
+        - "C:\\Program Files\\dotnet"
+        - "C:\\Users\\xsl\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\nodejs"
+        - "C:\\Program Files\\GitHub CLI"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312\\Scripts"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Trae CN\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\xsl\\.dotnet\\tools"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\xsl\\AppData\\Roaming\\npm"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\CodeBuddy CN\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\xsl\\.lmstudio\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Android\\Sdk\\build-tools\\34.0.0"
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Users\\xsl\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Program Files\\nodejs"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin\\vendor_perl"
+        - "C:\\Program Files\\Git\\usr\\bin\\core_perl"
+        - "C:\\Users\\xsl\\AppData\\Roaming\\Claude\\local-agent-mode-sessions\\skills-plugin\\ac922d91-0e2f-4370-a387-37bc3771c9e9\\0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lib"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/"
+      - "C:/Users/xsl/bin/"
+      - "C:/Program Files/Git/mingw64/bin/"
+      - "C:/Program Files/Git/usr/local/bin/"
+      - "C:/Program Files/Git/usr/bin/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files/Java/jdk-17/bin/"
+      - "C:/VulkanSDK/1.4.321.1/Bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/TortoiseSVN/bin/"
+      - "C:/Program Files/TortoiseGit/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/platform-tools/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/GitHub CLI/"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/xsl/AppData/Local/Programs/Trae CN/bin/"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/xsl/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/xsl/.dotnet/tools/"
+      - "C:/Users/xsl/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/xsl/AppData/Roaming/npm/"
+      - "C:/Users/xsl/AppData/Local/Programs/CodeBuddy CN/bin/"
+      - "C:/Users/xsl/AppData/Local/Programs/cursor/resources/app/bin/"
+      - "C:/Users/xsl/AppData/Local/Programs/Ollama/"
+      - "C:/Users/xsl/.lmstudio/bin/"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/build-tools/34.0.0/"
+      - "C:/Program Files/7-Zip/"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WinGet/Packages/Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe/"
+      - "C:/Program Files/Git/usr/bin/vendor_perl/"
+      - "C:/Program Files/Git/usr/bin/core_perl/"
+      - "C:/Users/xsl/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/ac922d91-0e2f-4370-a387-37bc3771c9e9/0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/lib.com"
+    found: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/lib.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\xsl\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\local\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Users\\xsl\\bin"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\Java\\jdk-17\\bin"
+        - "C:\\VulkanSDK\\1.4.321.1\\Bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\TortoiseSVN\\bin"
+        - "C:\\Program Files\\TortoiseGit\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit"
+        - "C:\\Program Files\\dotnet"
+        - "C:\\Users\\xsl\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\nodejs"
+        - "C:\\Program Files\\GitHub CLI"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312\\Scripts"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Trae CN\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\xsl\\.dotnet\\tools"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\xsl\\AppData\\Roaming\\npm"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\CodeBuddy CN\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\xsl\\.lmstudio\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Android\\Sdk\\build-tools\\34.0.0"
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Users\\xsl\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Program Files\\nodejs"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin\\vendor_perl"
+        - "C:\\Program Files\\Git\\usr\\bin\\core_perl"
+        - "C:\\Users\\xsl\\AppData\\Roaming\\Claude\\local-agent-mode-sessions\\skills-plugin\\ac922d91-0e2f-4370-a387-37bc3771c9e9\\0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\xsl\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\local\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Users\\xsl\\bin"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\Java\\jdk-17\\bin"
+        - "C:\\VulkanSDK\\1.4.321.1\\Bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\TortoiseSVN\\bin"
+        - "C:\\Program Files\\TortoiseGit\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit"
+        - "C:\\Program Files\\dotnet"
+        - "C:\\Users\\xsl\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\nodejs"
+        - "C:\\Program Files\\GitHub CLI"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312\\Scripts"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Trae CN\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\xsl\\.dotnet\\tools"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\xsl\\AppData\\Roaming\\npm"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\CodeBuddy CN\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\xsl\\.lmstudio\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Android\\Sdk\\build-tools\\34.0.0"
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Users\\xsl\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Program Files\\nodejs"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin\\vendor_perl"
+        - "C:\\Program Files\\Git\\usr\\bin\\core_perl"
+        - "C:\\Users\\xsl\\AppData\\Roaming\\Claude\\local-agent-mode-sessions\\skills-plugin\\ac922d91-0e2f-4370-a387-37bc3771c9e9\\0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.19+164abd434
+      鐢熸垚鍚姩鏃堕棿涓?2026/5/17 13:16:46銆?
+      
+      鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\shadertoy\\Raymarching\\build\\CMakeFiles\\4.1.0-rc4\\CompilerIdCXX\\CompilerIdCXX.vcxproj鈥?榛樿鐩爣)銆?
+      PrepareForBuild:
+        姝ｅ湪鍒涘缓鐩綍鈥淒ebug\\鈥濄€?
+        宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+        姝ｅ湪鍒涘缓鐩綍鈥淒ebug\\CompilerIdCXX.tlog\\鈥濄€?
+      InitializeBuildStatus:
+        姝ｅ湪鍒涘缓鈥淒ebug\\CompilerIdCXX.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+        姝ｅ湪瀵光€淒ebug\\CompilerIdCXX.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> D:\\shadertoy\\Raymarching\\build\\CMakeFiles\\4.1.0-rc4\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        姝ｅ湪鍒犻櫎鏂囦欢鈥淒ebug\\CompilerIdCXX.tlog\\unsuccessfulbuild鈥濄€?
+        姝ｅ湪瀵光€淒ebug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+      宸插畬鎴愮敓鎴愰」鐩€淒:\\shadertoy\\Raymarching\\build\\CMakeFiles\\4.1.0-rc4\\CompilerIdCXX\\CompilerIdCXX.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+      
+      宸叉垚鍔熺敓鎴愩€?
+          0 涓鍛?
+          0 涓敊璇?
+      
+      宸茬敤鏃堕棿 00:00:00.43
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        D:/shadertoy/Raymarching/build/CMakeFiles/4.1.0-rc4/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/"
+      - "C:/Users/xsl/bin/"
+      - "C:/Program Files/Git/mingw64/bin/"
+      - "C:/Program Files/Git/usr/local/bin/"
+      - "C:/Program Files/Git/usr/bin/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files/Java/jdk-17/bin/"
+      - "C:/VulkanSDK/1.4.321.1/Bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/TortoiseSVN/bin/"
+      - "C:/Program Files/TortoiseGit/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/platform-tools/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/GitHub CLI/"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/xsl/AppData/Local/Programs/Trae CN/bin/"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/xsl/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/xsl/.dotnet/tools/"
+      - "C:/Users/xsl/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/xsl/AppData/Roaming/npm/"
+      - "C:/Users/xsl/AppData/Local/Programs/CodeBuddy CN/bin/"
+      - "C:/Users/xsl/AppData/Local/Programs/cursor/resources/app/bin/"
+      - "C:/Users/xsl/AppData/Local/Programs/Ollama/"
+      - "C:/Users/xsl/.lmstudio/bin/"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/build-tools/34.0.0/"
+      - "C:/Program Files/7-Zip/"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WinGet/Packages/Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe/"
+      - "C:/Program Files/Git/usr/bin/vendor_perl/"
+      - "C:/Program Files/Git/usr/bin/core_perl/"
+      - "C:/Users/xsl/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/ac922d91-0e2f-4370-a387-37bc3771c9e9/0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/lld-link"
+      - "C:/Users/xsl/bin/lld-link.com"
+      - "C:/Users/xsl/bin/lld-link.exe"
+      - "C:/Users/xsl/bin/lld-link"
+      - "C:/Program Files/Git/mingw64/bin/lld-link.com"
+      - "C:/Program Files/Git/mingw64/bin/lld-link.exe"
+      - "C:/Program Files/Git/mingw64/bin/lld-link"
+      - "C:/Program Files/Git/usr/local/bin/lld-link.com"
+      - "C:/Program Files/Git/usr/local/bin/lld-link.exe"
+      - "C:/Program Files/Git/usr/local/bin/lld-link"
+      - "C:/Program Files/Git/usr/bin/lld-link.com"
+      - "C:/Program Files/Git/usr/bin/lld-link.exe"
+      - "C:/Program Files/Git/usr/bin/lld-link"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link"
+      - "C:/Program Files/Java/jdk-17/bin/lld-link.com"
+      - "C:/Program Files/Java/jdk-17/bin/lld-link.exe"
+      - "C:/Program Files/Java/jdk-17/bin/lld-link"
+      - "C:/VulkanSDK/1.4.321.1/Bin/lld-link.com"
+      - "C:/VulkanSDK/1.4.321.1/Bin/lld-link.exe"
+      - "C:/VulkanSDK/1.4.321.1/Bin/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link"
+      - "C:/Program Files/Git/cmd/lld-link.com"
+      - "C:/Program Files/Git/cmd/lld-link.exe"
+      - "C:/Program Files/Git/cmd/lld-link"
+      - "C:/Program Files/TortoiseSVN/bin/lld-link.com"
+      - "C:/Program Files/TortoiseSVN/bin/lld-link.exe"
+      - "C:/Program Files/TortoiseSVN/bin/lld-link"
+      - "C:/Program Files/TortoiseGit/bin/lld-link.com"
+      - "C:/Program Files/TortoiseGit/bin/lld-link.exe"
+      - "C:/Program Files/TortoiseGit/bin/lld-link"
+      - "C:/Program Files/CMake/bin/lld-link.com"
+      - "C:/Program Files/CMake/bin/lld-link.exe"
+      - "C:/Program Files/CMake/bin/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link"
+      - "C:/Program Files/dotnet/lld-link.com"
+      - "C:/Program Files/dotnet/lld-link.exe"
+      - "C:/Program Files/dotnet/lld-link"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/platform-tools/lld-link.com"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/platform-tools/lld-link.exe"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/platform-tools/lld-link"
+      - "C:/ProgramData/chocolatey/bin/lld-link.com"
+      - "C:/ProgramData/chocolatey/bin/lld-link.exe"
+      - "C:/ProgramData/chocolatey/bin/lld-link"
+      - "C:/Program Files/nodejs/lld-link.com"
+      - "C:/Program Files/nodejs/lld-link.exe"
+      - "C:/Program Files/nodejs/lld-link"
+      - "C:/Program Files/GitHub CLI/lld-link.com"
+      - "C:/Program Files/GitHub CLI/lld-link.exe"
+      - "C:/Program Files/GitHub CLI/lld-link"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/Scripts/lld-link.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/Scripts/lld-link.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/Scripts/lld-link"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/lld-link.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/lld-link.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/lld-link"
+      - "C:/Users/xsl/AppData/Local/Programs/Trae CN/bin/lld-link.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Trae CN/bin/lld-link.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Trae CN/bin/lld-link"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Users/xsl/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Microsoft VS Code/bin/lld-link"
+      - "C:/Users/xsl/.dotnet/tools/lld-link.com"
+      - "C:/Users/xsl/.dotnet/tools/lld-link.exe"
+      - "C:/Users/xsl/.dotnet/tools/lld-link"
+      - "C:/Users/xsl/AppData/Local/Programs/Antigravity/bin/lld-link.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Antigravity/bin/lld-link.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Antigravity/bin/lld-link"
+      - "C:/Users/xsl/AppData/Roaming/npm/lld-link.com"
+      - "C:/Users/xsl/AppData/Roaming/npm/lld-link.exe"
+      - "C:/Users/xsl/AppData/Roaming/npm/lld-link"
+      - "C:/Users/xsl/AppData/Local/Programs/CodeBuddy CN/bin/lld-link.com"
+      - "C:/Users/xsl/AppData/Local/Programs/CodeBuddy CN/bin/lld-link.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/CodeBuddy CN/bin/lld-link"
+      - "C:/Users/xsl/AppData/Local/Programs/cursor/resources/app/bin/lld-link.com"
+      - "C:/Users/xsl/AppData/Local/Programs/cursor/resources/app/bin/lld-link.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/cursor/resources/app/bin/lld-link"
+      - "C:/Users/xsl/AppData/Local/Programs/Ollama/lld-link.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Ollama/lld-link.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Ollama/lld-link"
+      - "C:/Users/xsl/.lmstudio/bin/lld-link.com"
+      - "C:/Users/xsl/.lmstudio/bin/lld-link.exe"
+      - "C:/Users/xsl/.lmstudio/bin/lld-link"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/build-tools/34.0.0/lld-link.com"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/build-tools/34.0.0/lld-link.exe"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/build-tools/34.0.0/lld-link"
+      - "C:/Program Files/7-Zip/lld-link.com"
+      - "C:/Program Files/7-Zip/lld-link.exe"
+      - "C:/Program Files/7-Zip/lld-link"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WinGet/Packages/Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe/lld-link.com"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WinGet/Packages/Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe/lld-link.exe"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WinGet/Packages/Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe/lld-link"
+      - "C:/Program Files/Git/usr/bin/vendor_perl/lld-link.com"
+      - "C:/Program Files/Git/usr/bin/vendor_perl/lld-link.exe"
+      - "C:/Program Files/Git/usr/bin/vendor_perl/lld-link"
+      - "C:/Program Files/Git/usr/bin/core_perl/lld-link.com"
+      - "C:/Program Files/Git/usr/bin/core_perl/lld-link.exe"
+      - "C:/Program Files/Git/usr/bin/core_perl/lld-link"
+      - "C:/Users/xsl/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/ac922d91-0e2f-4370-a387-37bc3771c9e9/0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e/bin/lld-link.com"
+      - "C:/Users/xsl/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/ac922d91-0e2f-4370-a387-37bc3771c9e9/0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e/bin/lld-link.exe"
+      - "C:/Users/xsl/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/ac922d91-0e2f-4370-a387-37bc3771c9e9/0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e/bin/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\xsl\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\local\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Users\\xsl\\bin"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\Java\\jdk-17\\bin"
+        - "C:\\VulkanSDK\\1.4.321.1\\Bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\TortoiseSVN\\bin"
+        - "C:\\Program Files\\TortoiseGit\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit"
+        - "C:\\Program Files\\dotnet"
+        - "C:\\Users\\xsl\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\nodejs"
+        - "C:\\Program Files\\GitHub CLI"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312\\Scripts"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Trae CN\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\xsl\\.dotnet\\tools"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\xsl\\AppData\\Roaming\\npm"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\CodeBuddy CN\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\xsl\\.lmstudio\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Android\\Sdk\\build-tools\\34.0.0"
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Users\\xsl\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Program Files\\nodejs"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin\\vendor_perl"
+        - "C:\\Program Files\\Git\\usr\\bin\\core_perl"
+        - "C:\\Users\\xsl\\AppData\\Roaming\\Claude\\local-agent-mode-sessions\\skills-plugin\\ac922d91-0e2f-4370-a387-37bc3771c9e9\\0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineRCCompiler.cmake:40 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/Platform/Windows-MSVC.cmake:573 (enable_language)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/Platform/Windows-MSVC.cmake:546 (__windows_compiler_msvc_enable_rc)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/Platform/Windows-MSVC-C.cmake:5 (__windows_compiler_msvc)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCInformation.cmake:48 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_RC_COMPILER"
+    description: "RC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "rc"
+    candidate_directories:
+      - "C:/Users/xsl/bin/"
+      - "C:/Program Files/Git/mingw64/bin/"
+      - "C:/Program Files/Git/usr/local/bin/"
+      - "C:/Program Files/Git/usr/bin/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files/Java/jdk-17/bin/"
+      - "C:/VulkanSDK/1.4.321.1/Bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/TortoiseSVN/bin/"
+      - "C:/Program Files/TortoiseGit/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/platform-tools/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/GitHub CLI/"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/xsl/AppData/Local/Programs/Trae CN/bin/"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/xsl/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/xsl/.dotnet/tools/"
+      - "C:/Users/xsl/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/xsl/AppData/Roaming/npm/"
+      - "C:/Users/xsl/AppData/Local/Programs/CodeBuddy CN/bin/"
+      - "C:/Users/xsl/AppData/Local/Programs/cursor/resources/app/bin/"
+      - "C:/Users/xsl/AppData/Local/Programs/Ollama/"
+      - "C:/Users/xsl/.lmstudio/bin/"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/build-tools/34.0.0/"
+      - "C:/Program Files/7-Zip/"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WinGet/Packages/Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe/"
+      - "C:/Program Files/Git/usr/bin/vendor_perl/"
+      - "C:/Program Files/Git/usr/bin/core_perl/"
+      - "C:/Users/xsl/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/ac922d91-0e2f-4370-a387-37bc3771c9e9/0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e/bin/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/CMake/sbin/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files/shadertoy_sdf/bin/"
+      - "C:/Program Files/shadertoy_sdf/sbin/"
+      - "C:/Program Files/shadertoy_sdf/"
+    searched_directories:
+      - "C:/Users/xsl/bin/rc.com"
+      - "C:/Users/xsl/bin/rc.exe"
+      - "C:/Users/xsl/bin/rc"
+      - "C:/Program Files/Git/mingw64/bin/rc.com"
+      - "C:/Program Files/Git/mingw64/bin/rc.exe"
+      - "C:/Program Files/Git/mingw64/bin/rc"
+      - "C:/Program Files/Git/usr/local/bin/rc.com"
+      - "C:/Program Files/Git/usr/local/bin/rc.exe"
+      - "C:/Program Files/Git/usr/local/bin/rc"
+      - "C:/Program Files/Git/usr/bin/rc.com"
+      - "C:/Program Files/Git/usr/bin/rc.exe"
+      - "C:/Program Files/Git/usr/bin/rc"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/rc.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/rc.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/rc"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/rc.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/rc.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/rc"
+      - "C:/Program Files/Java/jdk-17/bin/rc.com"
+      - "C:/Program Files/Java/jdk-17/bin/rc.exe"
+      - "C:/Program Files/Java/jdk-17/bin/rc"
+      - "C:/VulkanSDK/1.4.321.1/Bin/rc.com"
+      - "C:/VulkanSDK/1.4.321.1/Bin/rc.exe"
+      - "C:/VulkanSDK/1.4.321.1/Bin/rc"
+      - "C:/Windows/System32/rc.com"
+      - "C:/Windows/System32/rc.exe"
+      - "C:/Windows/System32/rc"
+      - "C:/Windows/rc.com"
+      - "C:/Windows/rc.exe"
+      - "C:/Windows/rc"
+      - "C:/Windows/System32/wbem/rc.com"
+      - "C:/Windows/System32/wbem/rc.exe"
+      - "C:/Windows/System32/wbem/rc"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc"
+      - "C:/Windows/System32/OpenSSH/rc.com"
+      - "C:/Windows/System32/OpenSSH/rc.exe"
+      - "C:/Windows/System32/OpenSSH/rc"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/rc.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/rc.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/rc"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc"
+      - "C:/Program Files/Git/cmd/rc.com"
+      - "C:/Program Files/Git/cmd/rc.exe"
+      - "C:/Program Files/Git/cmd/rc"
+      - "C:/Program Files/TortoiseSVN/bin/rc.com"
+      - "C:/Program Files/TortoiseSVN/bin/rc.exe"
+      - "C:/Program Files/TortoiseSVN/bin/rc"
+      - "C:/Program Files/TortoiseGit/bin/rc.com"
+      - "C:/Program Files/TortoiseGit/bin/rc.exe"
+      - "C:/Program Files/TortoiseGit/bin/rc"
+      - "C:/Program Files/CMake/bin/rc.com"
+      - "C:/Program Files/CMake/bin/rc.exe"
+      - "C:/Program Files/CMake/bin/rc"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc"
+      - "C:/Program Files/dotnet/rc.com"
+      - "C:/Program Files/dotnet/rc.exe"
+      - "C:/Program Files/dotnet/rc"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/platform-tools/rc.com"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/platform-tools/rc.exe"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/platform-tools/rc"
+      - "C:/ProgramData/chocolatey/bin/rc.com"
+      - "C:/ProgramData/chocolatey/bin/rc.exe"
+      - "C:/ProgramData/chocolatey/bin/rc"
+      - "C:/Program Files/nodejs/rc.com"
+      - "C:/Program Files/nodejs/rc.exe"
+      - "C:/Program Files/nodejs/rc"
+      - "C:/Program Files/GitHub CLI/rc.com"
+      - "C:/Program Files/GitHub CLI/rc.exe"
+      - "C:/Program Files/GitHub CLI/rc"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/Scripts/rc.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/Scripts/rc.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/Scripts/rc"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/rc.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/rc.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/rc"
+      - "C:/Users/xsl/AppData/Local/Programs/Trae CN/bin/rc.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Trae CN/bin/rc.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Trae CN/bin/rc"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WindowsApps/rc.com"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WindowsApps/rc.exe"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WindowsApps/rc"
+      - "C:/Users/xsl/AppData/Local/Programs/Microsoft VS Code/bin/rc.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Microsoft VS Code/bin/rc.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Microsoft VS Code/bin/rc"
+      - "C:/Users/xsl/.dotnet/tools/rc.com"
+      - "C:/Users/xsl/.dotnet/tools/rc.exe"
+      - "C:/Users/xsl/.dotnet/tools/rc"
+      - "C:/Users/xsl/AppData/Local/Programs/Antigravity/bin/rc.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Antigravity/bin/rc.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Antigravity/bin/rc"
+      - "C:/Users/xsl/AppData/Roaming/npm/rc.com"
+      - "C:/Users/xsl/AppData/Roaming/npm/rc.exe"
+      - "C:/Users/xsl/AppData/Roaming/npm/rc"
+      - "C:/Users/xsl/AppData/Local/Programs/CodeBuddy CN/bin/rc.com"
+      - "C:/Users/xsl/AppData/Local/Programs/CodeBuddy CN/bin/rc.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/CodeBuddy CN/bin/rc"
+      - "C:/Users/xsl/AppData/Local/Programs/cursor/resources/app/bin/rc.com"
+      - "C:/Users/xsl/AppData/Local/Programs/cursor/resources/app/bin/rc.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/cursor/resources/app/bin/rc"
+      - "C:/Users/xsl/AppData/Local/Programs/Ollama/rc.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Ollama/rc.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Ollama/rc"
+      - "C:/Users/xsl/.lmstudio/bin/rc.com"
+      - "C:/Users/xsl/.lmstudio/bin/rc.exe"
+      - "C:/Users/xsl/.lmstudio/bin/rc"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/build-tools/34.0.0/rc.com"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/build-tools/34.0.0/rc.exe"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/build-tools/34.0.0/rc"
+      - "C:/Program Files/7-Zip/rc.com"
+      - "C:/Program Files/7-Zip/rc.exe"
+      - "C:/Program Files/7-Zip/rc"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WinGet/Packages/Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe/rc.com"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WinGet/Packages/Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe/rc.exe"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WinGet/Packages/Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe/rc"
+      - "C:/Program Files/Git/usr/bin/vendor_perl/rc.com"
+      - "C:/Program Files/Git/usr/bin/vendor_perl/rc.exe"
+      - "C:/Program Files/Git/usr/bin/vendor_perl/rc"
+      - "C:/Program Files/Git/usr/bin/core_perl/rc.com"
+      - "C:/Program Files/Git/usr/bin/core_perl/rc.exe"
+      - "C:/Program Files/Git/usr/bin/core_perl/rc"
+      - "C:/Users/xsl/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/ac922d91-0e2f-4370-a387-37bc3771c9e9/0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e/bin/rc.com"
+      - "C:/Users/xsl/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/ac922d91-0e2f-4370-a387-37bc3771c9e9/0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e/bin/rc.exe"
+      - "C:/Users/xsl/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/ac922d91-0e2f-4370-a387-37bc3771c9e9/0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e/bin/rc"
+      - "C:/Program Files/bin/rc.com"
+      - "C:/Program Files/bin/rc.exe"
+      - "C:/Program Files/bin/rc"
+      - "C:/Program Files/sbin/rc.com"
+      - "C:/Program Files/sbin/rc.exe"
+      - "C:/Program Files/sbin/rc"
+      - "C:/Program Files/rc.com"
+      - "C:/Program Files/rc.exe"
+      - "C:/Program Files/rc"
+      - "C:/Program Files (x86)/bin/rc.com"
+      - "C:/Program Files (x86)/bin/rc.exe"
+      - "C:/Program Files (x86)/bin/rc"
+      - "C:/Program Files (x86)/sbin/rc.com"
+      - "C:/Program Files (x86)/sbin/rc.exe"
+      - "C:/Program Files (x86)/sbin/rc"
+      - "C:/Program Files (x86)/rc.com"
+      - "C:/Program Files (x86)/rc.exe"
+      - "C:/Program Files (x86)/rc"
+      - "C:/Program Files/CMake/bin/rc.com"
+      - "C:/Program Files/CMake/bin/rc.exe"
+      - "C:/Program Files/CMake/bin/rc"
+      - "C:/Program Files/CMake/sbin/rc.com"
+      - "C:/Program Files/CMake/sbin/rc.exe"
+      - "C:/Program Files/CMake/sbin/rc"
+      - "C:/Program Files/CMake/rc.com"
+      - "C:/Program Files/CMake/rc.exe"
+      - "C:/Program Files/CMake/rc"
+      - "C:/Program Files/shadertoy_sdf/bin/rc.com"
+      - "C:/Program Files/shadertoy_sdf/bin/rc.exe"
+      - "C:/Program Files/shadertoy_sdf/bin/rc"
+      - "C:/Program Files/shadertoy_sdf/sbin/rc.com"
+      - "C:/Program Files/shadertoy_sdf/sbin/rc.exe"
+      - "C:/Program Files/shadertoy_sdf/sbin/rc"
+      - "C:/Program Files/shadertoy_sdf/rc.com"
+      - "C:/Program Files/shadertoy_sdf/rc.exe"
+      - "C:/Program Files/shadertoy_sdf/rc"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\xsl\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\local\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Users\\xsl\\bin"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\Java\\jdk-17\\bin"
+        - "C:\\VulkanSDK\\1.4.321.1\\Bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\TortoiseSVN\\bin"
+        - "C:\\Program Files\\TortoiseGit\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit"
+        - "C:\\Program Files\\dotnet"
+        - "C:\\Users\\xsl\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\nodejs"
+        - "C:\\Program Files\\GitHub CLI"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312\\Scripts"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Trae CN\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\xsl\\.dotnet\\tools"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\xsl\\AppData\\Roaming\\npm"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\CodeBuddy CN\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\xsl\\.lmstudio\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Android\\Sdk\\build-tools\\34.0.0"
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Users\\xsl\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Program Files\\nodejs"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin\\vendor_perl"
+        - "C:\\Program Files\\Git\\usr\\bin\\core_perl"
+        - "C:\\Users\\xsl\\AppData\\Roaming\\Claude\\local-agent-mode-sessions\\skills-plugin\\ac922d91-0e2f-4370-a387-37bc3771c9e9\\0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/shadertoy_sdf"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/shadertoy_sdf"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "D:/shadertoy/Raymarching/build/CMakeFiles/CMakeScratch/TryCompile-95x5pz"
+      binary: "D:/shadertoy/Raymarching/build/CMakeFiles/CMakeScratch/TryCompile-95x5pz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/shadertoy/Raymarching/build/CMakeFiles/CMakeScratch/TryCompile-95x5pz'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ca8fc.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.19+164abd434
+        鐢熸垚鍚姩鏃堕棿涓?2026/5/17 13:16:47銆?
+        
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-95x5pz\\cmTC_ca8fc.vcxproj鈥?榛樿鐩爣)銆?
+        PrepareForBuild:
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_ca8fc.dir\\Debug\\鈥濄€?
+          宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-95x5pz\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_ca8fc.dir\\Debug\\cmTC_ca8fc.tlog\\鈥濄€?
+        InitializeBuildStatus:
+          姝ｅ湪鍒涘缓鈥渃mTC_ca8fc.dir\\Debug\\cmTC_ca8fc.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_ca8fc.dir\\Debug\\cmTC_ca8fc.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_ca8fc.dir\\Debug\\\\" /Fd"cmTC_ca8fc.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c"
+          鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.38.33145 鐗?
+          鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_ca8fc.dir\\Debug\\\\" /Fd"cmTC_ca8fc.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-95x5pz\\Debug\\cmTC_ca8fc.exe" /INCREMENTAL /ILK:"cmTC_ca8fc.dir\\Debug\\cmTC_ca8fc.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/shadertoy/Raymarching/build/CMakeFiles/CMakeScratch/TryCompile-95x5pz/Debug/cmTC_ca8fc.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/shadertoy/Raymarching/build/CMakeFiles/CMakeScratch/TryCompile-95x5pz/Debug/cmTC_ca8fc.lib" /MACHINE:X64  /machine:x64 cmTC_ca8fc.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_ca8fc.vcxproj -> D:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-95x5pz\\Debug\\cmTC_ca8fc.exe
+        FinalizeBuildStatus:
+          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_ca8fc.dir\\Debug\\cmTC_ca8fc.tlog\\unsuccessfulbuild鈥濄€?
+          姝ｅ湪瀵光€渃mTC_ca8fc.dir\\Debug\\cmTC_ca8fc.tlog\\cmTC_ca8fc.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-95x5pz\\cmTC_ca8fc.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+        
+        宸叉垚鍔熺敓鎴愩€?
+            0 涓鍛?
+            0 涓敊璇?
+        
+        宸茬敤鏃堕棿 00:00:00.38
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the C compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.38.33145.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "D:/shadertoy/Raymarching/build/CMakeFiles/CMakeScratch/TryCompile-eo5xea"
+      binary: "D:/shadertoy/Raymarching/build/CMakeFiles/CMakeScratch/TryCompile-eo5xea"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/shadertoy/Raymarching/build/CMakeFiles/CMakeScratch/TryCompile-eo5xea'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_73ece.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.19+164abd434
+        鐢熸垚鍚姩鏃堕棿涓?2026/5/17 13:16:48銆?
+        
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eo5xea\\cmTC_73ece.vcxproj鈥?榛樿鐩爣)銆?
+        PrepareForBuild:
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_73ece.dir\\Debug\\鈥濄€?
+          宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eo5xea\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_73ece.dir\\Debug\\cmTC_73ece.tlog\\鈥濄€?
+        InitializeBuildStatus:
+          姝ｅ湪鍒涘缓鈥渃mTC_73ece.dir\\Debug\\cmTC_73ece.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_73ece.dir\\Debug\\cmTC_73ece.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /GR /Fo"cmTC_73ece.dir\\Debug\\\\" /Fd"cmTC_73ece.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
+          鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.38.33145 鐗?
+          鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /GR /Fo"cmTC_73ece.dir\\Debug\\\\" /Fd"cmTC_73ece.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eo5xea\\Debug\\cmTC_73ece.exe" /INCREMENTAL /ILK:"cmTC_73ece.dir\\Debug\\cmTC_73ece.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/shadertoy/Raymarching/build/CMakeFiles/CMakeScratch/TryCompile-eo5xea/Debug/cmTC_73ece.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/shadertoy/Raymarching/build/CMakeFiles/CMakeScratch/TryCompile-eo5xea/Debug/cmTC_73ece.lib" /MACHINE:X64  /machine:x64 cmTC_73ece.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_73ece.vcxproj -> D:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eo5xea\\Debug\\cmTC_73ece.exe
+        FinalizeBuildStatus:
+          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_73ece.dir\\Debug\\cmTC_73ece.tlog\\unsuccessfulbuild鈥濄€?
+          姝ｅ湪瀵光€渃mTC_73ece.dir\\Debug\\cmTC_73ece.tlog\\cmTC_73ece.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eo5xea\\cmTC_73ece.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+        
+        宸叉垚鍔熺敓鎴愩€?
+            0 涓鍛?
+            0 涓敊璇?
+        
+        宸茬敤鏃堕棿 00:00:00.39
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.38.33145.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/FindGit.cmake:86 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/FetchContent.cmake:1874 (find_package)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/FetchContent.cmake:1609 (__FetchContent_populateSubbuild)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/FetchContent.cmake:2145:EVAL:2 (__FetchContent_doPopulation)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/FetchContent.cmake:2145 (cmake_language)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/FetchContent.cmake:2384 (__FetchContent_Populate)"
+      - "CMakeLists.txt:19 (FetchContent_MakeAvailable)"
+    mode: "program"
+    variable: "GIT_EXECUTABLE"
+    description: "Git command line client"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "git.cmd"
+      - "git"
+    candidate_directories:
+      - "C:/Users/xsl/bin/"
+      - "C:/Program Files/Git/mingw64/bin/"
+      - "C:/Program Files/Git/usr/local/bin/"
+      - "C:/Program Files/Git/usr/bin/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files/Java/jdk-17/bin/"
+      - "C:/VulkanSDK/1.4.321.1/Bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/TortoiseSVN/bin/"
+      - "C:/Program Files/TortoiseGit/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/platform-tools/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/GitHub CLI/"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/xsl/AppData/Local/Programs/Trae CN/bin/"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/xsl/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/xsl/.dotnet/tools/"
+      - "C:/Users/xsl/AppData/Local/Programs/Antigravity/bin/"
+      - "C:/Users/xsl/AppData/Roaming/npm/"
+      - "C:/Users/xsl/AppData/Local/Programs/CodeBuddy CN/bin/"
+      - "C:/Users/xsl/AppData/Local/Programs/cursor/resources/app/bin/"
+      - "C:/Users/xsl/AppData/Local/Programs/Ollama/"
+      - "C:/Users/xsl/.lmstudio/bin/"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/build-tools/34.0.0/"
+      - "C:/Program Files/7-Zip/"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WinGet/Packages/Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe/"
+      - "C:/Program Files/Git/usr/bin/vendor_perl/"
+      - "C:/Program Files/Git/usr/bin/core_perl/"
+      - "C:/Users/xsl/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/ac922d91-0e2f-4370-a387-37bc3771c9e9/0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e/bin/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/CMake/sbin/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files/shadertoy_sdf/bin/"
+      - "C:/Program Files/shadertoy_sdf/sbin/"
+      - "C:/Program Files/shadertoy_sdf/"
+      - "C:/Users/xsl/AppData/Local/Atlassian/SourceTree/git_local/bin/"
+    searched_directories:
+      - "C:/Users/xsl/bin/git.cmd.com"
+      - "C:/Users/xsl/bin/git.cmd.exe"
+      - "C:/Users/xsl/bin/git.cmd"
+      - "C:/Program Files/Git/mingw64/bin/git.cmd.com"
+      - "C:/Program Files/Git/mingw64/bin/git.cmd.exe"
+      - "C:/Program Files/Git/mingw64/bin/git.cmd"
+      - "C:/Program Files/Git/usr/local/bin/git.cmd.com"
+      - "C:/Program Files/Git/usr/local/bin/git.cmd.exe"
+      - "C:/Program Files/Git/usr/local/bin/git.cmd"
+      - "C:/Program Files/Git/usr/bin/git.cmd.com"
+      - "C:/Program Files/Git/usr/bin/git.cmd.exe"
+      - "C:/Program Files/Git/usr/bin/git.cmd"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/git.cmd.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/git.cmd.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/git.cmd"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/git.cmd.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/git.cmd.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/git.cmd"
+      - "C:/Program Files/Java/jdk-17/bin/git.cmd.com"
+      - "C:/Program Files/Java/jdk-17/bin/git.cmd.exe"
+      - "C:/Program Files/Java/jdk-17/bin/git.cmd"
+      - "C:/VulkanSDK/1.4.321.1/Bin/git.cmd.com"
+      - "C:/VulkanSDK/1.4.321.1/Bin/git.cmd.exe"
+      - "C:/VulkanSDK/1.4.321.1/Bin/git.cmd"
+      - "C:/Windows/System32/git.cmd.com"
+      - "C:/Windows/System32/git.cmd.exe"
+      - "C:/Windows/System32/git.cmd"
+      - "C:/Windows/git.cmd.com"
+      - "C:/Windows/git.cmd.exe"
+      - "C:/Windows/git.cmd"
+      - "C:/Windows/System32/wbem/git.cmd.com"
+      - "C:/Windows/System32/wbem/git.cmd.exe"
+      - "C:/Windows/System32/wbem/git.cmd"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/git.cmd.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/git.cmd.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/git.cmd"
+      - "C:/Windows/System32/OpenSSH/git.cmd.com"
+      - "C:/Windows/System32/OpenSSH/git.cmd.exe"
+      - "C:/Windows/System32/OpenSSH/git.cmd"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/git.cmd.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/git.cmd.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/git.cmd"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/git.cmd.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/git.cmd.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/git.cmd"
+      - "C:/Program Files/Git/cmd/git.cmd.com"
+      - "C:/Program Files/Git/cmd/git.cmd.exe"
+      - "C:/Program Files/Git/cmd/git.cmd"
+      - "C:/Program Files/TortoiseSVN/bin/git.cmd.com"
+      - "C:/Program Files/TortoiseSVN/bin/git.cmd.exe"
+      - "C:/Program Files/TortoiseSVN/bin/git.cmd"
+      - "C:/Program Files/TortoiseGit/bin/git.cmd.com"
+      - "C:/Program Files/TortoiseGit/bin/git.cmd.exe"
+      - "C:/Program Files/TortoiseGit/bin/git.cmd"
+      - "C:/Program Files/CMake/bin/git.cmd.com"
+      - "C:/Program Files/CMake/bin/git.cmd.exe"
+      - "C:/Program Files/CMake/bin/git.cmd"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/git.cmd.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/git.cmd.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/git.cmd"
+      - "C:/Program Files/dotnet/git.cmd.com"
+      - "C:/Program Files/dotnet/git.cmd.exe"
+      - "C:/Program Files/dotnet/git.cmd"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/platform-tools/git.cmd.com"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/platform-tools/git.cmd.exe"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/platform-tools/git.cmd"
+      - "C:/ProgramData/chocolatey/bin/git.cmd.com"
+      - "C:/ProgramData/chocolatey/bin/git.cmd.exe"
+      - "C:/ProgramData/chocolatey/bin/git.cmd"
+      - "C:/Program Files/nodejs/git.cmd.com"
+      - "C:/Program Files/nodejs/git.cmd.exe"
+      - "C:/Program Files/nodejs/git.cmd"
+      - "C:/Program Files/GitHub CLI/git.cmd.com"
+      - "C:/Program Files/GitHub CLI/git.cmd.exe"
+      - "C:/Program Files/GitHub CLI/git.cmd"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/Scripts/git.cmd.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/Scripts/git.cmd.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/Scripts/git.cmd"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/git.cmd.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/git.cmd.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Python/Python312/git.cmd"
+      - "C:/Users/xsl/AppData/Local/Programs/Trae CN/bin/git.cmd.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Trae CN/bin/git.cmd.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Trae CN/bin/git.cmd"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WindowsApps/git.cmd.com"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WindowsApps/git.cmd.exe"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WindowsApps/git.cmd"
+      - "C:/Users/xsl/AppData/Local/Programs/Microsoft VS Code/bin/git.cmd.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Microsoft VS Code/bin/git.cmd.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Microsoft VS Code/bin/git.cmd"
+      - "C:/Users/xsl/.dotnet/tools/git.cmd.com"
+      - "C:/Users/xsl/.dotnet/tools/git.cmd.exe"
+      - "C:/Users/xsl/.dotnet/tools/git.cmd"
+      - "C:/Users/xsl/AppData/Local/Programs/Antigravity/bin/git.cmd.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Antigravity/bin/git.cmd.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Antigravity/bin/git.cmd"
+      - "C:/Users/xsl/AppData/Roaming/npm/git.cmd.com"
+      - "C:/Users/xsl/AppData/Roaming/npm/git.cmd.exe"
+      - "C:/Users/xsl/AppData/Roaming/npm/git.cmd"
+      - "C:/Users/xsl/AppData/Local/Programs/CodeBuddy CN/bin/git.cmd.com"
+      - "C:/Users/xsl/AppData/Local/Programs/CodeBuddy CN/bin/git.cmd.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/CodeBuddy CN/bin/git.cmd"
+      - "C:/Users/xsl/AppData/Local/Programs/cursor/resources/app/bin/git.cmd.com"
+      - "C:/Users/xsl/AppData/Local/Programs/cursor/resources/app/bin/git.cmd.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/cursor/resources/app/bin/git.cmd"
+      - "C:/Users/xsl/AppData/Local/Programs/Ollama/git.cmd.com"
+      - "C:/Users/xsl/AppData/Local/Programs/Ollama/git.cmd.exe"
+      - "C:/Users/xsl/AppData/Local/Programs/Ollama/git.cmd"
+      - "C:/Users/xsl/.lmstudio/bin/git.cmd.com"
+      - "C:/Users/xsl/.lmstudio/bin/git.cmd.exe"
+      - "C:/Users/xsl/.lmstudio/bin/git.cmd"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/build-tools/34.0.0/git.cmd.com"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/build-tools/34.0.0/git.cmd.exe"
+      - "C:/Users/xsl/AppData/Local/Android/Sdk/build-tools/34.0.0/git.cmd"
+      - "C:/Program Files/7-Zip/git.cmd.com"
+      - "C:/Program Files/7-Zip/git.cmd.exe"
+      - "C:/Program Files/7-Zip/git.cmd"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WinGet/Packages/Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe/git.cmd.com"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WinGet/Packages/Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe/git.cmd.exe"
+      - "C:/Users/xsl/AppData/Local/Microsoft/WinGet/Packages/Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe/git.cmd"
+      - "C:/Program Files/Git/usr/bin/vendor_perl/git.cmd.com"
+      - "C:/Program Files/Git/usr/bin/vendor_perl/git.cmd.exe"
+      - "C:/Program Files/Git/usr/bin/vendor_perl/git.cmd"
+      - "C:/Program Files/Git/usr/bin/core_perl/git.cmd.com"
+      - "C:/Program Files/Git/usr/bin/core_perl/git.cmd.exe"
+      - "C:/Program Files/Git/usr/bin/core_perl/git.cmd"
+      - "C:/Users/xsl/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/ac922d91-0e2f-4370-a387-37bc3771c9e9/0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e/bin/git.cmd.com"
+      - "C:/Users/xsl/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/ac922d91-0e2f-4370-a387-37bc3771c9e9/0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e/bin/git.cmd.exe"
+      - "C:/Users/xsl/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/ac922d91-0e2f-4370-a387-37bc3771c9e9/0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e/bin/git.cmd"
+      - "C:/Program Files/bin/git.cmd.com"
+      - "C:/Program Files/bin/git.cmd.exe"
+      - "C:/Program Files/bin/git.cmd"
+      - "C:/Program Files/sbin/git.cmd.com"
+      - "C:/Program Files/sbin/git.cmd.exe"
+      - "C:/Program Files/sbin/git.cmd"
+      - "C:/Program Files/git.cmd.com"
+      - "C:/Program Files/git.cmd.exe"
+      - "C:/Program Files/git.cmd"
+      - "C:/Program Files (x86)/bin/git.cmd.com"
+      - "C:/Program Files (x86)/bin/git.cmd.exe"
+      - "C:/Program Files (x86)/bin/git.cmd"
+      - "C:/Program Files (x86)/sbin/git.cmd.com"
+      - "C:/Program Files (x86)/sbin/git.cmd.exe"
+      - "C:/Program Files (x86)/sbin/git.cmd"
+      - "C:/Program Files (x86)/git.cmd.com"
+      - "C:/Program Files (x86)/git.cmd.exe"
+      - "C:/Program Files (x86)/git.cmd"
+      - "C:/Program Files/CMake/bin/git.cmd.com"
+      - "C:/Program Files/CMake/bin/git.cmd.exe"
+      - "C:/Program Files/CMake/bin/git.cmd"
+      - "C:/Program Files/CMake/sbin/git.cmd.com"
+      - "C:/Program Files/CMake/sbin/git.cmd.exe"
+      - "C:/Program Files/CMake/sbin/git.cmd"
+      - "C:/Program Files/CMake/git.cmd.com"
+      - "C:/Program Files/CMake/git.cmd.exe"
+      - "C:/Program Files/CMake/git.cmd"
+      - "C:/Program Files/shadertoy_sdf/bin/git.cmd.com"
+      - "C:/Program Files/shadertoy_sdf/bin/git.cmd.exe"
+      - "C:/Program Files/shadertoy_sdf/bin/git.cmd"
+      - "C:/Program Files/shadertoy_sdf/sbin/git.cmd.com"
+      - "C:/Program Files/shadertoy_sdf/sbin/git.cmd.exe"
+      - "C:/Program Files/shadertoy_sdf/sbin/git.cmd"
+      - "C:/Program Files/shadertoy_sdf/git.cmd.com"
+      - "C:/Program Files/shadertoy_sdf/git.cmd.exe"
+      - "C:/Program Files/shadertoy_sdf/git.cmd"
+      - "C:/Users/xsl/AppData/Local/Atlassian/SourceTree/git_local/bin/git.cmd.com"
+      - "C:/Users/xsl/AppData/Local/Atlassian/SourceTree/git_local/bin/git.cmd.exe"
+      - "C:/Users/xsl/AppData/Local/Atlassian/SourceTree/git_local/bin/git.cmd"
+      - "C:/Users/xsl/bin/git.com"
+      - "C:/Users/xsl/bin/git.exe"
+      - "C:/Users/xsl/bin/git"
+      - "C:/Program Files/Git/mingw64/bin/git.com"
+    found: "C:/Program Files/Git/mingw64/bin/git.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\xsl\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\local\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Users\\xsl\\bin"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\Java\\jdk-17\\bin"
+        - "C:\\VulkanSDK\\1.4.321.1\\Bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\TortoiseSVN\\bin"
+        - "C:\\Program Files\\TortoiseGit\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit"
+        - "C:\\Program Files\\dotnet"
+        - "C:\\Users\\xsl\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\nodejs"
+        - "C:\\Program Files\\GitHub CLI"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312\\Scripts"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Trae CN\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\xsl\\.dotnet\\tools"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Antigravity\\bin"
+        - "C:\\Users\\xsl\\AppData\\Roaming\\npm"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\CodeBuddy CN\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\xsl\\.lmstudio\\bin"
+        - "C:\\Users\\xsl\\AppData\\Local\\Android\\Sdk\\build-tools\\34.0.0"
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Users\\xsl\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "C:\\Users\\xsl\\AppData\\Local\\Programs\\Python\\Python312"
+        - "C:\\Program Files\\nodejs"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin\\vendor_perl"
+        - "C:\\Program Files\\Git\\usr\\bin\\core_perl"
+        - "C:\\Users\\xsl\\AppData\\Roaming\\Claude\\local-agent-mode-sessions\\skills-plugin\\ac922d91-0e2f-4370-a387-37bc3771c9e9\\0d7b7175-74cd-4fbe-8eb3-e8c47c69c60e\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/shadertoy_sdf"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/shadertoy_sdf"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/FindThreads.cmake:97 (check_c_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "build/_deps/glfw-src/CMakeLists.txt:60 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "D:/shadertoy/Raymarching/build/CMakeFiles/CMakeScratch/TryCompile-rkt7sv"
+      binary: "D:/shadertoy/Raymarching/build/CMakeFiles/CMakeScratch/TryCompile-rkt7sv"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/shadertoy/Raymarching/build/_deps/glfw-src/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/shadertoy/Raymarching/build/CMakeFiles/CMakeScratch/TryCompile-rkt7sv'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_4b840.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.19+164abd434
+        鐢熸垚鍚姩鏃堕棿涓?2026/5/17 13:16:56銆?
+        
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rkt7sv\\cmTC_4b840.vcxproj鈥?榛樿鐩爣)銆?
+        PrepareForBuild:
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_4b840.dir\\Debug\\鈥濄€?
+          宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rkt7sv\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_4b840.dir\\Debug\\cmTC_4b840.tlog\\鈥濄€?
+        InitializeBuildStatus:
+          姝ｅ湪鍒涘缓鈥渃mTC_4b840.dir\\Debug\\cmTC_4b840.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_4b840.dir\\Debug\\cmTC_4b840.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_4b840.dir\\Debug\\\\" /Fd"cmTC_4b840.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rkt7sv\\src.c"
+          鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.38.33145 鐗?
+          鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_4b840.dir\\Debug\\\\" /Fd"cmTC_4b840.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rkt7sv\\src.c"
+          src.c
+        D:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rkt7sv\\src.c(1,10): error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥減thread.h鈥? No such file or directory [D:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rkt7sv\\cmTC_4b840.vcxproj]
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rkt7sv\\cmTC_4b840.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
+        
+        鐢熸垚澶辫触銆?
+        
+        鈥淒:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rkt7sv\\cmTC_4b840.vcxproj鈥?榛樿鐩爣) (1) ->
+        (ClCompile 鐩爣) -> 
+          D:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rkt7sv\\src.c(1,10): error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥減thread.h鈥? No such file or directory [D:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rkt7sv\\cmTC_4b840.vcxproj]
+        
+            0 涓鍛?
+            1 涓敊璇?
+        
+        宸茬敤鏃堕棿 00:00:00.33
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CheckLibraryExists.cmake:154 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/FindThreads.cmake:112 (check_library_exists)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "build/_deps/glfw-src/CMakeLists.txt:60 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "D:/shadertoy/Raymarching/build/CMakeFiles/CMakeScratch/TryCompile-wy4uyf"
+      binary: "D:/shadertoy/Raymarching/build/CMakeFiles/CMakeScratch/TryCompile-wy4uyf"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/shadertoy/Raymarching/build/_deps/glfw-src/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/shadertoy/Raymarching/build/CMakeFiles/CMakeScratch/TryCompile-wy4uyf'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_b273a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.19+164abd434
+        鐢熸垚鍚姩鏃堕棿涓?2026/5/17 13:16:57銆?
+        
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wy4uyf\\cmTC_b273a.vcxproj鈥?榛樿鐩爣)銆?
+        PrepareForBuild:
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_b273a.dir\\Debug\\鈥濄€?
+          宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wy4uyf\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_b273a.dir\\Debug\\cmTC_b273a.tlog\\鈥濄€?
+        InitializeBuildStatus:
+          姝ｅ湪鍒涘缓鈥渃mTC_b273a.dir\\Debug\\cmTC_b273a.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_b273a.dir\\Debug\\cmTC_b273a.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_b273a.dir\\Debug\\\\" /Fd"cmTC_b273a.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wy4uyf\\CheckFunctionExists.c"
+          鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.38.33145 鐗?
+          鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_b273a.dir\\Debug\\\\" /Fd"cmTC_b273a.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wy4uyf\\CheckFunctionExists.c"
+          CheckFunctionExists.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wy4uyf\\Debug\\cmTC_b273a.exe" /INCREMENTAL /ILK:"cmTC_b273a.dir\\Debug\\cmTC_b273a.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/shadertoy/Raymarching/build/CMakeFiles/CMakeScratch/TryCompile-wy4uyf/Debug/cmTC_b273a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/shadertoy/Raymarching/build/CMakeFiles/CMakeScratch/TryCompile-wy4uyf/Debug/cmTC_b273a.lib" /MACHINE:X64  /machine:x64 cmTC_b273a.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減threads.lib鈥?[D:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wy4uyf\\cmTC_b273a.vcxproj]
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wy4uyf\\cmTC_b273a.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
+        
+        鐢熸垚澶辫触銆?
+        
+        鈥淒:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wy4uyf\\cmTC_b273a.vcxproj鈥?榛樿鐩爣) (1) ->
+        (Link 鐩爣) -> 
+          LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減threads.lib鈥?[D:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wy4uyf\\cmTC_b273a.vcxproj]
+        
+            0 涓鍛?
+            1 涓敊璇?
+        
+        宸茬敤鏃堕棿 00:00:00.30
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CheckLibraryExists.cmake:154 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/FindThreads.cmake:112 (check_library_exists)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "build/_deps/glfw-src/CMakeLists.txt:60 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "D:/shadertoy/Raymarching/build/CMakeFiles/CMakeScratch/TryCompile-nosqzj"
+      binary: "D:/shadertoy/Raymarching/build/CMakeFiles/CMakeScratch/TryCompile-nosqzj"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/shadertoy/Raymarching/build/_deps/glfw-src/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/shadertoy/Raymarching/build/CMakeFiles/CMakeScratch/TryCompile-nosqzj'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_f88f9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.19+164abd434
+        鐢熸垚鍚姩鏃堕棿涓?2026/5/17 13:16:57銆?
+        
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nosqzj\\cmTC_f88f9.vcxproj鈥?榛樿鐩爣)銆?
+        PrepareForBuild:
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_f88f9.dir\\Debug\\鈥濄€?
+          宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nosqzj\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_f88f9.dir\\Debug\\cmTC_f88f9.tlog\\鈥濄€?
+        InitializeBuildStatus:
+          姝ｅ湪鍒涘缓鈥渃mTC_f88f9.dir\\Debug\\cmTC_f88f9.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_f88f9.dir\\Debug\\cmTC_f88f9.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_f88f9.dir\\Debug\\\\" /Fd"cmTC_f88f9.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nosqzj\\CheckFunctionExists.c"
+          鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.38.33145 鐗?
+          鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_f88f9.dir\\Debug\\\\" /Fd"cmTC_f88f9.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nosqzj\\CheckFunctionExists.c"
+          CheckFunctionExists.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nosqzj\\Debug\\cmTC_f88f9.exe" /INCREMENTAL /ILK:"cmTC_f88f9.dir\\Debug\\cmTC_f88f9.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/shadertoy/Raymarching/build/CMakeFiles/CMakeScratch/TryCompile-nosqzj/Debug/cmTC_f88f9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/shadertoy/Raymarching/build/CMakeFiles/CMakeScratch/TryCompile-nosqzj/Debug/cmTC_f88f9.lib" /MACHINE:X64  /machine:x64 cmTC_f88f9.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減thread.lib鈥?[D:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nosqzj\\cmTC_f88f9.vcxproj]
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nosqzj\\cmTC_f88f9.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
+        
+        鐢熸垚澶辫触銆?
+        
+        鈥淒:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nosqzj\\cmTC_f88f9.vcxproj鈥?榛樿鐩爣) (1) ->
+        (Link 鐩爣) -> 
+          LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減thread.lib鈥?[D:\\shadertoy\\Raymarching\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nosqzj\\cmTC_f88f9.vcxproj]
+        
+            0 涓鍛?
+            1 涓敊璇?
+        
+        宸茬敤鏃堕棿 00:00:00.29
+        
+      exitCode: 1
+...

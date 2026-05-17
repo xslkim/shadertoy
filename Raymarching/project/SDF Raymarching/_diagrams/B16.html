@@ -1,0 +1,55 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">相机系统：正交基与射线生成</div>
+
+  <div class="row grow gap-40" style="margin-top:36px;align-items:center">
+    <!-- 左：坐标系 -->
+    <div class="col" style="width:820px;gap:16px">
+      <svg width="780" height="470" viewBox="0 0 780 470">
+        <path d="M70,300 L120,270 L120,330 Z" fill="#e6edf3"/>
+        <text x="60" y="365" fill="#8b949e" font-size="21" class="label">相机</text>
+        <!-- ww forward -->
+        <line x1="120" y1="300" x2="430" y2="230" stroke="#ffa657" stroke-width="5" marker-end="url(#cw)"/>
+        <text x="320" y="240" fill="#ffa657" font-size="23" class="mono">ww (forward)</text>
+        <!-- uu right -->
+        <line x1="120" y1="300" x2="340" y2="370" stroke="#3fb950" stroke-width="5" marker-end="url(#cu)"/>
+        <text x="220" y="385" fill="#3fb950" font-size="23" class="mono">uu (right)</text>
+        <!-- vv up -->
+        <line x1="120" y1="300" x2="155" y2="120" stroke="#58a6ff" stroke-width="5" marker-end="url(#cv)"/>
+        <text x="160" y="115" fill="#58a6ff" font-size="23" class="mono">vv (up)</text>
+        <!-- 屏幕平面 -->
+        <polygon points="430,150 620,180 620,310 430,280" fill="#58a6ff" fill-opacity="0.1" stroke="#8b949e" stroke-width="2"/>
+        <circle cx="540" cy="225" r="7" fill="#ff7b72"/>
+        <text x="552" y="218" fill="#ff7b72" font-size="20" class="mono">pixel(i,j)</text>
+        <line x1="120" y1="300" x2="540" y2="225" stroke="#e6edf3" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#cr)"/>
+        <text x="380" y="320" fill="#e6edf3" font-size="22" class="mono" font-weight="700">rd 射线方向</text>
+        <defs>
+          <marker id="cw" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#ffa657"/></marker>
+          <marker id="cu" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#3fb950"/></marker>
+          <marker id="cv" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#58a6ff"/></marker>
+          <marker id="cr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#e6edf3"/></marker>
+        </defs>
+      </svg>
+      <div class="step">
+        <div class="step-h">三轴两两正交</div>
+        <div class="step-d">cross 叉积保证 uu ⊥ ww、vv ⊥ ww 且 vv ⊥ uu，构成完整相机坐标系</div>
+      </div>
+    </div>
+
+    <!-- 右：代码 -->
+    <div class="code small" style="width:1000px"><span class="com">// 相机绕 y 轴旋转</span>
+<span class="kw">float</span> an = <span class="num">0.5</span> * iTime;
+<span class="kw">vec3</span> ro = <span class="fn">vec3</span>(<span class="num">3.5</span>*<span class="fn">sin</span>(an), <span class="num">1.0</span>, <span class="num">3.5</span>*<span class="fn">cos</span>(an));
+
+<span class="com">// 构建正交基（lookAt）</span>
+<span class="kw">vec3</span> ww = <span class="fn">normalize</span>(target - ro);     <span class="com">// forward</span>
+<span class="kw">vec3</span> uu = <span class="fn">normalize</span>(<span class="fn">cross</span>(ww, UP));   <span class="com">// right</span>
+<span class="kw">vec3</span> vv = <span class="fn">cross</span>(uu, ww);             <span class="com">// up（自动正交）</span>
+
+<span class="com">// 生成每个像素的射线方向</span>
+<span class="com">// p = 像素偏移 / 屏幕高度（归一化）</span>
+<span class="kw">vec3</span> rd = <span class="fn">normalize</span>(p.x*uu + p.y*vv + ww*<span class="num">1.8</span>);</div>
+  </div>
+</div>
+</body></html>

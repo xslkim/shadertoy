@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">四光源系统</div>
+  <div class="subtitle" style="margin-top:10px">叠加四个光源，模拟真实世界的光照构成</div>
+
+  <div class="row center gap-24" style="margin-top:44px">
+    <div class="col card" style="width:400px;height:480px;background:#1a1500;border-color:#d29922">
+      <div style="font-size:56px;text-align:center">☀</div>
+      <div class="card-title yellow" style="text-align:center;margin-top:6px">Sun Light</div>
+      <div style="font-size:22px;font-weight:600;text-align:center;margin-bottom:14px">太阳光 / 主光</div>
+      <div class="card-desc" style="line-height:1.7">· 方向光（平行光）<br>· Lambert 漫反射<br>· Blinn-Phong 高光<br>· Schlick Fresnel<br>· 投射软阴影</div>
+    </div>
+    <div class="col card" style="width:400px;height:480px;background:#001624;border-color:#58a6ff">
+      <div style="font-size:56px;text-align:center">✦</div>
+      <div class="card-title accent" style="text-align:center;margin-top:6px">Sky Light</div>
+      <div style="font-size:22px;font-weight:600;text-align:center;margin-bottom:14px">天空光 / 环境光</div>
+      <div class="card-desc" style="line-height:1.7">· 半球形环境光<br>· 带方向性偏差<br>· 受 AO 遮蔽调节<br>· 含镜面反射分量</div>
+    </div>
+    <div class="col card" style="width:400px;height:480px;background:#001600;border-color:#3fb950">
+      <div style="font-size:56px;text-align:center">↩</div>
+      <div class="card-title green" style="text-align:center;margin-top:6px">Back Light</div>
+      <div style="font-size:22px;font-weight:600;text-align:center;margin-bottom:14px">背光 / 补光</div>
+      <div class="card-desc" style="line-height:1.7">· 反方向补光<br>· 模拟地面漫反射<br>· 防止背面全黑</div>
+    </div>
+    <div class="col card" style="width:400px;height:480px;background:#180000;border-color:#ff7b72">
+      <div style="font-size:56px;text-align:center">✺</div>
+      <div class="card-title red" style="text-align:center;margin-top:6px">SSS / Rim</div>
+      <div style="font-size:22px;font-weight:600;text-align:center;margin-bottom:14px">次表面散射</div>
+      <div class="card-desc" style="line-height:1.7">· 次表面散射近似<br>· Fresnel 边缘光<br>· 让物体边缘通透</div>
+    </div>
+  </div>
+
+  <div class="code" style="margin-top:40px;align-self:center;font-size:25px">col = sun·(dif+spe+fre) + sky·occ + back·dif + sss</div>
+</div>
+</body></html>

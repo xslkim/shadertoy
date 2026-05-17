@@ -1,0 +1,53 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">SDF 组合操作</div>
+
+  <div class="row center gap-32" style="margin-top:48px">
+    <!-- 并集 -->
+    <div class="col card" style="width:540px;height:560px">
+      <div class="card-title green">并集 Union</div>
+      <svg width="476" height="220" viewBox="0 0 476 220" style="margin-top:18px">
+        <circle cx="195" cy="110" r="92" fill="#3fb950" fill-opacity="0.3" stroke="#3fb950" stroke-width="3"/>
+        <circle cx="281" cy="110" r="92" fill="#3fb950" fill-opacity="0.3" stroke="#3fb950" stroke-width="3"/>
+      </svg>
+      <div class="code small" style="margin-top:18px;text-align:center"><span class="fn">min</span>(d1, d2)</div>
+      <div class="card-desc" style="margin-top:16px">取两个距离的<b>最小值</b><br>= 两个物体都在场景中</div>
+    </div>
+    <!-- 差集 -->
+    <div class="col card" style="width:540px;height:560px">
+      <div class="card-title red">差集 Subtraction</div>
+      <svg width="476" height="220" viewBox="0 0 476 220" style="margin-top:18px">
+        <defs><mask id="m"><rect width="476" height="220" fill="#fff"/>
+          <circle cx="281" cy="110" r="92" fill="#000"/></mask></defs>
+        <circle cx="195" cy="110" r="92" fill="#ff7b72" fill-opacity="0.3" stroke="#ff7b72" stroke-width="3" mask="url(#m)"/>
+        <circle cx="281" cy="110" r="92" fill="none" stroke="#ff7b72" stroke-width="2" stroke-dasharray="6 6"/>
+      </svg>
+      <div class="code small" style="margin-top:18px;text-align:center"><span class="fn">max</span>(d1, -d2)</div>
+      <div class="card-desc" style="margin-top:16px">从 d1 中<b>挖去</b> d2<br>取负号实现"减法"</div>
+    </div>
+    <!-- 交集 -->
+    <div class="col card" style="width:540px;height:560px">
+      <div class="card-title accent">交集 Intersection</div>
+      <svg width="476" height="220" viewBox="0 0 476 220" style="margin-top:18px">
+        <defs><clipPath id="c"><circle cx="281" cy="110" r="92"/></clipPath></defs>
+        <circle cx="195" cy="110" r="92" fill="none" stroke="#30363d" stroke-width="2" stroke-dasharray="6 6"/>
+        <circle cx="281" cy="110" r="92" fill="none" stroke="#30363d" stroke-width="2" stroke-dasharray="6 6"/>
+        <circle cx="195" cy="110" r="92" fill="#58a6ff" fill-opacity="0.42" clip-path="url(#c)"/>
+      </svg>
+      <div class="code small" style="margin-top:18px;text-align:center"><span class="fn">max</span>(d1, d2)</div>
+      <div class="card-desc" style="margin-top:16px">取两者的<b>最大值</b><br>只保留重叠部分</div>
+    </div>
+  </div>
+
+  <div class="row center" style="margin-top:36px">
+    <div class="card row" style="width:1480px;align-items:center;gap:36px;padding:24px 36px">
+      <div class="col" style="width:300px">
+        <div style="font-size:30px;font-weight:700">增强版并集 opU</div>
+        <div class="muted" style="font-size:23px;margin-top:6px">合并时携带材质 ID</div>
+      </div>
+      <div class="code small grow"><span class="kw">vec2</span> <span class="fn">opU</span>(<span class="kw">vec2</span> d1, <span class="kw">vec2</span> d2) { <span class="kw">return</span> (d1.x &lt; d2.x) ? d1 : d2; }  <span class="com">// x=距离 y=材质ID</span></div>
+    </div>
+  </div>
+</div>
+</body></html>

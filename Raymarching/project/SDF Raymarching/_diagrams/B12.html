@@ -1,0 +1,56 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">基础光照：漫反射与高光</div>
+
+  <div class="row grow gap-40" style="margin-top:36px;align-items:center">
+    <!-- 左：光照几何 -->
+    <div class="col" style="width:820px;gap:20px">
+      <svg width="820" height="540" viewBox="0 0 820 540">
+        <path d="M170,330 A240,240 0 0,1 650,330 Z" fill="#21262d" stroke="#30363d" stroke-width="2"/>
+        <!-- n 法线：竖直向上 -->
+        <line x1="410" y1="330" x2="410" y2="80" stroke="#ffa657" stroke-width="5" marker-end="url(#mn)"/>
+        <text x="430" y="100" fill="#ffa657" font-size="24" class="mono">n 法线</text>
+        <!-- l 光方向：左上 -->
+        <line x1="410" y1="330" x2="225" y2="105" stroke="#d29922" stroke-width="5" marker-end="url(#ml)"/>
+        <text x="120" y="92" fill="#d29922" font-size="24" class="mono">l 光方向</text>
+        <!-- v 视线：右上 -->
+        <line x1="410" y1="330" x2="615" y2="120" stroke="#e6edf3" stroke-width="5" marker-end="url(#mv)"/>
+        <text x="625" y="108" fill="#e6edf3" font-size="24" class="mono">v 视线</text>
+        <!-- h 半向量：l 与 v 的角平分方向 -->
+        <line x1="410" y1="330" x2="333" y2="92" stroke="#58a6ff" stroke-width="5" marker-end="url(#mh)"/>
+        <text x="300" y="72" fill="#58a6ff" font-size="24" class="mono">h 半向量</text>
+        <circle cx="410" cy="330" r="9" fill="#fff"/>
+        <text x="410" y="385" fill="#8b949e" font-size="22" text-anchor="middle" class="label">交点 P</text>
+        <text x="410" y="450" fill="#8b949e" font-size="21" text-anchor="middle" class="label">h = 光方向 l 与视线 v 的角平分线（半向量）</text>
+        <defs>
+          <marker id="mn" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#ffa657"/></marker>
+          <marker id="ml" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#d29922"/></marker>
+          <marker id="mv" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#e6edf3"/></marker>
+          <marker id="mh" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#58a6ff"/></marker>
+        </defs>
+      </svg>
+    </div>
+
+    <!-- 右：公式 -->
+    <div class="col" style="width:1000px;gap:22px">
+      <div class="card" style="padding:22px 28px">
+        <div class="accent" style="font-size:28px;font-weight:700">漫反射 Lambert</div>
+        <div class="mono" style="font-size:30px;margin-top:8px">dif = max(0, dot(n, l))</div>
+        <div class="muted" style="font-size:23px;margin-top:6px">法线与光方向夹角的余弦值，越正对光越亮</div>
+      </div>
+      <div class="card" style="padding:22px 28px">
+        <div class="accent" style="font-size:28px;font-weight:700">高光 Blinn-Phong</div>
+        <div class="mono" style="font-size:28px;margin-top:8px">h = normalize(l + v)</div>
+        <div class="mono" style="font-size:28px">spe = pow(max(0, dot(n,h)), 16.0)</div>
+        <div class="muted" style="font-size:23px;margin-top:6px">法线与半向量 h 的夹角 → 高光强度</div>
+      </div>
+      <div class="card" style="padding:22px 28px">
+        <div class="accent" style="font-size:28px;font-weight:700">Schlick Fresnel</div>
+        <div class="mono" style="font-size:28px;margin-top:8px">fre = pow(1 − dot(v, n), 2.0)</div>
+        <div class="muted" style="font-size:23px;margin-top:6px">掠射角时高光增强，物体边缘更亮</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

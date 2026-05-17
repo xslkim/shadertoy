@@ -1,0 +1,10 @@
+^D:\SHADERTOY\RAYMARCHING\BUILD\CMAKEFILES\EF01088AB9EC66BB39590952BA023D41\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/shadertoy/Raymarching -BD:/shadertoy/Raymarching/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/shadertoy/Raymarching/build/shadertoy_sdf.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,50 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">C++ 宿主程序：只需做 4 件事</div>
+
+  <div class="col gap-24" style="margin-top:44px">
+    <div class="card row" style="align-items:center;gap:28px;padding:24px 30px">
+      <div class="badge">1</div>
+      <div class="col" style="width:340px">
+        <div class="card-title" style="font-size:30px">初始化 GLFW / OpenGL</div>
+        <div class="card-desc" style="font-size:22px">创建窗口与渲染上下文</div>
+      </div>
+      <div class="code small grow"><span class="fn">glfwInit</span>();
+window = <span class="fn">glfwCreateWindow</span>(...);
+<span class="fn">glfwMakeContextCurrent</span>(window);</div>
+    </div>
+
+    <div class="card row" style="align-items:center;gap:28px;padding:24px 30px">
+      <div class="badge">2</div>
+      <div class="col" style="width:340px">
+        <div class="card-title" style="font-size:30px">全屏三角形 trick</div>
+        <div class="card-desc" style="font-size:22px">不需要任何顶点缓冲（VBO）</div>
+      </div>
+      <div class="code small grow"><span class="com">// vertex shader 用 gl_VertexID 生成坐标</span>
+<span class="fn">glDrawArrays</span>(GL_TRIANGLES, <span class="num">0</span>, <span class="num">3</span>);</div>
+    </div>
+
+    <div class="card row" style="align-items:center;gap:28px;padding:24px 30px">
+      <div class="badge">3</div>
+      <div class="col" style="width:340px">
+        <div class="card-title" style="font-size:30px">每帧上传 Uniform</div>
+        <div class="card-desc" style="font-size:22px">分辨率 / 时间 / 鼠标</div>
+      </div>
+      <div class="code small grow"><span class="fn">glUniform2f</span>(iRes,  width, height);
+<span class="fn">glUniform1f</span>(iTime, <span class="fn">glfwGetTime</span>());
+<span class="fn">glUniform4f</span>(iMouse, mx, my, bx, by);</div>
+    </div>
+
+    <div class="card row" style="align-items:center;gap:28px;padding:24px 30px">
+      <div class="badge">4</div>
+      <div class="col" style="width:340px">
+        <div class="card-title" style="font-size:30px">热重载 Shader</div>
+        <div class="card-desc" style="font-size:22px">改完立刻看到效果</div>
+      </div>
+      <div class="code small grow"><span class="com">// 每帧检测 shader.glsl 修改时间</span>
+<span class="com">// 有变化 → 重新编译并链接，无需重启</span></div>
+    </div>
+  </div>
+</div>
+</body></html>

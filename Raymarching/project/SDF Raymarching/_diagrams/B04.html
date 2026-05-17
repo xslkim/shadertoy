@@ -1,0 +1,55 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">SDF：用距离函数描述几何体</div>
+
+  <div class="row grow gap-40" style="margin-top:40px;align-items:center">
+    <!-- 左：定义 -->
+    <div class="col" style="width:880px;gap:26px">
+      <div class="accent" style="font-size:38px;font-weight:700">Signed Distance Function</div>
+      <div style="font-size:31px">SDF(p) = 点 p 到最近表面的<b>有符号距离</b></div>
+
+      <div class="col gap-16" style="margin-top:6px">
+        <div class="bullet"><div class="dot" style="background:#3fb950"></div><div class="green">f(p) &gt; 0　→　点在物体<b>外部</b></div></div>
+        <div class="bullet"><div class="dot" style="background:#d29922"></div><div class="yellow">f(p) = 0　→　点在物体<b>表面</b>上</div></div>
+        <div class="bullet"><div class="dot" style="background:#f85149"></div><div class="red">f(p) &lt; 0　→　点在物体<b>内部</b></div></div>
+      </div>
+
+      <div style="height:1px;background:#30363d;margin-top:10px"></div>
+      <div style="font-size:30px;font-weight:700">SDF 的返回值 = 可以安全步进的最大距离</div>
+      <div class="muted" style="font-size:26px">这正是下一节 Sphere Tracing 算法的理论依据</div>
+    </div>
+
+    <!-- 右：距离场可视化 -->
+    <svg width="780" height="780" viewBox="0 0 780 780">
+      <circle cx="390" cy="390" r="320" fill="none" stroke="#30363d" stroke-width="2" stroke-dasharray="7 9"/>
+      <circle cx="390" cy="390" r="255" fill="none" stroke="#30363d" stroke-width="2" stroke-dasharray="7 9"/>
+      <circle cx="390" cy="390" r="190" fill="none" stroke="#30363d" stroke-width="2" stroke-dasharray="7 9"/>
+      <circle cx="390" cy="390" r="125" fill="#58a6ff" fill-opacity="0.16" stroke="#58a6ff" stroke-width="3"/>
+      <text x="390" y="396" fill="#8b949e" font-size="22" text-anchor="middle" class="label">物体</text>
+
+      <!-- 外部绿点 + safe step 箭头 -->
+      <line x1="660" y1="200" x2="487" y2="312" stroke="#58a6ff" stroke-width="3" marker-end="url(#a)"/>
+      <circle cx="660" cy="200" r="9" fill="#3fb950"/>
+      <text x="600" y="170" fill="#58a6ff" font-size="26" class="mono" text-anchor="middle">d = 0.8</text>
+      <text x="600" y="142" fill="#8b949e" font-size="21" text-anchor="middle" class="label">可安全步进</text>
+
+      <line x1="140" y1="560" x2="316" y2="468" stroke="#3fb950" stroke-width="2" stroke-dasharray="5 5"/>
+      <circle cx="140" cy="560" r="9" fill="#3fb950"/>
+      <text x="120" y="600" fill="#3fb950" font-size="24" class="mono" text-anchor="middle">+1.4</text>
+
+      <!-- 表面黄点 -->
+      <circle cx="390" cy="265" r="9" fill="#d29922"/>
+      <text x="430" y="248" fill="#d29922" font-size="24" class="mono">0</text>
+
+      <!-- 内部红点 -->
+      <line x1="430" y1="430" x2="475" y2="475" stroke="#f85149" stroke-width="2" stroke-dasharray="5 5"/>
+      <circle cx="430" cy="430" r="9" fill="#f85149"/>
+      <text x="360" y="445" fill="#f85149" font-size="24" class="mono">-0.4</text>
+
+      <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+        <path d="M0,0 L8,3 L0,6 Z" fill="#58a6ff"/></marker></defs>
+    </svg>
+  </div>
+</div>
+</body></html>

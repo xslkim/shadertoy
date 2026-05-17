@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "D:/shadertoy/Raymarching/build/_deps/glfw-subbuild/CMakeFiles/glfw-populate"
+		},
+		{
+			"file" : "D:/shadertoy/Raymarching/build/_deps/glfw-subbuild/CMakeFiles/41e110a863d59f4d301c68bab0d35600/glfw-populate.rule"
+		},
+		{
+			"file" : "D:/shadertoy/Raymarching/build/_deps/glfw-subbuild/CMakeFiles/be072a2ee6f54e2b219be49b368a0030/glfw-populate-complete.rule"
+		},
+		{
+			"file" : "D:/shadertoy/Raymarching/build/_deps/glfw-subbuild/CMakeFiles/730d308bd796034bb42efc9cab0cce86/glfw-populate-build.rule"
+		},
+		{
+			"file" : "D:/shadertoy/Raymarching/build/_deps/glfw-subbuild/CMakeFiles/730d308bd796034bb42efc9cab0cce86/glfw-populate-configure.rule"
+		},
+		{
+			"file" : "D:/shadertoy/Raymarching/build/_deps/glfw-subbuild/CMakeFiles/730d308bd796034bb42efc9cab0cce86/glfw-populate-download.rule"
+		},
+		{
+			"file" : "D:/shadertoy/Raymarching/build/_deps/glfw-subbuild/CMakeFiles/730d308bd796034bb42efc9cab0cce86/glfw-populate-install.rule"
+		},
+		{
+			"file" : "D:/shadertoy/Raymarching/build/_deps/glfw-subbuild/CMakeFiles/730d308bd796034bb42efc9cab0cce86/glfw-populate-mkdir.rule"
+		},
+		{
+			"file" : "D:/shadertoy/Raymarching/build/_deps/glfw-subbuild/CMakeFiles/730d308bd796034bb42efc9cab0cce86/glfw-populate-patch.rule"
+		},
+		{
+			"file" : "D:/shadertoy/Raymarching/build/_deps/glfw-subbuild/CMakeFiles/730d308bd796034bb42efc9cab0cce86/glfw-populate-test.rule"
+		},
+		{
+			"file" : "D:/shadertoy/Raymarching/build/_deps/glfw-subbuild/CMakeFiles/730d308bd796034bb42efc9cab0cce86/glfw-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"glfw-populate"
+		],
+		"name" : "glfw-populate"
+	}
+}

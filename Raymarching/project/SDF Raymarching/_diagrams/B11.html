@@ -1,0 +1,59 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">法线：从 SDF 提取表面朝向</div>
+
+  <div class="row grow gap-40" style="margin-top:36px;align-items:center">
+    <!-- 左：原理图 -->
+    <div class="col" style="width:840px;gap:20px">
+      <div style="font-size:30px;font-weight:700">法线 = SDF 的<span class="accent">梯度方向</span></div>
+      <div class="muted" style="font-size:25px">SDF 增长最快的方向 = 离开表面最快的方向 = 法线</div>
+      <svg width="780" height="430" viewBox="0 0 780 430">
+        <circle cx="360" cy="300" r="200" fill="#21262d" stroke="#30363d" stroke-width="2"/>
+        <!-- 四面体 4 方向 -->
+        <g stroke="#58a6ff" stroke-width="3">
+          <line x1="360" y1="120" x2="290" y2="40"  marker-end="url(#n)"/>
+          <line x1="360" y1="120" x2="450" y2="55"  marker-end="url(#n)"/>
+          <line x1="360" y1="120" x2="250" y2="160" marker-end="url(#n)"/>
+          <line x1="360" y1="120" x2="470" y2="170" marker-end="url(#n)"/>
+        </g>
+        <text x="250" y="35" fill="#8b949e" font-size="20" class="mono">e0</text>
+        <text x="460" y="48" fill="#8b949e" font-size="20" class="mono">e1</text>
+        <text x="210" y="165" fill="#8b949e" font-size="20" class="mono">e2</text>
+        <text x="485" y="178" fill="#8b949e" font-size="20" class="mono">e3</text>
+        <!-- 法线 -->
+        <line x1="360" y1="120" x2="360" y2="-10" stroke="#ffa657" stroke-width="6" marker-end="url(#no)"/>
+        <circle cx="360" cy="120" r="9" fill="#fff"/>
+        <text x="392" y="95" fill="#ffa657" font-size="26" class="mono" font-weight="700">n 法线</text>
+        <text x="360" y="340" fill="#8b949e" font-size="22" text-anchor="middle" class="label">在表面点取四面体 4 个方向采样</text>
+        <defs>
+          <marker id="n" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#58a6ff"/></marker>
+          <marker id="no" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#ffa657"/></marker>
+        </defs>
+      </svg>
+    </div>
+
+    <!-- 右：代码 + 注解 -->
+    <div class="col" style="width:980px;gap:20px">
+      <div class="code small"><span class="kw">vec3</span> <span class="fn">calcNormal</span>(<span class="kw">in</span> <span class="kw">vec3</span> pos) {
+    <span class="kw">vec3</span> n = <span class="fn">vec3</span>(<span class="num">0.0</span>);
+    <span class="kw">for</span> (<span class="kw">int</span> i = ZERO; i &lt; <span class="num">4</span>; i++) {
+        <span class="com">// 位运算生成四面体 4 个顶点方向</span>
+        <span class="kw">vec3</span> e = <span class="num">0.5773</span> * (<span class="num">2.0</span>*<span class="fn">vec3</span>(
+            ((i+<span class="num">3</span>)&gt;&gt;<span class="num">1</span>)&amp;<span class="num">1</span>, (i&gt;&gt;<span class="num">1</span>)&amp;<span class="num">1</span>, i&amp;<span class="num">1</span>)-<span class="num">1.0</span>);
+        n += e * <span class="fn">map</span>(pos + <span class="num">0.0005</span>*e).x;
+    }
+    <span class="kw">return</span> <span class="fn">normalize</span>(n);
+}</div>
+      <div class="step">
+        <div class="step-h">为什么用循环而不展开？</div>
+        <div class="step-d">防止编译器把体积庞大的 map() 内联 4 次，严重拖累性能</div>
+      </div>
+      <div class="step">
+        <div class="step-h">地板优化</div>
+        <div class="step-d">材质 ID &lt; 1.5 时直接返回 (0,1,0)，省去 4 次 map() 调用</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

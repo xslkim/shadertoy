@@ -1,0 +1,51 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">盒子的 SDF：利用对称性</div>
+
+  <div class="row grow gap-40" style="margin-top:36px;align-items:center">
+    <!-- 左 -->
+    <div class="col" style="width:1080px;gap:22px">
+      <div class="code small"><span class="kw">float</span> <span class="fn">sdBox</span>(<span class="kw">vec3</span> p, <span class="kw">vec3</span> b) {
+    <span class="kw">vec3</span> d = <span class="fn">abs</span>(p) - b;
+    <span class="kw">return</span> <span class="fn">min</span>(<span class="fn">max</span>(d.x, <span class="fn">max</span>(d.y, d.z)), <span class="num">0.0</span>)
+         + <span class="fn">length</span>(<span class="fn">max</span>(d, <span class="num">0.0</span>));
+}</div>
+      <div class="step">
+        <div class="step-h">① abs(p) — 对称性折叠</div>
+        <div class="step-d">利用盒子关于三个轴的对称性，把问题化简到第一象限</div>
+      </div>
+      <div class="step">
+        <div class="step-h">② d = abs(p) − b — 超出量</div>
+        <div class="step-d">d 的每个分量 = 该方向超出盒子表面的距离；d&lt;0 表示仍在盒内</div>
+      </div>
+      <div class="step">
+        <div class="step-h">③ 内 / 外两种情况合并</div>
+        <div class="step-d">外部：length(max(d,0)) 到角点的欧氏距离<br>内部：min(max(d),0) 到最近面的负距离</div>
+      </div>
+    </div>
+
+    <!-- 右：盒子几何 -->
+    <svg width="620" height="600" viewBox="0 0 620 600">
+      <rect x="120" y="210" width="280" height="280" fill="#58a6ff" fill-opacity="0.14" stroke="#58a6ff" stroke-width="3"/>
+      <!-- 外点 P 右上 -->
+      <text x="490" y="78" fill="#3fb950" font-size="23" text-anchor="middle" class="label">点 P（外部）</text>
+      <circle cx="490" cy="120" r="8" fill="#3fb950"/>
+      <line x1="490" y1="120" x2="490" y2="210" stroke="#3fb950" stroke-width="2" stroke-dasharray="5 5"/>
+      <line x1="490" y1="120" x2="400" y2="120" stroke="#3fb950" stroke-width="2" stroke-dasharray="5 5"/>
+      <text x="440" y="108" fill="#3fb950" font-size="21" text-anchor="middle" class="mono">dx</text>
+      <text x="512" y="172" fill="#3fb950" font-size="21" class="mono">dy</text>
+      <line x1="490" y1="120" x2="406" y2="204" stroke="#58a6ff" stroke-width="3" marker-end="url(#bx)"/>
+      <text x="470" y="170" fill="#58a6ff" font-size="20" class="label">欧氏距离</text>
+      <!-- 内点 Q -->
+      <text x="255" y="305" fill="#f85149" font-size="22" text-anchor="middle" class="label">点 Q（内部）</text>
+      <circle cx="255" cy="335" r="8" fill="#f85149"/>
+      <line x1="255" y1="335" x2="120" y2="335" stroke="#f85149" stroke-width="2" stroke-dasharray="5 5"/>
+      <text x="240" y="372" fill="#f85149" font-size="20" class="label">到最近面 = 负距离</text>
+      <!-- 折叠提示 -->
+      <text x="310" y="552" fill="#8b949e" font-size="21" text-anchor="middle" class="label">abs(p)：四个象限 → 折叠成第一象限</text>
+      <defs><marker id="bx" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#58a6ff"/></marker></defs>
+    </svg>
+  </div>
+</div>
+</body></html>

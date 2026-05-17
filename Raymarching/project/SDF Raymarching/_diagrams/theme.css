@@ -1,0 +1,100 @@
+/* SDF Raymarching 教学图 — 共享主题 (dark-code) */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  width: 1920px; height: 1080px;
+  background: #0d1117; overflow: hidden;
+  font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+  color: #e6edf3;
+}
+.page {
+  width: 1920px; height: 1080px;
+  padding: 60px 80px;
+  display: flex; flex-direction: column;
+}
+
+/* ---- 颜色 ---- */
+.accent { color: #58a6ff; }
+.muted  { color: #8b949e; }
+.green  { color: #3fb950; }
+.orange { color: #ffa657; }
+.yellow { color: #d29922; }
+.red    { color: #f85149; }
+.fg     { color: #e6edf3; }
+
+/* ---- 标题 ---- */
+.title {
+  font-size: 68px; font-weight: 800; color: #e6edf3;
+  text-align: center; letter-spacing: 1px;
+}
+.title-row { display: flex; flex-direction: column; align-items: center; }
+.underline { height: 5px; width: 220px; background: #58a6ff; border-radius: 3px; margin-top: 14px; }
+.subtitle { font-size: 30px; color: #8b949e; text-align: center; margin-top: 16px; }
+.tag {
+  font-size: 24px; color: #58a6ff; letter-spacing: 5px;
+  text-align: center; font-weight: 600;
+}
+
+/* ---- 代码块 ---- */
+.code {
+  background: #161b22; border: 1px solid #30363d; border-radius: 14px;
+  padding: 26px 32px;
+  font-family: "Cascadia Code", Consolas, monospace;
+  font-size: 27px; line-height: 1.55; color: #e6edf3;
+  white-space: pre;
+}
+.code.small { font-size: 23px; }
+.kw  { color: #ff7b72; }
+.str { color: #a5d6ff; }
+.com { color: #8b949e; }
+.fn  { color: #d2a8ff; }
+.num { color: #79c0ff; }
+.op  { color: #e6edf3; }
+
+/* ---- 卡片 ---- */
+.card {
+  background: #161b22; border: 1px solid #30363d; border-radius: 18px;
+  padding: 30px 32px;
+}
+.card-title { font-size: 34px; font-weight: 700; }
+.card-desc  { font-size: 25px; color: #8b949e; line-height: 1.5; }
+
+/* ---- 布局 ---- */
+.row { display: flex; }
+.col { display: flex; flex-direction: column; }
+.grow { flex: 1; }
+.center { align-items: center; justify-content: center; }
+.gap-16 { gap: 16px; }
+.gap-24 { gap: 24px; }
+.gap-32 { gap: 32px; }
+.gap-40 { gap: 40px; }
+
+/* ---- 步骤条 ---- */
+.step {
+  border-left: 4px solid #58a6ff;
+  padding: 14px 22px; background: #11151c; border-radius: 0 10px 10px 0;
+}
+.step-h { font-size: 28px; font-weight: 700; color: #58a6ff; }
+.step-d { font-size: 24px; color: #8b949e; line-height: 1.5; margin-top: 4px; }
+
+/* ---- 公式 ---- */
+.formula {
+  background: #161b22; border: 1px solid #30363d; border-radius: 14px;
+  font-family: "Cascadia Code", Consolas, monospace;
+  font-size: 46px; font-weight: 700; color: #58a6ff;
+  text-align: center; padding: 26px;
+}
+
+/* ---- 圆点列表 ---- */
+.bullet { display: flex; align-items: flex-start; gap: 14px; font-size: 27px; }
+.dot { width: 14px; height: 14px; border-radius: 50%; margin-top: 11px; flex-shrink: 0; }
+
+/* ---- 数字徽标 ---- */
+.badge {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: #58a6ff; color: #fff; font-size: 30px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+
+svg { display: block; }
+.label { font-family: "Microsoft YaHei", sans-serif; }
+.mono { font-family: "Cascadia Code", Consolas, monospace; }

@@ -1,0 +1,58 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">圆环的 SDF：降维思路</div>
+
+  <div class="row grow gap-40" style="margin-top:36px;align-items:center">
+    <!-- 左 -->
+    <div class="col" style="width:1000px;gap:22px">
+      <div class="code small"><span class="kw">float</span> <span class="fn">sdTorus</span>(<span class="kw">vec3</span> p, <span class="kw">vec2</span> t) {
+    <span class="com">// t.x = 主半径 R，t.y = 管道半径 r</span>
+    <span class="kw">return</span> <span class="fn">length</span>(
+        <span class="fn">vec2</span>(<span class="fn">length</span>(p.xz) - t.x, p.y)
+    ) - t.y;
+}</div>
+      <div class="step">
+        <div class="step-h">① 水平距离 = length(p.xz)</div>
+        <div class="step-d">圆环绕 y 轴对称，先忽略旋转角，只算到 y 轴的水平距离</div>
+      </div>
+      <div class="step">
+        <div class="step-h">② 减去主半径 → 到中心线的距离</div>
+        <div class="step-d">length(p.xz) − R，把一个 3D 问题降成 1D 距离</div>
+      </div>
+      <div class="step">
+        <div class="step-h">③ 与 p.y 组成 2D 截面，再减 r</div>
+        <div class="step-d">3D 圆环问题 = 2D 截面上的一个圆 SDF，核心是旋转对称降维</div>
+      </div>
+    </div>
+
+    <!-- 右：圆环截面 -->
+    <svg width="680" height="600" viewBox="0 0 680 600">
+      <!-- 轴 -->
+      <line x1="340" y1="50" x2="340" y2="520" stroke="#30363d" stroke-width="2" stroke-dasharray="6 6"/>
+      <text x="356" y="68" fill="#8b949e" font-size="20" class="mono">y 轴</text>
+      <line x1="60" y1="320" x2="620" y2="320" stroke="#30363d" stroke-width="2" stroke-dasharray="6 6"/>
+      <text x="95" y="308" fill="#8b949e" font-size="20" class="mono">xz 平面</text>
+      <!-- 两个管道截面 -->
+      <circle cx="505" cy="320" r="72" fill="#58a6ff" fill-opacity="0.14" stroke="#58a6ff" stroke-width="3"/>
+      <circle cx="175" cy="320" r="72" fill="#58a6ff" fill-opacity="0.14" stroke="#58a6ff" stroke-width="3"/>
+      <!-- 主半径 R -->
+      <line x1="340" y1="320" x2="505" y2="320" stroke="#ffa657" stroke-width="4" marker-end="url(#tr)"/>
+      <text x="418" y="302" fill="#ffa657" font-size="25" text-anchor="middle" class="mono">R 主半径</text>
+      <!-- 管道半径 r -->
+      <line x1="505" y1="320" x2="505" y2="252" stroke="#58a6ff" stroke-width="3" marker-end="url(#tr2)"/>
+      <text x="527" y="290" fill="#58a6ff" font-size="24" class="mono">r</text>
+      <!-- 点 P -->
+      <line x1="548" y1="282" x2="505" y2="320" stroke="#3fb950" stroke-width="2" stroke-dasharray="5 5"/>
+      <circle cx="548" cy="282" r="8" fill="#3fb950"/>
+      <text x="560" y="268" fill="#3fb950" font-size="22" class="label">点 P</text>
+      <circle cx="505" cy="320" r="5" fill="#fff"/>
+      <text x="340" y="500" fill="#8b949e" font-size="21" text-anchor="middle" class="label">截面圆心绕 y 轴旋转一圈 = 圆环</text>
+      <defs>
+        <marker id="tr" markerWidth="11" markerHeight="11" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7 Z" fill="#ffa657"/></marker>
+        <marker id="tr2" markerWidth="11" markerHeight="11" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7 Z" fill="#58a6ff"/></marker>
+      </defs>
+    </svg>
+  </div>
+</div>
+</body></html>

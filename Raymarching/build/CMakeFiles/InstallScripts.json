@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"D:/shadertoy/Raymarching/build/cmake_install.cmake",
+		"D:/shadertoy/Raymarching/build/_deps/glfw-build/cmake_install.cmake",
+		"D:/shadertoy/Raymarching/build/_deps/glfw-build/src/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

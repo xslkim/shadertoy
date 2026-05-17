@@ -1,0 +1,51 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">场景构建与包围盒加速</div>
+
+  <div class="row grow gap-40" style="margin-top:36px;align-items:center">
+    <!-- 左：树结构 -->
+    <div class="col" style="width:880px;gap:0">
+      <div style="font-size:32px;font-weight:700;margin-bottom:20px">map() 函数结构</div>
+      <div style="background:#1f6feb;color:#fff;border-radius:10px;padding:16px 20px;font-size:25px;text-align:center;font-weight:700" class="mono">map(pos) → vec2(距离, 材质ID)</div>
+      <svg width="860" height="70" viewBox="0 0 860 70"><g stroke="#30363d" stroke-width="2" stroke-dasharray="4 4">
+        <line x1="430" y1="0" x2="120" y2="60"/><line x1="430" y1="0" x2="275" y2="60"/>
+        <line x1="430" y1="0" x2="430" y2="60"/><line x1="430" y1="0" x2="585" y2="60"/>
+        <line x1="430" y1="0" x2="740" y2="60"/></g></svg>
+      <div class="row gap-16">
+        <div class="col center" style="flex:1;background:#161b22;border:1px solid #3fb950;border-radius:8px;padding:12px 0">
+          <div style="font-size:21px;font-weight:700">Group 1</div><div class="green" style="font-size:20px">✓ 命中</div></div>
+        <div class="col center" style="flex:1;background:#161b22;border:1px solid #30363d;border-radius:8px;padding:12px 0">
+          <div style="font-size:21px">Group 2</div><div class="muted" style="font-size:20px">检测中</div></div>
+        <div class="col center" style="flex:1;background:#161b22;border:1px solid #f85149;border-radius:8px;padding:12px 0">
+          <div style="font-size:21px">Group 3</div><div class="red" style="font-size:20px">✗ 跳过</div></div>
+        <div class="col center" style="flex:1;background:#161b22;border:1px solid #30363d;border-radius:8px;padding:12px 0">
+          <div style="font-size:21px">Group 4</div><div class="muted" style="font-size:20px">检测中</div></div>
+        <div class="col center" style="flex:1;background:#161b22;border:1px solid #30363d;border-radius:8px;padding:12px 0">
+          <div style="font-size:21px">Group 5</div><div class="muted" style="font-size:20px">检测中</div></div>
+      </div>
+      <div class="step" style="margin-top:28px">
+        <div class="step-h">包围盒加速（AABB）</div>
+        <div class="step-d">点到包围盒的距离 &gt; 当前最近距离 → 整组物体直接跳过<br>25+ 个几何体，一次 map() 只需计算少数几组</div>
+      </div>
+    </div>
+
+    <!-- 右：代码 -->
+    <div class="code small" style="width:920px"><span class="kw">vec2</span> <span class="fn">map</span>(<span class="kw">in</span> <span class="kw">vec3</span> pos) {
+    <span class="com">// 地板：pos.y 即到 y=0 平面的距离</span>
+    <span class="kw">vec2</span> res = <span class="fn">vec2</span>(pos.y, <span class="num">0.0</span>);
+
+    <span class="com">// 第一组：先做包围盒检测</span>
+    <span class="kw">if</span> (<span class="fn">sdBox</span>(pos - g1Center, g1Extents) &lt; res.x) {
+        res = <span class="fn">opU</span>(res, <span class="fn">vec2</span>(
+            <span class="fn">sdSphere</span>(pos - <span class="fn">vec3</span>(-<span class="num">2</span>,<span class="num">.25</span>,<span class="num">0</span>), <span class="num">.25</span>),
+            <span class="num">26.9</span>   <span class="com">// 材质 ID</span>
+        ));
+        <span class="com">// ... 组内更多物体</span>
+    }
+    <span class="com">// 第二组、第三组 ... 结构相同</span>
+    <span class="kw">return</span> res;   <span class="com">// vec2(距离, 材质ID)</span>
+}</div>
+  </div>
+</div>
+</body></html>
