@@ -1,7 +1,7 @@
 >>> 开场：同一个关键字，不同的世界 #B01
 @enter: fade
 @exit: fade
-@visual: image
+@visual: image(./assets/B01.png)
 
 --- visual ---
 一张扁平矢量插画。画面中央漂浮着一个巨大的、发光的蓝色 #58a6ff "await" 符号，
@@ -46,7 +46,7 @@ async/await 这套语法，主要服务前两种
 >>> JS 单线程事件循环 #B03
 @enter: fade-up
 @exit: fade
-@visual: image
+@visual: image(./assets/B03.png)
 
 --- visual ---
 一张扁平矢量概念插画。画面中央是一个旋转木马 / 环形传送带，
@@ -159,7 +159,7 @@ C# 是 **多线程**，await 之后可能落到 **另一个线程**
 >>> await 的语义差异 #B07
 @enter: fade-up
 @exit: fade
-@visual: image
+@visual: image(./assets/B07.png)
 
 --- visual ---
 一张扁平矢量概念插画，左右对比两个"恢复调度"机制。
@@ -215,7 +215,7 @@ async def 定义协程，await 等待，语法依旧眼熟
 >>> Python：事件循环 + GIL #B09
 @enter: fade-up
 @exit: fade
-@visual: image
+@visual: image(./assets/B09.png)
 
 --- visual ---
 一张扁平矢量概念插画。画面中央是 Python 的事件循环（一个环形传送带），
@@ -328,7 +328,7 @@ Go 完全另立门户，用 goroutine 加 channel
 >>> 共同的本质：续体 #B13
 @enter: fade-up
 @exit: fade
-@visual: image
+@visual: image(./assets/B13.png)
 
 --- visual ---
 一张扁平矢量概念插画。画面中央是一段被剪刀剪断的发光代码丝带，

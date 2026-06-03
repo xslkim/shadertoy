@@ -1,7 +1,7 @@
 >>> 开场：卡住的程序 #B01
 @enter: fade
 @exit: fade
-@visual: image
+@visual: image(./assets/B01.png)
 
 --- visual ---
 一张扁平矢量插画。画面左右分屏对比。
@@ -72,7 +72,7 @@ string DownloadData() {
 >>> 多线程不是答案 #B04
 @enter: fade-up
 @exit: fade
-@visual: image
+@visual: image(./assets/B04.png)
 
 --- visual ---
 一张扁平矢量概念插画。画面中央是一座工厂车间。
@@ -171,7 +171,7 @@ await 之前的代码，正常同步执行
 >>> 编译器的魔法：状态机 #B08
 @enter: fade-up
 @exit: fade
-@visual: image
+@visual: image(./assets/B08.png)
 
 --- visual ---
 一张扁平矢量概念插画。主体是一卷电影胶片或一条带有多个存档点的游戏关卡轨道，
@@ -234,7 +234,7 @@ async/await 的全部魔法，就是这台状态机
 >>> await 之后，回到哪个线程 #B10
 @enter: fade-up
 @exit: fade
-@visual: image
+@visual: image(./assets/B10.png)
 
 --- visual ---
 一张扁平矢量概念插画。画面中心是一个发光的蓝色 #58a6ff "调度员 / 传送门" 装置，

@@ -1,7 +1,7 @@
 >>> 开场：回到 Unity #B01
 @enter: fade
 @exit: fade
-@visual: image
+@visual: image(./assets/B01.png)
 
 --- visual ---
 一张扁平矢量插画。画面主体是一个游戏开发者站在 Unity 风格的场景里，
@@ -55,7 +55,7 @@ yield return 一个异步操作，就是等它完成
 >>> 协程其实也是状态机 #B03
 @enter: fade-up
 @exit: fade
-@visual: image
+@visual: image(./assets/B03.png)
 
 --- visual ---
 一张扁平矢量概念插画。中央并排画两台外观相似的"齿轮状态机"装置，
@@ -106,7 +106,7 @@ IEnumerator 也是编译器生成的一台状态机
 >>> Unity 是单线程的 #B05
 @enter: fade-up
 @exit: fade
-@visual: image
+@visual: image(./assets/B05.png)
 
 --- visual ---
 一张扁平矢量概念插画。画面中央是一条环形的传送带流水线，标注感暗示它叫 "PlayerLoop"。
@@ -158,7 +158,7 @@ await 之后的这行，去改了 transform
 >>> UnitySynchronizationContext #B07
 @enter: fade-up
 @exit: fade
-@visual: image
+@visual: image(./assets/B07.png)
 
 --- visual ---
 一张扁平矢量概念插画。画面中心是一个发光的蓝色 #58a6ff 传送门装置，
@@ -241,7 +241,7 @@ async 方法则不受这个限制
 >>> 为什么需要 UniTask #B10
 @enter: fade-up
 @exit: fade
-@visual: image
+@visual: image(./assets/B10.png)
 
 --- visual ---
 一张扁平矢量概念插画。画面左边是 C# 原生 Task，被画成一个略显笨重、
@@ -265,7 +265,7 @@ C# 原生的 Task 是为服务器、为多线程设计的
 >>> UniTask 的核心优势 #B11
 @enter: fade-up
 @exit: fade
-@visual: image
+@visual: image(./assets/B11.png)
 
 --- visual ---
 一张扁平矢量概念插画。画面分三个发光的图标卡片横向排列（不含大段文字，靠图形表意）：
