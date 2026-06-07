@@ -1,0 +1,55 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.node{display:flex;align-items:center;gap:22px;border-radius:16px;padding:16px 26px;border:1px solid var(--border);background:var(--panel)}
+.node .dot{flex:none;width:54px;height:54px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:30px;color:var(--bg)}
+.node .nt{font-size:34px;font-weight:800}
+.node .nd{font-size:26px;color:var(--muted)}
+.arrow{align-self:center;color:var(--muted);font-size:30px;margin:-4px 0}
+</style></head>
+<body><div class="stage">
+  <div class="title-row" style="margin-bottom:4px">
+    <div class="h-title">相机采样 &amp; <span style="color:var(--accent)">完整流程</span></div>
+    <div class="rule" style="width:420px"></div>
+  </div>
+
+  <div class="row grow gap48" style="margin-top:26px">
+    <!-- 左：相机模型 -->
+    <div class="col card" style="width:880px;padding:32px 40px">
+      <div style="font-size:38px;font-weight:800;margin-bottom:8px">射线从哪来：针孔相机</div>
+      <svg width="100%" height="430" viewBox="0 0 800 430" preserveAspectRatio="xMidYMid meet">
+        <!-- 相机点 -->
+        <circle cx="80" cy="215" r="14" fill="#58a6ff"/><text x="40" y="270" fill="#8b949e" font-size="24">相机位置</text>
+        <!-- 视锥 -->
+        <line x1="80" y1="215" x2="470" y2="70" stroke="#3b4a5e" stroke-width="2"/>
+        <line x1="80" y1="215" x2="470" y2="360" stroke="#3b4a5e" stroke-width="2"/>
+        <!-- 成像平面网格 -->
+        <g stroke="#30363d" stroke-width="2"><rect x="380" y="80" width="180" height="270" fill="#0c1118"/>
+          <line x1="425" y1="80" x2="425" y2="350"/><line x1="470" y1="80" x2="470" y2="350"/><line x1="515" y1="80" x2="515" y2="350"/>
+          <line x1="380" y1="148" x2="560" y2="148"/><line x1="380" y1="215" x2="560" y2="215"/><line x1="380" y1="282" x2="560" y2="282"/></g>
+        <text x="470" y="386" fill="#8b949e" font-size="24" text-anchor="middle">成像平面 1024×768</text>
+        <!-- 穿过网格的射线 -->
+        <g stroke="#58a6ff" stroke-width="2.5"><line x1="80" y1="215" x2="700" y2="120"/><line x1="80" y1="215" x2="700" y2="215"/><line x1="80" y1="215" x2="700" y2="310"/></g>
+        <!-- 子像素放大 -->
+        <g transform="translate(610,250)">
+          <rect x="0" y="0" width="150" height="150" rx="8" fill="#11161f" stroke="#58a6ff" stroke-width="2"/>
+          <line x1="75" y1="0" x2="75" y2="150" stroke="#58a6ff" stroke-width="2"/><line x1="0" y1="75" x2="150" y2="75" stroke="#58a6ff" stroke-width="2"/>
+          <g fill="#cfe8ff"><circle cx="30" cy="34" r="4"/><circle cx="52" cy="56" r="4"/><circle cx="40" cy="60" r="4"/><circle cx="110" cy="30" r="4"/><circle cx="124" cy="52" r="4"/><circle cx="34" cy="116" r="4"/><circle cx="58" cy="124" r="4"/><circle cx="112" cy="118" r="4"/><circle cx="126" cy="100" r="4"/></g>
+          <text x="75" y="184" fill="#8b949e" font-size="22" text-anchor="middle">2×2 子像素 → 抗锯齿</text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- 右：五步流程 -->
+    <div class="col grow" style="gap:8px;justify-content:center">
+      <div class="node"><div class="dot" style="background:#58a6ff">1</div><div><div class="nt">像素 → 射线</div><div class="nd">针孔相机生成射线</div></div></div>
+      <div class="arrow">↓</div>
+      <div class="node"><div class="dot" style="background:#39c5cf">2</div><div><div class="nt">求交</div><div class="nd">遍历 9 球，最近命中</div></div></div>
+      <div class="arrow">↓</div>
+      <div class="node"><div class="dot" style="background:#3fb950">3</div><div><div class="nt">材质分支</div><div class="nd">漫反射 / 镜面 / 折射</div></div></div>
+      <div class="arrow">↓</div>
+      <div class="node"><div class="dot" style="background:#ffa657">4</div><div><div class="nt">终止判断</div><div class="nd">俄罗斯轮盘赌</div></div></div>
+      <div class="arrow">↓</div>
+      <div class="node"><div class="dot" style="background:#bc8cff">5</div><div><div class="nt">输出</div><div class="nd">平均 + Gamma + PPM</div></div></div>
+    </div>
+  </div>
+</div></body></html>

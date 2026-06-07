@@ -1,0 +1,78 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css"></head>
+<body><div class="stage">
+  <div class="title-row" style="margin-bottom:4px">
+    <div class="h-title">九个球，<span style="color:var(--accent)">拼出一个房间</span></div>
+    <div class="rule" style="width:400px"></div>
+  </div>
+
+  <div class="row grow gap32" style="margin-top:22px">
+    <!-- 左：Cornell Box 剖面 -->
+    <div class="col card" style="width:720px;padding:30px 36px">
+      <div style="font-size:34px;font-weight:800;margin-bottom:10px">Cornell Box 剖面</div>
+      <svg width="100%" height="430" viewBox="0 0 640 430" preserveAspectRatio="xMidYMid meet">
+        <rect x="70" y="40" width="500" height="330" rx="6" fill="#0c1118" stroke="#30363d" stroke-width="2"/>
+        <!-- 墙 -->
+        <rect x="70" y="40" width="16" height="330" fill="#ff7b72" opacity=".9"/>
+        <rect x="554" y="40" width="16" height="330" fill="#58a6ff" opacity=".9"/>
+        <rect x="70" y="40" width="500" height="14" fill="#e6edf3" opacity=".5"/>
+        <rect x="70" y="356" width="500" height="14" fill="#e6edf3" opacity=".5"/>
+        <!-- 光源弧 -->
+        <path d="M250 54 A130 130 0 0 1 390 54" fill="none" stroke="#ffe9a8" stroke-width="8"/>
+        <ellipse cx="320" cy="70" rx="120" ry="34" fill="#ffe9a8" opacity=".16"/>
+        <!-- 镜面球 -->
+        <circle cx="220" cy="290" r="56" fill="#26303d" stroke="#cfe6fb" stroke-width="3"/><circle cx="204" cy="272" r="13" fill="#dfe9f5" opacity=".7"/>
+        <!-- 玻璃球 -->
+        <circle cx="410" cy="298" r="50" fill="#10242a" stroke="#8fd3ff" stroke-width="3" opacity=".9"/>
+        <!-- 标签 -->
+        <text x="18" y="210" fill="#ff7b72" font-size="22" transform="rotate(-90 18 210)" text-anchor="middle">左墙 红</text>
+        <text x="624" y="210" fill="#58a6ff" font-size="22" transform="rotate(90 624 210)" text-anchor="middle">右墙 蓝</text>
+        <text x="320" y="40" fill="#e3b341" font-size="22" text-anchor="middle">光源 r=600</text>
+        <text x="220" y="300" fill="#e6edf3" font-size="22" text-anchor="middle">镜面 r=16.5</text>
+        <text x="410" y="306" fill="#e6edf3" font-size="22" text-anchor="middle">玻璃 r=16.5</text>
+      </svg>
+      <div class="row between" style="margin-top:6px">
+        <div class="tag" style="background:rgba(139,148,158,.16);color:var(--muted);font-size:24px">6 面墙 + 2 小球 + 1 光源</div>
+        <div class="tag" style="background:rgba(88,166,255,.18);color:var(--accent);font-size:24px">= 9 个球</div>
+      </div>
+    </div>
+
+    <!-- 右：两块 -->
+    <div class="col grow gap24">
+      <!-- 大球当墙 -->
+      <div class="card col grow" style="padding:26px 36px;justify-content:center">
+        <div style="font-size:34px;font-weight:800">大球当墙：曲率≈0 就是平面</div>
+        <svg width="100%" height="190" viewBox="0 0 760 190" preserveAspectRatio="xMidYMid meet" style="margin-top:4px">
+          <!-- 几乎笔直的圆弧 -->
+          <path d="M30 70 Q 380 56 730 70" fill="none" stroke="#8fd3ff" stroke-width="4"/>
+          <circle cx="540" cy="62" r="26" fill="none" stroke="#8b949e" stroke-width="3"/><line x1="558" y1="80" x2="588" y2="110" stroke="#8b949e" stroke-width="4"/>
+          <!-- 数轴 -->
+          <line x1="40" y1="150" x2="720" y2="150" stroke="#30363d" stroke-width="3"/>
+          <g class="mono" font-size="24">
+            <circle cx="690" cy="150" r="6" fill="#58a6ff"/><text x="690" y="182" fill="#58a6ff" text-anchor="middle">x=100001</text>
+            <line x1="90" y1="150" x2="690" y2="150" stroke="#58a6ff" stroke-width="3"/>
+            <text x="390" y="138" fill="#8b949e" text-anchor="middle">半径 100000</text>
+            <circle cx="90" cy="150" r="6" fill="#e6edf3"/><text x="90" y="182" fill="#e6edf3" text-anchor="middle">x=1 (墙面)</text>
+          </g>
+        </svg>
+        <div class="pt" style="margin-top:2px">球心 − 半径 = 墙壁位置 · <span class="dim">半径十万的球面，局部就是平面</span></div>
+      </div>
+      <!-- 射线求交 -->
+      <div class="card col" style="padding:24px 36px">
+        <div style="font-size:34px;font-weight:800">射线求交：解二次方程</div>
+        <div class="row" style="align-items:center;gap:24px;margin-top:6px">
+          <svg width="300" height="150" viewBox="0 0 300 150">
+            <circle cx="200" cy="78" r="56" fill="none" stroke="#8fd3ff" stroke-width="3"/>
+            <line x1="10" y1="120" x2="290" y2="40" stroke="#58a6ff" stroke-width="4"/>
+            <circle cx="151" cy="106" r="7" fill="#e3b341"/><circle cx="250" cy="78" r="7" fill="#e3b341"/>
+            <text x="120" y="100" fill="#e3b341" font-size="22">取较近正 t</text>
+          </svg>
+          <div class="col gap16" style="flex:1">
+            <div class="row gap16" style="align-items:center"><span class="tag" style="background:rgba(139,148,158,.16);color:var(--muted);font-size:22px">无解</span><span class="pt dim">未命中</span></div>
+            <div class="row gap16" style="align-items:center"><span class="tag" style="background:rgba(227,179,65,.18);color:var(--yellow);font-size:22px">一解</span><span class="pt dim">相切</span></div>
+            <div class="row gap16" style="align-items:center"><span class="tag" style="background:rgba(88,166,255,.18);color:var(--accent);font-size:22px">两解</span><span class="pt dim">穿过 → 遍历九球取最近命中</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></body></html>

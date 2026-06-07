@@ -1,0 +1,51 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css"></head>
+<body><div class="stage">
+  <div class="title-row" style="margin-bottom:6px">
+    <div class="h-title">俄罗斯轮盘赌：<span style="color:var(--accent)">如何优雅终止</span></div>
+    <div class="rule" style="width:480px"></div>
+  </div>
+
+  <!-- 弹射链 + 分叉 -->
+  <div class="card grow" style="margin-top:26px;padding:30px 50px">
+    <svg width="100%" height="360" viewBox="0 0 1700 360" preserveAspectRatio="xMidYMid meet">
+      <!-- 相机 -->
+      <g transform="translate(70,150)"><rect x="-50" y="-30" width="76" height="60" rx="9" fill="#161b22" stroke="#58a6ff" stroke-width="3"/><polygon points="26,-18 52,-32 52,32 26,18" fill="#161b22" stroke="#58a6ff" stroke-width="3"/></g>
+      <!-- 主链：前五次 -->
+      <line x1="124" y1="150" x2="980" y2="150" stroke="#58a6ff" stroke-width="5"/>
+      <g>
+        <!-- 5 个无条件弹射点 + 轮盘 -->
+        <g id="b1" transform="translate(220,150)"><circle r="20" fill="none" stroke="#58a6ff" stroke-width="4"/><circle r="6" fill="#58a6ff"/></g>
+        <g transform="translate(370,150)"><circle r="20" fill="none" stroke="#58a6ff" stroke-width="4"/><circle r="6" fill="#58a6ff"/></g>
+        <g transform="translate(520,150)"><circle r="20" fill="none" stroke="#58a6ff" stroke-width="4"/><circle r="6" fill="#58a6ff"/></g>
+        <g transform="translate(670,150)"><circle r="20" fill="none" stroke="#58a6ff" stroke-width="4"/><circle r="6" fill="#58a6ff"/></g>
+        <g transform="translate(820,150)"><circle r="20" fill="none" stroke="#58a6ff" stroke-width="4"/><circle r="6" fill="#58a6ff"/></g>
+      </g>
+      <rect x="180" y="60" width="680" height="44" rx="22" fill="rgba(88,166,255,.12)"/>
+      <text x="520" y="90" fill="#58a6ff" font-size="28" text-anchor="middle" font-weight="700">前五次弹射 · 无条件继续</text>
+
+      <!-- 第六点：决策轮盘 -->
+      <g transform="translate(980,150)"><circle r="34" fill="#161b22" stroke="#e3b341" stroke-width="4"/>
+        <g stroke="#e3b341" stroke-width="3"><line x1="0" y1="-34" x2="0" y2="34"/><line x1="-34" y1="0" x2="34" y2="0"/></g>
+        <circle r="7" fill="#e3b341"/></g>
+      <text x="980" y="232" fill="#e3b341" font-size="26" text-anchor="middle">掷骰子</text>
+
+      <!-- 分叉一：存活（绿） -->
+      <line x1="1014" y1="135" x2="1240" y2="70" stroke="#3fb950" stroke-width="5"/>
+      <polygon points="1240,70 1222,70 1230,84" fill="#3fb950"/>
+      <text x="1260" y="64" fill="#3fb950" font-size="30" font-weight="700">存活 → 继续</text>
+      <text x="1260" y="104" fill="#8b949e" font-size="26">贡献 ×1/p 补偿，期望不变</text>
+      <!-- 分叉二：终止（红） -->
+      <line x1="1014" y1="166" x2="1240" y2="250" stroke="#ff7b72" stroke-width="5"/>
+      <g transform="translate(1250,258)" stroke="#ff7b72" stroke-width="5" stroke-linecap="round"><line x1="-12" y1="-12" x2="12" y2="12"/><line x1="12" y1="-12" x2="-12" y2="12"/></g>
+      <text x="1290" y="248" fill="#ff7b72" font-size="30" font-weight="700">终止 → 返回光能</text>
+      <text x="1290" y="288" fill="#8b949e" font-size="26">暗色表面更容易被终止（吸收更多光）</text>
+    </svg>
+  </div>
+
+  <!-- 天平对比 -->
+  <div class="row center gap48" style="margin-top:26px">
+    <div class="card row center gap24" style="padding:18px 40px"><div class="tag" style="background:rgba(139,148,158,.18);color:var(--muted);font-size:26px">固定最大次数</div><div class="pt dim">→ 丢失后续光能 · <b style="color:var(--red)">有偏</b></div></div>
+    <div style="font-size:40px;color:var(--muted)">vs</div>
+    <div class="card row center gap24" style="padding:18px 40px;border-color:rgba(88,166,255,.5)"><div class="tag" style="background:rgba(88,166,255,.18);color:var(--accent);font-size:26px">俄罗斯轮盘赌</div><div class="pt">→ 数学期望不变 · <b style="color:var(--accent)">无偏</b></div></div>
+  </div>
+</div></body></html>

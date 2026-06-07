@@ -1,0 +1,44 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css"></head>
+<body><div class="stage">
+  <div class="title-row" style="margin-bottom:6px">
+    <div class="h-title">为什么这么慢：<span style="color:var(--accent)">一笔账</span></div>
+    <div class="rule" style="width:420px"></div>
+  </div>
+
+  <!-- 乘法链 -->
+  <div class="row center grow gap24" style="margin-top:20px">
+    <div class="card col center" style="width:300px;height:230px;justify-content:center">
+      <div class="mono" style="font-size:64px;font-weight:800">786K</div>
+      <div class="label" style="margin-top:10px;text-align:center">像素<br>1024 × 768</div>
+    </div>
+    <div style="font-size:64px;color:var(--accent)">×</div>
+    <div class="card col center" style="width:300px;height:230px;justify-content:center">
+      <div class="mono" style="font-size:64px;font-weight:800">1000</div>
+      <div class="label" style="margin-top:10px;text-align:center">每像素<br>追踪路径数</div>
+    </div>
+    <div style="font-size:64px;color:var(--accent)">×</div>
+    <div class="card col center" style="width:300px;height:230px;justify-content:center">
+      <div class="mono" style="font-size:64px;font-weight:800">8</div>
+      <div class="label" style="margin-top:10px;text-align:center">每条路径<br>平均弹射</div>
+    </div>
+    <div style="font-size:64px;color:var(--accent)">=</div>
+    <!-- 结果 -->
+    <div class="col center" style="width:360px;height:230px;border-radius:24px;justify-content:center;
+         background:linear-gradient(135deg,rgba(88,166,255,.22),rgba(88,166,255,.05));border:2px solid var(--accent)">
+      <div class="mono" style="font-size:92px;font-weight:800;color:var(--accent);line-height:1">60亿</div>
+      <div class="pt" style="margin-top:12px">次光线追踪</div>
+    </div>
+  </div>
+
+  <!-- 底部两个语境 -->
+  <div class="row grow gap48 center" style="margin-top:30px">
+    <div class="card row center gap32" style="width:640px;height:180px">
+      <svg width="92" height="120" viewBox="0 0 92 120"><g stroke="#8b949e" stroke-width="4" stroke-linecap="round"><line x1="18" y1="12" x2="74" y2="12"/><line x1="18" y1="108" x2="74" y2="108"/></g><path d="M22 12 L70 12 L50 60 L70 108 L22 108 L42 60 Z" fill="none" stroke="#8b949e" stroke-width="4" stroke-linejoin="round"/><path d="M38 30 L54 30 L46 50 Z" fill="#e3b341" opacity=".7"/></svg>
+      <div class="col"><div style="font-size:40px;font-weight:800">单张画面</div><div class="pt dim">几分钟到几小时</div></div>
+    </div>
+    <div class="card row center gap32" style="width:640px;height:180px">
+      <svg width="120" height="110" viewBox="0 0 120 110"><g fill="none" stroke="#58a6ff" stroke-width="3"><rect x="10" y="14" width="100" height="24" rx="5"/><rect x="10" y="44" width="100" height="24" rx="5"/><rect x="10" y="74" width="100" height="24" rx="5"/></g><g fill="#3fb950"><circle cx="24" cy="26" r="4"/><circle cx="24" cy="56" r="4"/><circle cx="24" cy="86" r="4"/></g></svg>
+      <div class="col"><div style="font-size:40px;font-weight:800">电影工业</div><div class="pt dim">数千台机器渲染一帧</div></div>
+    </div>
+  </div>
+</div></body></html>

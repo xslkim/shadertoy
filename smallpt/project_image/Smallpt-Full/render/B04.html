@@ -1,0 +1,64 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css"></head>
+<body><div class="stage">
+  <div class="title-row" style="margin-bottom:4px">
+    <div class="h-title">光线路径 &nbsp;+&nbsp; <span style="color:var(--accent)">蒙特卡洛</span></div>
+    <div class="rule" style="width:420px"></div>
+  </div>
+
+  <!-- 上：一条光线的旅程 -->
+  <div class="card grow" style="margin-top:26px;padding:28px 40px">
+    <div class="row between center" style="margin-bottom:6px"><div style="font-size:40px;font-weight:800">一条光线的旅程</div>
+      <div class="label">相机 → 地板 → 红墙 → 天花板 → 光源</div></div>
+    <svg width="100%" height="240" viewBox="0 0 1640 240" preserveAspectRatio="xMidYMid meet">
+      <defs><linearGradient id="rj" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1f4e8a"/><stop offset="1" stop-color="#dff0ff"/></linearGradient></defs>
+      <!-- 房间剖面 -->
+      <rect x="220" y="20" width="1360" height="200" rx="8" fill="#0c1118" stroke="#30363d" stroke-width="2"/>
+      <rect x="220" y="20" width="12" height="200" fill="#ff7b72" opacity=".85"/>
+      <text x="262" y="56" fill="#8b949e" font-size="22">天花板</text>
+      <text x="262" y="212" fill="#8b949e" font-size="22">地板</text>
+      <!-- 光源 -->
+      <rect x="1180" y="26" width="170" height="16" rx="8" fill="#ffe9a8"/><ellipse cx="1265" cy="34" rx="120" ry="30" fill="#ffe9a8" opacity=".18"/>
+      <!-- 相机 -->
+      <g transform="translate(150,120)"><rect x="-58" y="-30" width="82" height="60" rx="9" fill="#161b22" stroke="#58a6ff" stroke-width="3"/><polygon points="24,-18 52,-32 52,32 24,18" fill="#161b22" stroke="#58a6ff" stroke-width="3"/></g>
+      <!-- 弹射路径 -->
+      <polyline points="202,120 470,196 760,52 1090,196 1265,42" fill="none" stroke="url(#rj)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <g><circle cx="470" cy="196" r="11" fill="#7fb1ee"/><circle cx="760" cy="52" r="11" fill="#a9cdf5"/><circle cx="1090" cy="196" r="11" fill="#cfe6fb"/><circle cx="1265" cy="42" r="13" fill="#fff7d6"/></g>
+      <!-- 随机偏转小箭头 -->
+      <g stroke="#8b949e" stroke-width="2" fill="none" stroke-linecap="round" opacity=".8">
+        <path d="M470 196 l-18 -30"/><path d="M760 52 l24 24"/><path d="M1090 196 l-20 -28"/></g>
+      <text x="470" y="240" fill="#8b949e" font-size="22" text-anchor="middle">①地板</text>
+      <text x="760" y="100" fill="#8b949e" font-size="22" text-anchor="middle">②红墙</text>
+      <text x="1090" y="240" fill="#8b949e" font-size="22" text-anchor="middle">③天花板</text>
+      <text x="1300" y="86" fill="#e3b341" font-size="22">④光源</text>
+    </svg>
+  </div>
+
+  <!-- 下：蒙特卡洛 -->
+  <div class="row grow gap32" style="margin-top:24px">
+    <div class="card col" style="width:560px;padding:26px 36px">
+      <div style="font-size:40px;font-weight:800;margin-bottom:6px">无数方向，只随机选几个</div>
+      <svg width="100%" height="220" viewBox="0 0 480 220" preserveAspectRatio="xMidYMid meet">
+        <line x1="40" y1="180" x2="440" y2="180" stroke="#30363d" stroke-width="3"/>
+        <!-- 半球候选方向 -->
+        <g stroke="#3b4a5e" stroke-width="2" fill="none" stroke-linecap="round">
+          <line x1="240" y1="180" x2="120" y2="120"/><line x1="240" y1="180" x2="160" y2="70"/>
+          <line x1="240" y1="180" x2="320" y2="60"/><line x1="240" y1="180" x2="360" y2="120"/>
+          <line x1="240" y1="180" x2="280" y2="48"/><line x1="240" y1="180" x2="200" y2="52"/></g>
+        <!-- 被选中的方向 -->
+        <g stroke="#58a6ff" stroke-width="4" fill="none" stroke-linecap="round">
+          <line x1="240" y1="180" x2="240" y2="44"/><line x1="240" y1="180" x2="150" y2="92"/></g>
+        <polygon points="240,44 234,60 246,60" fill="#cfe8ff"/>
+        <circle cx="240" cy="180" r="7" fill="#e6edf3"/>
+      </svg>
+      <div class="pt dim" style="margin-top:6px">随机样本求平均 → 逼近积分真值</div>
+    </div>
+    <div class="card col grow center" style="padding:26px 32px">
+      <div class="row between" style="width:100%;align-items:flex-end">
+        <div class="col center gap16"><div style="width:150px;height:150px;border-radius:14px;background:repeating-conic-gradient(#2b3340 0 12deg,#454f5e 12deg 24deg)"></div><div class="pt">4 spp · 噪点多</div></div>
+        <div class="col center gap16"><div style="width:150px;height:150px;border-radius:14px;background:repeating-conic-gradient(#3a4250 0 22deg,#5a6470 0)"></div><div class="pt">20 spp · 改善</div></div>
+        <div class="col center gap16"><div style="width:150px;height:150px;border-radius:14px;background:radial-gradient(circle at 40% 35%,#cfe6fb,#5b6470)"></div><div class="pt" style="color:var(--accent)">100 spp · 清晰</div></div>
+      </div>
+      <div class="pt dim" style="margin-top:22px">采样越多，估计越准</div>
+    </div>
+  </div>
+</div></body></html>

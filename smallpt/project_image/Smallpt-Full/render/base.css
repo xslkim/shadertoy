@@ -1,0 +1,42 @@
+/* smallpt-full 信息图共享设计系统 — 1920x1080, dark-code 主题 */
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel2:#1c2430; --border:#30363d;
+  --fg:#e6edf3; --muted:#8b949e; --accent:#58a6ff;
+  --red:#ff7b72; --green:#3fb950; --orange:#ffa657; --yellow:#e3b341;
+  --purple:#bc8cff; --cyan:#39c5cf;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;background:var(--bg);overflow:hidden}
+body{
+  font-family:"Microsoft YaHei","Noto Sans SC","Segoe UI",sans-serif;
+  color:var(--fg); -webkit-font-smoothing:antialiased;
+}
+/* 底部预留 84px 安全带：后期单独叠加字幕，画面内不放任何内容/脚注 */
+.stage{position:relative;width:1920px;height:1080px;padding:64px 96px 84px;display:flex;flex-direction:column}
+.mono{font-family:"Consolas","JetBrains Mono",monospace}
+
+/* 标题 */
+.h-title{font-size:80px;font-weight:800;letter-spacing:1px;line-height:1.1}
+.h-sub{font-size:34px;color:var(--muted);font-weight:500}
+.kicker{font-size:30px;letter-spacing:10px;color:var(--accent);font-weight:700}
+.rule{height:5px;border-radius:3px;background:var(--accent)}
+.title-row{display:flex;flex-direction:column;align-items:center;gap:18px}
+
+/* 卡片 */
+.card{background:var(--panel);border:1px solid var(--border);border-radius:24px;padding:40px}
+.card-top{height:8px;border-radius:8px 8px 0 0}
+.label{font-size:28px;color:var(--muted)}
+.pt{font-size:30px;line-height:1.5}
+.tag{display:inline-block;font-size:24px;padding:6px 18px;border-radius:999px;font-weight:700}
+
+/* 通用 flex 工具 */
+.row{display:flex}.col{display:flex;flex-direction:column}
+.center{align-items:center;justify-content:center}
+.between{justify-content:space-between}
+.grow{flex:1}
+.gap16{gap:16px}.gap24{gap:24px}.gap32{gap:32px}.gap48{gap:48px}
+
+.dim{color:var(--muted)}
+.foot{position:absolute;left:0;bottom:46px;width:1920px;text-align:center;font-size:30px;color:var(--muted)}
+.foot b{color:var(--accent)}
+svg{display:block;overflow:visible}

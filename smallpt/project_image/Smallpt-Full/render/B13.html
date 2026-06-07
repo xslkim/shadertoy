@@ -1,0 +1,57 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.tbl{display:grid;grid-template-columns:230px 1fr 1fr;gap:12px;flex:1;margin-top:14px}
+.hd{display:flex;align-items:center;justify-content:center;gap:14px;font-size:34px;font-weight:800;border-radius:14px;padding:14px}
+.hd.rm{background:rgba(88,166,255,.16);color:var(--accent)}
+.hd.pt{background:rgba(255,166,87,.16);color:var(--orange)}
+.rl{display:flex;align-items:center;font-size:30px;font-weight:800;color:#c9d4e1;padding-left:8px}
+.cell{display:flex;align-items:center;gap:18px;background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:12px 22px}
+.cell.rmc{border-left:5px solid var(--accent)}
+.cell.ptc{border-left:5px solid var(--orange)}
+.cell .pts{font-size:26px;line-height:1.34;color:#c9d4e1}
+.cell svg{flex:none}
+.hl{outline:2px solid var(--accent);border-radius:16px}
+.icon{width:54px;height:54px;flex:none}
+</style></head>
+<body><div class="stage">
+  <div class="title-row" style="margin-bottom:2px">
+    <div class="h-title" style="font-size:68px">两种光线渲染的<span style="color:var(--accent)">全面对比</span></div>
+  </div>
+
+  <div class="tbl">
+    <!-- header -->
+    <div></div>
+    <div class="hd rm"><svg class="icon" viewBox="0 0 54 54"><rect x="8" y="14" width="38" height="26" rx="4" fill="none" stroke="#58a6ff" stroke-width="3"/><circle cx="27" cy="27" r="6" fill="#58a6ff"/></svg>Raymarching · 实时</div>
+    <div class="hd pt"><svg class="icon" viewBox="0 0 54 54"><rect x="10" y="10" width="34" height="34" rx="4" fill="none" stroke="#ffa657" stroke-width="3"/><line x1="10" y1="22" x2="44" y2="22" stroke="#ffa657" stroke-width="3"/></svg>Path Tracing · 离线</div>
+
+    <!-- 行1 平台 -->
+    <div class="rl">平台与速度</div>
+    <div class="cell rmc"><svg class="icon" viewBox="0 0 54 54"><rect x="10" y="10" width="34" height="34" rx="5" fill="none" stroke="#58a6ff" stroke-width="3"/><rect x="20" y="20" width="14" height="14" fill="#58a6ff"/><g stroke="#58a6ff" stroke-width="3"><line x1="16" y1="6" x2="16" y2="10"/><line x1="27" y1="6" x2="27" y2="10"/><line x1="38" y1="6" x2="38" y2="10"/><line x1="16" y1="44" x2="16" y2="48"/><line x1="27" y1="44" x2="27" y2="48"/><line x1="38" y1="44" x2="38" y2="48"/></g></svg><div class="pts">GPU Fragment Shader<br>每帧 16ms · 实时交互</div></div>
+    <div class="cell ptc"><svg class="icon" viewBox="0 0 54 54"><rect x="12" y="12" width="30" height="30" rx="4" fill="none" stroke="#ffa657" stroke-width="3"/><rect x="22" y="22" width="10" height="10" fill="#ffa657"/></svg><div class="pts">CPU 离线渲染<br>分钟到小时 · 后期合成</div></div>
+
+    <!-- 行2 几何 -->
+    <div class="rl">几何表示</div>
+    <div class="cell rmc"><svg class="icon" viewBox="0 0 54 54"><circle cx="16" cy="18" r="9" fill="none" stroke="#58a6ff" stroke-width="3"/><rect x="30" y="9" width="18" height="18" rx="3" fill="none" stroke="#58a6ff" stroke-width="3"/><ellipse cx="27" cy="42" rx="16" ry="7" fill="none" stroke="#58a6ff" stroke-width="3"/></svg><div class="pts">25+ 种 SDF 图元<br>平滑并集差集 · 任意形状</div></div>
+    <div class="cell ptc"><svg class="icon" viewBox="0 0 54 54"><circle cx="18" cy="20" r="8" fill="none" stroke="#ffa657" stroke-width="3"/><circle cx="36" cy="32" r="11" fill="none" stroke="#ffa657" stroke-width="3"/></svg><div class="pts">只有球体<br>大球当平面 · 解析求交</div></div>
+
+    <!-- 行3 求交 -->
+    <div class="rl">求交方式</div>
+    <div class="cell rmc"><svg class="icon" viewBox="0 0 54 54"><line x1="6" y1="40" x2="48" y2="14" stroke="#58a6ff" stroke-width="3"/><circle cx="20" cy="32" r="9" fill="none" stroke="#58a6ff" stroke-width="2"/><circle cx="33" cy="24" r="5" fill="none" stroke="#58a6ff" stroke-width="2"/></svg><div class="pts">Sphere Tracing 步进<br>最多 70 次迭代</div></div>
+    <div class="cell ptc"><svg class="icon" viewBox="0 0 54 54"><circle cx="32" cy="27" r="13" fill="none" stroke="#ffa657" stroke-width="3"/><line x1="4" y1="40" x2="32" y2="27" stroke="#ffa657" stroke-width="3"/><circle cx="22" cy="31" r="4" fill="#ffa657"/></svg><div class="pts">解一元二次方程<br>一步精确 · 无迭代</div></div>
+
+    <!-- 行4 光照（高亮） -->
+    <div class="rl" style="color:var(--accent)">光照模型 ★</div>
+    <div class="cell rmc hl"><svg class="icon" viewBox="0 0 54 54"><circle cx="27" cy="22" r="10" fill="none" stroke="#58a6ff" stroke-width="3"/><g stroke="#58a6ff" stroke-width="3" stroke-linecap="round"><line x1="27" y1="4" x2="27" y2="9"/><line x1="9" y1="22" x2="14" y2="22"/><line x1="45" y1="22" x2="40" y2="22"/></g><line x1="22" y1="40" x2="32" y2="40" stroke="#58a6ff" stroke-width="3"/></svg><div class="pts">经验公式 · 手工调参<br>Lambert+Phong+Schlick 近似</div></div>
+    <div class="cell ptc hl"><svg class="icon" viewBox="0 0 54 54"><text x="6" y="40" font-size="40" fill="#ffa657">∫</text><path d="M24 40 L34 16 L44 40" fill="none" stroke="#ffa657" stroke-width="3"/></svg><div class="pts">数值求解渲染方程<br>颜色溢出+焦散自动产生 · 物理正确</div></div>
+
+    <!-- 行5 场景 -->
+    <div class="rl">适用场景</div>
+    <div class="cell rmc"><svg class="icon" viewBox="0 0 54 54"><rect x="6" y="18" width="42" height="20" rx="10" fill="none" stroke="#58a6ff" stroke-width="3"/><circle cx="18" cy="28" r="3" fill="#58a6ff"/><circle cx="36" cy="28" r="3" fill="#58a6ff"/></svg><div class="pts">游戏引擎 · 实时可视化<br>交互艺术</div></div>
+    <div class="cell ptc"><svg class="icon" viewBox="0 0 54 54"><rect x="10" y="14" width="34" height="26" rx="3" fill="none" stroke="#ffa657" stroke-width="3"/><line x1="10" y1="14" x2="44" y2="8" stroke="#ffa657" stroke-width="3"/></svg><div class="pts">电影 VFX · 建筑可视化<br>产品渲染</div></div>
+  </div>
+
+  <!-- 融合 banner（内容行，非底部脚注） -->
+  <div class="row center" style="margin-top:14px;background:linear-gradient(90deg,rgba(88,166,255,.14),rgba(255,166,87,.14));border-radius:14px;padding:16px 30px">
+    <div class="pt" style="font-size:30px;text-align:center">两者互补，不是替代 — <b style="color:var(--accent)">NVIDIA RTX</b> 在 GPU 上硬件加速路径追踪</div>
+  </div>
+</div></body></html>

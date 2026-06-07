@@ -1,0 +1,66 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css"></head>
+<body><div class="stage">
+  <div class="title-row" style="margin-bottom:8px">
+    <div class="h-title">直接光照 &nbsp;→&nbsp; <span style="color:var(--accent)">全局光照</span></div>
+    <div class="rule" style="width:420px"></div>
+  </div>
+
+  <div class="row grow gap48" style="margin-top:30px">
+    <!-- 左：直接光照 -->
+    <div class="col grow card" style="padding:0;overflow:hidden">
+      <div class="card-top" style="background:var(--muted)"></div>
+      <div class="col" style="padding:34px 40px 30px;height:100%">
+        <div class="row between center"><div style="font-size:46px;font-weight:800">直接光照</div>
+          <div class="tag" style="background:rgba(139,148,158,.18);color:var(--muted)">DIRECT</div></div>
+        <svg width="100%" height="430" viewBox="0 0 760 430" style="margin-top:6px" preserveAspectRatio="xMidYMid meet">
+          <defs><radialGradient id="d1" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#f0f3f8"/><stop offset="55%" stop-color="#5b6470"/><stop offset="100%" stop-color="#05070a"/></radialGradient></defs>
+          <!-- 光源 -->
+          <g transform="translate(650,60)"><circle r="34" fill="#ffe9a8"/><g stroke="#e3b341" stroke-width="4" stroke-linecap="round"><line x1="0" y1="-50" x2="0" y2="-40"/><line x1="-44" y1="-24" x2="-36" y2="-20"/><line x1="44" y1="-24" x2="36" y2="-20"/></g></g>
+          <!-- 光束 -->
+          <line x1="624" y1="86" x2="392" y2="250" stroke="#fff3c4" stroke-width="7" opacity=".85"/>
+          <!-- 地面 -->
+          <line x1="40" y1="360" x2="720" y2="360" stroke="#30363d" stroke-width="3"/>
+          <!-- 球 -->
+          <circle cx="360" cy="288" r="92" fill="url(#d1)"/>
+          <path d="M360 196 A92 92 0 0 0 300 366 L360 288 Z" fill="#04060a"/>
+          <!-- 硬阴影 -->
+          <ellipse cx="320" cy="372" rx="120" ry="18" fill="#000" opacity=".9"/>
+        </svg>
+        <div class="pt dim" style="margin-top:auto">照到就亮 · 照不到全黑 · 生硬缺细节</div>
+      </div>
+    </div>
+
+    <!-- 右：全局光照 -->
+    <div class="col grow card" style="padding:0;overflow:hidden;border-color:rgba(88,166,255,.5)">
+      <div class="card-top" style="background:var(--accent)"></div>
+      <div class="col" style="padding:34px 40px 30px;height:100%">
+        <div class="row between center"><div style="font-size:46px;font-weight:800">全局光照</div>
+          <div class="tag" style="background:rgba(88,166,255,.18);color:var(--accent)">GLOBAL</div></div>
+        <svg width="100%" height="430" viewBox="0 0 760 430" style="margin-top:6px" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <radialGradient id="g1" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#f2f5fa"/><stop offset="60%" stop-color="#8590a0"/><stop offset="100%" stop-color="#3a2c2c"/></radialGradient>
+            <linearGradient id="floorbleed" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9aa3b2" stop-opacity=".0"/><stop offset="1" stop-color="#9aa3b2" stop-opacity=".22"/></linearGradient>
+          </defs>
+          <!-- 红墙 -->
+          <rect x="36" y="70" width="14" height="290" fill="#ff7b72" opacity=".9"/>
+          <!-- 光源 -->
+          <g transform="translate(650,60)"><circle r="34" fill="#ffe9a8"/><g stroke="#e3b341" stroke-width="4" stroke-linecap="round"><line x1="0" y1="-50" x2="0" y2="-40"/><line x1="-44" y1="-24" x2="-36" y2="-20"/><line x1="44" y1="-24" x2="36" y2="-20"/></g></g>
+          <line x1="624" y1="86" x2="392" y2="250" stroke="#fff3c4" stroke-width="7" opacity=".85"/>
+          <!-- 间接光路：光源→红墙→球背面 -->
+          <path d="M626 84 Q 250 120 50 210" fill="none" stroke="#ff7b72" stroke-width="2.5" stroke-dasharray="6 8" opacity=".7"/>
+          <path d="M50 210 Q 200 280 280 300" fill="none" stroke="#ff9b94" stroke-width="2.5" stroke-dasharray="6 8" opacity=".7"/>
+          <line x1="40" y1="360" x2="720" y2="360" stroke="#30363d" stroke-width="3"/>
+          <!-- 地面颜色溢出 -->
+          <ellipse cx="360" cy="372" rx="150" ry="26" fill="url(#floorbleed)"/>
+          <ellipse cx="300" cy="372" rx="90" ry="16" fill="#ff7b72" opacity=".10"/>
+          <circle cx="360" cy="288" r="92" fill="url(#g1)"/>
+          <!-- 背光面：暖色间接光而非全黑 -->
+          <path d="M360 196 A92 92 0 0 0 300 366 L360 288 Z" fill="#3a2622"/>
+          <path d="M360 196 A92 92 0 0 0 300 366 L360 288 Z" fill="#ff7b72" opacity=".14"/>
+          <ellipse cx="318" cy="374" rx="118" ry="15" fill="#000" opacity=".35"/>
+        </svg>
+        <div class="pt" style="margin-top:auto;color:var(--fg)">光反复弹射 · 颜色溢出 · <b style="color:var(--accent)">照亮每个角落</b></div>
+      </div>
+    </div>
+  </div>
+</div></body></html>

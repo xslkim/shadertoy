@@ -1,0 +1,60 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.band{display:flex;align-items:center;gap:36px;background:var(--panel);border:1px solid var(--border);border-radius:20px;padding:22px 40px;flex:1}
+.num{flex:none;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:800;color:var(--bg);background:var(--accent)}
+.band .desc{flex:1}
+.band h3{font-size:38px;font-weight:800;margin-bottom:6px}
+</style></head>
+<body><div class="stage">
+  <div class="title-row" style="margin-bottom:4px">
+    <div class="h-title">玻璃折射：<span style="color:var(--accent)">三件事一起发生</span></div>
+    <div class="rule" style="width:480px"></div>
+  </div>
+
+  <div class="col grow gap24" style="margin-top:24px">
+    <!-- ① Snell -->
+    <div class="band">
+      <div class="num">1</div>
+      <svg width="360" height="180" viewBox="0 0 360 180">
+        <rect x="0" y="0" width="360" height="90" fill="#10151d"/><rect x="0" y="90" width="360" height="90" fill="#1a2330"/>
+        <line x1="0" y1="90" x2="360" y2="90" stroke="#30363d" stroke-width="2"/>
+        <text x="14" y="34" fill="#8b949e" font-size="22">空气 n=1.0</text><text x="14" y="170" fill="#8b949e" font-size="22">玻璃 n=1.5</text>
+        <line x1="180" y1="90" x2="180" y2="20" stroke="#3b4a5e" stroke-width="2" stroke-dasharray="5 6"/>
+        <line x1="80" y1="20" x2="180" y2="90" stroke="#fff3c4" stroke-width="5"/>
+        <line x1="180" y1="90" x2="232" y2="172" stroke="#58a6ff" stroke-width="5"/>
+        <polygon points="232,172 222,160 234,156" fill="#58a6ff"/>
+        <line x1="180" y1="90" x2="150" y2="150" stroke="#8fd3ff" stroke-width="3" stroke-dasharray="6 6"/>
+      </svg>
+      <div class="desc"><h3>Snell 定律 · 改变方向</h3><div class="pt dim">进入光密介质，光线向法线偏折</div></div>
+    </div>
+    <!-- ② 全内反射 -->
+    <div class="band">
+      <div class="num">2</div>
+      <svg width="360" height="180" viewBox="0 0 360 180">
+        <rect x="0" y="0" width="360" height="70" fill="#10151d"/><rect x="0" y="70" width="360" height="110" fill="#1a2330"/>
+        <line x1="0" y1="70" x2="360" y2="70" stroke="#30363d" stroke-width="2"/>
+        <!-- 小角度：折射穿出（绿） -->
+        <line x1="70" y1="170" x2="110" y2="70" stroke="#3fb950" stroke-width="4"/><line x1="110" y1="70" x2="140" y2="14" stroke="#3fb950" stroke-width="4"/>
+        <!-- 临界角（黄）贴面 -->
+        <line x1="170" y1="170" x2="200" y2="70" stroke="#e3b341" stroke-width="4"/><line x1="200" y1="70" x2="300" y2="60" stroke="#e3b341" stroke-width="4" stroke-dasharray="5 5"/>
+        <!-- 超临界：全反射（红） -->
+        <line x1="250" y1="170" x2="280" y2="70" stroke="#ff7b72" stroke-width="5"/><line x1="280" y1="70" x2="320" y2="170" stroke="#ff7b72" stroke-width="5"/>
+        <polygon points="320,170 308,160 318,152" fill="#ff7b72"/>
+      </svg>
+      <div class="desc"><h3 style="color:var(--red)">全内反射 · 无法穿透</h3><div class="pt dim">超过临界角（玻璃≈42°），水面变成镜子</div></div>
+    </div>
+    <!-- ③ Fresnel -->
+    <div class="band">
+      <div class="num">3</div>
+      <svg width="360" height="180" viewBox="0 0 360 180">
+        <line x1="40" y1="150" x2="340" y2="150" stroke="#30363d" stroke-width="2"/>
+        <line x1="40" y1="150" x2="40" y2="20" stroke="#30363d" stroke-width="2"/>
+        <text x="46" y="40" fill="#8b949e" font-size="20">反射率</text><text x="250" y="172" fill="#8b949e" font-size="20">观察角度→</text>
+        <path d="M40 144 C 180 140 280 120 320 30" fill="none" stroke="#58a6ff" stroke-width="5"/>
+        <circle cx="40" cy="144" r="6" fill="#58a6ff"/><text x="54" y="138" fill="#e6edf3" font-size="22">正对 4%</text>
+        <circle cx="320" cy="30" r="6" fill="#58a6ff"/><text x="216" y="28" fill="#e6edf3" font-size="22">斜看 ≈100%</text>
+      </svg>
+      <div class="desc"><h3>Fresnel · 能量分配</h3><div class="pt dim">斜看玻璃更反光 — 决定反射与穿透各占多少</div></div>
+    </div>
+  </div>
+</div></body></html>

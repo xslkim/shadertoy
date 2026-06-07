@@ -1,0 +1,46 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.recap{flex:1;background:var(--panel);border:1px solid var(--border);border-radius:20px;padding:0;overflow:hidden}
+.recap .top{height:8px}.recap .body{padding:24px 30px}
+.recap h3{font-size:38px;font-weight:800;margin-bottom:14px}
+.recap li{font-size:27px;line-height:1.74;list-style:none;color:#c9d4e1;display:flex;gap:12px}
+.recap li::before{content:"";flex:none;width:9px;height:9px;border-radius:50%;background:var(--accent);margin-top:16px}
+.step{flex:1;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
+.step .c{width:62px;height:62px;border-radius:50%;border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800;color:var(--accent)}
+.step .t{font-size:25px;color:#c9d4e1;line-height:1.3}
+.sep{align-self:center;color:var(--muted);font-size:28px;margin-top:18px}
+</style></head>
+<body><div class="stage">
+  <div class="title-row" style="margin-bottom:6px">
+    <div class="h-title">回顾 &amp; <span style="color:var(--accent)">动手建议</span></div>
+    <div class="rule" style="width:360px"></div>
+  </div>
+
+  <!-- 三张回顾卡 -->
+  <div class="row gap32" style="margin-top:26px">
+    <div class="recap"><div class="top" style="background:var(--accent)"></div><div class="body">
+      <h3>原理</h3><ul>
+      <li>直接光照 → 全局光照</li><li>光线弹射路径</li><li>蒙特卡洛随机采样</li><li>收敛：噪点到清晰</li></ul></div></div>
+    <div class="recap"><div class="top" style="background:var(--green)"></div><div class="body">
+      <h3 style="color:var(--green)">材质</h3><ul>
+      <li>三种材质决定弹射</li><li>漫反射 · 余弦加权</li><li>镜面 · 确定反射</li><li>折射 · Snell+TIR+Fresnel</li></ul></div></div>
+    <div class="recap"><div class="top" style="background:var(--orange)"></div><div class="body">
+      <h3 style="color:var(--orange)">工程</h3><ul>
+      <li>9 球搭房间</li><li>俄罗斯轮盘赌 · 无偏终止</li><li>针孔相机 + 子像素采样</li><li>Gamma 校正 + PPM 输出</li></ul></div></div>
+  </div>
+
+  <!-- 六步动手 -->
+  <div class="card grow col" style="margin-top:26px;padding:26px 44px;justify-content:center">
+    <div style="font-size:34px;font-weight:800;margin-bottom:20px">动手实现 · 分步指南</div>
+    <div class="row" style="align-items:flex-start">
+      <div class="step"><div class="c">1</div><div class="t">写 Vec+Ray<br>+Sphere</div></div><div class="sep">→</div>
+      <div class="step"><div class="c">2</div><div class="t">求交<br>输出法线色</div></div><div class="sep">→</div>
+      <div class="step"><div class="c">3</div><div class="t">漫反射<br>(限弹射3次)</div></div><div class="sep">→</div>
+      <div class="step"><div class="c">4</div><div class="t">俄罗斯<br>轮盘赌</div></div><div class="sep">→</div>
+      <div class="step"><div class="c">5</div><div class="t">镜面<br>反射</div></div><div class="sep">→</div>
+      <div class="step"><div class="c">6</div><div class="t">折射<br>玻璃</div></div>
+    </div>
+    <div class="pt dim" style="margin-top:18px;text-align:center">每步先用低采样 (4 spp) 出图验证，确认正确再加下一步</div>
+    <div style="margin-top:16px;text-align:center;font-size:34px;color:var(--accent);font-weight:800">最好的学习方式，永远是动手写代码</div>
+  </div>
+</div></body></html>
