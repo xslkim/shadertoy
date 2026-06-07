@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<link rel="stylesheet" href="frame.css">
+<style>
+  .cards{display:flex;gap:40px;flex:1;margin-top:36px}
+  .c{flex:1;background:linear-gradient(180deg,#16162a,#101020);border:1px solid var(--line);
+    border-radius:22px;padding:42px;display:flex;flex-direction:column}
+  .c .ic{font-size:52px;margin-bottom:18px}
+  .c h3{font-size:34px;margin-bottom:18px}
+  .c p{font-size:26px;line-height:1.55;color:#d2d2e4}
+  .c.warn{border-color:#4a2630} .c.warn h3{color:var(--warn)}
+  .c.ok{border-color:#1f3a2a} .c.ok h3{color:var(--accent3)}
+  .c.info h3{color:var(--accent2)}
+  code{font-size:23px}
+</style></head><body>
+<div class="frame">
+  <div class="kicker">07 · 现状</div>
+  <div class="title">它很新 —— 现在该<span class="ext">怎么上手</span></div>
+  <div class="cards">
+    <div class="c warn"><div class="ic">⚠</div><h3>spec v1 · 等驱动</h3>
+      <p>SDK 1.4.350 头文件齐全,但桌面驱动<b>尚未暴露</b>它。代码能编译,运行时 <code>vkCreateDevice</code> 会因扩展不支持而失败。</p></div>
+    <div class="c ok"><div class="ic">✓</div><h3>现在可预演</h3>
+      <p>用本机已支持的 <code>descriptor_buffer</code> 实现等价 bindless,先把心智模型和画面跑通。本 demo 即如此。</p></div>
+    <div class="c info"><div class="ic">↗</div><h3>延续关系</h3>
+      <p>heap 与 buffer 不是互斥,是延续。理解了 buffer,等驱动跟上后迁移到 heap 几乎零成本。</p></div>
+  </div>
+</div>
+<div class="badge">现在:descriptor_buffer 预演 → 未来:descriptor_heap</div>
+</body></html>

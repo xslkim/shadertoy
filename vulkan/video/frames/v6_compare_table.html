@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<link rel="stylesheet" href="frame.css">
+<style>
+  table{width:100%;border-collapse:collapse;margin-top:40px;flex:1;font-size:27px}
+  th,td{text-align:left;padding:24px 28px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:30px;color:var(--muted);letter-spacing:1px}
+  th.b{color:var(--gold)} th.h{color:var(--accent)}
+  td.k{color:var(--muted);width:300px}
+  code{font-size:24px}
+  tr:last-child td{border-bottom:none}
+</style></head><body>
+<div class="frame">
+  <div class="kicker">06 · 对照</div>
+  <div class="title"><span class="ext">descriptor_buffer</span> ↔ <span class="ext">descriptor_heap</span></div>
+  <table>
+    <tr><th>环节</th><th class="b">descriptor_buffer(本 demo 实跑)</th><th class="h">descriptor_heap(新)</th></tr>
+    <tr><td class="k">承载描述符</td><td>一块 buffer,描述符即数据</td><td>一块全局堆 + 映射表</td></tr>
+    <tr><td class="k">写描述符</td><td><code>vkGetDescriptorEXT</code></td><td><code>vkWriteResourceDescriptorsEXT</code></td></tr>
+    <tr><td class="k">绑定</td><td><code>vkCmdBindDescriptorBuffersEXT</code> + <code>SetOffsets</code></td><td><code>vkCmdBindResourceHeapEXT</code>(整块堆)</td></tr>
+    <tr><td class="k">选资源</td><td><code>vkCmdPushConstants</code> 推索引</td><td><code>vkCmdPushDataEXT</code> 推索引</td></tr>
+    <tr><td class="k">心智模型</td><td>描述符脱离 set,可自由摆放</td><td>绑一块堆 + push 一个索引(更像 D3D12)</td></tr>
+  </table>
+</div>
+<div class="badge">心智模型一致 · heap 几乎零成本上手</div>
+</body></html>

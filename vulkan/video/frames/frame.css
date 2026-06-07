@@ -1,0 +1,41 @@
+/* 视频帧统一样式 · 1920×1080 · 暗色霓虹(呼应 demo 画面) */
+:root{
+  --bg:#0a0a12; --bg2:#0e0e1a; --panel:#14142200; --panelfill:#15152400;
+  --ink:#f0f0f8; --muted:#9a9ab2; --line:#2c2c46;
+  --accent:#ff5a8a; --accent2:#5ac8ff; --accent3:#7cff9e; --gold:#ffd25a; --warn:#ff7a7a;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1920px;height:1080px;overflow:hidden}
+body{
+  background:
+    radial-gradient(1200px 700px at 78% 18%, rgba(90,200,255,.10), transparent 60%),
+    radial-gradient(1000px 800px at 18% 88%, rgba(255,90,138,.12), transparent 55%),
+    var(--bg);
+  color:var(--ink);
+  font-family:"Segoe UI","Microsoft YaHei",system-ui,sans-serif;
+  position:relative;
+}
+.frame{position:absolute;inset:0;padding:90px 110px;display:flex;flex-direction:column}
+.kicker{font-size:24px;letter-spacing:8px;color:var(--muted);text-transform:uppercase;margin-bottom:14px}
+.title{font-size:66px;font-weight:800;line-height:1.1;letter-spacing:.5px}
+.title .ext{color:var(--accent)}
+.subtitle{font-size:30px;color:var(--muted);margin-top:16px}
+.spacer{flex:1}
+.foot{position:absolute;left:110px;bottom:54px;font-size:22px;color:var(--muted);letter-spacing:2px}
+.badge{position:absolute;right:110px;bottom:54px;font-size:22px;color:var(--accent);
+  border:1px solid var(--line);border-radius:30px;padding:8px 22px}
+code{font-family:"Cascadia Code",Consolas,monospace;background:#1c1c30;color:var(--accent2);
+  padding:3px 12px;border-radius:8px;font-size:.9em}
+
+/* 卡片 / 栏 */
+.cols{display:flex;gap:48px;flex:1;align-items:stretch;margin-top:30px}
+.card{flex:1;background:linear-gradient(180deg,#16162a,#101020);border:1px solid var(--line);
+  border-radius:22px;padding:44px 46px;display:flex;flex-direction:column}
+.card h2{font-size:38px;margin-bottom:26px}
+.card.bad h2{color:var(--warn)} .card.good h2{color:var(--accent3)}
+.row{display:flex;align-items:flex-start;gap:18px;margin:16px 0;font-size:28px;line-height:1.4}
+.dot{flex:none;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;
+  font-size:19px;font-weight:700;margin-top:2px}
+.bad .dot{background:#3a1a22;color:#ff9a9a} .good .dot{background:#143a23;color:#9affb6}
+.note{margin-top:auto;padding-top:24px;font-size:26px}
+.note.bad{color:#ff9a9a} .note.good{color:#9affb6}

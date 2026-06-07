@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<link rel="stylesheet" href="frame.css">
+<style>
+  .stage{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:30px}
+  .heap{display:flex;gap:14px}
+  .slot{width:210px;height:150px;border:2px solid var(--line);border-radius:16px;
+    background:linear-gradient(180deg,#16162a,#101020);display:flex;flex-direction:column;
+    justify-content:center;align-items:center;position:relative}
+  .slot .idx{position:absolute;top:-44px;font-size:26px;color:var(--muted)}
+  .slot .ico{font-size:56px}.slot .ty{font-size:20px;color:var(--muted);margin-top:8px}
+  .slot.hot{border-color:var(--accent);box-shadow:0 0 50px rgba(255,90,138,.55)}
+  .bar{display:flex;align-items:center;gap:20px;font-size:28px;color:var(--muted);margin-top:18px}
+  .axis{height:2px;background:var(--line);flex:1}
+  .anno{font-size:26px;color:#d2d2e4;text-align:center;max-width:1300px;line-height:1.5}
+  .anno b{color:var(--accent2)}
+</style></head><body>
+<div class="frame">
+  <div class="kicker">03 · 核心 A</div>
+  <div class="title">堆 = 一块连续内存,描述符<span class="ext">按尺寸紧密排列</span></div>
+  <div class="stage">
+    <div class="heap">
+      <div class="slot"><span class="idx">#0</span><span class="ico">🔴</span><span class="ty">scene 0</span></div>
+      <div class="slot"><span class="idx">#1</span><span class="ico">🔵</span><span class="ty">scene 1</span></div>
+      <div class="slot hot"><span class="idx">#2</span><span class="ico">🟣</span><span class="ty">scene 2</span></div>
+      <div class="slot"><span class="idx">#3</span><span class="ico">🟢</span><span class="ty">scene 3</span></div>
+      <div class="slot"><span class="idx">#4</span><span class="ico">🟠</span><span class="ty">scene 4</span></div>
+      <div class="slot"><span class="idx">#5</span><span class="ico">🟦</span><span class="ty">scene 5</span></div>
+    </div>
+    <div class="bar"><span>偏移 0</span><div class="axis"></div><span>Resource Heap(GPU 内存)</span><div class="axis"></div><span>→</span></div>
+    <div class="anno">每个槽位 = 一个描述符,大小固定。本 demo 实测
+      <b>uniformBufferDescriptorSize = 8 字节</b>(由 <code>vkGetPhysicalDeviceDescriptorSizeEXT</code> 查得)。
+      <br>第 i 个资源 → 堆基址 + i × 描述符尺寸。访问 = 给一个索引 i。</div>
+  </div>
+</div>
+<div class="badge">VK_EXT_descriptor_heap</div>
+</body></html>

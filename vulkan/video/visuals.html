@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VK_EXT_descriptor_heap 教学图示</title>
+<style>
+  :root{
+    --bg:#0a0a12; --panel:#12121f; --ink:#e8e8f0; --muted:#8a8aa0;
+    --accent:#ff5a8a; --accent2:#5ac8ff; --accent3:#7cff9e; --line:#2a2a40;
+    --warn:#ff6b6b; --gold:#ffd25a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);
+    font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.6}
+  section{min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+    align-items:center;padding:48px;border-bottom:1px solid var(--line);position:relative}
+  h1{font-size:34px;margin-bottom:6px;letter-spacing:1px}
+  h1 .ext{color:var(--accent)}
+  .sub{color:var(--muted);margin-bottom:36px;font-size:16px}
+  .tag{position:absolute;top:28px;left:32px;font-size:13px;color:var(--muted);
+    letter-spacing:3px;text-transform:uppercase}
+  .cols{display:flex;gap:40px;flex-wrap:wrap;justify-content:center;align-items:stretch;width:100%;max-width:1200px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+    padding:26px 28px;flex:1;min-width:330px}
+  .card h2{font-size:20px;margin-bottom:14px}
+  .bad h2{color:var(--warn)} .good h2{color:var(--accent3)}
+  .step{display:flex;align-items:center;gap:10px;margin:9px 0;font-size:15px}
+  .num{flex:none;width:24px;height:24px;border-radius:50%;background:var(--line);
+    display:grid;place-items:center;font-size:12px;color:var(--ink)}
+  .bad .num{background:#3a1a22;color:#ff9a9a}
+  .good .num{background:#173a23;color:#9affb6}
+  code{font-family:"Cascadia Code",Consolas,monospace;background:#1c1c2e;
+    padding:2px 7px;border-radius:5px;color:var(--accent2);font-size:13px}
+  .arrow{color:var(--muted);text-align:center;font-size:22px;margin:4px 0}
+  /* 时间线 */
+  .timeline{display:flex;align-items:stretch;gap:0;width:100%;max-width:1100px}
+  .tl{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:14px;
+    padding:24px;position:relative;margin:0 8px}
+  .tl .ver{font-size:13px;color:var(--muted);letter-spacing:1px}
+  .tl h3{font-size:19px;margin:6px 0 10px}
+  .tl.a h3{color:var(--accent2)} .tl.b h3{color:var(--gold)} .tl.c h3{color:var(--accent)}
+  .tl p{font-size:14px;color:#cfcfe0}
+  .tlwrap{display:flex;align-items:center;width:100%;max-width:1180px}
+  .tlwrap .sep{color:var(--muted);font-size:30px;flex:none}
+  .tl.c{box-shadow:0 0 0 2px var(--accent),0 0 30px rgba(255,90,138,.3)}
+  /* 堆布局 */
+  .heap{display:flex;gap:6px;margin:10px 0 4px}
+  .slot{width:104px;height:78px;border:1px solid var(--line);border-radius:10px;
+    background:var(--panel);display:flex;flex-direction:column;justify-content:center;
+    align-items:center;transition:.3s;position:relative}
+  .slot .idx{position:absolute;top:-22px;font-size:13px;color:var(--muted)}
+  .slot .ico{font-size:26px} .slot .ty{font-size:11px;color:var(--muted);margin-top:4px}
+  .slot.hot{border-color:var(--accent);box-shadow:0 0 22px rgba(255,90,138,.55);
+    transform:translateY(-6px)}
+  .heaplabel{font-size:13px;color:var(--muted);margin-top:18px}
+  .flow{display:flex;align-items:center;gap:18px;margin-top:34px;flex-wrap:wrap;justify-content:center}
+  .pill{background:var(--panel);border:1px solid var(--line);border-radius:30px;
+    padding:12px 22px;font-size:15px}
+  .pill b{color:var(--accent)}
+  .big{font-size:26px;color:var(--muted)}
+  /* API 流程 */
+  .pipe{display:flex;flex-direction:column;gap:12px;width:100%;max-width:760px}
+  .row{display:flex;align-items:center;gap:16px;background:var(--panel);
+    border:1px solid var(--line);border-left:4px solid var(--accent);
+    border-radius:10px;padding:14px 18px}
+  .row .s{flex:none;width:30px;height:30px;border-radius:8px;background:#241a2a;
+    color:var(--accent);display:grid;place-items:center;font-weight:700}
+  .row .t{font-size:15px}.row .t b{color:var(--ink)}
+  .row .t span{color:var(--muted);font-size:13px}
+  .legend{margin-top:26px;color:var(--muted);font-size:13px;max-width:760px;text-align:center}
+  .kbd{border:1px solid var(--line);border-radius:6px;padding:1px 8px;background:#1c1c2e}
+</style>
+</head>
+<body>
+
+<!-- 屏 1:对比 -->
+<section>
+  <div class="tag">screen 1 · 痛点</div>
+  <h1>传统描述符模型 &nbsp;vs&nbsp; <span class="ext">Descriptor Heap</span></h1>
+  <div class="sub">为什么需要一个新模型</div>
+  <div class="cols">
+    <div class="card bad">
+      <h2>传统模型 · 绑定时代</h2>
+      <div class="step"><span class="num">1</span><div>创建 <code>DescriptorPool</code></div></div>
+      <div class="arrow">↓</div>
+      <div class="step"><span class="num">2</span><div>分配 <code>DescriptorSet</code>(形状由 layout 决定)</div></div>
+      <div class="arrow">↓</div>
+      <div class="step"><span class="num">3</span><div><code>vkUpdateDescriptorSets</code> 写入真实资源</div></div>
+      <div class="arrow">↓</div>
+      <div class="step"><span class="num">4</span><div><code>vkCmdBindDescriptorSets</code> 每次绘制绑定</div></div>
+      <p style="margin-top:16px;color:#ff9a9a;font-size:14px">⚠ 资源组合一变就换 layout/set;海量资源切换成本高</p>
+    </div>
+    <div class="card good">
+      <h2>堆模型 · 索引时代</h2>
+      <div class="step"><span class="num">1</span><div>建一块全局 <code>堆 (heap)</code></div></div>
+      <div class="arrow">↓</div>
+      <div class="step"><span class="num">2</span><div>所有资源描述符紧密排进堆里</div></div>
+      <div class="arrow">↓</div>
+      <div class="step"><span class="num">3</span><div>绑定整块堆(整帧一次)</div></div>
+      <div class="arrow">↓</div>
+      <div class="step"><span class="num">4</span><div>shader 拿 <code>索引</code> 直接到堆里取资源</div></div>
+      <p style="margin-top:16px;color:#9affb6;font-size:14px">✓ 一帧内随手访问任意资源 —— 真正的 bindless</p>
+    </div>
+  </div>
+</section>
+
+<!-- 屏 2:演进 -->
+<section>
+  <div class="tag">screen 2 · 演进</div>
+  <h1>Vulkan 走向 Bindless 的三步</h1>
+  <div class="sub">descriptor_heap 不是凭空出现的</div>
+  <div class="tlwrap">
+    <div class="tl a">
+      <div class="ver">VULKAN 1.2 CORE</div>
+      <h3>descriptor_indexing</h3>
+      <p>shader 可用<b>非一致索引</b>访问描述符数组。bindless 的雏形,但描述符仍绑在 set 里。</p>
+    </div>
+    <div class="sep">→</div>
+    <div class="tl b">
+      <div class="ver">VK_EXT</div>
+      <h3>descriptor_buffer</h3>
+      <p>描述符变成<b>普通数据</b>,写进 buffer 用 GPU 地址绑定。本 demo 实际用它出画面。</p>
+    </div>
+    <div class="sep">→</div>
+    <div class="tl c">
+      <div class="ver">VK_EXT · 本期主角</div>
+      <h3>descriptor_heap</h3>
+      <p>一块<b>全局堆</b> + 一张<b>映射表</b>,shader 由<b>索引</b>直接定位资源。对齐 D3D12 / SM6.6。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 屏 3:核心概念 + 动画 -->
+<section>
+  <div class="tag">screen 3 · 核心</div>
+  <h1>一个<span class="ext">堆</span>,一个<span class="ext">索引</span></h1>
+  <div class="sub">CPU 每帧只推送一个整数,shader 自己去堆里取(下方为动画演示)</div>
+
+  <div class="heap" id="heap">
+    <div class="slot"><span class="idx">#0</span><span class="ico">🔴</span><span class="ty">scene 0</span></div>
+    <div class="slot"><span class="idx">#1</span><span class="ico">🔵</span><span class="ty">scene 1</span></div>
+    <div class="slot"><span class="idx">#2</span><span class="ico">🟣</span><span class="ty">scene 2</span></div>
+    <div class="slot"><span class="idx">#3</span><span class="ico">🟢</span><span class="ty">scene 3</span></div>
+    <div class="slot"><span class="idx">#4</span><span class="ico">🟠</span><span class="ty">scene 4</span></div>
+    <div class="slot"><span class="idx">#5</span><span class="ico">🟦</span><span class="ty">scene 5</span></div>
+  </div>
+  <div class="heaplabel">↑ Resource Heap:每个槽位 = 一个描述符(本 demo 中 <code>8 字节</code>),紧密排列</div>
+
+  <div class="flow">
+    <div class="pill">CPU: <code>vkCmdPushDataEXT</code> → push <b id="pushval">index = 0</b></div>
+    <div class="big">→</div>
+    <div class="pill">GPU shader: <code>heap[ <b id="shadeval">0</b> ]</code></div>
+    <div class="big">→</div>
+    <div class="pill">取出资源 <b id="resval">scene 0</b> 上色</div>
+  </div>
+  <div class="legend">索引来源可以是 push 常量 / 间接 buffer / shader record……
+    本 demo 用最直观的 <code>HEAP_WITH_PUSH_INDEX_EXT</code>。</div>
+</section>
+
+<!-- 屏 4:API 流程 -->
+<section>
+  <div class="tag">screen 4 · API</div>
+  <h1>descriptor_heap 工作流 · 六步</h1>
+  <div class="sub">对照 <code>src/descriptor_heap_reference.cpp</code></div>
+  <div class="pipe">
+    <div class="row"><span class="s">1</span><div class="t"><b>开启特性</b>
+      &nbsp; <code>VkPhysicalDeviceDescriptorHeapFeaturesEXT.descriptorHeap = VK_TRUE</code></div></div>
+    <div class="row"><span class="s">2</span><div class="t"><b>查描述符尺寸</b>
+      &nbsp; <code>vkGetPhysicalDeviceDescriptorSizeEXT</code> <span>→ 算出堆要多大</span></div></div>
+    <div class="row"><span class="s">3</span><div class="t"><b>创建堆 buffer</b>
+      &nbsp; <code>usage = VK_BUFFER_USAGE_DESCRIPTOR_HEAP_BIT_EXT</code></div></div>
+    <div class="row"><span class="s">4</span><div class="t"><b>写描述符进堆</b>
+      &nbsp; <code>vkWriteResourceDescriptorsEXT</code> / <code>...SamplerDescriptorsEXT</code></div></div>
+    <div class="row"><span class="s">5</span><div class="t"><b>建映射表(灵魂)</b>
+      &nbsp; <code>VkDescriptorSetAndBindingMappingEXT</code> <span>→ source = HEAP_WITH_PUSH_INDEX</span></div></div>
+    <div class="row"><span class="s">6</span><div class="t"><b>录命令</b>
+      &nbsp; <code>vkCmdBindResourceHeapEXT</code> + <code>vkCmdPushDataEXT</code> + <code>vkCmdDraw</code></div></div>
+  </div>
+  <div class="legend">对照本 demo 实跑的 descriptor_buffer:绑堆 ↔ <code>vkCmdBindDescriptorBuffersEXT</code>,
+    push 索引 ↔ <code>vkCmdPushConstants</code>。心智模型一致。</div>
+</section>
+
+<script>
+  // 屏 3 动画:循环切换被访问的堆槽位
+  const slots=[...document.querySelectorAll('#heap .slot')];
+  const names=['scene 0','scene 1','scene 2','scene 3','scene 4','scene 5'];
+  let i=0;
+  setInterval(()=>{
+    slots.forEach(s=>s.classList.remove('hot'));
+    slots[i].classList.add('hot');
+    document.getElementById('pushval').textContent='index = '+i;
+    document.getElementById('shadeval').textContent=i;
+    document.getElementById('resval').textContent=names[i];
+    i=(i+1)%slots.length;
+  },1100);
+</script>
+</body>
+</html>

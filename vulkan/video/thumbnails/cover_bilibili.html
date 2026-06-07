@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><style>
+:root{--ink:#f4f4fb;--muted:#a6a6c0;--accent:#ff5a8a;--accent2:#5ac8ff;--line:#33334e}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1146px;height:717px;overflow:hidden}
+body{font-family:"Segoe UI","Microsoft YaHei",sans-serif;color:var(--ink);background:#07070f;position:relative}
+.bg{position:absolute;inset:0;background:url('../shot_1.png') right center/cover no-repeat}
+.shade{position:absolute;inset:0;background:
+  linear-gradient(90deg,#07070f 36%,rgba(7,7,15,.74) 55%,rgba(7,7,15,.12) 100%),
+  radial-gradient(640px 460px at 10% 82%,rgba(90,200,255,.20),transparent 60%)}
+.wrap{position:absolute;inset:0;padding:62px 56px;display:flex;flex-direction:column;justify-content:center}
+.kicker{font-size:28px;letter-spacing:6px;color:var(--accent2);font-weight:700;margin-bottom:16px}
+.t1{font-size:58px;font-weight:800;line-height:1.06}
+.t2{font-size:94px;font-weight:900;line-height:1.0;color:var(--accent);
+  text-shadow:0 0 38px rgba(255,90,138,.45);margin:6px 0 4px}
+.tag{font-size:33px;color:var(--ink);margin-top:24px;font-weight:600}
+.tag b{color:var(--accent2)}
+.code{position:absolute;left:56px;bottom:48px;font-family:Consolas,monospace;font-size:28px;
+  color:var(--ink);background:#16162acc;border:1px solid var(--line);border-radius:12px;padding:10px 20px}
+.new{position:absolute;top:42px;right:48px;background:var(--accent);color:#fff;font-weight:900;
+  font-size:32px;letter-spacing:2px;padding:11px 28px;border-radius:14px;transform:rotate(4deg);
+  box-shadow:0 0 40px rgba(255,90,138,.6)}
+.new small{display:block;font-size:17px;font-weight:600;letter-spacing:3px;opacity:.9}
+</style></head><body>
+<div class="bg"></div><div class="shade"></div>
+<div class="new">NEW<small>SPEC v1</small></div>
+<div class="wrap">
+  <div class="kicker">VULKAN · 全新扩展</div>
+  <div class="t1">终于!Vulkan 也有了</div>
+  <div class="t2">Descriptor Heap</div>
+  <div class="tag">一块堆 · 一个<b>索引</b> · 海量资源随手可取</div>
+</div>
+<div class="code">VK_EXT_descriptor_heap</div>
+</body></html>

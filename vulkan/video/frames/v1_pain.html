@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<link rel="stylesheet" href="frame.css"></head><body>
+<div class="frame">
+  <div class="kicker">01 · 痛点</div>
+  <div class="title">传统描述符模型 <span style="color:var(--muted)">vs</span> <span class="ext">堆模型</span></div>
+  <div class="cols">
+    <div class="card bad">
+      <h2>传统模型 · 绑定时代</h2>
+      <div class="row"><span class="dot">1</span><div>创建 <code>DescriptorPool</code></div></div>
+      <div class="row"><span class="dot">2</span><div>分配 <code>DescriptorSet</code>(形状由 layout 决定)</div></div>
+      <div class="row"><span class="dot">3</span><div><code>vkUpdateDescriptorSets</code> 写入真实资源</div></div>
+      <div class="row"><span class="dot">4</span><div><code>vkCmdBindDescriptorSets</code> 每次绘制前绑定</div></div>
+      <div class="note bad">⚠ 资源组合一变就换 layout/set;海量资源切换成本高</div>
+    </div>
+    <div class="card good">
+      <h2>堆模型 · 索引时代</h2>
+      <div class="row"><span class="dot">1</span><div>建一块全局 <code>堆 (heap)</code></div></div>
+      <div class="row"><span class="dot">2</span><div>所有资源描述符紧密排进堆里</div></div>
+      <div class="row"><span class="dot">3</span><div>整帧只绑定一次堆</div></div>
+      <div class="row"><span class="dot">4</span><div>shader 拿 <code>整数索引</code> 直接到堆里取资源</div></div>
+      <div class="note good">✓ 一帧内随手访问任意资源 —— 真正的 bindless</div>
+    </div>
+  </div>
+</div>
+<div class="badge">VK_EXT_descriptor_heap</div>
+</body></html>

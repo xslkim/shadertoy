@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<link rel="stylesheet" href="frame.css">
+<style>
+  .steps{display:flex;flex-direction:column;gap:18px;flex:1;margin-top:30px}
+  .s{display:flex;align-items:center;gap:26px;background:linear-gradient(90deg,#16162a,#101020);
+    border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:14px;padding:22px 30px}
+  .s .n{flex:none;width:54px;height:54px;border-radius:12px;background:#241a2a;color:var(--accent);
+    display:grid;place-items:center;font-size:28px;font-weight:800}
+  .s .t{font-size:29px}.s .t b{color:var(--ink)} .s .t span{color:var(--muted);font-size:24px}
+  .s code{font-size:25px}
+</style></head><body>
+<div class="frame">
+  <div class="kicker">05 · API</div>
+  <div class="title">descriptor_heap 工作流 · <span class="ext">六步</span></div>
+  <div class="steps">
+    <div class="s"><span class="n">1</span><div class="t"><b>开启特性</b> &nbsp;<code>VkPhysicalDeviceDescriptorHeapFeaturesEXT.descriptorHeap = VK_TRUE</code></div></div>
+    <div class="s"><span class="n">2</span><div class="t"><b>查描述符尺寸</b> &nbsp;<code>vkGetPhysicalDeviceDescriptorSizeEXT</code> <span>→ 算出堆要多大</span></div></div>
+    <div class="s"><span class="n">3</span><div class="t"><b>创建堆 buffer</b> &nbsp;<code>usage = VK_BUFFER_USAGE_DESCRIPTOR_HEAP_BIT_EXT</code></div></div>
+    <div class="s"><span class="n">4</span><div class="t"><b>写描述符进堆</b> &nbsp;<code>vkWriteResourceDescriptorsEXT</code> / <code>vkWriteSamplerDescriptorsEXT</code></div></div>
+    <div class="s"><span class="n">5</span><div class="t"><b>建映射表(灵魂)</b> &nbsp;<code>VkDescriptorSetAndBindingMappingEXT</code> <span>→ source = HEAP_WITH_PUSH_INDEX</span></div></div>
+    <div class="s"><span class="n">6</span><div class="t"><b>录命令</b> &nbsp;<code>vkCmdBindResourceHeapEXT</code> + <code>vkCmdPushDataEXT</code> + <code>vkCmdDraw</code></div></div>
+  </div>
+</div>
+<div class="badge">VK_EXT_descriptor_heap</div>
+</body></html>

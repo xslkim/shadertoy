@@ -1,0 +1,39 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<link rel="stylesheet" href="../frames/frame.css">
+<style>
+  .tl{display:flex;align-items:stretch;gap:0;flex:1;margin-top:40px}
+  .step{flex:1;background:linear-gradient(180deg,#16162a,#101020);border:1px solid var(--line);
+    border-radius:22px;padding:42px;margin:0 14px;display:flex;flex-direction:column;position:relative}
+  .step .ver{font-size:22px;color:var(--muted);letter-spacing:2px}
+  .step h3{font-size:40px;margin:14px 0 22px}
+  .step.a h3{color:var(--accent2)} .step.b h3{color:var(--gold)} .step.c h3{color:var(--accent)}
+  .step p{font-size:27px;line-height:1.5;color:#d2d2e4} .step b{color:var(--ink)}
+  .step.c{box-shadow:0 0 0 2px var(--accent),0 0 60px rgba(255,90,138,.30)}
+  .sep{align-self:center;font-size:60px;color:var(--muted);flex:none}
+  .stage{position:absolute;top:-18px;left:42px;font-size:20px;background:#1c1c30;
+    border:1px solid var(--line);border-radius:20px;padding:5px 16px;color:var(--muted)}
+  .rv{transition:opacity .25s}
+</style></head><body>
+<div class="frame">
+  <div class="kicker">02 · 演进</div>
+  <div class="title">Vulkan 走向 Bindless 的<span class="ext">三步</span></div>
+  <div class="tl">
+    <div class="step a rv" data-at="1"><span class="stage">第一步</span>
+      <div class="ver">VULKAN 1.2 CORE</div><h3>descriptor_indexing</h3>
+      <p>shader 可用<b>非一致索引</b>访问描述符数组。bindless 雏形,但描述符仍绑在 set 里。</p></div>
+    <div class="sep rv" data-at="2">→</div>
+    <div class="step b rv" data-at="2"><span class="stage">第二步</span>
+      <div class="ver">VK_EXT</div><h3>descriptor_buffer</h3>
+      <p>描述符变成<b>普通数据</b>,写进 buffer 用 GPU 地址绑定。<b>本 demo 用它出画面。</b></p></div>
+    <div class="sep rv" data-at="3">→</div>
+    <div class="step c rv" data-at="3"><span class="stage">本期主角</span>
+      <div class="ver">VK_EXT</div><h3>descriptor_heap</h3>
+      <p>一块<b>全局堆</b> + 一张<b>映射表</b>,shader 由<b>索引</b>直接定位资源。对齐 D3D12 / SM6.6。</p></div>
+  </div>
+</div>
+<div class="badge">VK_EXT_descriptor_heap</div>
+<script>
+  const step=+(new URLSearchParams(location.search).get('step')||0);
+  document.querySelectorAll('.rv').forEach(e=>{ if(+e.dataset.at>step) e.style.opacity=0; });
+</script>
+</body></html>
