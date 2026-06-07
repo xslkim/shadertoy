@@ -1,0 +1,10 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../theme.css">
+<div class="stage">
+  <h1 class="title" style="font-size:50px;margin-bottom:44px">对象销毁了，任务要自动停</h1>
+  <div class="code" style="width:78%;font-size:27px"><span class="kw">async</span> <span class="type">UniTaskVoid</span> <span class="type">Start</span>() {
+    <span class="kw">var</span> token = <span class="kw">this</span>.<span class="type">GetCancellationTokenOnDestroy</span>();
+    <span class="accent">// 对象被 Destroy 时，这个 token 自动取消</span>
+    <span class="kw">await</span> <span class="type">UniTask</span>.<span class="type">Delay</span>(5000, cancellationToken: token);
+    transform.position = spawn; <span class="cmt">// 安全：对象没了就不会执行到</span>
+}</div>
+</div>

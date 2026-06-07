@@ -1,0 +1,16 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../theme.css">
+<div class="stage">
+  <h1 class="title" style="font-size:50px;margin-bottom:48px">Rust：async 不自带运行时</h1>
+  <div class="row" style="align-items:center">
+    <div class="code" style="width:60%;font-size:27px"><span class="kw">async fn</span> <span class="type">download</span>() -> <span class="type">String</span> {
+    <span class="kw">let</span> data = <span class="type">fetch</span>(url).<span class="kw">await</span>;   <span class="cmt">// await 是后缀</span>
+    <span class="type">parse</span>(data)
+}
+
+<span class="macro">#[tokio::main]</span>                     <span class="cmt">// 需要自己选执行器</span>
+<span class="kw">async fn</span> <span class="type">main</span>() {
+    <span class="kw">let</span> result = <span class="type">download</span>().<span class="kw">await</span>;
+}</div>
+    <div class="note" style="width:28%">async fn 只是返回一个 <span class="accent">Future</span>，需要 executor 来推动</div>
+  </div>
+</div>

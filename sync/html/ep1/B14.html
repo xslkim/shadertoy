@@ -1,0 +1,14 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../theme.css">
+<div class="stage">
+  <h1 class="title" style="font-size:52px;margin-bottom:44px">随时喊停：CancellationToken</h1>
+  <div class="code" style="width:72%;font-size:28px"><span class="kw">async</span> <span class="type">Task</span> <span class="type">RunAsync</span>(<span class="type">CancellationToken</span> token) {
+    <span class="kw">var</span> data = <span class="kw">await</span> <span class="type">DownloadAsync</span>(token);
+    token.<span class="type">ThrowIfCancellationRequested</span>();
+    <span class="type">Process</span>(data);
+}
+
+<span class="cmt">// 调用方</span>
+<span class="kw">var</span> cts = <span class="kw">new</span> <span class="type">CancellationTokenSource</span>();
+cts.<span class="type">CancelAfter</span>(5000);          <span class="cmt">// 5 秒后自动取消</span>
+<span class="kw">await</span> <span class="type">RunAsync</span>(cts.Token);</div>
+</div>

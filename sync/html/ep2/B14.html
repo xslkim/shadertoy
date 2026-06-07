@@ -1,0 +1,9 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../theme.css">
+<div class="stage">
+  <h1 class="title bad" style="font-size:52px;margin-bottom:44px">没传 token 的下场</h1>
+  <div class="code" style="width:74%;font-size:27px;margin-bottom:30px"><span class="kw">async void</span> <span class="type">Start</span>() {
+    <span class="kw">await</span> <span class="type">Task</span>.<span class="type">Delay</span>(5000);          <span class="cmt">// 5 秒里对象可能已被销毁</span>
+    gameObject.<span class="type">SetActive</span>(<span class="kw">false</span>);     <span class="bad">// ✗ MissingReferenceException</span>
+}</div>
+  <p class="muted" style="font-size:30px">对象已 Destroy，但任务没人取消 → 恢复时访问空对象 → 抛异常</p>
+</div>

@@ -1,0 +1,13 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../theme.css">
+<div class="stage">
+  <h1 class="title" style="font-size:52px;margin-bottom:40px">UniTask：一切皆可 await</h1>
+  <div class="code" style="width:80%;font-size:27px"><span class="kw">async</span> <span class="type">UniTask</span> <span class="type">LoadLevelAsync</span>() {
+    <span class="kw">await</span> <span class="type">UniTask</span>.<span class="type">Delay</span>(2000);                 <span class="cmt">// 等 2 秒</span>
+    <span class="kw">await</span> <span class="type">SceneManager</span>.<span class="type">LoadSceneAsync</span>(<span class="str">"Game"</span>); <span class="cmt">// 直接 await 加载</span>
+    <span class="kw">await</span> <span class="type">UniTask</span>.<span class="type">NextFrame</span>();                 <span class="cmt">// 等下一帧</span>
+    <span class="kw">await</span> <span class="type">UniTask</span>.<span class="type">WaitUntil</span>(() => isReady);    <span class="cmt">// 等条件成立</span>
+
+    <span class="cmt">// 并发：一起加载，等全部完成</span>
+    <span class="kw">await</span> <span class="type">UniTask</span>.<span class="type">WhenAll</span>(<span class="type">LoadA</span>(), <span class="type">LoadB</span>(), <span class="type">LoadC</span>());
+}</div>
+</div>

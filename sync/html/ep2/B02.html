@@ -1,0 +1,13 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../theme.css">
+<div class="stage">
+  <h1 class="title" style="font-size:54px;margin-bottom:44px">协程 Coroutine：Unity 的老朋友</h1>
+  <div class="code" style="width:74%;font-size:28px"><span class="kw">IEnumerator</span> <span class="type">LoadLevel</span>() {
+    <span class="type">Show</span>(<span class="str">"加载中..."</span>);
+    <span class="kw">yield return new</span> <span class="type">WaitForSeconds</span>(2f);   <span class="cmt">// 等 2 秒</span>
+    <span class="kw">var</span> op = <span class="type">SceneManager</span>.<span class="type">LoadSceneAsync</span>(<span class="str">"Game"</span>);
+    <span class="kw">yield return</span> op;                       <span class="cmt">// 等加载完</span>
+    <span class="type">Show</span>(<span class="str">"开始！"</span>);
+}
+
+<span class="type">StartCoroutine</span>(<span class="type">LoadLevel</span>());               <span class="cmt">// 启动</span></div>
+</div>

@@ -1,0 +1,19 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../theme.css">
+<div class="stage">
+  <h1 class="title" style="font-size:54px;margin-bottom:48px">看，和 C# 几乎一样</h1>
+  <div class="row" style="align-items:stretch">
+    <div class="code" style="width:44%;font-size:27px"><span class="label" style="color:#f1e05a">JavaScript</span><span class="kw">async function</span> <span class="type">load</span>() {
+  <span class="kw">try</span> {
+    <span class="kw">const</span> data = <span class="kw">await</span> <span class="type">fetch</span>(url);
+    <span class="kw">return await</span> data.<span class="type">json</span>();
+  } <span class="kw">catch</span> (e) { <span class="type">log</span>(e); }
+}</div>
+    <div class="approx">≈</div>
+    <div class="code" style="width:44%;font-size:27px"><span class="label" style="color:#3fb950">C#</span><span class="kw">async</span> <span class="type">Task</span>&lt;<span class="type">Json</span>&gt; <span class="type">Load</span>() {
+    <span class="kw">try</span> {
+        <span class="kw">var</span> data = <span class="kw">await</span> <span class="type">Fetch</span>(url);
+        <span class="kw">return await</span> data.<span class="type">Json</span>();
+    } <span class="kw">catch</span> (<span class="type">Exception</span> e) { <span class="type">Log</span>(e); }
+}</div>
+  </div>
+</div>

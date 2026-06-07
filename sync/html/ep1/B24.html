@@ -1,0 +1,12 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../theme.css">
+<div class="stage">
+  <h1 class="title" style="font-size:58px;margin-bottom:48px">上集 · 记住这几点</h1>
+  <ul class="bullets" style="font-size:33px">
+    <li>async ≠ 多线程，await 是<span class="accent">"暂停并交还线程"</span></li>
+    <li>编译器把 async 方法改写成一台<span class="accent">状态机</span></li>
+    <li>默认把后半段送回原来的同步上下文；<span class="bad">别用 .Result，会死锁</span></li>
+    <li>各语言语法统一、底层各异：多线程 / 事件循环 / 绿色线程</li>
+    <li>共同的本质，是把"后续"打包成<span class="accent">续体</span></li>
+  </ul>
+  <p class="foot" style="font-size:28px;margin-top:56px">下集：async/await 在 Unity 实战</p>
+</div>

@@ -1,0 +1,16 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../theme.css">
+<div class="stage">
+  <h1 class="title" style="font-size:54px;margin-bottom:36px">两个必知细节</h1>
+  <div class="code" style="width:72%;font-size:27px;margin-bottom:28px"><span class="label kw">返回类型</span><span class="kw">async</span> <span class="kw">void</span> <span class="type">DoWork</span>() {        <span class="bad">// ✗ 没人能 await，异常掀翻进程</span>
+    <span class="kw">await</span> <span class="type">Task</span>.<span class="type">Delay</span>(1000);
+}
+<span class="kw">async</span> <span class="type">Task</span> <span class="type">DoWorkOk</span>() {      <span class="good">// ✓ 几乎总是用 Task</span>
+    <span class="kw">await</span> <span class="type">Task</span>.<span class="type">Delay</span>(1000);
+}</div>
+  <div class="code" style="width:72%;font-size:27px"><span class="label accent">异常处理</span><span class="kw">try</span> {
+    <span class="kw">var</span> data = <span class="kw">await</span> <span class="type">DownloadAsync</span>();
+}
+<span class="kw">catch</span> (<span class="type">HttpRequestException</span> e) {
+    <span class="type">Log</span>(e); <span class="cmt">// 异常存进 Task，await 时原样重抛</span>
+}</div>
+</div>

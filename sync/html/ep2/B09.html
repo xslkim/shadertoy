@@ -1,0 +1,15 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../theme.css">
+<div class="stage">
+  <h1 class="title" style="font-size:56px;margin-bottom:40px">协程 vs async/await</h1>
+  <table style="width:88%;font-size:28px">
+    <thead><tr><th style="width:22%">维度</th><th>协程 Coroutine</th><th>async/await</th></tr></thead>
+    <tbody>
+      <tr><td class="dim">返回值</td><td>不支持</td><td><span class="accent">支持 Task&lt;T&gt;</span></td></tr>
+      <tr><td class="dim">异常处理</td><td>不能 try-catch</td><td><span class="accent">正常 try-catch</span></td></tr>
+      <tr><td class="dim">取消</td><td>手动停</td><td><span class="accent">CancellationToken</span></td></tr>
+      <tr><td class="dim">跨线程计算</td><td>不行</td><td><span class="accent">Task.Run + 回主线程</span></td></tr>
+      <tr><td class="dim">驱动者</td><td>引擎每帧推</td><td>任务完成回调</td></tr>
+      <tr><td class="dim">依附对象</td><td>需 MonoBehaviour</td><td><span class="accent">不需要</span></td></tr>
+    </tbody>
+  </table>
+</div>

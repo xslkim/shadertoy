@@ -1,0 +1,20 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../theme.css">
+<div class="stage">
+  <h1 class="title" style="font-size:54px;margin-bottom:40px">怎么选？一张决策图</h1>
+  <div class="flow" style="width:85%">
+    <div class="fbox q">需要返回值 / 异常处理 / 取消 / 跨线程计算？</div>
+    <div class="frow" style="margin-top:8px">
+      <div class="fcol">
+        <div class="flabel">是</div>
+        <div class="farrow">↓</div>
+        <div class="fbox good">用 async + UniTask</div>
+      </div>
+      <div class="fcol">
+        <div class="flabel">否，只是简单按帧的时序</div>
+        <div class="farrow">↓</div>
+        <div class="fbox accent">协程也够用</div>
+      </div>
+    </div>
+    <p class="foot" style="font-size:32px;margin-top:50px">新项目优先 async + UniTask，老项目协程可共存</p>
+  </div>
+</div>

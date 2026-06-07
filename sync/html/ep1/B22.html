@@ -1,0 +1,14 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../theme.css">
+<div class="stage">
+  <h1 class="title" style="font-size:52px;margin-bottom:40px">五种语言，一张总表</h1>
+  <table style="width:92%;font-size:27px">
+    <thead><tr><th style="width:16%">语言</th><th>底层模型</th><th>语法</th><th>运行时</th></tr></thead>
+    <tbody>
+      <tr><td><b>C#</b></td><td class="dim">多线程 + 线程池</td><td><span class="accent">async/await</span></td><td class="dim">自带，捕获同步上下文</td></tr>
+      <tr><td><b>JavaScript</b></td><td class="dim">单线程事件循环</td><td><span class="accent">async/await</span></td><td class="dim">自带，靠微任务队列</td></tr>
+      <tr><td><b>Python</b></td><td class="dim">单线程 + GIL</td><td><span class="accent">async/await</span></td><td class="dim">需 asyncio.run 启动</td></tr>
+      <tr><td><b>Rust</b></td><td class="dim">多线程 + 执行器</td><td><span class="accent">async/.await</span></td><td class="dim">不自带，需选 tokio</td></tr>
+      <tr><td><b>Go</b></td><td class="dim">绿色线程 goroutine</td><td>go + channel</td><td class="dim">自带运行时调度</td></tr>
+    </tbody>
+  </table>
+</div>

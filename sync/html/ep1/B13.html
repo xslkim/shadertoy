@@ -1,0 +1,15 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../theme.css">
+<div class="stage">
+  <h1 class="title bad" style="font-size:50px;margin-bottom:48px">经典死锁：.Result 同步等异步</h1>
+  <div class="row" style="align-items:center">
+    <div class="code" style="width:50%;font-size:28px"><span class="cmt">// UI 线程上</span>
+<span class="kw">var</span> data = <span class="type">DownloadAsync</span>().Result; <span class="bad">// ✗ 死锁</span></div>
+    <div class="cyc" style="width:38%">
+      <div class="cbox">UI 线程</div>
+      <div class="carr">↓ &nbsp; ↑</div>
+      <div class="cbox">await 后半段</div>
+      <div class="lock">🔒</div>
+      <div class="ctxt">互相等待，永久卡死</div>
+    </div>
+  </div>
+</div>

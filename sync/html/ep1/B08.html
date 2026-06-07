@@ -1,0 +1,20 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../theme.css">
+<div class="stage">
+  <h1 class="title" style="font-size:52px;margin-bottom:40px">你写的几行，被改写成这样</h1>
+  <div class="code" style="width:80%;font-size:28px"><span class="kw">class</span> StateMachine {
+    <span class="kw">int</span> state = <span class="str">0</span>;            <span class="cmt">// 当前停在哪个存档点</span>
+    <span class="kw">string</span> data;              <span class="cmt">// 被保存的局部变量</span>
+
+    <span class="kw">void</span> <span class="type">MoveNext</span>() {
+        <span class="kw">if</span> (state == <span class="str">0</span>) {
+            awaiter = client.<span class="type">DownloadAsync</span>(url).<span class="type">GetAwaiter</span>();
+            state = <span class="str">1</span>;
+            awaiter.<span class="type">OnCompleted</span>(MoveNext); <span class="cmt">// 结果好了再回来</span>
+            <span class="kw">return</span>;                        <span class="accent">// ← 暂停，线程交还</span>
+        }
+        <span class="cmt">// state == 1：恢复，读取结果</span>
+        data = awaiter.<span class="type">GetResult</span>();
+        result = <span class="type">Parse</span>(data);
+    }
+}</div>
+</div>

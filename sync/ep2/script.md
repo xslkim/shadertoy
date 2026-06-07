@@ -11,7 +11,7 @@
 开发者正在权衡该走哪条路。深色科技背景 #0d1117，扁平现代矢量风格，蓝色辉光。
 
 --- narration ---
-上一集我们讲透了 async/await 的本质
+上集我们讲透了 async/await 的本质，还横向看了各语言
 这一集回到真实战场：**Unity**
 游戏里到处是异步
 加载资源、等动画、等几秒、等网络
@@ -23,7 +23,7 @@ Unity 老牌的做法是 **协程**
 >>> Unity 的老办法：协程 #B02
 @enter: fade-up
 @exit: fade
-@visual: animation
+@visual: image(./assets/B02.png)
 
 --- visual ---
 深色背景 #0d1117。顶部标题 "协程 Coroutine：Unity 的老朋友"，字号 54px，粗体 #e6edf3，距顶 60px。
@@ -79,7 +79,7 @@ IEnumerator 也是编译器生成的一台状态机
 >>> 协程的局限 #B04
 @enter: fade-up
 @exit: fade
-@visual: animation
+@visual: image(./assets/B04.png)
 
 --- visual ---
 深色背景 #0d1117。顶部标题 "协程能做，也有它做不到的"，字号 52px，粗体 #e6edf3，距顶 60px。
@@ -128,7 +128,7 @@ Unity 的整个游戏循环叫 **PlayerLoop**
 >>> 在 Unity 里直接写 async #B06
 @enter: fade-up
 @exit: fade
-@visual: animation
+@visual: image(./assets/B06.png)
 
 --- visual ---
 深色背景 #0d1117。顶部标题 "好消息：async 直接能用"，字号 54px，粗体 #e6edf3，距顶 60px。
@@ -181,7 +181,7 @@ await 之后的这行，去改了 transform
 >>> 跨线程的坑：Task.Run #B08
 @enter: fade-up
 @exit: fade
-@visual: animation
+@visual: image(./assets/B08.png)
 
 --- visual ---
 深色背景 #0d1117。顶部标题 "坑：在后台线程碰 Unity API", 字号 50px，粗体，红色 #ff7b72，距顶 60px。
@@ -212,7 +212,7 @@ transform.position = result;       // ✓ 安全
 >>> 协程 vs async 对比 #B09
 @enter: fade-up
 @exit: fade
-@visual: animation
+@visual: image(./assets/B09.png)
 
 --- visual ---
 深色背景 #0d1117。顶部标题 "协程 vs async/await", 字号 56px，粗体 #e6edf3，距顶 50px。
@@ -287,7 +287,7 @@ UniTask 凭什么成为标准，主要三点
 >>> UniTask 代码示例 #B12
 @enter: fade-up
 @exit: fade
-@visual: animation
+@visual: image(./assets/B12.png)
 
 --- visual ---
 深色背景 #0d1117。顶部标题 "UniTask：一切皆可 await", 字号 52px，粗体 #e6edf3，距顶 50px。
@@ -318,7 +318,7 @@ await UniTask.Delay，等两秒，零分配
 >>> 生命周期与取消 #B13
 @enter: fade-up
 @exit: fade
-@visual: animation
+@visual: image(./assets/B13.png)
 
 --- visual ---
 深色背景 #0d1117。顶部标题 "对象销毁了，任务要自动停", 字号 50px，粗体 #e6edf3，距顶 50px。
@@ -348,7 +348,7 @@ UniTask 给了一个利器
 >>> 经典坑：销毁后继续执行 #B14
 @enter: fade-up
 @exit: fade
-@visual: animation
+@visual: image(./assets/B14.png)
 
 --- visual ---
 深色背景 #0d1117。顶部标题 "没传 token 的下场", 字号 52px，粗体，红色 #ff7b72，距顶 60px。
@@ -375,7 +375,7 @@ await 等了五秒，这五秒里对象被销毁了
 >>> 该用协程还是 async #B15
 @enter: fade-up
 @exit: fade
-@visual: animation
+@visual: image(./assets/B15.png)
 
 --- visual ---
 深色背景 #0d1117。顶部标题 "怎么选？一张决策图", 字号 54px，粗体 #e6edf3，距顶 50px。
@@ -395,28 +395,26 @@ await 等了五秒，这五秒里对象被销毁了
 但对于新代码，业界的共识是优先 async 加 UniTask
 
 
->>> 第二集小结 #B16
+>>> 全系列总结 #B16
 @enter: fade-up
 @exit: fade
-@visual: animation
+@visual: image(./assets/B16.png)
 
 --- visual ---
-深色背景 #0d1117。顶部居中标题 "第二集 · Unity 异步要点", 字号 56px，粗体 #e6edf3，距顶 60px。
-下方五行要点，纵向排列，占画布 82% 宽，每行左侧 accent 色 #58a6ff 圆点，字号 33px，依次淡入：
-• 协程和 async 骨子里都是状态机
-• Unity API 只能主线程，这是一切坑的根源
-• UnitySynchronizationContext 默认把 await 后半段送回主线程
-• 高频异步用 UniTask：零 GC、集成 PlayerLoop
-• 永远传 CancellationToken，对象销毁要能自动停
-底部一行小字 "下一集：和 JS、Python、Rust、Go 横向对比"，字号 28px，颜色 #8b949e。
+深色背景 #0d1117。顶部居中标题 "两集回顾 · 你的异步心智模型", 字号 54px，粗体 #e6edf3，距顶 50px。
+下方两张横向卡片，各占画布约 42% 宽，间距 48px，高约 360px，圆角 16px，背景 #161b22，内边距 32px。
+每卡顶部集数标签 accent 色 #58a6ff 30px + 标题 36px + 三行要点 28px #8b949e：
+卡①「上集 · 本质与全景」：async≠多线程，是状态机 / 同步上下文，别用 .Result / 各语言本质都是续体
+卡②「下集 · Unity 实战」：主线程铁律是一切坑的根源 / UniTask 零 GC、集成 PlayerLoop / 永远传取消 token
+底部一行 30px #e6edf3："会用，更要懂它为什么这么设计"。
 
 --- narration ---
-第二集收个尾
-协程和 async **骨子里都是状态机**
-Unity API **只能在主线程**，这是一切坑的根源
-默认的同步上下文会把 await 后半段 **送回主线程**
-高频异步请用 **UniTask**：零 GC，集成帧循环
-永远记得传 **取消 token**，对象销毁要能自动停
-下一集，我们跳出 C#
-看看 **JS、Python、Rust、Go** 是怎么做异步的
-你会对 async/await 有一个更立体的认识
+两集到这里就讲完了，我们回顾一下
+上集，**async 不是多线程**，是编译器生成的状态机
+各语言语法统一、底层各异，共同本质是 **续体**
+下集，在 Unity 里守住 **主线程铁律**
+高频异步用 UniTask，永远传取消 token
+异步编程不难
+难的是从"会用"到真正 **懂它为什么这么设计**
+希望这两集，帮你跨过了这道坎
+我们下个系列再见

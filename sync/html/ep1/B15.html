@@ -1,0 +1,24 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../theme.css">
+<div class="stage">
+  <h1 class="title" style="font-size:52px;margin-bottom:48px">并发，其实只有几种底层模型</h1>
+  <div class="cards" style="width:92%">
+    <div class="card">
+      <span class="ico">🧵</span>
+      <h3 class="accent">多线程</h3>
+      <div class="item">抢占式，OS 调度</div>
+      <div class="item">代表：C# Task 线程池</div>
+    </div>
+    <div class="card">
+      <span class="ico">🔁</span>
+      <h3 class="accent">事件循环</h3>
+      <div class="item">单线程，任务排队</div>
+      <div class="item">代表：JS / Python asyncio</div>
+    </div>
+    <div class="card">
+      <span class="ico">🟢</span>
+      <h3 class="accent">协程 / 绿色线程</h3>
+      <div class="item">用户态调度</div>
+      <div class="item">代表：Go goroutine</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../theme.css">
+<div class="stage">
+  <h1 class="title" style="font-size:52px;margin-bottom:48px">Go：根本没有 async/await</h1>
+  <div class="row" style="align-items:center">
+    <div class="code" style="width:60%;font-size:28px"><span class="kw">func</span> <span class="type">download</span>(ch <span class="kw">chan</span> string) {
+    data := <span class="type">fetch</span>(url)      <span class="cmt">// 看起来是同步阻塞写法</span>
+    ch <span class="accent">&lt;-</span> <span class="type">parse</span>(data)       <span class="cmt">// 结果通过 channel 传回</span>
+}
+
+<span class="kw">go</span> <span class="type">download</span>(ch)             <span class="cmt">// go 关键字：开一个 goroutine</span>
+result := <span class="accent">&lt;-</span>ch              <span class="cmt">// 从 channel 取结果</span></div>
+    <div class="note" style="width:28%">goroutine = 极轻量绿色线程，运行时自动调度</div>
+  </div>
+</div>

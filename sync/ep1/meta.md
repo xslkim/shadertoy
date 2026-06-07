@@ -1,5 +1,5 @@
 --- meta ---
-title: C# async await 的本质（第一集 · 原理与细节）
+title: async await 的本质与全景（上集 · 原理 + 跨语言）
 aspect: 16:9
 theme: dark-code
 fps: 30

@@ -1,0 +1,10 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../theme.css">
+<div class="stage">
+  <h1 class="title" style="font-size:54px;margin-bottom:44px">好消息：async 直接能用</h1>
+  <div class="code" style="width:74%;font-size:28px"><span class="kw">async void</span> <span class="type">Start</span>() {           <span class="cmt">// 事件式入口，可用 async void</span>
+    <span class="type">Show</span>(<span class="str">"加载中..."</span>);
+    <span class="kw">await</span> <span class="type">Task</span>.<span class="type">Delay</span>(2000);    <span class="cmt">// 等 2 秒，不卡主线程</span>
+    transform.position = spawn; <span class="bad">// 仍在主线程？关键问题</span>
+    <span class="type">Show</span>(<span class="str">"开始！"</span>);
+}</div>
+</div>

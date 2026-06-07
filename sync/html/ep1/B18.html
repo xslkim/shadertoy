@@ -1,0 +1,13 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../theme.css">
+<div class="stage">
+  <h1 class="title" style="font-size:50px;margin-bottom:44px">同样的 await，底下天差地别</h1>
+  <table style="width:86%;font-size:30px">
+    <thead><tr><th style="width:26%">维度</th><th>C#</th><th>JavaScript</th></tr></thead>
+    <tbody>
+      <tr><td class="dim">线程模型</td><td><span class="accent">多线程 + 线程池</span></td><td><span class="accent">单线程事件循环</span></td></tr>
+      <tr><td class="dim">await 后半段</td><td>可能在别的线程</td><td>永远同一个线程</td></tr>
+      <tr><td class="dim">真并行计算</td><td>可以 Task.Run</td><td>不行（要靠 Worker）</td></tr>
+      <tr><td class="dim">数据竞争</td><td>需要加锁</td><td>几乎不用担心</td></tr>
+    </tbody>
+  </table>
+</div>

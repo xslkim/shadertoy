@@ -1,0 +1,13 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../theme.css">
+<div class="stage">
+  <h1 class="title" style="font-size:52px;margin-bottom:48px">ConfigureAwait(false)：别回去了</h1>
+  <div class="row" style="align-items:stretch">
+    <div class="code" style="width:42%;font-size:28px"><span class="label accent">库代码 / 不碰 UI</span><span class="kw">var</span> data = <span class="kw">await</span> client
+    .<span class="type">DownloadAsync</span>(url)
+    .<span class="type">ConfigureAwait</span>(<span class="kw">false</span>);
+<span class="cmt">// 后半段留在线程池，更快</span></div>
+    <div class="code" style="width:42%;font-size:28px"><span class="label muted">UI 代码 / 要更新界面</span><span class="kw">var</span> data = <span class="kw">await</span> client
+    .<span class="type">DownloadAsync</span>(url);
+label.Text = data; <span class="cmt">// 需要回 UI 线程</span></div>
+  </div>
+</div>

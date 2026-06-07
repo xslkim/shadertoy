@@ -1,0 +1,15 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../theme.css">
+<div class="stage">
+  <h1 class="title" style="font-size:56px;margin-bottom:48px">Task：一张取餐小票</h1>
+  <div class="row" style="align-items:center">
+    <div class="code" style="width:55%;font-size:30px"><span class="kw">async</span> <span class="type">Task</span>&lt;<span class="type">string</span>&gt; <span class="type">DownloadAsync</span>() {
+    <span class="kw">var</span> data = <span class="kw">await</span> client.<span class="type">DownloadAsync</span>(url);
+    <span class="kw">return</span> <span class="type">Parse</span>(data);
+}</div>
+    <div class="receipt" style="width:30%">
+      <span class="ico">⏳</span>
+      <div class="t">结果稍后送达</div>
+      <div class="t" style="color:var(--accent);font-size:26px;margin-top:10px">Task&lt;string&gt;</div>
+    </div>
+  </div>
+</div>

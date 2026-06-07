@@ -1,0 +1,12 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../theme.css">
+<div class="stage">
+  <h1 class="title" style="font-size:54px;margin-bottom:44px">让多件事同时等：WhenAll</h1>
+  <div class="code" style="width:72%;font-size:28px"><span class="bad">// ✗ 串行：一个等完再等下一个，共 3 秒</span>
+<span class="kw">var</span> a = <span class="kw">await</span> <span class="type">GetAsync</span>(1);
+<span class="kw">var</span> b = <span class="kw">await</span> <span class="type">GetAsync</span>(2);
+<span class="kw">var</span> c = <span class="kw">await</span> <span class="type">GetAsync</span>(3);
+
+<span class="good">// ✓ 并发：三个一起飞，只等最慢的，约 1 秒</span>
+<span class="kw">var</span> all = <span class="kw">await</span> <span class="type">Task</span>.<span class="type">WhenAll</span>(
+    <span class="type">GetAsync</span>(1), <span class="type">GetAsync</span>(2), <span class="type">GetAsync</span>(3));</div>
+</div>
