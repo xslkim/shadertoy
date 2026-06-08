@@ -75,75 +75,167 @@ set 的形状由 **descriptor set layout** 决定
 传统模型就成了瓶颈
 
 
->>> Vulkan 走向 Bindless 的三步 #B04
+>>> Bindless 三步演进 · 开场 #B04
 @enter: slide-left
-@exit: fade
-@visual: image(./assets/v2_evolution.png)
+@exit: none
+@visual: image(./assets/evo_0.png)
 
 --- visual ---
-（此描述仅作文档参考，实际使用 ./assets/v2_evolution.png 图片文件）
-横向三栏演进时间线图：
-  第一步 "descriptor_indexing"（蓝色，VULKAN 1.2 CORE）
-  → 第二步 "descriptor_buffer"（金色，VK_EXT）
-  → 第三步 "descriptor_heap"（红色高亮边框，VK_EXT，标注"本期主角"）
-每栏有对应技术说明文字。
+（此描述仅作文档参考，实际使用 ./assets/evo_0.png 图片文件 —— 演进时间线动画第 0 帧）
+"Vulkan 走向 Bindless 的三步"标题，下方三栏时间线尚未出现（空舞台）。
+这是演进序列的开场，后续三块将依次点亮三步。
 
 --- narration ---
 Vulkan 走向 bindless 分了三步
+
+
+>>> Bindless 三步演进 · 第一步 #B05
+@enter: none
+@exit: none
+@visual: image(./assets/evo_1.png)
+
+--- visual ---
+（此描述仅作文档参考，实际使用 ./assets/evo_1.png 图片文件 —— 演进时间线第 1 帧）
+时间线第一栏点亮：descriptor_indexing（蓝色，VULKAN 1.2 CORE），其余两栏仍未出现。
+
+--- narration ---
 **第一步，descriptor_indexing**，已进 1.2 核心
 允许 shader 用**非一致索引**访问描述符数组
 bindless 的雏形有了，但描述符还在 set 里
+
+
+>>> Bindless 三步演进 · 第二步 #B06
+@enter: none
+@exit: none
+@visual: image(./assets/evo_2.png)
+
+--- visual ---
+（此描述仅作文档参考，实际使用 ./assets/evo_2.png 图片文件 —— 演进时间线第 2 帧）
+时间线第二栏点亮：descriptor_buffer（金色，VK_EXT），与第一栏间出现箭头；第三栏仍未出现。
+
+--- narration ---
 **第二步，descriptor_buffer**
 把描述符本身当成**普通数据**，写进一块 buffer
 描述符第一次脱离 set，变成可自由摆放的内存
 这也是我们 demo **实际用来出画面**的扩展
+
+
+>>> Bindless 三步演进 · 第三步 #B07
+@enter: none
+@exit: fade
+@visual: image(./assets/evo_3.png)
+
+--- visual ---
+（此描述仅作文档参考，实际使用 ./assets/evo_3.png 图片文件 —— 演进时间线第 3 帧 · 完整）
+时间线第三栏点亮：descriptor_heap（红色高亮边框，VK_EXT，标注"本期主角"），三步全部呈现。
+
+--- narration ---
 **第三步，descriptor_heap**，今天的主角
 一块全局的堆加一张映射表
 shader 里的 set/binding 由一个**索引**直接定位
 这就和 D3D12 的 ResourceDescriptorHeap 对齐了
 
 
->>> 核心概念：堆内存模型 #B05
+>>> 堆内存模型 · 开场 #B08
 @enter: fade-up
-@exit: fade
-@visual: image(./assets/v3_heap_layout.png)
+@exit: none
+@visual: image(./assets/heap_0.png)
 
 --- visual ---
-（此描述仅作文档参考，实际使用 ./assets/v3_heap_layout.png 图片文件）
-堆布局图：6 个槽位（#0~#5）横向排列，每槽 emoji 图标 + 类型标签；
-底部水平轴线标注"偏移 0 → Resource Heap (GPU 内存)"；
-下方注释文字："每个槽位 = 一个描述符，uniformBufferDescriptorSize = 8 字节"。
+（此描述仅作文档参考，实际使用 ./assets/heap_0.png 图片文件 —— 堆布局动画第 0 帧）
+"堆 = 一块连续内存，描述符按尺寸紧密排列"标题，下方槽位尚未出现（空舞台）。
 
 --- narration ---
 把 descriptor_heap 的脑内模型建立起来
 想象一块连续的 GPU 内存，这就是**堆**
-每个资源的描述符按固定尺寸紧密排列
-第 0 槽、第 1 槽、第 2 槽……
-本 demo 里，**uniformBufferDescriptorSize = 8 字节**
-这个数字由 vkGetPhysicalDeviceDescriptorSizeEXT 查得
-6 个场景就是堆里 6 个 8 字节的槽位
-第 i 个资源 → 堆基址 + i × 描述符尺寸
 
 
->>> 核心概念：索引访问流 #B06
-@enter: slide-left
-@exit: fade
-@visual: image(./assets/v4_index_flow.png)
+>>> 堆内存模型 · 槽位排列 #B09
+@enter: none
+@exit: none
+@visual: image(./assets/heap_3.png)
 
 --- visual ---
-（此描述仅作文档参考，实际使用 ./assets/v4_index_flow.png 图片文件）
-三步流程图：① CPU 每帧 push 索引数字 "2" via vkCmdPushDataEXT
-→ ② GPU shader heap[2] 命中第 2 槽（高亮）
-→ ③ scene 2 被渲染输出画面（缩略图）。
-底部注释："没有重建描述符、没有重绑 set —— 只是换了个索引"。
+（此描述仅作文档参考，实际使用 ./assets/heap_3.png 图片文件 —— 堆布局动画第 3 帧）
+堆中前三个槽位 #0 #1 #2 已出现（每槽 emoji 图标 + scene 标签），其余槽位与底部轴线尚未出现。
+
+--- narration ---
+每个资源的描述符按固定尺寸紧密排列
+第 0 槽、第 1 槽、第 2 槽……
+
+
+>>> 堆内存模型 · 完整布局 #B10
+@enter: none
+@exit: fade
+@visual: image(./assets/heap_7.png)
+
+--- visual ---
+（此描述仅作文档参考，实际使用 ./assets/heap_7.png 图片文件 —— 堆布局动画第 7 帧 · 完整）
+6 个槽位 #0~#5 全部排列，底部水平轴线"偏移 0 → Resource Heap (GPU 内存)"出现，
+第 2 槽高亮，下方注释"uniformBufferDescriptorSize = 8 字节 / 第 i 个资源 → 堆基址 + i × 尺寸"。
+
+--- narration ---
+本 demo 里，**uniformBufferDescriptorSize 是 8 字节**
+这个数字由查询描述符尺寸的接口返回
+6 个场景就是堆里 6 个 8 字节的槽位
+第 i 个资源的地址，就是堆基址加上 i 乘描述符尺寸
+
+
+>>> 索引访问流 · CPU 推索引 #B11
+@enter: slide-left
+@exit: none
+@visual: image(./assets/index_1.png)
+
+--- visual ---
+（此描述仅作文档参考，实际使用 ./assets/index_1.png 图片文件 —— 索引访问流第 1 帧）
+"CPU 推一个索引，GPU 自己去堆里取"标题，仅出现第①框：CPU 每帧 push 大字"2"，
+下方 vkCmdPushDataEXT。其余两框与箭头尚未出现。
 
 --- narration ---
 shader 要用某个资源时，不绑定任何东西
-而是拿一个**整数索引**，比如 index = 2
+而是拿一个**整数索引**，比如这里是 2
+
+
+>>> 索引访问流 · GPU 取描述符 #B12
+@enter: none
+@exit: none
+@visual: image(./assets/index_2.png)
+
+--- visual ---
+（此描述仅作文档参考，实际使用 ./assets/index_2.png 图片文件 —— 索引访问流第 2 帧）
+出现第①→②框：箭头延伸到第②框 GPU shader，6 格 mini 堆中第 2 格高亮，heap[2] 取出描述符。
+第③框尚未出现。
+
+--- narration ---
 直接去堆里第 2 槽取描述符
 索引从哪来？这正是 descriptor_heap 灵活的地方
+
+
+>>> 索引访问流 · 渲染输出 #B13
+@enter: none
+@exit: none
+@visual: image(./assets/index_3.png)
+
+--- visual ---
+（此描述仅作文档参考，实际使用 ./assets/index_3.png 图片文件 —— 索引访问流第 3 帧）
+三框完整：①CPU push 2 → ②GPU heap[2] → ③画面输出 scene 2 缩略图。底部注释尚未出现。
+
+--- narration ---
 它定义了一张**映射表**
 VkDescriptorSetAndBindingMappingEXT
+
+
+>>> 索引访问流 · 索引来源 #B14
+@enter: none
+@exit: fade
+@visual: image(./assets/index_4.png)
+
+--- visual ---
+（此描述仅作文档参考，实际使用 ./assets/index_4.png 图片文件 —— 索引访问流第 4 帧 · 完整）
+三框 + 底部注释全部呈现："没有重建描述符、没有重绑 set —— 运行时只是换了个索引；
+索引来源可选 HEAP_WITH_PUSH_INDEX / 间接 buffer / shader record"。
+
+--- narration ---
 指定索引来自：push 常量、间接 buffer、或 shader record
 我们用最直观的：**HEAP_WITH_PUSH_INDEX**
 CPU 每帧 push 一个索引，GPU 自己去堆里取
@@ -151,7 +243,7 @@ CPU 每帧 push 一个索引，GPU 自己去堆里取
 堆模型是 shader 拿**索引**，自己主动去取
 
 
->>> API 六步完整走查 #B07
+>>> API 六步完整走查 #B15
 @enter: fade
 @exit: fade
 @visual: image(./assets/v5_api_steps.png)
@@ -174,7 +266,7 @@ VkPhysicalDeviceDescriptorHeapFeaturesEXT
 **第二步：查描述符尺寸**
 vkGetPhysicalDeviceDescriptorSizeEXT
 返回每种描述符占多少字节
-堆的大小 = 资源数 × 尺寸，再按对齐取整
+堆的大小，就是资源数乘以尺寸，再按对齐取整
 **第三步：建堆 buffer**
 普通 vkCreateBuffer
 usage 是新的 VK_BUFFER_USAGE_DESCRIPTOR_HEAP_BIT_EXT
@@ -185,7 +277,7 @@ vkWriteResourceDescriptorsEXT
 本质就是往映射内存里写数据
 **第五步：建映射表**，这是整套 API 的灵魂
 VkDescriptorSetAndBindingMappingEXT
-告诉驱动：shader 的 set=0 binding=0
+告诉驱动：shader 里 set 是 0、binding 是 0
 索引来源是 **HEAP_WITH_PUSH_INDEX_EXT**
 **第六步：录命令**
 vkCmdBindResourceHeapEXT 整帧绑一次堆
@@ -193,7 +285,7 @@ vkCmdPushDataEXT 把当前索引推进去
 然后照常 vkCmdDraw
 
 
->>> buffer vs heap 对照 #B08
+>>> buffer vs heap 对照 #B16
 @enter: slide-left
 @exit: fade
 @visual: image(./assets/v6_compare_table.png)
@@ -206,15 +298,15 @@ vkCmdPushDataEXT 把当前索引推进去
 
 --- narration ---
 注意这套 API 和 descriptor_buffer 几乎一一对应
-绑堆 ↔ vkCmdBindDescriptorBuffersEXT
-push 索引 ↔ vkCmdPushConstants
+绑堆这一步，对应它的 vkCmdBindDescriptorBuffersEXT
+push 索引这一步，对应它的 vkCmdPushConstants
 descriptor_heap 只是把绑定和偏移
-统一成了"绑一整块堆 + push 一个索引"
+统一成了"绑一整块堆，再 push 一个索引"
 更接近 D3D12，更适合一帧内切换海量资源
 理解了 buffer，heap 几乎**零成本**上手
 
 
->>> Demo 代码：bindless 核心 #B09
+>>> Demo 代码：bindless 核心 #B17
 @enter: fade-up
 @exit: fade
 @visual: animation
@@ -254,19 +346,18 @@ descriptor_heap 只是把绑定和偏移
 --- narration ---
 回到能真正跑的版本，看关键代码
 **frag shader** 里这行是 bindless 的核心
-scenes[nonuniformEXT(idx)].s
-一个描述符数组，用**非一致索引**随机访问
+就是一个描述符数组，用**非一致索引**随机访问
 idx 是几，就取堆里第几个场景的参数
 **main.cpp** 里，CPU 这边每帧算出当前索引
-pcv.sceneA 是场景 A 的索引
-pcv.sceneB 是过渡目标场景的索引
+push 常量里的 sceneA，是场景 A 的索引
+sceneB，是过渡目标场景的索引
 vkCmdPushConstants 把这两个数推给 shader
 屏幕上每次形状切换，背后就是这个索引在变
 没有重建描述符，没有重绑 set
 所有场景描述符一开始就静静躺在堆里
 
 
->>> Demo 启动日志 #B10
+>>> Demo 启动日志 #B18
 @enter: fade
 @exit: fade
 @visual: animation
@@ -305,7 +396,7 @@ descriptor_heap 当前驱动还**不支持**，走教学降级
 已经把 **6 个描述符**写进了堆
 
 
->>> 现状与注意事项 #B11
+>>> 现状与注意事项 #B19
 @enter: fade
 @exit: fade
 @visual: image(./assets/v7_status.png)
@@ -334,7 +425,7 @@ sampler 堆和 resource 堆要分开管理
 capture-replay 调试需要额外声明支持
 
 
->>> 收尾 #B12
+>>> 收尾 #B20
 @enter: fade
 @exit: fade
 @visual: image(./assets/shot_3.png)
