@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"></head>
+<body>
+<div class="stage">
+  <div class="h-top">动手 ②：<span class="accent">准备标定板</span></div>
+  <div class="rule"></div>
+  <div class="sub">生成 AprilGrid，打印贴硬板，并写一个描述它尺寸的 target.yaml</div>
+
+  <div class="row grow gap-l" style="margin-top:36px;align-items:stretch">
+    <div class="col gap-m" style="flex:1.2">
+      <div class="code" style="font-size:26px;line-height:1.8">
+        <div class="cm"># 生成可打印 PDF</div>
+        <span class="kw">kalibr_create_target_pdf</span> \<br>
+        &nbsp;&nbsp;--type apriltag \<br>
+        &nbsp;&nbsp;--nx 6 --ny 6 \<br>
+        &nbsp;&nbsp;--tsize 0.088 --tspace 0.3
+      </div>
+      <div class="code" style="font-size:26px;line-height:1.8">
+        <span class="cm"># aprilgrid.yaml — 告诉 Kalibr 板的真实尺寸</span><br>
+        target_type: <span class="str">aprilgrid</span><br>
+        tagCols: <span class="fl">6</span><br>
+        tagRows: <span class="fl">6</span><br>
+        tagSize: <span class="fl">0.088</span> &nbsp;<span class="cm"># tag 边长 (米)</span><br>
+        tagSpacing: <span class="fl">0.3</span> &nbsp;<span class="cm"># 间隙/tag 边长 比例</span>
+      </div>
+    </div>
+    <div class="col gap-m" style="flex:1;justify-content:center">
+      <div class="card col gap-s" style="border-left:5px solid var(--green)">
+        <div style="font-size:30px;font-weight:700">📏 量一量再填</div>
+        <div class="muted" style="font-size:26px">打印会缩放！用尺子量实际 tagSize 填进 yaml，否则尺度全错</div></div>
+      <div class="card col gap-s" style="border-left:5px solid var(--green)">
+        <div style="font-size:30px;font-weight:700">🧱 必须平整</div>
+        <div class="muted" style="font-size:26px">贴在铝板/亚克力等硬质平板上，不能有褶皱、翘曲</div></div>
+      <div class="card col gap-s" style="border-left:5px solid var(--green)">
+        <div style="font-size:30px;font-weight:700">💡 哑光无反光</div>
+        <div class="muted" style="font-size:26px">哑光打印，避免高光让角点检测失败</div></div>
+    </div>
+  </div>
+</div>
+</body></html>

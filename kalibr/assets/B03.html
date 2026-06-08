@@ -1,0 +1,54 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"></head>
+<body>
+<div class="stage">
+  <div class="h-top">先复习：<span class="accent">内参</span> Intrinsics</div>
+  <div class="rule"></div>
+  <div class="sub">相机「内部」的成像几何 —— 与相机装在哪无关</div>
+
+  <div class="row grow gap-l" style="margin-top:36px;align-items:stretch">
+    <!-- pinhole projection -->
+    <div class="card col" style="flex:0 0 880px">
+      <div class="muted mono" style="font-size:24px">针孔模型：3D 点经光心投到图像平面</div>
+      <div class="grow center">
+        <svg width="800" height="440" viewBox="0 0 800 440">
+          <!-- image plane -->
+          <rect x="250" y="120" width="14" height="240" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+          <text x="226" y="110" fill="#8b949e" font-size="22" font-family="JetBrains Mono">图像平面</text>
+          <!-- optical center -->
+          <circle cx="470" cy="240" r="9" fill="#58a6ff"/>
+          <text x="486" y="248" fill="#58a6ff" font-size="24" font-family="JetBrains Mono">光心 O</text>
+          <!-- 3D point -->
+          <circle cx="720" cy="120" r="11" fill="#3fb950"/>
+          <text x="650" y="100" fill="#3fb950" font-size="24" font-family="JetBrains Mono">P (X,Y,Z)</text>
+          <!-- rays -->
+          <line x1="720" y1="120" x2="470" y2="240" stroke="#3fb950" stroke-width="2.5"/>
+          <line x1="470" y1="240" x2="257" y2="343" stroke="#3fb950" stroke-width="2.5" stroke-dasharray="5 5"/>
+          <circle cx="257" cy="343" r="8" fill="#3fb950"/>
+          <text x="120" y="350" fill="#e6edf3" font-size="22" font-family="JetBrains Mono">投影 (u,v)</text>
+          <!-- focal length -->
+          <line x1="257" y1="380" x2="470" y2="380" stroke="#58a6ff" stroke-width="2"/>
+          <text x="330" y="408" fill="#58a6ff" font-size="22" font-family="JetBrains Mono">焦距 f</text>
+          <!-- principal axis -->
+          <line x1="257" y1="240" x2="730" y2="240" stroke="#30363d" stroke-width="1.5" stroke-dasharray="4 4"/>
+        </svg>
+      </div>
+    </div>
+    <!-- K matrix -->
+    <div class="col gap-m grow" style="justify-content:center">
+      <div class="code" style="font-size:30px;line-height:1.5">
+        <div class="cm" style="font-size:24px;margin-bottom:10px"># 内参矩阵 K</div>
+        K = <span class="fl">[ fx&nbsp;&nbsp;0&nbsp;&nbsp;cx ]</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="fl">[&nbsp;&nbsp;0&nbsp;fy&nbsp;cy ]</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="fl">[&nbsp;&nbsp;0&nbsp;&nbsp;0&nbsp;&nbsp;1 ]</span>
+      </div>
+      <div class="card col gap-s" style="padding:28px 32px">
+        <div style="font-size:28px"><span class="mono accent">fx, fy</span> &nbsp;焦距（像素）</div>
+        <div style="font-size:28px"><span class="mono accent">cx, cy</span> &nbsp;主点 / 光心像素坐标</div>
+        <div style="font-size:28px"><span class="mono red">k1,k2,p1,p2</span> &nbsp;畸变系数</div>
+      </div>
+      <div class="tag" style="align-self:flex-start;font-size:24px">真实镜头有畸变，直线会被拍弯 → 必须建模</div>
+    </div>
+  </div>
+</div>
+</body></html>

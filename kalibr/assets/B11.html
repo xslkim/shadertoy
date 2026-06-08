@@ -1,0 +1,49 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"></head>
+<body>
+<div class="stage">
+  <div class="h-top">选对<span class="accent">畸变模型</span></div>
+  <div class="rule"></div>
+  <div class="sub">模型选错，重投影误差永远压不下去 —— 按相机 FOV 来选</div>
+
+  <div class="row grow gap-m" style="margin-top:36px;align-items:stretch">
+    <div class="card col center" style="flex:1">
+      <svg width="320" height="300" viewBox="0 0 320 300" id="g_pin"></svg>
+      <div style="font-size:34px;font-weight:700;margin-top:10px"><span class="mono accent">pinhole-radtan</span></div>
+      <div class="muted center" style="font-size:26px;margin-top:8px;text-align:center">普通前视/窄角相机<br>径向 + 切向畸变</div>
+    </div>
+    <div class="card col center" style="flex:1;border-color:rgba(88,166,255,.5)">
+      <svg width="320" height="300" viewBox="0 0 320 300" id="g_equi"></svg>
+      <div style="font-size:34px;font-weight:700;margin-top:10px"><span class="mono accent">pinhole-equi</span></div>
+      <div class="muted center" style="font-size:26px;margin-top:8px;text-align:center">鱼眼 / 环视相机<br>等距投影 (KB 模型)</div>
+    </div>
+    <div class="card col center" style="flex:1">
+      <div style="font-size:30px;font-weight:700;align-self:flex-start">更广角可选</div>
+      <div class="col gap-s grow center" style="align-items:flex-start;width:100%">
+        <div style="font-size:28px"><span class="mono accent">omni-radtan</span> 全向</div>
+        <div style="font-size:28px"><span class="mono accent">ds</span> 双球 Double Sphere</div>
+        <div style="font-size:28px"><span class="mono accent">eucm</span> 扩展统一</div>
+      </div>
+      <div class="tag" style="align-self:flex-start;font-size:24px">≥ 150° FOV 优先 ds / eucm</div>
+    </div>
+  </div>
+
+  <div class="code center" style="margin-top:30px;font-size:30px">
+    --models <span class="accent">pinhole-equi</span> <span class="accent">pinhole-equi</span> <span class="accent">pinhole-radtan</span>
+    &nbsp;&nbsp;<span class="cm" style="font-size:24px"># 每个相机各指定一个模型</span>
+  </div>
+</div>
+<script>
+const NS='http://www.w3.org/2000/svg';
+function grid(id,fn){const s=document.getElementById(id);const N=10,o=20,L=280;
+  for(let i=0;i<=N;i++){for(const horiz of [0,1]){
+    let d='';for(let j=0;j<=40;j++){let a=(i/N-0.5)*2,b=(j/40-0.5)*2;let x=horiz?b:a,y=horiz?a:b;
+      const[X,Y]=fn(x,y);const px=o+(X*0.5+0.5)*L,py=o+(Y*0.5+0.5)*L;d+=(j?'L':'M')+px+' '+py+' ';}
+    const p=document.createElementNS(NS,'path');p.setAttribute('d',d);p.setAttribute('fill','none');
+    p.setAttribute('stroke','#58a6ff');p.setAttribute('stroke-width','2');p.setAttribute('opacity','0.85');s.appendChild(p);}}}
+// barrel (radtan, mild)
+grid('g_pin',(x,y)=>{const r2=x*x+y*y,k=1+0.18*r2;return[x*k,y*k]});
+// fisheye (equidistant, strong)
+grid('g_equi',(x,y)=>{const r=Math.hypot(x,y)||1e-6,th=Math.atan(r*1.6),s=(th/(Math.PI/2))/r;return[x*s*1.15,y*s*1.15]});
+</script>
+</body></html>

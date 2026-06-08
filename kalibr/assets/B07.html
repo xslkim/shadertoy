@@ -1,0 +1,75 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"></head>
+<body>
+<div class="stage">
+  <div class="h-top">第一步：<span class="accent">角点检测</span></div>
+  <div class="rule"></div>
+  <div class="sub">每张图里，把检测到的像素点和板上已知 3D 点一一对应起来</div>
+
+  <div class="row grow gap-l" style="margin-top:30px;align-items:center">
+    <!-- detected board with corners -->
+    <div class="card center" style="flex:0 0 920px">
+      <svg width="840" height="540" viewBox="0 0 840 540">
+        <!-- perspective grid of tags -->
+        <g id="tags"></g>
+        <!-- zoom inset -->
+        <circle cx="690" cy="150" r="120" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
+        <circle cx="690" cy="150" r="120" fill="none" stroke="#30363d" stroke-dasharray="5 5"/>
+        <rect x="650" y="110" width="80" height="80" fill="none" stroke="#3fb950" stroke-width="2"/>
+        <circle cx="690" cy="150" r="9" fill="none" stroke="#3fb950" stroke-width="3"/>
+        <line x1="690" y1="120" x2="690" y2="180" stroke="#3fb950" stroke-width="1.5"/>
+        <line x1="660" y1="150" x2="720" y2="150" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="612" y="295" fill="#3fb950" font-size="22" font-family="JetBrains Mono">亚像素精度</text>
+      </svg>
+    </div>
+    <!-- pipeline -->
+    <div class="col gap-m grow">
+      <div class="card col gap-s"><div class="row gap-s" style="align-items:center">
+        <div class="badge-num" style="background:#3fb950;color:#06140a">✓</div>
+        <div style="font-size:32px;font-weight:700">识别 tag 与 ID</div></div>
+        <div class="muted" style="font-size:26px">解码每个 AprilTag → 知道是哪一格</div></div>
+      <div class="card col gap-s"><div class="row gap-s" style="align-items:center">
+        <div class="badge-num" style="background:#3fb950;color:#06140a">✓</div>
+        <div style="font-size:32px;font-weight:700">提取亚像素角点</div></div>
+        <div class="muted" style="font-size:26px">每个 tag 4 个角，精度可达 0.1 像素</div></div>
+      <div class="code" style="font-size:27px">
+        <div class="cm" style="font-size:22px"># 得到一批对应关系</div>
+        3D <span class="green">P_i</span> (板坐标) &nbsp;↔&nbsp; 2D <span class="accent">x_i</span> (像素)
+      </div>
+      <div class="tag" style="align-self:flex-start;font-size:24px">这些对应关系就是后面优化的「观测数据」</div>
+    </div>
+  </div>
+</div>
+<script>
+// draw a perspective-warped grid of tag squares with green corners
+const NS='http://www.w3.org/2000/svg';
+const g=document.getElementById('tags');
+const cols=6,rows=4;
+// perspective corners of board
+const TL=[60,90],TR=[560,40],BL=[40,500],BR=[600,470];
+function lerp(a,b,t){return[a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t]}
+function pt(u,v){const top=lerp(TL,TR,u),bot=lerp(BL,BR,u);return lerp(top,bot,v)}
+// tag squares
+for(let r=0;r<rows;r++)for(let c=0;c<cols;c++){
+  const pad=0.18, u0=(c+pad)/cols,u1=(c+1-pad)/cols,v0=(r+pad)/rows,v1=(r+1-pad)/rows;
+  const p=[pt(u0,v0),pt(u1,v0),pt(u1,v1),pt(u0,v1)];
+  const poly=document.createElementNS(NS,'polygon');
+  poly.setAttribute('points',p.map(q=>q.join(',')).join(' '));
+  poly.setAttribute('fill','#161b22');poly.setAttribute('stroke','#8b949e');poly.setAttribute('stroke-width','1.5');
+  g.appendChild(poly);
+}
+// green corner dots at every tag-grid intersection
+for(let r=0;r<=rows;r++)for(let c=0;c<=cols;c++){
+  const q=pt(c/cols,r/rows);
+  const dot=document.createElementNS(NS,'circle');
+  dot.setAttribute('cx',q[0]);dot.setAttribute('cy',q[1]);dot.setAttribute('r','5');
+  dot.setAttribute('fill','#3fb950');g.appendChild(dot);
+}
+// a couple of ID labels
+[['12',pt(0.16,0.16)],['18',pt(0.84,0.16)]].forEach(([t,q])=>{
+  const tx=document.createElementNS(NS,'text');tx.setAttribute('x',q[0]-10);tx.setAttribute('y',q[1]-8);
+  tx.setAttribute('fill','#58a6ff');tx.setAttribute('font-size','20');tx.setAttribute('font-family','JetBrains Mono');
+  tx.textContent='#'+t;g.appendChild(tx);
+});
+</script>
+</body></html>

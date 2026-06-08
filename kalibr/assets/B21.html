@@ -1,0 +1,35 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"></head>
+<body>
+<div class="stage">
+  <div class="h-top">回顾 ＆ <span class="accent">下一步</span></div>
+  <div class="rule"></div>
+  <div class="sub">从原理到一次完整标定，你已经走通了</div>
+
+  <div class="card grow center" style="margin-top:30px">
+    <div class="row gap-s center" style="flex-wrap:nowrap">
+      <div class="col center" style="width:200px"><div style="font-size:44px">🎯</div><div style="font-size:25px;font-weight:700;text-align:center;margin-top:8px">AprilGrid<br>＋角点检测</div></div>
+      <div class="accent" style="font-size:40px">→</div>
+      <div class="col center" style="width:200px"><div style="font-size:44px">📐</div><div style="font-size:25px;font-weight:700;text-align:center;margin-top:8px">重投影误差<br>建模</div></div>
+      <div class="accent" style="font-size:40px">→</div>
+      <div class="col center" style="width:200px"><div style="font-size:44px">⚙️</div><div style="font-size:25px;font-weight:700;text-align:center;margin-top:8px">批量优化<br>内参＋外参</div></div>
+      <div class="accent" style="font-size:40px">→</div>
+      <div class="col center" style="width:200px"><div style="font-size:44px">📄</div><div style="font-size:25px;font-weight:700;text-align:center;margin-top:8px">camchain<br>.yaml</div></div>
+      <div class="accent" style="font-size:40px">→</div>
+      <div class="col center" style="width:200px"><div style="font-size:44px">✅</div><div style="font-size:25px;font-weight:700;text-align:center;margin-top:8px">看误差<br>验收</div></div>
+    </div>
+  </div>
+
+  <div class="row gap-m" style="margin-top:34px">
+    <div class="card col gap-s grow" style="border-left:5px solid var(--accent)">
+      <div style="font-size:30px;font-weight:700">▶ 自己动手</div>
+      <div class="muted" style="font-size:26px">打印 AprilGrid → 录一段双目 rosbag → 跑通 kalibr_calibrate_cameras</div></div>
+    <div class="card col gap-s grow" style="border-left:5px solid var(--purple)">
+      <div style="font-size:30px;font-weight:700">▶ 进阶</div>
+      <div class="muted" style="font-size:26px">相机–IMU 标定：外参 + 时间偏移，用连续时间 B 样条优化</div></div>
+  </div>
+
+  <div class="center" style="margin-top:30px;font-size:30px;color:var(--muted)">
+    docs：<span class="mono accent">github.com/ethz-asl/kalibr/wiki</span></div>
+</div>
+</body></html>

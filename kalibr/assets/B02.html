@@ -1,0 +1,65 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"></head>
+<body>
+<div class="stage">
+  <div class="h-top">为什么自动驾驶<span class="accent">离不开标定</span></div>
+  <div class="rule"></div>
+  <div class="sub">一辆车上十几个相机，融合的前提是知道每个相机「看哪、怎么看」</div>
+
+  <div class="row grow gap-l" style="margin-top:30px;align-items:center">
+    <!-- top-down car with surround cameras -->
+    <div class="card center" style="flex:0 0 840px;height:100%">
+      <svg width="760" height="700" viewBox="0 0 760 700">
+        <defs>
+          <radialgradient id="fov" cx="50%" cy="0%" r="100%">
+            <stop offset="0%" stop-color="#58a6ff" stop-opacity="0.38"/>
+            <stop offset="100%" stop-color="#58a6ff" stop-opacity="0"/>
+          </radialgradient>
+        </defs>
+        <!-- FOV wedges (drawn first, behind) -->
+        <g fill="url(#fov)">
+          <path d="M380 200 L120 -40 L640 -40 Z"/>            <!-- front -->
+          <path d="M380 500 L120 740 L640 740 Z"/>            <!-- rear -->
+          <path d="M250 250 L-60 60 L-60 440 Z"/>             <!-- left -->
+          <path d="M510 250 L820 60 L820 440 Z"/>             <!-- right -->
+        </g>
+        <!-- car body -->
+        <rect x="288" y="200" width="184" height="300" rx="40" fill="#161b22" stroke="#58a6ff" stroke-width="3"/>
+        <rect x="312" y="232" width="136" height="84" rx="16" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
+        <rect x="312" y="392" width="136" height="84" rx="16" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
+        <text x="380" y="362" fill="#8b949e" font-size="26" text-anchor="middle" font-family="Noto Sans CJK SC">自动驾驶车</text>
+        <!-- camera dots -->
+        <g fill="#58a6ff">
+          <circle cx="380" cy="200" r="11"/><circle cx="380" cy="500" r="11"/>
+          <circle cx="288" cy="250" r="11"/><circle cx="472" cy="250" r="11"/>
+          <circle cx="288" cy="450" r="11"/><circle cx="472" cy="450" r="11"/>
+        </g>
+        <text x="380" y="180" fill="#e6edf3" font-size="22" text-anchor="middle" font-family="JetBrains Mono">前视</text>
+        <text x="380" y="540" fill="#e6edf3" font-size="22" text-anchor="middle" font-family="JetBrains Mono">后视</text>
+        <text x="120" y="250" fill="#e6edf3" font-size="22" text-anchor="middle" font-family="JetBrains Mono">环视</text>
+        <text x="640" y="250" fill="#e6edf3" font-size="22" text-anchor="middle" font-family="JetBrains Mono">环视</text>
+      </svg>
+    </div>
+    <!-- reasons -->
+    <div class="col gap-m grow">
+      <div class="card row gap-m" style="align-items:center;padding:30px 36px">
+        <div class="badge-num">1</div>
+        <div><div style="font-size:38px;font-weight:700">BEV 鸟瞰拼接</div>
+        <div class="muted" style="font-size:28px;margin-top:6px">多路画面拼成统一俯视图，靠外参对齐</div></div>
+      </div>
+      <div class="card row gap-m" style="align-items:center;padding:30px 36px">
+        <div class="badge-num">2</div>
+        <div><div style="font-size:38px;font-weight:700">多传感器融合</div>
+        <div class="muted" style="font-size:28px;margin-top:6px">相机、激光、IMU 投到同一坐标系才能相互验证</div></div>
+      </div>
+      <div class="card row gap-m" style="align-items:center;padding:30px 36px">
+        <div class="badge-num">3</div>
+        <div><div style="font-size:38px;font-weight:700">测距与定位</div>
+        <div class="muted" style="font-size:28px;margin-top:6px">像素反算 3D 距离，依赖准确的内参与畸变</div></div>
+      </div>
+      <div class="tag" style="align-self:flex-start;font-size:26px;color:#d29922;background:rgba(210,153,34,.12);border-color:rgba(210,153,34,.4)">
+        外参差 1° → 50m 外横向偏差近 1m</div>
+    </div>
+  </div>
+</div>
+</body></html>
