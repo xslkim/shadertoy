@@ -1,0 +1,26 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"></head>
+<body>
+<div class="stage">
+  <div class="h-top">动手 ③：<span class="accent">跑标定命令</span></div>
+  <div class="rule"></div>
+  <div class="sub">一条命令，把多相机内参、畸变、相机间外参一次性解出来</div>
+
+  <div class="code grow col" style="margin-top:36px;font-size:34px;line-height:1.7;justify-content:center;position:relative">
+    <div><span class="kw">kalibr_calibrate_cameras</span> \</div>
+    <div>&nbsp;&nbsp;--bag <span class="str">calib.bag</span> \ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cm"># 录好的数据包</span></div>
+    <div>&nbsp;&nbsp;--topics <span class="str">/cam0/image_raw /cam1/image_raw</span> \ <span class="cm"># 每个相机话题</span></div>
+    <div>&nbsp;&nbsp;--models <span class="accent">pinhole-equi pinhole-equi</span> \ &nbsp;<span class="cm"># 每相机畸变模型</span></div>
+    <div>&nbsp;&nbsp;--target <span class="str">aprilgrid.yaml</span> &nbsp;&nbsp;&nbsp;&nbsp;<span class="cm"># 标定板描述</span></div>
+  </div>
+
+  <div class="row gap-m" style="margin-top:34px">
+    <div class="card col gap-s grow"><div class="accent" style="font-size:28px;font-weight:700">⚠ topics 与 models 顺序一一对应</div>
+      <div class="muted" style="font-size:25px">第 i 个 topic 用第 i 个 model</div></div>
+    <div class="card col gap-s grow"><div class="accent" style="font-size:28px;font-weight:700">📄 产物</div>
+      <div class="muted mono" style="font-size:25px">camchain-….yaml ＋ report-cam-….pdf</div></div>
+    <div class="card col gap-s grow"><div class="accent" style="font-size:28px;font-weight:700">🔁 接力初值</div>
+      <div class="muted" style="font-size:25px">先各自估内参 → 再联合优化外参</div></div>
+  </div>
+</div>
+</body></html>

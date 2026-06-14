@@ -1,0 +1,57 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"></head>
+<body>
+<div class="stage">
+  <div class="h-top">多相机<span class="accent">外参</span>怎么被算出来</div>
+  <div class="rule"></div>
+  <div class="sub">关键：相邻相机要同时看到同一块板 —— 位姿一串联，相对外参就出来了</div>
+
+  <div class="card grow center" style="margin-top:30px;position:relative">
+    <svg width="1500" height="560" viewBox="0 0 1500 560">
+      <!-- board in middle -->
+      <text x="750" y="150" fill="#8b949e" font-size="24" text-anchor="middle" font-family="Noto Sans CJK SC">标定板（同一时刻）</text>
+      <g transform="translate(750,310)">
+        <polygon points="-85,-130 85,-130 85,130 -85,130" fill="#161b22" stroke="#8b949e" stroke-width="2"/>
+        <g stroke="#30363d" stroke-width="1.5">
+          <line x1="-85" y1="-43" x2="85" y2="-43"/><line x1="-85" y1="43" x2="85" y2="43"/>
+          <line x1="-28" y1="-130" x2="-28" y2="130"/><line x1="28" y1="-130" x2="28" y2="130"/>
+        </g>
+      </g>
+      <!-- cam0 left -->
+      <g transform="translate(180,270)">
+        <rect x="-10" y="-40" width="120" height="80" rx="10" fill="#161b22" stroke="#58a6ff" stroke-width="3"/>
+        <polygon points="110,-20 160,-40 160,40 110,20" fill="#58a6ff" opacity="0.3"/>
+        <text x="40" y="78" fill="#58a6ff" font-size="28" text-anchor="middle" font-family="JetBrains Mono">cam0</text>
+      </g>
+      <!-- cam1 right -->
+      <g transform="translate(1200,270)">
+        <rect x="0" y="-40" width="120" height="80" rx="10" fill="#161b22" stroke="#3fb950" stroke-width="3"/>
+        <polygon points="0,-20 -50,-40 -50,40 0,20" fill="#3fb950" opacity="0.3"/>
+        <text x="60" y="78" fill="#3fb950" font-size="28" text-anchor="middle" font-family="JetBrains Mono">cam1</text>
+      </g>
+      <!-- pose arrows to board -->
+      <path d="M360 280 Q540 245 658 290" fill="none" stroke="#58a6ff" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#a1)"/>
+      <path d="M1190 280 Q985 245 842 290" fill="none" stroke="#3fb950" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#a2)"/>
+      <text x="430" y="235" fill="#58a6ff" font-size="26" font-family="JetBrains Mono">T_c0_b</text>
+      <text x="985" y="235" fill="#3fb950" font-size="26" font-family="JetBrains Mono">T_c1_b</text>
+      <!-- inter-camera extrinsic -->
+      <text x="750" y="450" fill="#bc8cff" font-size="32" text-anchor="middle" font-family="JetBrains Mono" font-weight="bold">T_c1_c0  ← 要求的相机间外参</text>
+      <path d="M300 500 Q750 545 1220 500" fill="none" stroke="#bc8cff" stroke-width="4" marker-end="url(#a3)"/>
+      <defs>
+        <marker id="a1" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#58a6ff"/></marker>
+        <marker id="a2" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#3fb950"/></marker>
+        <marker id="a3" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#bc8cff"/></marker>
+      </defs>
+    </svg>
+  </div>
+
+  <div class="row gap-m" style="margin-top:26px">
+    <div class="code grow" style="font-size:30px">
+      <span class="purple">T_c1_c0</span> = <span class="purple">T_c1_b</span> · <span class="purple">T_c0_b</span><sup>-1</sup>
+      &nbsp;&nbsp;<span class="cm" style="font-size:24px"># 板位姿被消掉，相机间相对位姿恒定</span>
+    </div>
+    <div class="tag" style="font-size:26px;align-self:center;color:#d29922;background:rgba(210,153,34,.12);border-color:rgba(210,153,34,.4)">
+      ⚠ 相邻相机必须有<b>重叠视野</b>，否则无法串联</div>
+  </div>
+</div>
+</body></html>

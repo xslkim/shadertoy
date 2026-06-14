@@ -1,0 +1,32 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"></head>
+<body>
+<div class="stage">
+  <div class="h-top">动手 ①：<span class="accent">装好 Kalibr</span></div>
+  <div class="rule"></div>
+  <div class="sub">Kalibr 基于 ROS，强烈建议用官方 Docker，省去依赖地狱</div>
+
+  <div class="row grow gap-l" style="margin-top:40px;align-items:stretch">
+    <div class="code col" style="flex:1.4;font-size:28px;line-height:1.9;justify-content:center">
+      <div class="cm"># 1. 拉取源码</div>
+      <div><span class="kw">git</span> clone https://github.com/ethz-asl/kalibr</div>
+      <div style="height:18px"></div>
+      <div class="cm"># 2. 构建镜像（选对应 ROS / Ubuntu 版本）</div>
+      <div><span class="kw">docker</span> build -t kalibr \</div>
+      <div>&nbsp;&nbsp;-f kalibr/Dockerfile_ros1_20_04 kalibr</div>
+      <div style="height:18px"></div>
+      <div class="cm"># 3. 进入容器，挂载数据目录</div>
+      <div><span class="kw">docker</span> run -it -v $(pwd)/data:/data \</div>
+      <div>&nbsp;&nbsp;kalibr</div>
+    </div>
+    <div class="col gap-m" style="flex:1;justify-content:center">
+      <div class="card col gap-s"><div style="font-size:30px;font-weight:700">🐳 为什么用 Docker</div>
+        <div class="muted" style="font-size:26px">ROS + Python2/3 + ceres 依赖复杂，镜像里都配好了</div></div>
+      <div class="card col gap-s"><div style="font-size:30px;font-weight:700">📂 -v 挂载</div>
+        <div class="muted" style="font-size:26px">把存放 rosbag 和结果的目录映射进容器</div></div>
+      <div class="card col gap-s"><div style="font-size:30px;font-weight:700">✅ 验证</div>
+        <div class="muted mono" style="font-size:26px">kalibr_calibrate_cameras --help</div></div>
+    </div>
+  </div>
+</div>
+</body></html>

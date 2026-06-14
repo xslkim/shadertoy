@@ -1,0 +1,32 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"></head>
+<body>
+<div class="stage">
+  <div class="h-top">采集数据：<span class="accent">决定成败</span>的一步</div>
+  <div class="rule"></div>
+  <div class="sub">90% 的标定失败源于数据采集 —— 用 rosbag 录下所有相机话题</div>
+
+  <div class="row grow gap-l" style="margin-top:30px;align-items:stretch">
+    <div class="card col gap-m" style="flex:1;border-top:5px solid var(--green)">
+      <div class="green" style="font-size:34px;font-weight:800">✓ 要这样做</div>
+      <div style="font-size:29px">📐 让角点<b>铺满整个画面</b>，尤其四角和边缘</div>
+      <div style="font-size:29px">🔄 覆盖<b>不同距离、不同倾斜角</b></div>
+      <div style="font-size:29px">🐢 <b>缓慢移动</b>，避免运动模糊</div>
+      <div style="font-size:29px">👀 相邻相机让板<b>同时入画</b>（共视）</div>
+      <div style="font-size:29px">🎞️ 每个相机攒够<b>几百帧</b>有效检测</div>
+    </div>
+    <div class="card col gap-m" style="flex:1;border-top:5px solid var(--red)">
+      <div class="red" style="font-size:34px;font-weight:800">✗ 别这样做</div>
+      <div style="font-size:29px">🚫 板子只在画面<b>正中央</b>晃</div>
+      <div style="font-size:29px">🚫 全程<b>同一个姿态</b>、同一距离</div>
+      <div style="font-size:29px">🚫 <b>快速挥动</b>导致拖影模糊</div>
+      <div style="font-size:29px">🚫 <b>过曝 / 反光</b>，tag 解码失败</div>
+      <div style="font-size:29px">🚫 帧率太高录一堆<b>近似重复帧</b></div>
+    </div>
+  </div>
+
+  <div class="code center" style="margin-top:28px;font-size:28px">
+    <span class="kw">rosbag</span> record -O calib.bag /cam0/image_raw /cam1/image_raw /cam2/image_raw …
+  </div>
+</div>
+</body></html>

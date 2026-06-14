@@ -1,0 +1,55 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"></head>
+<body>
+<div class="stage">
+  <div class="h-top"><span class="accent">外参</span> Extrinsics ＆ 标定的本质</div>
+  <div class="rule"></div>
+  <div class="sub">外参 = 相机相对某个参考系的位姿；标定 = 一个「反问题」</div>
+
+  <div class="row grow gap-l" style="margin-top:36px;align-items:stretch">
+    <!-- frames + T -->
+    <div class="card col" style="flex:0 0 880px">
+      <div class="muted mono" style="font-size:24px">外参 T = [R | t]：旋转 + 平移</div>
+      <div class="grow center">
+        <svg width="800" height="430" viewBox="0 0 800 430">
+          <!-- world frame (board) -->
+          <g transform="translate(120,300)">
+            <line x1="0" y1="0" x2="110" y2="0" stroke="#f85149" stroke-width="3"/>
+            <line x1="0" y1="0" x2="0" y2="-110" stroke="#3fb950" stroke-width="3"/>
+            <line x1="0" y1="0" x2="60" y2="50" stroke="#58a6ff" stroke-width="3"/>
+            <text x="-10" y="40" fill="#8b949e" font-size="24" font-family="JetBrains Mono">世界系 (板)</text>
+          </g>
+          <!-- camera frame -->
+          <g transform="translate(560,140)">
+            <line x1="0" y1="0" x2="100" y2="0" stroke="#f85149" stroke-width="3"/>
+            <line x1="0" y1="0" x2="0" y2="100" stroke="#3fb950" stroke-width="3"/>
+            <line x1="0" y1="0" x2="-55" y2="-45" stroke="#58a6ff" stroke-width="3"/>
+            <rect x="-46" y="-36" width="92" height="64" rx="10" fill="none" stroke="#e6edf3" stroke-width="2"/>
+            <text x="50" y="-20" fill="#8b949e" font-size="24" font-family="JetBrains Mono">相机系</text>
+          </g>
+          <!-- T arrow -->
+          <path d="M180 250 Q360 120 520 150" fill="none" stroke="#bc8cff" stroke-width="3" stroke-dasharray="7 6" marker-end="url(#ah)"/>
+          <defs><marker id="ah" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+            <path d="M0 0 L10 5 L0 10 Z" fill="#bc8cff"/></marker></defs>
+          <text x="300" y="150" fill="#bc8cff" font-size="30" font-family="JetBrains Mono" font-weight="bold">T = [R|t]</text>
+        </svg>
+      </div>
+    </div>
+    <!-- inverse problem -->
+    <div class="col gap-m grow" style="justify-content:center">
+      <div class="card col gap-s">
+        <div class="green mono" style="font-size:26px">✓ 已知</div>
+        <div style="font-size:30px">标定板角点 3D 坐标 <span class="mono green">P</span></div>
+        <div style="font-size:30px">每张图检测到的像素 <span class="mono green">x</span></div>
+      </div>
+      <div class="center" style="font-size:42px;color:var(--accent)">⇩ 反求 ⇩</div>
+      <div class="card col gap-s" style="border-color:rgba(88,166,255,.5)">
+        <div class="accent mono" style="font-size:26px">？ 求解</div>
+        <div style="font-size:30px">内参 <span class="mono accent">K、畸变</span></div>
+        <div style="font-size:30px">每个视角外参 <span class="mono purple">[R|t]</span></div>
+        <div style="font-size:30px">相机间相对外参 <span class="mono purple">T_cn_c0</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

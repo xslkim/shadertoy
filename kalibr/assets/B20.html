@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"></head>
+<body>
+<div class="stage">
+  <div class="h-top">最常见的<span class="accent">五个坑</span></div>
+  <div class="rule"></div>
+  <div class="sub">误差降不下去时，90% 是这几件事之一</div>
+
+  <div class="row gap-m grow" style="margin-top:38px;align-items:stretch">
+    <div class="card col gap-s grow" style="border-top:5px solid var(--amber)">
+      <div style="font-size:40px">🌫️</div>
+      <div style="font-size:30px;font-weight:700">运动模糊</div>
+      <div class="muted" style="font-size:25px">挥太快 → 角点糊。放慢、提高快门</div>
+    </div>
+    <div class="card col gap-s grow" style="border-top:5px solid var(--amber)">
+      <div style="font-size:40px">🔭</div>
+      <div style="font-size:30px;font-weight:700">共视不足</div>
+      <div class="muted" style="font-size:25px">相邻相机没同时看到板，外参无解</div>
+    </div>
+    <div class="card col gap-s grow" style="border-top:5px solid var(--amber)">
+      <div style="font-size:40px">📐</div>
+      <div style="font-size:30px;font-weight:700">tagSize 量错</div>
+      <div class="muted" style="font-size:25px">yaml 尺寸≠实物 → 尺度系统性偏差</div>
+    </div>
+    <div class="card col gap-s grow" style="border-top:5px solid var(--amber)">
+      <div style="font-size:40px">🐟</div>
+      <div style="font-size:30px;font-weight:700">畸变模型选错</div>
+      <div class="muted" style="font-size:25px">鱼眼用了 radtan → 边缘残差爆炸</div>
+    </div>
+    <div class="card col gap-s grow" style="border-top:5px solid var(--amber)">
+      <div style="font-size:40px">🎲</div>
+      <div style="font-size:30px;font-weight:700">姿态太单一</div>
+      <div class="muted" style="font-size:25px">距离/角度不够多样 → 参数欠约束</div>
+    </div>
+  </div>
+
+  <div class="card row gap-m center" style="margin-top:30px;padding:36px 48px">
+    <div style="font-size:40px">🛠️</div>
+    <div style="font-size:32px">排查口诀：<span class="accent">先看角点检测对不对</span> → 再看畸变模型 → 最后看覆盖度与共视</div>
+  </div>
+</div>
+</body></html>

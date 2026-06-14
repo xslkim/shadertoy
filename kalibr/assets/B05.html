@@ -1,0 +1,47 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"></head>
+<body>
+<div class="stage">
+  <div class="h-top">Kalibr 是什么</div>
+  <div class="rule"></div>
+  <div class="sub">ETH Zurich 自主系统实验室 (ASL) 开源的相机/IMU 标定工具箱</div>
+
+  <div class="row gap-m" style="margin-top:44px">
+    <div class="card col gap-s grow" style="border-top:5px solid var(--accent)">
+      <div style="font-size:46px">📷</div>
+      <div style="font-size:34px;font-weight:700">多相机内外参</div>
+      <div class="muted" style="font-size:26px">本视频聚焦 · 任意多相机一次标定</div>
+    </div>
+    <div class="card col gap-s grow" style="border-top:5px solid var(--muted)">
+      <div style="font-size:46px">🧭</div>
+      <div style="font-size:34px;font-weight:700">相机 – IMU</div>
+      <div class="muted" style="font-size:26px">外参 + 时间偏移（本视频不展开）</div>
+    </div>
+    <div class="card col gap-s grow" style="border-top:5px solid var(--muted)">
+      <div style="font-size:46px">🎞️</div>
+      <div style="font-size:34px;font-weight:700">卷帘快门</div>
+      <div class="muted" style="font-size:26px">rolling-shutter 行时间建模</div>
+    </div>
+    <div class="card col gap-s grow" style="border-top:5px solid var(--accent)">
+      <div style="font-size:46px">🎯</div>
+      <div style="font-size:34px;font-weight:700">AprilGrid 检测</div>
+      <div class="muted" style="font-size:26px">自动识别角点，部分遮挡也能用</div>
+    </div>
+  </div>
+
+  <div class="card row gap-l grow" style="margin-top:40px;align-items:center;padding:40px 56px">
+    <div class="col gap-s" style="flex:1">
+      <div class="tag" style="align-self:flex-start">核心方法</div>
+      <div style="font-size:40px;font-weight:700;margin-top:12px">基于<span class="accent">重投影误差</span>的批量非线性优化</div>
+      <div class="muted" style="font-size:28px;margin-top:10px">
+        把所有相机的内参、所有视角的位姿、相机间外参放进<span class="fg" style="color:#e6edf3">同一个</span>最小二乘问题，一起求解</div>
+    </div>
+    <div class="code" style="font-size:30px;flex:0 0 560px">
+      <div class="cm" style="font-size:22px"># 常用命令</div>
+      kalibr_calibrate_cameras<br>
+      kalibr_calibrate_imu_camera<br>
+      <span class="cm">kalibr_create_target_pdf</span>
+    </div>
+  </div>
+</div>
+</body></html>
