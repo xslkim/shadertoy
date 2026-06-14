@@ -1,0 +1,10 @@
+^D:\SHADERTOY\LTFFZL\BUILD\CMAKEFILES\AD15D54C8090395178B2A0EBF4A1CCC2\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/shadertoy/ltffzl -BD:/shadertoy/ltffzl/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/shadertoy/ltffzl/build/shadertoy_heartfelt.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

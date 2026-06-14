@@ -1,0 +1,45 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">拖尾水珠：会滑落的大雨珠</div>
+  <div class="subtitle" style="margin-top:14px">按列分网格，每列一颗雨珠从上往下"掉"，身后拖出水痕</div>
+
+  <div class="row center" style="margin-top:40px;gap:56px">
+    <!-- 一列里的雨珠 -->
+    <svg width="430" height="470" viewBox="0 0 430 470" style="flex-shrink:0">
+      <rect x="150" y="10" width="130" height="450" rx="10" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+      <text x="215" y="40" fill="#8b949e" font-size="20" text-anchor="middle" class="label">一列</text>
+      <!-- droplets path -->
+      <g fill="#58a6ff">
+        <circle cx="212" cy="120" r="3.5" opacity="0.6"/>
+        <circle cx="220" cy="150" r="3" opacity="0.5"/>
+        <circle cx="210" cy="185" r="4" opacity="0.6"/>
+        <circle cx="223" cy="215" r="3" opacity="0.5"/>
+      </g>
+      <!-- trail -->
+      <path d="M205,250 Q215,160 215,90" stroke="#58a6ff" stroke-width="10" fill="none" opacity="0.28" stroke-linecap="round"/>
+      <path d="M208,250 Q215,180 215,110" stroke="#58a6ff" stroke-width="5" fill="none" opacity="0.45" stroke-linecap="round"/>
+      <!-- main drop with wiggle marker -->
+      <circle cx="215" cy="270" r="26" fill="#58a6ff" opacity="0.95"/>
+      <circle cx="207" cy="262" r="7" fill="#cfe5ff" opacity="0.8"/>
+      <!-- fall arrow -->
+      <line x1="330" y1="90" x2="330" y2="380" stroke="#3fb950" stroke-width="3" marker-end="url(#a)"/>
+      <defs><marker id="a" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto"><path d="M1,1 L11,6 L1,11 Z" fill="#3fb950"/></marker></defs>
+      <text x="352" y="240" fill="#3fb950" font-size="22" class="label">下落</text>
+      <text x="215" y="320" fill="#cfe5ff" font-size="20" text-anchor="middle" class="label">主水珠</text>
+      <text x="120" y="160" fill="#8b949e" font-size="20" text-anchor="end" class="label">水痕 trail</text>
+    </svg>
+
+    <div class="col" style="width:820px;gap:16px">
+      <div class="step"><div class="step-h">列分网格</div><div class="step-d" style="font-size:25px"><span class="mono">grid = vec2(6,1)*2</span>，每列负责一颗雨珠</div></div>
+      <div class="step"><div class="step-h">三角波控制下落</div><div class="step-d" style="font-size:25px"><span class="mono">y = Saw(.85, fract(t+n.z))</span> 让它从上往下掉</div></div>
+      <div class="step"><div class="step-h">主水珠 + 拖尾 + 小水点</div><div class="step-d" style="font-size:25px">圆形主体 + 逐渐变细的 trail + 路径上的 droplets</div></div>
+      <div class="step" style="border-left-color:#ffa657"><div class="step-h orange">横向摇摆 wiggle</div><div class="step-d" style="font-size:25px"><span class="mono">x += sin(y+sin(y)) * …</span> 下落不再是直线</div></div>
+    </div>
+  </div>
+
+  <div class="code" style="margin-top:30px;align-self:center;width:1500px;font-size:25px"><span class="kw">float</span> mainDrop = <span class="fn">S</span>(<span class="num">.4</span>, <span class="num">0.</span>, <span class="fn">length</span>((st - p) * a.yx));        <span class="com">// 主水珠：一个圆</span>
+<span class="kw">float</span> trail    = <span class="fn">S</span>(<span class="num">.23</span>*r, <span class="num">.15</span>*r*r, <span class="fn">abs</span>(st.x - x)) * trailFront;  <span class="com">// 身后的水痕</span>
+<span class="kw">return</span> <span class="kw">vec2</span>(mainDrop + droplets, trail);   <span class="com">// x:水珠图案   y:水痕</span></div>
+</div>
+</body></html>

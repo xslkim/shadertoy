@@ -1,0 +1,33 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">雨痕擦出清晰：focus 的妙处</div>
+  <div class="subtitle" style="margin-top:14px">水流过的地方，把雾"擦干"了，露出清晰的痕</div>
+
+  <div class="formula" style="margin-top:54px;align-self:center;width:1520px;font-size:34px;line-height:1.45">
+    focus = <span class="fn">mix</span>( <span class="orange">maxBlur</span> <span class="red">− c.y</span> ,&nbsp; <span class="green">minBlur</span> ,&nbsp; <span class="accent">水珠强度</span> )
+  </div>
+
+  <div class="row center gap-24" style="margin-top:50px">
+    <div class="card col" style="width:480px;height:280px">
+      <div class="card-title orange" style="font-size:32px">maxBlur</div>
+      <div class="card-desc" style="font-size:25px;margin-top:14px;line-height:1.55">玻璃整体的雾，基准模糊。<br>雨越大，雾越厚。</div>
+    </div>
+    <div class="card col" style="width:480px;height:280px;border-color:#f85149">
+      <div class="card-title red" style="font-size:32px">− c.y（水痕）</div>
+      <div class="card-desc" style="font-size:25px;margin-top:14px;line-height:1.55">拖尾记录下的"擦干"程度。<br>水痕越强，<b class="red">从雾里减掉越多</b>，<br>那条痕就越清晰。</div>
+    </div>
+    <div class="card col" style="width:480px;height:280px;border-color:#3fb950">
+      <div class="card-title green" style="font-size:32px">→ minBlur</div>
+      <div class="card-desc" style="font-size:25px;margin-top:14px;line-height:1.55">水珠正中心，直接用<br>最清晰的级别。<br>透镜中心最透。</div>
+    </div>
+  </div>
+
+  <div class="row center" style="margin-top:48px">
+    <div class="step" style="width:1480px;border-left-color:#3fb950">
+      <div class="step-h green" style="font-size:30px">效果</div>
+      <div class="step-d" style="font-size:27px">于是你看到的，是一道道 <b class="green">清晰的水痕</b>，划过一片 <b class="orange">朦胧的雾面</b> —— 这正是真实雨窗的样子。</div>
+    </div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">从图案到法线：水珠的坡度</div>
+  <div class="subtitle" style="margin-top:14px">把灰度水珠图案当成"高度图"，越亮越高</div>
+
+  <div class="row center" style="margin-top:44px;gap:60px">
+    <svg width="620" height="430" viewBox="0 0 620 430" style="flex-shrink:0">
+      <!-- drop as a bump (cross-section) -->
+      <path d="M40,360 C180,360 200,140 310,140 C420,140 440,360 580,360"
+            fill="#0d2d44" stroke="#58a6ff" stroke-width="4"/>
+      <path d="M40,360 C180,360 200,140 310,140 C420,140 440,360 580,360 L580,400 L40,400 Z" fill="#0d2236" opacity="0.5"/>
+      <text x="500" y="345" fill="#58a6ff" font-size="22" class="label">水珠隆起</text>
+      <!-- sample point p -->
+      <circle cx="230" cy="210" r="9" fill="#e6edf3"/>
+      <text x="230" y="195" fill="#e6edf3" font-size="22" text-anchor="middle" class="mono">p</text>
+      <!-- step in x -->
+      <circle cx="270" cy="170" r="8" fill="#3fb950"/>
+      <text x="300" y="160" fill="#3fb950" font-size="20" class="mono">p + e.xy</text>
+      <line x1="230" y1="210" x2="270" y2="170" stroke="#3fb950" stroke-width="2.5" stroke-dasharray="5 4"/>
+      <!-- tangent / normal arrows -->
+      <line x1="230" y1="210" x2="320" y2="138" stroke="#8b949e" stroke-width="2" stroke-dasharray="4 4"/>
+      <line x1="275" y1="174" x2="330" y2="240" stroke="#ffa657" stroke-width="4" marker-end="url(#n)"/>
+      <defs><marker id="n" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto"><path d="M1,1 L11,6 L1,11 Z" fill="#ffa657"/></marker></defs>
+      <text x="340" y="250" fill="#ffa657" font-size="24" class="mono">n</text>
+      <text x="310" y="410" fill="#8b949e" font-size="20" text-anchor="middle" class="label">坡度越陡，偏移 n 越大</text>
+    </svg>
+
+    <div class="col" style="width:760px;gap:20px">
+      <div class="step"><div class="step-h">把图案当高度</div><div class="step-d" style="font-size:26px"><span class="mono">c.x</span> 越大 = 水越厚 = 这点越"高"</div></div>
+      <div class="step"><div class="step-h">旁边各挪一小步</div><div class="step-d" style="font-size:26px">沿 x、y 各取一点，重新算一遍图案</div></div>
+      <div class="step" style="border-left-color:#ffa657"><div class="step-h orange">比较高度差 = 坡度</div><div class="step-d" style="font-size:26px">两个差值合成二维向量 <span class="mono">n</span>，指向倾斜方向</div></div>
+    </div>
+  </div>
+
+  <div class="code" style="margin-top:36px;align-self:center;width:1320px;font-size:25px"><span class="kw">vec2</span> e = <span class="kw">vec2</span>(<span class="num">.001</span>, <span class="num">0.</span>);
+<span class="kw">float</span> cx = <span class="fn">Drops</span>(uv + e   , …).x;     <span class="com">// 沿 x 挪一步</span>
+<span class="kw">float</span> cy = <span class="fn">Drops</span>(uv + e.yx, …).x;     <span class="com">// 沿 y 挪一步</span>
+<span class="kw">vec2</span>  n  = <span class="kw">vec2</span>(cx - c.x, cy - c.x);    <span class="com">// 有限差分 → 表面坡度(法线)</span></div>
+</div>
+</body></html>

@@ -1,0 +1,45 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">核心思想：整段特效只是"扰动一张图"</div>
+  <div class="subtitle" style="margin-top:14px">没有 3D、没有粒子，每个像素都来自背景照片</div>
+
+  <div class="formula" style="margin-top:60px;align-self:center;width:1500px;font-size:42px;line-height:1.4">
+    <span class="op">最终颜色</span> = <span class="fn">texture</span>( <span class="accent">背景图</span>,
+    <span class="op">UV</span> <span class="green">+ n</span>,
+    <span class="orange">focus</span> )
+  </div>
+
+  <div class="row center gap-40" style="margin-top:60px">
+    <div class="card col" style="width:680px;height:300px">
+      <div class="row" style="align-items:center;gap:16px">
+        <div style="font-size:48px">↔️</div>
+        <div class="card-title green" style="font-size:38px">UV + n　→　折射</div>
+      </div>
+      <div class="card-desc" style="font-size:27px;margin-top:18px;line-height:1.55">
+        取色的位置被水珠 <b class="green">推偏一点点</b>。<br>
+        偏移量 n 来自水珠表面的坡度，<br>
+        像透镜一样把背后的光线弯折过来。
+      </div>
+    </div>
+    <div class="card col" style="width:680px;height:300px">
+      <div class="row" style="align-items:center;gap:16px">
+        <div style="font-size:48px">🌫️</div>
+        <div class="card-title orange" style="font-size:38px">focus　→　雾面</div>
+      </div>
+      <div class="card-desc" style="font-size:27px;margin-top:18px;line-height:1.55">
+        取色的 <b class="orange">清晰程度</b> 随玻璃雾的厚薄变化。<br>
+        focus 越大越模糊，玻璃越"起雾"；<br>
+        水流过的地方又被擦得清晰。
+      </div>
+    </div>
+  </div>
+
+  <div class="row center" style="margin-top:54px">
+    <div class="step" style="width:1400px;border-left-color:#3fb950">
+      <div class="step-h green" style="font-size:30px">一句话</div>
+      <div class="step-d" style="font-size:27px">剩下的全部代码，都是在算这两个量：<b class="green">偏移 n</b> 和 <b class="orange">模糊 focus</b>。</div>
+    </div>
+  </div>
+</div>
+</body></html>

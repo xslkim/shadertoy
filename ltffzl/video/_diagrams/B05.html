@@ -1,0 +1,38 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">可重复的随机：哈希函数</div>
+  <div class="subtitle" style="margin-top:14px">同样的输入，永远得到同样的输出 —— 画面才不会每帧乱闪</div>
+
+  <div class="row center gap-24" style="margin-top:56px">
+    <div class="col center card" style="width:330px;height:190px;justify-content:center">
+      <div class="card-title" style="font-size:30px">输入一个编号</div>
+      <div class="mono accent" style="font-size:30px;margin-top:12px">p = 12.0</div>
+    </div>
+    <div class="accent" style="font-size:46px">→</div>
+    <div class="col center card" style="width:430px;height:190px;justify-content:center">
+      <div class="card-title" style="font-size:28px">fract · dot 位混合</div>
+      <div class="mono" style="font-size:22px;margin-top:12px;color:#8b949e">打散成混乱的小数</div>
+    </div>
+    <div class="accent" style="font-size:46px">→</div>
+    <div class="col center card" style="width:380px;height:190px;justify-content:center;border-color:#3fb950">
+      <div class="card-title green" style="font-size:28px">三个伪随机数</div>
+      <div class="mono" style="font-size:24px;margin-top:12px">n.x  n.y  n.z ∈ 0~1</div>
+    </div>
+  </div>
+
+  <div class="code" style="margin-top:52px;align-self:center;width:1340px;font-size:26px"><span class="com">// from Dave Hoskins — 一个数 → 三个 0~1 的伪随机数</span>
+<span class="kw">vec3</span> <span class="fn">N13</span>(<span class="kw">float</span> p) {
+    <span class="kw">vec3</span> p3 = <span class="fn">fract</span>(<span class="kw">vec3</span>(p) * <span class="kw">vec3</span>(<span class="num">.1031</span>, <span class="num">.11369</span>, <span class="num">.13787</span>));
+    p3 += <span class="fn">dot</span>(p3, p3.yzx + <span class="num">19.19</span>);
+    <span class="kw">return</span> <span class="fn">fract</span>((p3.xxy + p3.yzz) * p3.zyx);
+}</div>
+
+  <div class="row center" style="margin-top:40px">
+    <div class="card row" style="width:1340px;align-items:center;gap:20px;padding:22px 32px">
+      <div style="font-size:34px">🎲</div>
+      <div class="card-desc" style="font-size:26px"><b class="accent">用途</b>：给每颗水珠分配 <b class="fg">位置、大小、出现时间</b> —— 随机但完全确定</div>
+    </div>
+  </div>
+</div>
+</body></html>

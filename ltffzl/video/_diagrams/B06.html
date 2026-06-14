@@ -1,0 +1,50 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">静态水珠：格子里的小圆点</div>
+  <div class="subtitle" style="margin-top:14px">把画面切成密网格，每格用哈希丢一颗水珠</div>
+
+  <div class="row center" style="margin-top:48px;gap:48px">
+    <!-- 网格示意 -->
+    <svg width="560" height="430" viewBox="0 0 560 430" style="flex-shrink:0">
+      <rect x="20" y="20" width="520" height="390" rx="10" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+      <!-- grid -->
+      <g stroke="#30363d" stroke-width="1.5">
+        <line x1="150" y1="20" x2="150" y2="410"/><line x1="280" y1="20" x2="280" y2="410"/><line x1="410" y1="20" x2="410" y2="410"/>
+        <line x1="20" y1="117" x2="540" y2="117"/><line x1="20" y1="215" x2="540" y2="215"/><line x1="20" y1="312" x2="540" y2="312"/>
+      </g>
+      <!-- random dots, one per cell with soft halo -->
+      <g>
+        <circle cx="95" cy="80" r="16" fill="#58a6ff" opacity="0.85"/>
+        <circle cx="210" cy="60" r="10" fill="#58a6ff" opacity="0.6"/>
+        <circle cx="345" cy="90" r="18" fill="#58a6ff" opacity="0.9"/>
+        <circle cx="470" cy="70" r="12" fill="#58a6ff" opacity="0.7"/>
+        <circle cx="80" cy="170" r="12" fill="#58a6ff" opacity="0.7"/>
+        <circle cx="225" cy="185" r="17" fill="#58a6ff" opacity="0.88"/>
+        <circle cx="360" cy="160" r="9" fill="#58a6ff" opacity="0.5"/>
+        <circle cx="455" cy="180" r="15" fill="#58a6ff" opacity="0.82"/>
+        <circle cx="110" cy="270" r="14" fill="#58a6ff" opacity="0.78"/>
+        <circle cx="200" cy="285" r="11" fill="#58a6ff" opacity="0.62"/>
+        <circle cx="350" cy="265" r="16" fill="#58a6ff" opacity="0.85"/>
+        <circle cx="480" cy="280" r="10" fill="#58a6ff" opacity="0.55"/>
+        <circle cx="90" cy="365" r="13" fill="#58a6ff" opacity="0.7"/>
+        <circle cx="230" cy="350" r="15" fill="#58a6ff" opacity="0.8"/>
+        <circle cx="345" cy="370" r="11" fill="#58a6ff" opacity="0.6"/>
+        <circle cx="470" cy="355" r="17" fill="#58a6ff" opacity="0.88"/>
+      </g>
+      <text x="280" y="430" fill="#8b949e" font-size="22" text-anchor="middle" class="label" dy="-2">uv × 40 → 每格一颗，位置随机</text>
+    </svg>
+
+    <div class="col" style="width:760px;gap:18px">
+      <div class="step"><div class="step-h">① 切网格</div><div class="step-d" style="font-size:25px"><span class="mono">uv *= 40.</span> 把画面分成密密的格子</div></div>
+      <div class="step"><div class="step-h">② 每格丢一颗</div><div class="step-d" style="font-size:25px">用哈希给每格一个随机位置，只在自己格内</div></div>
+      <div class="step"><div class="step-h">③ 距离场画圆</div><div class="step-d" style="font-size:25px"><span class="mono">S(.3, 0., d)</span> 离中心越近越亮 → 圆形水珠</div></div>
+      <div class="step" style="border-left-color:#3fb950"><div class="step-h green">④ 随时间淡入淡出</div><div class="step-d" style="font-size:25px">三角波 <span class="mono">Saw</span> 让水珠慢慢冒出、再淡掉</div></div>
+    </div>
+  </div>
+
+  <div class="code" style="margin-top:34px;align-self:center;width:1300px;font-size:25px"><span class="kw">vec2</span> id = <span class="fn">floor</span>(uv);  uv = <span class="fn">fract</span>(uv) - <span class="num">.5</span>;     <span class="com">// 格子编号 + 格内坐标</span>
+<span class="kw">vec3</span> n = <span class="fn">N13</span>(id.x*<span class="num">107.45</span> + id.y*<span class="num">3543.65</span>);     <span class="com">// 这一格的随机数</span>
+<span class="kw">float</span> c = <span class="fn">S</span>(<span class="num">.3</span>, <span class="num">0.</span>, <span class="fn">length</span>(uv - p)) * <span class="fn">Saw</span>(<span class="num">.025</span>, <span class="fn">fract</span>(t+n.z));  <span class="com">// 圆 × 淡入淡出</span></div>
+</div>
+</body></html>

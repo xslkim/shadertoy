@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page">
+  <div class="title">三层叠加：把雨调大调小</div>
+  <div class="subtitle" style="margin-top:14px">疏密大小有了层次，再用一个"雨量"统一控制强度</div>
+
+  <div class="row center" style="margin-top:50px;gap:26px">
+    <div class="card col center" style="width:380px;height:250px;justify-content:center">
+      <div class="badge" style="background:#8b949e">1</div>
+      <div class="card-title" style="font-size:32px;margin-top:16px">静态小水珠</div>
+      <div class="card-desc" style="font-size:24px;text-align:center;margin-top:8px"><span class="mono">StaticDrops</span><br>铺满玻璃的小点</div>
+      <div class="muted mono" style="font-size:22px;margin-top:12px">× staticDrops</div>
+    </div>
+    <div class="accent" style="font-size:50px">+</div>
+    <div class="card col center" style="width:380px;height:250px;justify-content:center">
+      <div class="badge">2</div>
+      <div class="card-title" style="font-size:32px;margin-top:16px">拖尾雨珠</div>
+      <div class="card-desc" style="font-size:24px;text-align:center;margin-top:8px"><span class="mono">DropLayer2(uv)</span><br>正常大小的滑落珠</div>
+      <div class="muted mono" style="font-size:22px;margin-top:12px">× layer1</div>
+    </div>
+    <div class="accent" style="font-size:50px">+</div>
+    <div class="card col center" style="width:380px;height:250px;justify-content:center">
+      <div class="badge">3</div>
+      <div class="card-title" style="font-size:32px;margin-top:16px">放大拖尾雨珠</div>
+      <div class="card-desc" style="font-size:24px;text-align:center;margin-top:8px"><span class="mono">DropLayer2(uv*1.85)</span><br>更大更稀的滑落珠</div>
+      <div class="muted mono" style="font-size:22px;margin-top:12px">× layer2</div>
+    </div>
+  </div>
+
+  <div class="formula" style="margin-top:48px;align-self:center;width:1180px;font-size:34px">
+    rainAmount = <span class="orange">iMouse.y</span>　或　<span class="green">sin(T*.05)*.3 + .7</span>
+  </div>
+
+  <div class="row center" style="margin-top:34px">
+    <div class="card row" style="width:1180px;align-items:center;gap:20px;padding:22px 32px">
+      <div style="font-size:34px">🌧️</div>
+      <div class="card-desc" style="font-size:26px"><b class="accent">雨量 rainAmount</b> 决定三层的权重：鼠标上下可调，不调时用正弦波让雨自己时大时小。</div>
+    </div>
+  </div>
+</div>
+</body></html>
