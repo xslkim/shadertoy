@@ -1,0 +1,32 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page tight">
+  <div class="head-row"><span class="kicker">END-TO-END LATENCY</span></div>
+  <div class="h1 mt8">端到端延迟预算 · 延迟藏在哪</div>
+  <div class="lead mt8">从你动一下，到对方屏幕亮起来，要走完这条流水线</div>
+
+  <div class="pipe mt48">
+    <div class="stage bg-blue"><div style="font-size:46px">📷</div><div class="st-t mt8">采集</div><div class="st-d">摄像头/抓屏<br>~5-16ms</div></div>
+    <div class="arrow">→</div>
+    <div class="stage bg-blue"><div style="font-size:46px">🧮</div><div class="st-t mt8">编码</div><div class="st-d">压缩成码流<br>~5-30ms</div></div>
+    <div class="arrow">→</div>
+    <div class="stage bg-blue"><div style="font-size:46px">📦</div><div class="st-t mt8">打包</div><div class="st-d">RTP 分片<br>~1ms</div></div>
+    <div class="arrow">→</div>
+    <div class="stage bg-amber"><div style="font-size:46px">🌐</div><div class="st-t mt8">网络</div><div class="st-d">单程传输<br>~10-100ms</div></div>
+    <div class="arrow">→</div>
+    <div class="stage bg-amber"><div style="font-size:46px">⏳</div><div class="st-t mt8">抖动缓冲</div><div class="st-d">攒包匀速放<br>~10-60ms</div></div>
+    <div class="arrow">→</div>
+    <div class="stage bg-green"><div style="font-size:46px">🔓</div><div class="st-t mt8">解码</div><div class="st-d">还原画面<br>~5-20ms</div></div>
+    <div class="arrow">→</div>
+    <div class="stage bg-green"><div style="font-size:46px">🖥️</div><div class="st-t mt8">渲染</div><div class="st-d">上屏显示<br>~8-16ms</div></div>
+  </div>
+
+  <div class="card mt56 center" style="height:160px;background:#11271a;border-color:#2ea043">
+    <div class="center col">
+      <div style="font-size:30px;color:#8b949e">人能感到"实时"的红线</div>
+      <div style="font-size:64px;font-weight:800;color:#3fb950;margin-top:6px">端到端 ≤ 200ms 才算可交互</div>
+    </div>
+  </div>
+  <div class="foot">WebRTC 的工作：把这条流水线的每一段都压到极限</div>
+</div>
+</body></html>

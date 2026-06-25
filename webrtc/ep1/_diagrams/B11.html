@@ -1,0 +1,32 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page tight">
+  <div class="head-row"><span class="kicker">WHY COMPRESSIBLE</span></div>
+  <div class="h1 mt8">视频为什么能压缩：到处都是冗余</div>
+  <div class="lead mt8">1080p 原始视频每秒上 Gb，根本传不动 —— 但其实信息没那么多</div>
+
+  <div class="grid g2 mt40" style="gap:40px">
+    <div class="card bg-blue" style="padding:34px;height:480px">
+      <div class="h2" style="font-size:34px">① 空间冗余</div>
+      <div class="card-desc mt8" style="font-size:26px">一帧之内，相邻像素往往很像</div>
+      <div class="mt24 center" style="height:230px;background:linear-gradient(160deg,#1f6feb,#388bfd 55%,#2ea043);border-radius:14px;position:relative">
+        <div style="position:absolute;left:50%;top:58%;transform:translateX(-50%);font-size:64px">🏞️</div>
+        <div style="position:absolute;top:18px;left:24px;font-size:24px;background:rgba(0,0,0,.45);padding:6px 14px;border-radius:8px">一大片蓝天，像素都差不多</div>
+      </div>
+      <div class="step mt24"><div class="step-d" style="font-size:24px">→ 用"预测 + 残差"描述一块，而非逐像素存</div></div>
+    </div>
+    <div class="card bg-green" style="padding:34px;height:480px">
+      <div class="h2" style="font-size:34px;color:#3fb950">② 时间冗余</div>
+      <div class="card-desc mt8" style="font-size:26px">相邻两帧，绝大部分没变</div>
+      <div class="row mt24 gap-20">
+        <div class="center col" style="flex:1"><div class="center" style="height:150px;background:#161b22;border:1px solid #30363d;border-radius:12px;font-size:60px">🧍‍♂️</div><div class="card-desc mt8" style="font-size:22px">第 N 帧</div></div>
+        <div class="arrow">→</div>
+        <div class="center col" style="flex:1"><div class="center" style="height:150px;background:#161b22;border:1px solid #30363d;border-radius:12px;font-size:60px">🚶‍♂️</div><div class="card-desc mt8" style="font-size:22px">第 N+1 帧</div></div>
+      </div>
+      <div class="step mt24" style="border-color:#3fb950"><div class="step-d" style="font-size:24px">→ 背景没动，只有人在动：只存"动了的部分"</div></div>
+    </div>
+  </div>
+
+  <div class="formula mt32" style="font-size:40px">编码器的核心思想：别存整帧，只存「变化」</div>
+</div>
+</body></html>

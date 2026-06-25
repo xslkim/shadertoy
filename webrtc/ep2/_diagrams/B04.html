@@ -1,0 +1,35 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page tight">
+  <div class="head-row"><span class="kicker">H.264 over RTP · PACKETIZATION</span></div>
+  <div class="h1 mt8">视频载荷怎么打包进 RTP</div>
+  <div class="lead mt8">一个 NAL 可能比一个网络包还大 —— 受 MTU ≈ 1200 字节限制，分三种模式</div>
+
+  <div class="card bg-blue mt32" style="padding:24px">
+    <div class="row" style="gap:14px;align-items:center"><span class="pill" style="font-size:22px">① 单 NAL</span><span style="font-size:25px;color:#e6edf3">正常大小：一个包刚好装一个 NAL</span></div>
+    <div class="bitrow mt16" style="height:60px"><div class="bit" style="flex:2;background:#30363d"><span class="bn" style="font-size:20px">RTP头</span></div><div class="bit bg-green" style="flex:8"><span class="bn" style="font-size:22px">一个完整 NAL（如一个 P 片）</span></div></div>
+  </div>
+
+  <div class="card bg-purp mt20" style="padding:24px">
+    <div class="row" style="gap:14px;align-items:center"><span class="pill" style="font-size:22px;border-color:#8957e5;color:#d2a8ff">② STAP-A 聚合</span><span style="font-size:25px;color:#e6edf3">多个小 NAL（如 SPS+PPS）塞进一个包</span></div>
+    <div class="bitrow mt16" style="height:60px">
+      <div class="bit" style="flex:2;background:#30363d"><span class="bn" style="font-size:20px">RTP头</span></div>
+      <div class="bit" style="flex:1;background:#6e40c9"><span class="bn" style="font-size:18px">STAP</span></div>
+      <div class="bit bg-blue" style="flex:3"><span class="bn" style="font-size:20px">len+SPS</span></div>
+      <div class="bit" style="flex:3;background:#1f6feb"><span class="bn" style="font-size:20px">len+PPS</span></div>
+    </div>
+  </div>
+
+  <div class="card bg-amber mt20" style="padding:24px">
+    <div class="row" style="gap:14px;align-items:center"><span class="pill" style="font-size:22px;border-color:#9e6a03;color:#ffa657">③ FU-A 分片</span><span style="font-size:25px;color:#e6edf3">大 NAL（如几十 KB 的 IDR 关键帧）切到多个包</span></div>
+    <div class="bitrow mt16" style="height:60px">
+      <div class="bit" style="flex:2;background:#30363d"><span class="bn" style="font-size:19px">RTP头</span></div>
+      <div class="bit bg-amber" style="flex:3"><span class="bn" style="font-size:19px">FU · S起始</span></div>
+      <div class="bit" style="flex:3;background:#9e6a03"><span class="bn" style="font-size:19px">FU · 中段</span></div>
+      <div class="bit bg-amber" style="flex:3"><span class="bn" style="font-size:19px">FU · E结束</span></div>
+    </div>
+  </div>
+
+  <div class="card mt24 bg-red row center" style="gap:14px;padding:20px"><span style="font-size:30px">⚠️</span><span style="font-size:26px;color:#e6edf3">一个关键帧丢任意一片 → <b class="bad">整帧作废</b>，这才要 NACK 重传或请求新关键帧</span></div>
+</div>
+</body></html>

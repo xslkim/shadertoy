@@ -1,0 +1,45 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page tight">
+  <div class="head-row"><span class="kicker">CODEC WAR</span></div>
+  <div class="h1 mt8">编解码器之争：画面用谁编</div>
+
+  <table class="tbl mt32" style="font-size:26px">
+    <tr><th style="width:16%">编解码器</th><th>压缩效率</th><th>硬件解码</th><th>专利授权</th><th>在 WebRTC 中</th></tr>
+    <tr>
+      <td class="accent" style="font-size:30px">H.264</td>
+      <td class="mid">中（基准线）</td>
+      <td class="good">几乎全设备都有</td>
+      <td>需授权，但已普及</td>
+      <td><b class="good">必备兜底</b>，互通性最好</td>
+    </tr>
+    <tr>
+      <td class="accent" style="font-size:30px">VP8</td>
+      <td class="bad">较低（早期）</td>
+      <td class="mid">部分</td>
+      <td class="good">免版税</td>
+      <td>老牌默认，软编为主</td>
+    </tr>
+    <tr>
+      <td class="accent" style="font-size:30px">VP9</td>
+      <td class="good">高</td>
+      <td class="mid">较多</td>
+      <td class="good">免版税</td>
+      <td>支持 <b>SVC 分层</b>，会议常用</td>
+    </tr>
+    <tr>
+      <td class="accent" style="font-size:30px">AV1</td>
+      <td class="good">最高（新王）</td>
+      <td class="mid">普及中</td>
+      <td class="good">免版税</td>
+      <td>低带宽利器，软解吃 CPU</td>
+    </tr>
+  </table>
+
+  <div class="grid g2 mt32" style="gap:32px">
+    <div class="card bg-green" style="padding:26px"><div class="h2" style="font-size:28px;color:#3fb950">想兼容、要稳</div><div class="card-desc mt8" style="font-size:25px;color:#e6edf3">→ H.264，几乎所有终端硬件直解</div></div>
+    <div class="card bg-blue" style="padding:26px"><div class="h2" style="font-size:28px">带宽紧张、追画质</div><div class="card-desc mt8" style="font-size:25px;color:#e6edf3">→ AV1 / VP9，同画质省更多码率</div></div>
+  </div>
+  <div class="foot">最终用哪个，由双方在 SDP 里协商 —— 取交集、挑最优</div>
+</div>
+</body></html>

@@ -1,0 +1,44 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page tight">
+  <div class="head-row"><span class="kicker">JITTER BUFFER</span></div>
+  <div class="h1 mt8">抖动缓冲：流畅与延迟的跷跷板</div>
+
+  <div class="grid g2 mt32" style="gap:40px;align-items:center">
+    <div class="card bg-soft" style="padding:30px">
+      <div class="h2" style="font-size:30px;color:#f85149">网络来的包：间隔忽快忽慢</div>
+      <div class="row mt24" style="align-items:flex-end;gap:10px;height:120px">
+        <div class="bit" style="background:#1f6feb;width:60px;height:120px"></div>
+        <div class="bit" style="background:#1f6feb;width:60px;height:60px"></div>
+        <div class="bit" style="background:#1f6feb;width:60px;height:100px"></div>
+        <div class="bit" style="background:#1f6feb;width:60px;height:40px"></div>
+        <div class="bit" style="background:#1f6feb;width:60px;height:110px"></div>
+        <div class="bit" style="background:#1f6feb;width:60px;height:70px"></div>
+      </div>
+      <div class="card-desc mt16" style="font-size:25px">直接来一个播一个 → 画面一卡一卡（抖动 Jitter）</div>
+    </div>
+
+    <div class="card bg-soft" style="padding:30px">
+      <div class="h2" style="font-size:30px;color:#3fb950">经抖动缓冲：匀速放出</div>
+      <div class="row mt24" style="align-items:flex-end;gap:10px;height:120px">
+        <div class="bit" style="background:#238636;width:60px;height:80px"></div>
+        <div class="bit" style="background:#238636;width:60px;height:80px"></div>
+        <div class="bit" style="background:#238636;width:60px;height:80px"></div>
+        <div class="bit" style="background:#238636;width:60px;height:80px"></div>
+        <div class="bit" style="background:#238636;width:60px;height:80px"></div>
+        <div class="bit" style="background:#238636;width:60px;height:80px"></div>
+      </div>
+      <div class="card-desc mt16" style="font-size:25px">先攒一点点，再用稳定节拍交给解码器</div>
+    </div>
+  </div>
+
+  <div class="card mt40 row center between" style="padding:28px 40px">
+    <div class="center col"><div class="h2" style="font-size:34px;color:#3fb950">缓冲大</div><div class="card-desc mt8" style="font-size:25px">更流畅 · 但延迟更高</div></div>
+    <div style="font-size:48px;color:#58a6ff">⟷</div>
+    <div class="center col"><div class="h2" style="font-size:34px;color:#d29922">缓冲小</div><div class="card-desc mt8" style="font-size:25px">更实时 · 但容易卡</div></div>
+    <div style="font-size:48px;color:#58a6ff">⟹</div>
+    <div class="center col"><div class="h2" style="font-size:34px;color:#58a6ff">WebRTC</div><div class="card-desc mt8" style="font-size:25px">随网络动态调到刚刚好</div></div>
+  </div>
+  <div class="foot">实时性的秘密齐了：不强求可靠，只压低延迟，并且时刻自适应</div>
+</div>
+</body></html>

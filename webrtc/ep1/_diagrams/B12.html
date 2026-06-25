@@ -1,0 +1,44 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page tight">
+  <div class="head-row"><span class="kicker">I / P / B FRAMES</span></div>
+  <div class="h1 mt8">三种帧 · 以及 WebRTC 的取舍</div>
+
+  <div class="grid g3 mt32" style="gap:28px">
+    <div class="card bg-blue center col" style="height:300px;padding:28px">
+      <div class="h2" style="font-size:56px;color:#58a6ff">I</div>
+      <div class="card-title mt8" style="font-size:30px">关键帧 / 帧内</div>
+      <div class="card-desc mt12" style="text-align:center;font-size:25px">完整一帧，自给自足<br>谁都不参考，能独立解码</div>
+      <div class="pill mt16" style="font-size:22px">最大</div>
+    </div>
+    <div class="card bg-green center col" style="height:300px;padding:28px">
+      <div class="h2" style="font-size:56px;color:#3fb950">P</div>
+      <div class="card-title mt8" style="font-size:30px">前向预测</div>
+      <div class="card-desc mt12" style="text-align:center;font-size:25px">只记和<b style="color:#e6edf3">前面</b>帧的差异<br>小得多</div>
+      <div class="pill ok mt16" style="font-size:22px">小</div>
+    </div>
+    <div class="card bg-amber center col" style="height:300px;padding:28px">
+      <div class="h2" style="font-size:56px;color:#ffa657">B</div>
+      <div class="card-title mt8" style="font-size:30px">双向预测</div>
+      <div class="card-desc mt12" style="text-align:center;font-size:25px">同时参考<b style="color:#e6edf3">前 + 后</b>帧<br>最省，但要等未来</div>
+      <div class="pill mt16" style="font-size:22px;border-color:#9e6a03;color:#ffa657">最小</div>
+    </div>
+  </div>
+
+  <div class="row center mt32 gap-12" style="flex-wrap:wrap">
+    <div class="bit" style="background:#1f6feb;width:80px;height:64px"><span class="bn">I</span></div>
+    <div class="bit" style="background:#238636;width:80px;height:64px"><span class="bn">P</span></div>
+    <div class="bit" style="background:#9e6a03;width:80px;height:64px"><span class="bn">B</span></div>
+    <div class="bit" style="background:#238636;width:80px;height:64px"><span class="bn">P</span></div>
+    <div class="bit" style="background:#9e6a03;width:80px;height:64px"><span class="bn">B</span></div>
+    <div class="bit" style="background:#238636;width:80px;height:64px"><span class="bn">P</span></div>
+    <span style="font-size:24px;color:#8b949e;margin-left:14px">一个 GOP 画面组</span>
+  </div>
+
+  <div class="card mt32 bg-red" style="padding:28px 36px">
+    <div class="h2" style="font-size:32px;color:#f85149">B 帧的代价：要「等未来那一帧先到」</div>
+    <div class="card-desc mt8" style="font-size:27px;color:#e6edf3">这一等，<b class="red">延迟和乱序</b>就来了 → 实时通话与直播里，WebRTC 基本 <b class="red">不用 B 帧</b></div>
+    <div class="card-desc mt8" style="font-size:25px">省那点带宽，远不如低延迟值钱</div>
+  </div>
+</div>
+</body></html>

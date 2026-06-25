@@ -1,0 +1,28 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page tight">
+  <div class="head-row"><span class="kicker">RTP HEADER · 12 BYTES</span></div>
+  <div class="h1 mt8">RTP 包头逐字段拆解</div>
+  <div class="lead mt8">固定 12 字节 = 3 行 × 32 比特</div>
+
+  <div class="bitscale mt24" style="font-size:16px"><span>0</span><span>4</span><span>8</span><span>12</span><span>16</span><span>20</span><span>24</span><span>28</span><span>31</span></div>
+  <div class="bitrow" style="height:96px">
+    <div class="bit bg-soft" style="flex:2;border:1px solid #30363d"><span class="bn" style="font-size:20px">V</span><span class="bw">2</span></div>
+    <div class="bit bg-soft" style="flex:1;border:1px solid #30363d"><span class="bn" style="font-size:20px">P</span><span class="bw">1</span></div>
+    <div class="bit bg-soft" style="flex:1;border:1px solid #30363d"><span class="bn" style="font-size:20px">X</span><span class="bw">1</span></div>
+    <div class="bit bg-soft" style="flex:4;border:1px solid #30363d"><span class="bn" style="font-size:20px">CC</span><span class="bw">4</span></div>
+    <div class="bit bg-amber" style="flex:1"><span class="bn" style="font-size:20px">M</span><span class="bw">1</span></div>
+    <div class="bit bg-blue" style="flex:7"><span class="bn" style="font-size:22px">PT 负载类型</span><span class="bw">7 bit</span></div>
+    <div class="bit bg-green" style="flex:16"><span class="bn" style="font-size:22px">sequence number 序列号</span><span class="bw">16 bit</span></div>
+  </div>
+  <div class="bitrow" style="height:78px"><div class="bit bg-purp" style="flex:1"><span class="bn" style="font-size:24px">timestamp 时间戳</span><span class="bw">32 bit</span></div></div>
+  <div class="bitrow" style="height:78px"><div class="bit" style="flex:1;background:#1f3a5f;border:1px solid #1f4e79"><span class="bn" style="font-size:24px">SSRC 同步源标识（流的身份证）</span><span class="bw">32 bit</span></div></div>
+  <div class="bitrow" style="height:64px"><div class="bit" style="flex:1;background:#161b22;border:1px dashed #30363d"><span class="bn" style="font-size:22px;color:#8b949e">（可选）CSRC 列表 · 头部扩展：transport-wide cc 序号 / abs-send-time …</span></div></div>
+
+  <div class="grid g3 mt24" style="gap:18px">
+    <div class="card bg-soft" style="padding:18px"><span class="pill" style="font-size:21px;border-color:#9e6a03;color:#ffa657">M 标记位</span><div class="card-desc mt8" style="font-size:23px">常用来标记一帧的最后一个包</div></div>
+    <div class="card bg-soft" style="padding:18px"><span class="pill" style="font-size:21px">序列号</span><div class="card-desc mt8" style="font-size:23px">丢包检测、重排全靠它</div></div>
+    <div class="card bg-soft" style="padding:18px"><span class="pill" style="font-size:21px">时间戳</span><div class="card-desc mt8" style="font-size:23px">决定这帧何时播、音画同步</div></div>
+  </div>
+</div>
+</body></html>

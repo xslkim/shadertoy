@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page tight">
+  <div class="head-row"><span class="kicker">CONGESTION CONTROL · GCC</span></div>
+  <div class="h1 mt8">拥塞控制：WebRTC 自己估带宽</div>
+  <div class="lead mt8">不只看丢包，更盯着"包到达延迟的变化趋势"——延迟一抬头，就知道快堵了</div>
+
+  <div class="row mt40 center" style="gap:0">
+    <div class="card bg-blue center col" style="width:330px;height:240px">
+      <div style="font-size:54px">📤</div>
+      <div class="card-title accent mt12">发送端</div>
+      <div class="card-desc mt8" style="text-align:center">按目标码率<br>驱动编码器</div>
+    </div>
+    <div class="arrow" style="font-size:30px;padding:0 8px">媒体 →</div>
+    <div class="card bg-amber center col" style="width:300px;height:240px">
+      <div style="font-size:54px">🌐</div>
+      <div class="card-title" style="color:#ffa657">网络</div>
+      <div class="card-desc mt8" style="text-align:center">排队 = 延迟上升<br>拥塞的早期信号</div>
+    </div>
+    <div class="arrow" style="font-size:30px;padding:0 8px">→</div>
+    <div class="card bg-green center col" style="width:330px;height:240px">
+      <div style="font-size:54px">📥</div>
+      <div class="card-title" style="color:#3fb950">接收端</div>
+      <div class="card-desc mt8" style="text-align:center">测量延迟趋势<br>+ 丢包率</div>
+    </div>
+  </div>
+
+  <div class="row center mt24" style="gap:16px">
+    <div class="pill" style="font-size:25px;border-color:#8957e5;color:#d2a8ff">⟲ RTCP 反馈：transport-cc / REMB 把测量回传给发送端</div>
+  </div>
+
+  <div class="grid g3 mt40" style="gap:28px">
+    <div class="card center col bg-soft" style="height:150px"><div class="card-title accent">带宽好</div><div class="card-desc mt8 good" style="font-size:26px">升码率 · 更清晰</div></div>
+    <div class="card center col bg-soft" style="height:150px"><div class="card-title accent">带宽差</div><div class="card-desc mt8 mid" style="font-size:26px">先保流畅 · 降码率</div></div>
+    <div class="card center col bg-soft" style="height:150px"><div class="card-title accent">你看到的</div><div class="card-desc mt8" style="font-size:26px;color:#e6edf3">画质忽高忽低</div></div>
+  </div>
+  <div class="foot">Google Congestion Control（GCC）：实时调整编码器目标码率的闭环</div>
+</div>
+</body></html>

@@ -1,0 +1,35 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page tight">
+  <div class="head-row"><span class="kicker">RTP over UDP</span></div>
+  <div class="h1 mt8">RTP：给原始的 UDP 装上时间轴</div>
+  <div class="lead mt8">裸 UDP 不知道包的先后，也不知道何时该播。RTP 盖了三个章：</div>
+
+  <div class="grid g3 mt40" style="gap:32px">
+    <div class="card bg-blue center col" style="height:330px;padding:30px">
+      <div style="font-size:64px">🔢</div>
+      <div class="card-title accent mt16" style="font-size:34px">序列号</div>
+      <div class="mono mt8" style="font-size:24px;color:#79c0ff">sequence number · 16bit</div>
+      <div class="card-desc mt16" style="text-align:center;font-size:26px">让接收端能<b style="color:#e6edf3">排序</b><br>并立刻<b style="color:#e6edf3">发现谁丢了</b></div>
+    </div>
+    <div class="card bg-blue center col" style="height:330px;padding:30px">
+      <div style="font-size:64px">⏱️</div>
+      <div class="card-title accent mt16" style="font-size:34px">时间戳</div>
+      <div class="mono mt8" style="font-size:24px;color:#79c0ff">timestamp · 32bit</div>
+      <div class="card-desc mt16" style="text-align:center;font-size:26px">决定每帧<b style="color:#e6edf3">何时播</b><br>音画<b style="color:#e6edf3">同步</b>、播放平稳</div>
+    </div>
+    <div class="card bg-blue center col" style="height:330px;padding:30px">
+      <div style="font-size:64px">🏷️</div>
+      <div class="card-title accent mt16" style="font-size:34px">负载类型</div>
+      <div class="mono mt8" style="font-size:24px;color:#79c0ff">payload type · 7bit</div>
+      <div class="card-desc mt16" style="text-align:center;font-size:26px">告诉对方<br>这是<b style="color:#e6edf3">什么编码</b></div>
+    </div>
+  </div>
+
+  <div class="card mt40 row center" style="height:120px;gap:18px">
+    <span class="pill">SSRC</span>
+    <div style="font-size:28px;color:#8b949e">再加一个 32 位的 <b class="accent">SSRC</b>，作为每一路流的唯一身份证</div>
+  </div>
+  <div class="foot">无序的 UDP，靠 RTP 这几个字段，才能在接收端还原成连续的视频流</div>
+</div>
+</body></html>

@@ -1,0 +1,27 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page tight">
+  <div class="head-row"><span class="kicker">SVC · SCALABLE VIDEO</span></div>
+  <div class="h1 mt8">SVC 分层编码：一路码流，按需取层</div>
+  <div class="lead mt8">多人会议的绝活 —— 一路码流里嵌套好几层</div>
+
+  <div class="card bg-soft mt32" style="padding:30px">
+    <div class="bitrow" style="height:70px"><div class="bit bg-green" style="flex:1"><span class="bn" style="font-size:24px">基础层 L0 · 低清 / 低帧率（人人都能收）</span></div></div>
+    <div class="bitrow"  style="height:70px"><div class="bit bg-blue"  style="flex:1"><span class="bn" style="font-size:24px">增强层 L1 · 叠上去 → 更高清 / 更高帧率</span></div></div>
+    <div class="bitrow"  style="height:70px"><div class="bit bg-purp"  style="flex:1"><span class="bn" style="font-size:24px">增强层 L2 · 再叠 → 最高清</span></div></div>
+    <div class="card-desc mt16" style="font-size:24px">三个维度可分层：<b style="color:#e6edf3">时间层</b>(帧率) · <b style="color:#e6edf3">空间层</b>(分辨率) · <b style="color:#e6edf3">质量层</b>(清晰度)</div>
+  </div>
+
+  <div class="row mt32 center" style="gap:0">
+    <div class="card bg-soft center col" style="width:240px;height:200px"><div style="font-size:48px">📤</div><div class="card-title mt8">发送端</div><div class="card-desc mt4" style="font-size:22px">只编一路分层流</div></div>
+    <div class="arrow">→</div>
+    <div class="card bg-amber center col" style="width:300px;height:200px"><div style="font-size:48px">🔀</div><div class="card-title" style="color:#ffa657">SFU 服务器</div><div class="card-desc mt4" style="font-size:22px;text-align:center">按各人网络<br><b style="color:#e6edf3">只转发子集 · 不转码</b></div></div>
+    <div class="arrow">→</div>
+    <div class="col gap-12">
+      <div class="pill ok" style="font-size:23px">📶 网好 → 收 L0+L1+L2 高清</div>
+      <div class="pill" style="font-size:23px;border-color:#9e6a03;color:#ffa657">📵 网差 → 只收 L0 低清但流畅</div>
+    </div>
+  </div>
+  <div class="foot">关键在「不转码」：服务器只是按需丢层 —— 大型会议扛住几十人的秘密</div>
+</div>
+</body></html>

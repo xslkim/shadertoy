@@ -1,0 +1,33 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page tight">
+  <div class="head-row"><span class="kicker">PACKET LOSS RECOVERY</span></div>
+  <div class="h1 mt8">抗丢包三件套</div>
+  <div class="lead mt8">丢了包也不能干瞪眼 —— 用哪一招，取决于还剩多少延迟预算</div>
+
+  <div class="grid g3 mt40" style="gap:32px">
+    <div class="card bg-blue" style="height:560px;padding:34px">
+      <div class="row" style="align-items:center;gap:16px"><div class="badge" style="background:#1f6feb">1</div><div class="h2" style="font-size:38px">NACK</div></div>
+      <div class="mono mt12" style="font-size:23px;color:#79c0ff">+ RTX 重传流</div>
+      <div class="card-desc mt24" style="font-size:28px;line-height:1.6">时间<b style="color:#e6edf3">还来得及</b>时，<br>让对方把丢的那个包<b style="color:#e6edf3">补发一次</b></div>
+      <div class="step mt32"><div class="step-d" style="font-size:24px">✔ 精准、不浪费带宽<br>✘ 要等一个往返 RTT</div></div>
+      <div class="pill ok mt24" style="font-size:23px">适合：RTT 小、还有预算</div>
+    </div>
+    <div class="card bg-green" style="height:560px;padding:34px">
+      <div class="row" style="align-items:center;gap:16px"><div class="badge" style="background:#238636">2</div><div class="h2" style="font-size:38px">FEC</div></div>
+      <div class="mono mt12" style="font-size:23px;color:#7ee787">前向纠错 · 冗余</div>
+      <div class="card-desc mt24" style="font-size:28px;line-height:1.6">提前多发一点<b style="color:#e6edf3">冗余数据</b><br>丢少量包能<b style="color:#e6edf3">就地算回来</b></div>
+      <div class="step mt32" style="border-color:#3fb950"><div class="step-d" style="font-size:24px">✔ 连往返都省了，最快<br>✘ 平时多花带宽</div></div>
+      <div class="pill ok mt24" style="font-size:23px">适合：丢包高、要极低延迟</div>
+    </div>
+    <div class="card bg-amber" style="height:560px;padding:34px">
+      <div class="row" style="align-items:center;gap:16px"><div class="badge" style="background:#9e6a03">3</div><div class="h2" style="font-size:38px">关键帧请求</div></div>
+      <div class="mono mt12" style="font-size:23px;color:#ffa657">PLI / FIR</div>
+      <div class="card-desc mt24" style="font-size:28px;line-height:1.6">实在<b style="color:#e6edf3">救不回来</b>了<br>请求一个全新 <b style="color:#e6edf3">I 帧</b>整体刷新</div>
+      <div class="step mt32" style="border-color:#ffa657"><div class="step-d" style="font-size:24px">✔ 彻底重置、止损<br>✘ I 帧大、瞬时码率高</div></div>
+      <div class="pill mt24" style="font-size:23px;border-color:#9e6a03;color:#ffa657">适合：画面已经烂掉</div>
+    </div>
+  </div>
+  <div class="foot">NACK 补、FEC 防、PLI 兜底 —— 都是在"延迟预算"里做的权衡</div>
+</div>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page tight">
+  <div class="head-row"><span class="kicker">TCP vs UDP</span></div>
+  <div class="h1 mt8">为什么实时不能用 TCP</div>
+
+  <div class="grid g2 mt32" style="gap:36px">
+    <div class="card bg-red" style="padding:30px 34px">
+      <div class="h2" style="color:#f85149">TCP · 太"负责任"</div>
+      <div class="lead mt8" style="color:#e6edf3">保证不丢、保证顺序</div>
+      <div class="row mt24 gap-12" style="align-items:center">
+        <div class="bit" style="background:#238636;width:90px;height:64px"><span class="bn">1</span></div>
+        <div class="bit" style="background:#238636;width:90px;height:64px"><span class="bn">2</span></div>
+        <div class="bit" style="background:#da3633;width:90px;height:64px"><span class="bn">3✗</span></div>
+        <div class="bit" style="background:#484f58;width:90px;height:64px"><span class="bn">4</span></div>
+        <div class="bit" style="background:#484f58;width:90px;height:64px"><span class="bn">5</span></div>
+      </div>
+      <div class="step mt24" style="border-color:#f85149;background:#2d1518">
+        <div class="step-h" style="color:#f85149">队头阻塞 Head-of-Line</div>
+        <div class="step-d" style="color:#e6edf3">第 3 个丢了，4、5 已经到，也得排队<br>干等它重传回来才能交付</div>
+      </div>
+      <div class="bullet mt24"><div class="dot" style="background:#f85149"></div>
+        <div style="font-size:27px">重传回来的，是一帧<b class="red">过期的旧画面</b>，等到了反而更糟</div></div>
+    </div>
+
+    <div class="card bg-green" style="padding:30px 34px">
+      <div class="h2" style="color:#3fb950">UDP · 宁丢不等</div>
+      <div class="lead mt8" style="color:#e6edf3">不保证、不排序、不阻塞</div>
+      <div class="row mt24 gap-12" style="align-items:center">
+        <div class="bit" style="background:#238636;width:90px;height:64px"><span class="bn">1</span></div>
+        <div class="bit" style="background:#238636;width:90px;height:64px"><span class="bn">2</span></div>
+        <div class="bit" style="background:#30363d;width:90px;height:64px"><span class="bn" style="opacity:.4">✗</span></div>
+        <div class="bit" style="background:#238636;width:90px;height:64px"><span class="bn">4</span></div>
+        <div class="bit" style="background:#238636;width:90px;height:64px"><span class="bn">5</span></div>
+      </div>
+      <div class="step mt24" style="border-color:#3fb950;background:#11271a">
+        <div class="step-h" style="color:#3fb950">丢了就丢，后面照常播</div>
+        <div class="step-d" style="color:#e6edf3">第 3 个丢了？4、5 立刻交付<br>实时画面不为旧包停下</div>
+      </div>
+      <div class="bullet mt24"><div class="dot" style="background:#3fb950"></div>
+        <div style="font-size:27px">WebRTC 在 UDP 上自己补"该补的"，丢"能丢的"</div></div>
+    </div>
+  </div>
+  <div class="foot">实时的第一原则：宁可丢一帧，也绝不让整条流停下来等</div>
+</div>
+</body></html>

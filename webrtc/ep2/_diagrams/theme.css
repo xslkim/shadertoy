@@ -1,0 +1,170 @@
+/* SDF Raymarching 教学图 — 共享主题 (dark-code) */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  width: 1920px; height: 1080px;
+  background: #0d1117; overflow: hidden;
+  font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+  color: #e6edf3;
+}
+.page {
+  width: 1920px; height: 1080px;
+  padding: 60px 80px;
+  display: flex; flex-direction: column;
+}
+
+/* ---- 颜色 ---- */
+.accent { color: #58a6ff; }
+.muted  { color: #8b949e; }
+.green  { color: #3fb950; }
+.orange { color: #ffa657; }
+.yellow { color: #d29922; }
+.red    { color: #f85149; }
+.fg     { color: #e6edf3; }
+
+/* ---- 标题 ---- */
+.title {
+  font-size: 68px; font-weight: 800; color: #e6edf3;
+  text-align: center; letter-spacing: 1px;
+}
+.title-row { display: flex; flex-direction: column; align-items: center; }
+.underline { height: 5px; width: 220px; background: #58a6ff; border-radius: 3px; margin-top: 14px; }
+.subtitle { font-size: 30px; color: #8b949e; text-align: center; margin-top: 16px; }
+.tag {
+  font-size: 24px; color: #58a6ff; letter-spacing: 5px;
+  text-align: center; font-weight: 600;
+}
+
+/* ---- 代码块 ---- */
+.code {
+  background: #161b22; border: 1px solid #30363d; border-radius: 14px;
+  padding: 26px 32px;
+  font-family: "Cascadia Code", Consolas, monospace;
+  font-size: 27px; line-height: 1.55; color: #e6edf3;
+  white-space: pre;
+}
+.code.small { font-size: 23px; }
+.kw  { color: #ff7b72; }
+.str { color: #a5d6ff; }
+.com { color: #8b949e; }
+.fn  { color: #d2a8ff; }
+.num { color: #79c0ff; }
+.op  { color: #e6edf3; }
+
+/* ---- 卡片 ---- */
+.card {
+  background: #161b22; border: 1px solid #30363d; border-radius: 18px;
+  padding: 30px 32px;
+}
+.card-title { font-size: 34px; font-weight: 700; }
+.card-desc  { font-size: 25px; color: #8b949e; line-height: 1.5; }
+
+/* ---- 布局 ---- */
+.row { display: flex; }
+.col { display: flex; flex-direction: column; }
+.grow { flex: 1; }
+.center { align-items: center; justify-content: center; }
+.gap-16 { gap: 16px; }
+.gap-24 { gap: 24px; }
+.gap-32 { gap: 32px; }
+.gap-40 { gap: 40px; }
+
+/* ---- 步骤条 ---- */
+.step {
+  border-left: 4px solid #58a6ff;
+  padding: 14px 22px; background: #11151c; border-radius: 0 10px 10px 0;
+}
+.step-h { font-size: 28px; font-weight: 700; color: #58a6ff; }
+.step-d { font-size: 24px; color: #8b949e; line-height: 1.5; margin-top: 4px; }
+
+/* ---- 公式 ---- */
+.formula {
+  background: #161b22; border: 1px solid #30363d; border-radius: 14px;
+  font-family: "Cascadia Code", Consolas, monospace;
+  font-size: 46px; font-weight: 700; color: #58a6ff;
+  text-align: center; padding: 26px;
+}
+
+/* ---- 圆点列表 ---- */
+.bullet { display: flex; align-items: flex-start; gap: 14px; font-size: 27px; }
+.dot { width: 14px; height: 14px; border-radius: 50%; margin-top: 11px; flex-shrink: 0; }
+
+/* ---- 数字徽标 ---- */
+.badge {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: #58a6ff; color: #fff; font-size: 30px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+
+svg { display: block; }
+.label { font-family: "Microsoft YaHei", sans-serif; }
+.mono { font-family: "Cascadia Code", Consolas, monospace; }
+
+/* ============ WebRTC 教程扩展组件 ============ */
+.h1 { font-size: 60px; font-weight: 800; }
+.h2 { font-size: 44px; font-weight: 800; }
+.lead { font-size: 30px; color: #8b949e; }
+.center-col { display:flex; flex-direction:column; align-items:center; justify-content:center; }
+.page.tight { padding: 56px 72px; }
+.head-row { display:flex; align-items:baseline; gap:20px; }
+.kicker { font-size:24px; letter-spacing:4px; color:#58a6ff; font-weight:700; }
+
+/* 间距工具 */
+.mt8{margin-top:8px}.mt12{margin-top:12px}.mt16{margin-top:16px}.mt20{margin-top:20px}
+.mt24{margin-top:24px}.mt32{margin-top:32px}.mt40{margin-top:40px}.mt48{margin-top:48px}.mt56{margin-top:56px}
+.gap-12{gap:12px}.gap-20{gap:20px}.gap-48{gap:48px}
+.wrap{flex-wrap:wrap}.between{justify-content:space-between}.start{align-items:flex-start}
+
+/* 颜色底 */
+.bg-blue  { background:#12243b; border-color:#1f4e79; }
+.bg-green { background:#11271a; border-color:#2ea043; }
+.bg-red   { background:#2d1518; border-color:#da3633; }
+.bg-amber { background:#2a2113; border-color:#9e6a03; }
+.bg-purp  { background:#211b33; border-color:#8957e5; }
+.bg-soft  { background:#11151c; }
+
+/* 网格 */
+.grid { display:grid; gap:20px; }
+.g2 { grid-template-columns:1fr 1fr; }
+.g3 { grid-template-columns:1fr 1fr 1fr; }
+.g4 { grid-template-columns:repeat(4,1fr); }
+
+/* 表格 */
+.tbl { width:100%; border-collapse:collapse; font-size:25px; }
+.tbl th, .tbl td { border:1px solid #30363d; padding:14px 18px; text-align:left; }
+.tbl th { background:#161b22; color:#58a6ff; font-size:26px; font-weight:700; }
+.tbl td.c, .tbl th.c { text-align:center; }
+.tbl tr:nth-child(even) td { background:#0f141b; }
+.good{color:#3fb950;font-weight:700}.bad{color:#f85149;font-weight:700}.mid{color:#d29922;font-weight:700}
+
+/* 流水线 / 管线阶段 */
+.pipe { display:flex; align-items:stretch; gap:0; }
+.stage { background:#161b22; border:1px solid #30363d; border-radius:12px;
+  padding:18px 20px; display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center; min-width:0; flex:1; }
+.stage .st-t { font-size:25px; font-weight:700; }
+.stage .st-d { font-size:20px; color:#8b949e; margin-top:6px; }
+.arrow { display:flex; align-items:center; color:#58a6ff; font-size:34px; padding:0 10px; }
+
+/* 比特字段（按位宽度成比例的格子） */
+.bitrow { display:flex; width:100%; border-radius:10px; overflow:hidden; border:1px solid #30363d; }
+.bitrow + .bitrow { margin-top:10px; }
+.bit { border-right:1px solid #0d1117; padding:14px 8px; text-align:center; color:#e6edf3;
+  display:flex; flex-direction:column; justify-content:center; min-width:0; }
+.bit:last-child{border-right:none;}
+.bit .bn { font-family:"Cascadia Code",Consolas,monospace; font-size:24px; font-weight:700; }
+.bit .bw { font-size:18px; color:#c9d1d9; opacity:.8; margin-top:4px; }
+.bitscale { display:flex; width:100%; margin-bottom:6px; }
+.bitscale span { flex:1; text-align:center; font-size:17px; color:#8b949e;
+  font-family:"Cascadia Code",monospace; border-left:1px dashed #30363d; }
+
+/* 封装嵌套盒（俄罗斯套娃） */
+.encap { border:2px solid #1f4e79; border-radius:14px; padding:16px; }
+.encap-h { font-size:24px; font-weight:700; margin-bottom:12px; font-family:"Cascadia Code",monospace; }
+
+/* 标签胶囊 */
+.pill { display:inline-flex; align-items:center; gap:8px; font-size:22px;
+  padding:6px 16px; border-radius:999px; border:1px solid #30363d; background:#161b22; }
+.pill.ok{border-color:#2ea043;color:#3fb950}.pill.no{border-color:#da3633;color:#f85149}
+
+.foot { position:absolute; bottom:120px; left:0; right:0; text-align:center; font-size:24px; color:#8b949e; }
+body{position:relative;}

@@ -1,0 +1,33 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page tight">
+  <div class="head-row"><span class="kicker">H.264 BITSTREAM · NAL</span></div>
+  <div class="h1 mt8">码流结构：一串 NAL 单元</div>
+  <div class="lead mt8">熵编码出来的比特不是一锅粥 —— Annex-B 用起始码 <span class="mono" style="color:#79c0ff">00 00 01</span> 把单元隔开</div>
+
+  <div class="bitrow mt32" style="border:none;gap:8px">
+    <div class="bit mono" style="background:#30363d;flex:0 0 130px;height:84px"><span class="bn" style="font-size:20px">00 00 01</span></div>
+    <div class="bit" style="background:#1f6feb;flex:2;height:84px"><span class="bn" style="font-size:24px">SPS</span></div>
+    <div class="bit mono" style="background:#30363d;flex:0 0 130px;height:84px"><span class="bn" style="font-size:20px">00 00 01</span></div>
+    <div class="bit" style="background:#388bfd;flex:2;height:84px"><span class="bn" style="font-size:24px">PPS</span></div>
+    <div class="bit mono" style="background:#30363d;flex:0 0 130px;height:84px"><span class="bn" style="font-size:20px">00 00 01</span></div>
+    <div class="bit" style="background:#238636;flex:4;height:84px"><span class="bn" style="font-size:24px">IDR 片（关键帧）</span></div>
+    <div class="bit mono" style="background:#30363d;flex:0 0 130px;height:84px"><span class="bn" style="font-size:20px">00 00 01</span></div>
+    <div class="bit" style="background:#2ea043;flex:3;height:84px"><span class="bn" style="font-size:24px">非 IDR 片 (P)</span></div>
+  </div>
+
+  <table class="tbl mt40">
+    <tr><th style="width:18%">NAL 类型</th><th class="c" style="width:14%">type 值</th><th>作用</th></tr>
+    <tr><td class="accent">SPS</td><td class="c mono">7</td><td>序列参数集：分辨率、profile、编码配置</td></tr>
+    <tr><td class="accent">PPS</td><td class="c mono">8</td><td>图像参数集：熵编码模式、量化等参数</td></tr>
+    <tr><td class="good">IDR 片</td><td class="c mono">5</td><td>关键帧片，可独立解码、清空参考</td></tr>
+    <tr><td>非 IDR 片</td><td class="c mono">1</td><td>普通片（P 帧等），依赖参考帧</td></tr>
+    <tr><td>SEI</td><td class="c mono">6</td><td>补充增强信息（时间码、HDR 元数据等）</td></tr>
+  </table>
+
+  <div class="card mt24 bg-amber row center" style="padding:20px;gap:14px">
+    <span style="font-size:30px">⚠️</span>
+    <span style="font-size:27px;color:#e6edf3">解码器必须 <b style="color:#ffa657">先拿到 SPS + PPS</b>，才能解开后面的 IDR 画面</span>
+  </div>
+</div>
+</body></html>

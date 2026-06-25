@@ -1,0 +1,24 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page tight">
+  <div class="head-row"><span class="kicker">ICE · STUN · TURN</span></div>
+  <div class="h1 mt8">连接怎么建：穿透 NAT</div>
+  <div class="lead mt8">两台在不同家庭网络后面、都没有公网地址的设备，怎么找到对方？</div>
+
+  <div class="row mt32 center" style="gap:0">
+    <div class="card bg-blue center col" style="width:300px;height:130px"><div class="card-title accent">📱 A 端</div><div class="card-desc mt4" style="font-size:22px">NAT 后</div></div>
+    <div class="arrow" style="font-size:24px;flex-direction:column"><div>① SDP offer/answer</div><div style="font-size:32px">⇄</div></div>
+    <div class="card bg-amber center col" style="width:320px;height:130px"><div class="card-title" style="color:#ffa657">📡 信令服务器</div><div class="card-desc mt4" style="font-size:22px">交换编码能力 + 候选地址</div></div>
+    <div class="arrow" style="font-size:24px;flex-direction:column"><div style="font-size:32px">⇄</div></div>
+    <div class="card bg-blue center col" style="width:300px;height:130px"><div class="card-title accent">💻 B 端</div><div class="card-desc mt4" style="font-size:22px">NAT 后</div></div>
+  </div>
+
+  <div class="h2 mt32" style="font-size:30px">② 每端收集"候选地址"，互相试探挑最优路</div>
+  <div class="grid g3 mt20" style="gap:24px">
+    <div class="card bg-green" style="padding:24px;height:200px"><div class="card-title" style="font-size:27px;color:#3fb950">host 本地</div><div class="card-desc mt8" style="font-size:23px">局域网内网地址<br>同一网络直连</div><div class="pill ok mt12" style="font-size:21px">延迟最低</div></div>
+    <div class="card bg-blue" style="padding:24px;height:200px"><div class="card-title" style="font-size:27px">srflx · 经 STUN</div><div class="card-desc mt8" style="font-size:23px">问 STUN 拿到自己的<br><b style="color:#e6edf3">公网映射地址</b></div><div class="pill mt12" style="font-size:21px">打洞直连</div></div>
+    <div class="card bg-amber" style="padding:24px;height:200px"><div class="card-title" style="font-size:27px;color:#ffa657">relay · 经 TURN</div><div class="card-desc mt8" style="font-size:23px">穿不过去时<br><b style="color:#e6edf3">走 TURN 中转</b></div><div class="pill mt12" style="font-size:21px;border-color:#9e6a03;color:#ffa657">兜底·有延迟</div></div>
+  </div>
+  <div class="foot">能直连就直连（延迟最低），实在穿不过去才退而走 TURN 中转</div>
+</div>
+</body></html>

@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page tight">
+  <div class="head-row"><span class="kicker">PROTOCOL STACK</span></div>
+  <div class="h1 mt8">协议全景：所有东西都跑在 UDP 上</div>
+
+  <div class="grid g3 mt32" style="gap:24px">
+    <div class="encap" style="border-color:#1f4e79;background:#0f1722">
+      <div class="encap-h accent">① 音视频媒体</div>
+      <div class="bit bg-blue" style="height:70px;border-radius:10px"><span class="bn" style="font-size:24px">RTP / RTCP</span></div>
+      <div class="arrow" style="justify-content:center;font-size:26px">↓</div>
+      <div class="bit bg-purp" style="height:70px;border-radius:10px"><span class="bn" style="font-size:24px">SRTP（加密+认证）</span></div>
+    </div>
+    <div class="encap" style="border-color:#2ea043;background:#0f1a13">
+      <div class="encap-h" style="color:#3fb950">② 应用数据</div>
+      <div class="bit bg-green" style="height:70px;border-radius:10px"><span class="bn" style="font-size:24px">DataChannel</span></div>
+      <div class="arrow" style="justify-content:center;font-size:26px">↓</div>
+      <div class="bit bg-soft" style="height:70px;border-radius:10px;border:1px solid #30363d"><span class="bn" style="font-size:24px">SCTP over DTLS</span></div>
+    </div>
+    <div class="encap" style="border-color:#8957e5;background:#160f1f">
+      <div class="encap-h" style="color:#d2a8ff">③ 密钥协商</div>
+      <div class="bit bg-purp" style="height:70px;border-radius:10px"><span class="bn" style="font-size:24px">DTLS 握手</span></div>
+      <div class="arrow" style="justify-content:center;font-size:26px">↓</div>
+      <div class="bit bg-soft" style="height:70px;border-radius:10px;border:1px solid #30363d"><span class="bn" style="font-size:22px">导出 SRTP 密钥</span></div>
+    </div>
+  </div>
+
+  <div class="bitrow mt24" style="height:80px"><div class="bit" style="background:#21262d;flex:1"><span class="bn" style="font-size:26px">UDP / IP — 所有流量的公共底座</span></div></div>
+
+  <div class="grid g2 mt24" style="gap:24px">
+    <div class="card bg-soft row center" style="gap:14px;padding:20px"><span style="font-size:34px">🧭</span><span style="font-size:24px;color:#e6edf3"><b class="accent">ICE / STUN / TURN</b> 负责"怎么连通、穿透 NAT"</span></div>
+    <div class="card bg-soft row center" style="gap:14px;padding:20px"><span style="font-size:34px">📡</span><span style="font-size:24px;color:#e6edf3"><b class="accent">信令(SDP)</b> 走带外通道，不归 WebRTC 管</span></div>
+  </div>
+  <div class="foot">记住这张图，下面把每一种包逐个拆开</div>
+</div>
+</body></html>

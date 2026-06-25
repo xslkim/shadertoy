@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page tight">
+  <div class="head-row"><span class="kicker">REMOTE CONTROL · ANATOMY</span></div>
+  <div class="h1 mt8">远程遥控的本质：同一条管线</div>
+  <div class="lead mt8">所有方案都是这套流程；WebRTC 是通用基准线，专用方案在这三处做减法、用通用性换延迟</div>
+
+  <div class="pipe mt40">
+    <div class="stage bg-blue"><div style="font-size:42px">🖥️</div><div class="st-t mt8">被控端抓屏</div><div class="st-d">采集桌面/游戏画面</div></div>
+    <div class="arrow">→</div>
+    <div class="stage bg-blue"><div style="font-size:42px">🧮</div><div class="st-t mt8">硬件编码</div><div class="st-d">H.264/HEVC/AV1</div></div>
+    <div class="arrow">→</div>
+    <div class="stage bg-amber"><div style="font-size:42px">🌐</div><div class="st-t mt8">低延迟传输</div><div class="st-d">UDP / 自研 / WebRTC</div></div>
+    <div class="arrow">→</div>
+    <div class="stage bg-green"><div style="font-size:42px">🖼️</div><div class="st-t mt8">主控端解码渲染</div><div class="st-d">显示画面</div></div>
+  </div>
+
+  <div class="card mt24 bg-soft row center" style="gap:14px;padding:18px">
+    <span style="font-size:28px">⟵</span><span style="font-size:25px;color:#e6edf3">反向：键鼠 / 手柄指令，走一条<b class="accent">低延迟控制通道</b>回传给被控端</span>
+  </div>
+
+  <div class="h2 mt32" style="font-size:30px">各家的差异，只在三处</div>
+  <div class="grid g3 mt20" style="gap:24px">
+    <div class="card bg-blue center col" style="height:150px"><div style="font-size:40px">🎞️</div><div class="card-title accent mt8">用什么编码器</div></div>
+    <div class="card bg-blue center col" style="height:150px"><div style="font-size:40px">🛰️</div><div class="card-title accent mt8">用什么传输协议</div></div>
+    <div class="card bg-blue center col" style="height:150px"><div style="font-size:40px">🔁</div><div class="card-title accent mt8">要不要中转服务器</div></div>
+  </div>
+</div>
+</body></html>

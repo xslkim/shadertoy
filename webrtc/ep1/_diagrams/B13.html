@@ -1,0 +1,31 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page tight">
+  <div class="head-row"><span class="kicker">ENCODER PIPELINE</span></div>
+  <div class="h1 mt8">一帧画面，怎么变成比特</div>
+  <div class="lead mt8">编码器内部流水线 —— 以 H.264 为例</div>
+
+  <div class="pipe mt40" style="flex-wrap:wrap;gap:14px">
+    <div class="stage bg-blue" style="flex:0 0 280px"><div class="st-t">① 分块</div><div class="st-d">切成宏块 16×16<br>(HEVC: CTU / AV1: 超块)</div></div>
+    <div class="arrow">→</div>
+    <div class="stage bg-blue" style="flex:0 0 300px"><div class="st-t">② 预测</div><div class="st-d">帧内 / 帧间运动估计<br>找最像的参考</div></div>
+    <div class="arrow">→</div>
+    <div class="stage bg-blue" style="flex:0 0 280px"><div class="st-t">③ 残差</div><div class="st-d">原块 − 预测块<br>剩下的误差</div></div>
+  </div>
+  <div class="pipe mt16" style="flex-wrap:wrap;gap:14px">
+    <div class="stage bg-amber" style="flex:0 0 280px"><div class="st-t">④ 变换</div><div class="st-d">整数 DCT<br>能量集中到少数系数</div></div>
+    <div class="arrow">→</div>
+    <div class="stage bg-red" style="flex:0 0 300px"><div class="st-t">⑤ 量化 ⚠ 有损</div><div class="st-d">扔掉人眼不敏感的高频<br>码率/画质的总开关</div></div>
+    <div class="arrow">→</div>
+    <div class="stage bg-green" style="flex:0 0 280px"><div class="st-t">⑥ 熵编码</div><div class="st-d">CABAC / CAVLC<br>无损压成最短比特</div></div>
+  </div>
+
+  <div class="card mt32 bg-soft row center" style="gap:20px;padding:22px">
+    <span class="pill" style="font-size:23px">↻ 环内去块滤波</span>
+    <span style="color:#8b949e;font-size:24px">+</span>
+    <span class="pill" style="font-size:23px">参考帧缓冲</span>
+    <span style="color:#8b949e;font-size:24px">→ 给后续 P/B 帧当参考，避免误差累积</span>
+  </div>
+  <div class="foot">量化越狠 → 码率越低、画面越糊。这就是"有损压缩"的源头</div>
+</div>
+</body></html>

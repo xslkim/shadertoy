@@ -1,0 +1,28 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page tight">
+  <div class="head-row"><span class="kicker">ENCRYPTION · DTLS-SRTP</span></div>
+  <div class="h1 mt8">加密：DTLS 握手 + SRTP 保护</div>
+  <div class="lead mt8">WebRTC 的铁律——没有明文，全程加密。分工很巧妙：</div>
+
+  <div class="row mt40 center" style="gap:0">
+    <div class="card bg-purp center col" style="width:380px;height:300px;padding:30px">
+      <div style="font-size:56px">🤝</div>
+      <div class="card-title mt12" style="font-size:32px;color:#d2a8ff">① DTLS 握手</div>
+      <div class="card-desc mt12" style="text-align:center;font-size:25px">在 UDP 上安全地<br><b style="color:#e6edf3">交换密钥</b><br>（DTLS = TLS 的 UDP 版）</div>
+    </div>
+    <div class="arrow" style="font-size:34px;padding:0 24px">导出密钥 →</div>
+    <div class="card bg-blue center col" style="width:380px;height:300px;padding:30px">
+      <div style="font-size:56px">🔐</div>
+      <div class="card-title mt12" style="font-size:32px;color:#58a6ff">② SRTP 保护</div>
+      <div class="card-desc mt12" style="text-align:center;font-size:25px">用导出的密钥<br>给每个 RTP 包<br><b style="color:#e6edf3">加密 + 防篡改</b></div>
+    </div>
+  </div>
+
+  <div class="grid g2 mt40" style="gap:28px">
+    <div class="card bg-soft" style="padding:24px"><div class="h2" style="font-size:26px">为什么不直接把媒体塞进 DTLS？</div><div class="card-desc mt8" style="font-size:24px">SRTP 开销小、保留 RTP 结构，对实时和丢包更友好</div></div>
+    <div class="card bg-soft" style="padding:24px"><div class="h2" style="font-size:26px;color:#3fb950">各司其职</div><div class="card-desc mt8" style="font-size:24px">握手归 DTLS，逐包加密归 SRTP；数据通道则直接走 DTLS</div></div>
+  </div>
+  <div class="foot">WebRTC 里不存在明文媒体 —— 抓包也只能看到密文</div>
+</div>
+</body></html>

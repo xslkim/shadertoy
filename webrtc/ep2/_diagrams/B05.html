@@ -1,0 +1,28 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page tight">
+  <div class="head-row"><span class="kicker">RTCP · FEEDBACK LOOP</span></div>
+  <div class="h1 mt8">RTCP：质量反馈回路</div>
+  <div class="lead mt8">RTP 只管发媒体，质量谁来盯？是和它配对的 RTCP（约占 5% 带宽）</div>
+
+  <div class="grid g2 mt32" style="gap:32px">
+    <div class="card bg-blue" style="padding:28px;height:230px">
+      <div class="h2" style="font-size:32px">SR · 发送报告</div>
+      <div class="card-desc mt12" style="font-size:26px">发送端通报：已发多少包/字节、自己的时钟，用于跨流音画同步</div>
+    </div>
+    <div class="card bg-green" style="padding:28px;height:230px">
+      <div class="h2" style="font-size:32px;color:#3fb950">RR · 接收报告</div>
+      <div class="card-desc mt12" style="font-size:26px">接收端回报：<b style="color:#e6edf3">丢包率、抖动、往返时延 RTT</b></div>
+    </div>
+  </div>
+
+  <div class="h2 mt32" style="font-size:30px">反馈包 —— 第一幕那套自适应，全靠它们</div>
+  <div class="grid g4 mt20" style="gap:20px">
+    <div class="card bg-soft center col" style="height:150px"><div class="card-title accent">NACK</div><div class="card-desc mt8" style="font-size:23px;text-align:center">要求重传</div></div>
+    <div class="card bg-soft center col" style="height:150px"><div class="card-title accent">PLI / FIR</div><div class="card-desc mt8" style="font-size:23px;text-align:center">请求关键帧</div></div>
+    <div class="card bg-soft center col" style="height:150px"><div class="card-title accent">REMB</div><div class="card-desc mt8" style="font-size:23px;text-align:center">上报估计带宽</div></div>
+    <div class="card bg-soft center col" style="height:150px"><div class="card-title accent">transport-cc</div><div class="card-desc mt8" style="font-size:23px;text-align:center">逐包到达反馈</div></div>
+  </div>
+  <div class="foot">实时性的自适应闭环，背后就是 RTCP 这条控制信道在撑着</div>
+</div>
+</body></html>

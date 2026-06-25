@@ -1,0 +1,37 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page tight">
+  <div class="head-row"><span class="kicker">BIT LEVEL · NAL HEADER</span></div>
+  <div class="h1 mt8">钻到比特层：一个 NAL 头 = 1 字节</div>
+  <div class="lead mt8">8 个比特，三块位域，规规矩矩</div>
+
+  <div class="bitscale mt32">
+    <span>bit7</span><span>bit6</span><span>bit5</span><span>bit4</span><span>bit3</span><span>bit2</span><span>bit1</span><span>bit0</span>
+  </div>
+  <div class="bitrow" style="height:120px">
+    <div class="bit bg-red" style="flex:1"><span class="bn">F</span><span class="bw">forbidden_zero<br>1 bit · 恒 0</span></div>
+    <div class="bit bg-amber" style="flex:2"><span class="bn">nal_ref_idc</span><span class="bw">2 bit · 重要性 / 是否被参考</span></div>
+    <div class="bit bg-blue" style="flex:5"><span class="bn">nal_unit_type</span><span class="bw">5 bit · 决定它是 SPS / PPS / IDR …</span></div>
+  </div>
+
+  <div class="h2 mt40" style="font-size:32px">举例：读一个字节就知道是什么</div>
+  <div class="grid g3 mt20" style="gap:24px">
+    <div class="card bg-soft" style="padding:26px">
+      <div class="mono h2" style="font-size:40px;color:#79c0ff">0x67</div>
+      <div class="mono mt8" style="font-size:24px;color:#8b949e">0 11 00111</div>
+      <div class="card-desc mt12" style="font-size:25px">ref_idc=3，type=<b class="accent">7</b><br>→ <b class="good">SPS</b></div>
+    </div>
+    <div class="card bg-soft" style="padding:26px">
+      <div class="mono h2" style="font-size:40px;color:#79c0ff">0x65</div>
+      <div class="mono mt8" style="font-size:24px;color:#8b949e">0 11 00101</div>
+      <div class="card-desc mt12" style="font-size:25px">ref_idc=3，type=<b class="accent">5</b><br>→ <b class="good">IDR 关键帧</b></div>
+    </div>
+    <div class="card bg-soft" style="padding:26px">
+      <div class="mono h2" style="font-size:40px;color:#79c0ff">0x41</div>
+      <div class="mono mt8" style="font-size:24px;color:#8b949e">0 10 00001</div>
+      <div class="card-desc mt12" style="font-size:25px">ref_idc=2，type=<b class="accent">1</b><br>→ <b>非 IDR 片 (P)</b></div>
+    </div>
+  </div>
+  <div class="foot">到比特这一层，一切都是规规矩矩的位域 —— 没有魔法</div>
+</div>
+</body></html>

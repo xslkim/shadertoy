@@ -1,0 +1,27 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page tight">
+  <div class="head-row"><span class="kicker">DATACHANNEL · SCTP</span></div>
+  <div class="h1 mt8">DataChannel：传任意数据</div>
+  <div class="lead mt8">除了音视频，还能传文件、游戏状态、遥控指令、聊天</div>
+
+  <div class="encap mt32" style="border-color:#2ea043;padding:18px">
+    <div class="encap-h" style="color:#3fb950">应用数据</div>
+    <div class="encap" style="border-color:#1f4e79;padding:16px">
+      <div class="encap-h accent">SCTP（可靠性可配）</div>
+      <div class="encap" style="border-color:#8957e5;padding:16px">
+        <div class="encap-h" style="color:#d2a8ff">DTLS（加密）</div>
+        <div class="bit bg-soft" style="height:64px;border-radius:10px;border:1px solid #30363d"><span class="bn" style="font-size:24px">UDP / IP</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="h2 mt32" style="font-size:30px">SCTP 最妙的是：可靠性可以自己选</div>
+  <div class="grid g3 mt20" style="gap:24px">
+    <div class="card bg-green" style="padding:24px;height:200px"><div class="card-title" style="font-size:28px;color:#3fb950">完全可靠 · 有序</div><div class="card-desc mt8" style="font-size:24px">像 TCP，必到、按序<br>→ 文件传输、聊天</div></div>
+    <div class="card bg-amber" style="padding:24px;height:200px"><div class="card-title" style="font-size:28px;color:#ffa657">部分可靠</div><div class="card-desc mt8" style="font-size:24px">最多重传 N 次，或只在<br>几 ms 内有效 → 折中</div></div>
+    <div class="card bg-red" style="padding:24px;height:200px"><div class="card-title" style="font-size:28px;color:#f85149">完全不可靠</div><div class="card-desc mt8" style="font-size:24px">像 UDP，丢了不管只图快<br>→ <b style="color:#e6edf3">键鼠 / 遥控指令</b></div></div>
+  </div>
+  <div class="foot">远程遥控的键鼠指令，常走这条"不可靠但极快"的通道</div>
+</div>
+</body></html>

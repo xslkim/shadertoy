@@ -1,0 +1,48 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="theme.css"></head><body>
+<div class="page tight">
+  <div class="head-row"><span class="kicker">SIDE BY SIDE</span></div>
+  <div class="h1 mt8">五种方案横向大对比</div>
+
+  <table class="tbl mt24" style="font-size:23px">
+    <tr>
+      <th style="width:16%">方案</th><th>典型编码</th><th>传输协议</th><th class="c">延迟量级</th><th class="c">画质</th><th class="c">开源/自托管</th><th>最佳场景</th>
+    </tr>
+    <tr>
+      <td class="accent" style="font-size:25px">WebRTC</td>
+      <td>VP8/9·H.264·AV1·Opus</td><td>RTP/SRTP + DataChannel</td>
+      <td class="c mid">~100ms 级</td><td class="c mid">中</td><td class="c good">标准开放</td>
+      <td>浏览器原生实时通信、生态最广</td>
+    </tr>
+    <tr>
+      <td class="accent" style="font-size:25px">RustDesk</td>
+      <td>VP9 / AV1 / H.264</td><td>自研协议 + 中继</td>
+      <td class="c mid">直连~50ms</td><td class="c mid">中</td><td class="c good">✔ 完全自托管</td>
+      <td>开源可控、私有化远控</td>
+    </tr>
+    <tr>
+      <td class="accent" style="font-size:25px">Parsec / Moonlight</td>
+      <td>NVENC H.264/HEVC/AV1</td><td>自研 UDP</td>
+      <td class="c good">局域网&lt;16ms</td><td class="c good">高(4:4:4)</td><td class="c mid">半开源</td>
+      <td>游戏 / 创作串流</td>
+    </tr>
+    <tr>
+      <td class="accent" style="font-size:25px">TeamViewer / 向日葵</td>
+      <td>私有编码</td><td>私有协议 · 中转优先</td>
+      <td class="c bad">~100ms+ 看网</td><td class="c mid">中</td><td class="c bad">闭源</td>
+      <td>企业运维、随处能连</td>
+    </tr>
+    <tr>
+      <td class="accent" style="font-size:25px">云游戏 / 云手机</td>
+      <td>硬件 H.264/HEVC/AV1</td><td>WebRTC / 私有 UDP</td>
+      <td class="c good">就近 30–80ms</td><td class="c good">高</td><td class="c bad">平台方</td>
+      <td>算力在云、终端只显示</td>
+    </tr>
+  </table>
+
+  <div class="card mt24 bg-soft center" style="height:150px">
+    <div class="center col"><div class="h2" style="color:#58a6ff">越专用越低延迟，越通用越留余量</div>
+    <div class="card-desc mt8" style="font-size:24px">通用选 WebRTC · 极致低延迟 Parsec/Moonlight · 自托管 RustDesk · 兼容 TeamViewer/向日葵 · 上云 云游戏</div></div>
+  </div>
+</div>
+</body></html>
