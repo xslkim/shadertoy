@@ -1,0 +1,48 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"></head>
+<body>
+<div class="stage">
+  <div class="h-top">功能安全：<span class="accent">ISO 26262</span> ASIL 等级</div>
+  <div class="rule"></div>
+  <div class="sub">等级越高 → 危害越严重 → 认证要求越严</div>
+
+  <div class="row grow gap-m" style="margin-top:48px;align-items:stretch">
+    <!-- 阶梯图 -->
+    <div class="card grow col" style="padding:40px;justify-content:flex-end">
+      <div class="row" style="align-items:flex-end;gap:18px;height:100%">
+        <div class="col center grow" style="background:#21262d;border-radius:12px;padding:18px;height:28%">
+          <div class="mono muted" style="font-size:26px">QM</div>
+          <div class="muted" style="font-size:18px">质量管理</div>
+        </div>
+        <div class="col center grow" style="background:#21262d;border-radius:12px;padding:18px;height:46%">
+          <div class="mono muted" style="font-size:26px">ASIL-A</div>
+          <div class="muted" style="font-size:18px">轻</div>
+        </div>
+        <div class="col center grow" style="background:#21262d;border-radius:12px;padding:18px;height:62%">
+          <div class="mono muted" style="font-size:26px">ASIL-B</div>
+          <div class="muted" style="font-size:18px">中</div>
+        </div>
+        <div class="col center grow" style="background:#21262d;border-radius:12px;padding:18px;height:78%">
+          <div class="mono muted" style="font-size:26px">ASIL-C</div>
+          <div class="muted" style="font-size:18px">较高</div>
+        </div>
+        <div class="col center grow" style="background:var(--accent);color:#06101f;border-radius:12px;padding:18px;height:100%">
+          <div class="mono" style="font-size:30px;font-weight:800">ASIL-D</div>
+          <div style="font-size:20px;font-weight:700">最高</div>
+        </div>
+      </div>
+    </div>
+    <!-- 说明 -->
+    <div class="card col gap-s" style="flex:0 0 520px;padding:40px;justify-content:center">
+      <div class="row gap-s" style="align-items:center">
+        <div class="badge-warn">!</div>
+        <div style="font-size:34px;font-weight:700">ASIL-D = 涉及生命安全</div>
+      </div>
+      <div class="muted" style="font-size:26px;line-height:1.6;margin-top:18px">刹车、转向这类功能<br>必须按 ASIL-D 认证</div>
+      <div style="height:2px;background:var(--border);margin:24px 0"></div>
+      <div class="mono accent" style="font-size:28px">~100 份安全工件</div>
+      <div class="muted" style="font-size:24px;line-height:1.6;margin-top:8px">危害分析 / FMEA / 覆盖率验证…<br>自己做：数年 + 上千万</div>
+    </div>
+  </div>
+</div>
+</body></html>

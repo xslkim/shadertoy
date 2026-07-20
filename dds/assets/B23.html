@@ -1,0 +1,50 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"></head>
+<body>
+<div class="stage">
+  <div class="h-top">五者的 <span class="accent">层级关系</span></div>
+  <div class="rule"></div>
+  <div class="sub">它们不是竞争关系，而是处在不同层</div>
+
+  <div class="col grow gap-s" style="margin-top:40px;justify-content:center">
+    <!-- 层1 协议标准 -->
+    <div class="row gap-m" style="align-items:center">
+      <div class="tag" style="width:240px;justify-content:center;font-size:24px">协议标准</div>
+      <div class="row gap-m grow">
+        <div class="card center grow" style="padding:30px;font-size:38px;font-weight:700"><span class="mono accent">DDS 标准</span></div>
+        <div class="card center grow" style="padding:30px;font-size:38px;font-weight:700"><span class="mono accent">SOME/IP 标准</span></div>
+        <div class="card" style="padding:30px;flex:0 0 0;background:transparent;border:none"></div>
+      </div>
+    </div>
+    <div class="muted" style="font-size:22px;margin-left:264px">↓ 由标准派生出</div>
+    <!-- 层2 具体实现 -->
+    <div class="row gap-m" style="align-items:center">
+      <div class="tag" style="width:240px;justify-content:center;font-size:24px">具体实现</div>
+      <div class="row gap-m grow">
+        <div class="card center grow" style="padding:30px;font-size:34px;font-weight:700"><span class="mono">FastDDS</span></div>
+        <div class="card center grow" style="padding:30px;font-size:34px;font-weight:700"><span class="mono">Cyclone DDS</span></div>
+        <div class="card center grow" style="padding:30px;font-size:34px;font-weight:700"><span class="mono">RTI Connext</span></div>
+      </div>
+    </div>
+    <div class="muted" style="font-size:22px;margin-left:264px">↓ 被上层框架使用</div>
+    <!-- 层3 上层框架 -->
+    <div class="row gap-m" style="align-items:center">
+      <div class="tag" style="width:240px;justify-content:center;font-size:24px">上层框架</div>
+      <div class="row gap-m grow">
+        <div class="card center grow" style="padding:30px;font-size:36px;font-weight:700">ROS2</div>
+        <div class="card center grow" style="padding:30px;font-size:36px;font-weight:700">CyberRT</div>
+        <div class="card center grow" style="padding:30px;font-size:36px;font-weight:700">AUTOSAR AP</div>
+      </div>
+    </div>
+    <!-- Zenoh 跨层 -->
+    <div class="row gap-m" style="align-items:center;margin-top:18px">
+      <div class="tag" style="width:240px;justify-content:center;font-size:24px;background:rgba(188,140,255,.14);color:var(--purple);border-color:rgba(188,140,255,.45)">跨层新势力</div>
+      <div class="row gap-m grow">
+        <div class="card center grow" style="padding:30px;font-size:38px;font-weight:800;background:rgba(188,140,255,.14);border:2px solid var(--purple)"><span class="mono purple">Zenoh</span> <span class="muted" style="font-size:26px;font-weight:500">— 横跨协议 / 实现 / 框架多层</span></div>
+        <div class="card" style="padding:30px;flex:0 0 0;background:transparent;border:none"></div>
+        <div class="card" style="padding:30px;flex:0 0 0;background:transparent;border:none"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

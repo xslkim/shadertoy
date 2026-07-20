@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"></head>
+<body>
+<div class="stage">
+  <div class="h-top">QoS 进阶：<span class="accent">参数 × 场景</span> 的配对</div>
+  <div class="rule"></div>
+  <div class="sub">同一个机制，配出完全不同的行为</div>
+
+  <div class="row grow gap-m" style="margin-top:48px;align-items:stretch">
+    <!-- 高频传感器 -->
+    <div class="card col gap-s grow">
+      <div class="row gap-s" style="align-items:center">
+        <div class="badge-num" style="background:var(--accent)">▲</div>
+        <div style="font-size:38px;font-weight:700">点云 / 图像 <span class="muted" style="font-size:26px">高频传感器</span></div>
+      </div>
+      <div class="tbl" style="margin-top:18px">
+        <div class="tr"><span class="mono accent" style="font-size:28px;width:300px">BEST_EFFORT</span><span class="muted" style="font-size:26px">丢了就丢，不重传</span></div>
+        <div class="tr"><span class="mono accent" style="font-size:28px;width:300px">KEEP_LAST 5</span><span class="muted" style="font-size:26px">只留最近 5 条</span></div>
+        <div class="tr"><span class="mono accent" style="font-size:28px;width:300px">Lifespan 50ms</span><span class="muted" style="font-size:26px">过期自动作废</span></div>
+      </div>
+      <div class="tag" style="align-self:flex-start;margin-top:18px;color:var(--green);background:rgba(63,185,80,.12);border-color:rgba(63,185,80,.4)">数据新鲜 &gt; 完整</div>
+    </div>
+
+    <!-- 低频重要 -->
+    <div class="card col gap-s grow">
+      <div class="row gap-s" style="align-items:center">
+        <div class="badge-num" style="background:var(--green)">★</div>
+        <div style="font-size:38px;font-weight:700">诊断 / 配置 <span class="muted" style="font-size:26px">低频重要</span></div>
+      </div>
+      <div class="tbl" style="margin-top:18px">
+        <div class="tr"><span class="mono green" style="font-size:28px;width:300px">RELIABLE</span><span class="muted" style="font-size:26px">保证送到，丢了重传</span></div>
+        <div class="tr"><span class="mono green" style="font-size:28px;width:300px">KEEP_ALL</span><span class="muted" style="font-size:26px">一条都不丢</span></div>
+        <div class="tr"><span class="mono green" style="font-size:28px;width:300px">TRANSIENT_LOCAL</span><span class="muted" style="font-size:26px">新订阅者可补收历史</span></div>
+      </div>
+      <div class="tag" style="align-self:flex-start;margin-top:18px;color:var(--green);background:rgba(63,185,80,.12);border-color:rgba(63,185,80,.4)">一条都不能少</div>
+    </div>
+  </div>
+</div>
+</body></html>
