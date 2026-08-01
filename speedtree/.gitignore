@@ -1,0 +1,10 @@
+# 密钥与本地配置（勿提交）
+key.txt
+tools/vision_config.json
+
+# Python
+tools/__pycache__/
+*.pyc
+
+# 本地 IDE
+.vscode/

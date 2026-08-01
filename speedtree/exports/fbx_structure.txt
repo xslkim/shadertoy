@@ -1,0 +1,140 @@
+﻿FBXHeaderExtension
+  FBXHeaderVersion  1003
+  FBXVersion  7300
+  EncryptionType  0
+  CreationTimeStamp
+    Version  1000
+    Year  2019
+    Month  11
+    Day  27
+    Hour  11
+    Minute  56
+    Second  55
+    Millisecond  862
+  Creator  'FBX SDK/FBX Plugins version 2019.0'
+  SceneInfo  'GlobalInfo\x00\x01SceneInfo', 'UserData'
+    Type  'UserData'
+    Version  100
+    MetaData
+    Properties70
+      ... (P 鍏?15 涓?
+FileId  bytes
+CreationTime  '2019-11-27 11:56:55:862'
+Creator  'FBX SDK/FBX Plugins version 2019.0 build'
+GlobalSettings
+  Version  1000
+  Properties70
+    P  'UpAxis', 'int', 'Integer', ''
+    P  'UpAxisSign', 'int', 'Integer', ''
+    ... (P 鍏?20 涓?
+Documents
+  Count  1
+  Document  3011098970880, '', 'Scene'
+    Properties70
+    RootNode  0
+References
+Definitions
+  Version  100
+  Count  69
+  ObjectType  'GlobalSettings'
+    Count  1
+  ObjectType  'Model'
+    Count  4
+    PropertyTemplate  'FbxNode'
+  ... (ObjectType 鍏?6 涓?
+Objects
+  NodeAttribute  3011036422992, '\x00\x01NodeAttribute', 'Null'
+    TypeFlags  'Null'
+  Geometry  3011089131216, '\x00\x01Geometry', 'Mesh'
+    Properties70
+    Vertices  array[5148]
+    PolygonVertexIndex  array[4152]
+    Edges  array[2621]
+    GeometryVersion  124
+    LayerElementNormal  0
+    LayerElementColor  0
+    LayerElementUV  0
+    LayerElementSmoothing  0
+    LayerElementMaterial  0
+    Layer  0
+      ... (LayerElement 鍏?5 涓?
+  Geometry  3011089133936, '\x00\x01Geometry', 'Mesh'
+    Properties70
+    Vertices  array[2916]
+    PolygonVertexIndex  array[1672]
+    Edges  array[1257]
+    GeometryVersion  124
+    LayerElementNormal  0
+    LayerElementColor  0
+    LayerElementUV  0
+    LayerElementSmoothing  0
+    LayerElementMaterial  0
+    Layer  0
+      ... (LayerElement 鍏?5 涓?
+  ... (Geometry 鍏?3 涓?
+  Model  3010987363808, 'IL3DN_Tree_Pine_01_OneMesh\x00\x01Model', 'Null'
+    Version  232
+    Properties70
+      ... (P 鍏?8 涓?
+    Shading  True
+    Culling  'CullingOff'
+  Model  3010987366000, 'IL3DN_Tree_Pine_01_LOD0\x00\x01Model', 'Mesh'
+    Version  232
+    Properties70
+      ... (P 鍏?8 涓?
+    Shading  True
+    Culling  'CullingOff'
+  ... (Model 鍏?4 涓?
+  Material  3009174343952, 'Default_Bark\x00\x01Material', ''
+    Version  102
+    ShadingModel  'phong'
+    MultiLayer  0
+    Properties70
+      ... (P 鍏?15 涓?
+  Material  3009174344432, 'Default_Leaves\x00\x01Material', ''
+    Version  102
+    ShadingModel  'phong'
+    MultiLayer  0
+    Properties70
+      ... (P 鍏?15 涓?
+  CollectionExclusive  3009672750048, 'zScale\x00\x01DisplayLayer', 'DisplayLayer'
+    Properties70
+      ... (P 鍏?3 涓?
+  CollectionExclusive  3009672750624, 'Tree01_Leaves_Edit\x00\x01DisplayLayer', 'DisplayLayer'
+    Properties70
+  ... (CollectionExclusive 鍏?58 涓?
+Connections
+  C  'OO', 3010987363808, 0
+  C  'OO', 3010987366000, 3010987363808
+  ... (C 鍏?18 涓?
+
+=== Connections 鍓?20 鏉?===
+  ['OO', 3010987363808, 0]
+  ['OO', 3010987366000, 3010987363808]
+  ['OO', 3010987370384, 3010987363808]
+  ['OO', 3010987376960, 3010987363808]
+  ['OO', 3011036422992, 3010987363808]
+  ['OO', 3011089131216, 3010987366000]
+  ['OO', 3009174343952, 3010987366000]
+  ['OO', 3009174344432, 3010987366000]
+  ['OO', 3011089133936, 3010987370384]
+  ['OO', 3009174343952, 3010987370384]
+  ['OO', 3009174344432, 3010987370384]
+  ['OO', 3011089137744, 3010987376960]
+  ['OO', 3009174343952, 3010987376960]
+  ['OO', 3009174344432, 3010987376960]
+  ['OO', 3010987376960, 3009670236816]
+  ['OO', 3010987370384, 3009670236816]
+  ['OO', 3010987366000, 3009670236816]
+  ['OO', 3010987363808, 3009670236816]
+鎬昏繛鎺ユ暟 18
+
+=== Definitions ===
+  Version [100]
+  Count [69]
+  ['GlobalSettings'] [[1]]
+  ['Model'] [[4]]
+  ['NodeAttribute'] [[1]]
+  ['Geometry'] [[3]]
+  ['Material'] [[2]]
+  ['CollectionExclusive'] [[58]]
