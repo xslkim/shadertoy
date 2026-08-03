@@ -1,0 +1,45 @@
+{
+  "source": "mesh/IL3DN_Tree_Birch_01.FBX",
+  "kind": "birch",
+  "lod_count": 4,
+  "lod_stats": [
+    {
+      "verts": 6986,
+      "polys": 3692,
+      "tris": 7384,
+      "bark_polys": 2866,
+      "leaf_polys": 826
+    },
+    {
+      "verts": 2899,
+      "polys": 1400,
+      "tris": 2800,
+      "bark_polys": 1028,
+      "leaf_polys": 372
+    },
+    {
+      "verts": 1381,
+      "polys": 554,
+      "tris": 1108,
+      "bark_polys": 338,
+      "leaf_polys": 216
+    },
+    {
+      "verts": 376,
+      "polys": 131,
+      "tris": 262,
+      "bark_polys": 59,
+      "leaf_polys": 72
+    }
+  ],
+  "parameters": {
+    "height_m": 10.36,
+    "variant": 1
+  },
+  "outputs": [
+    "model.fbx",
+    "render.png",
+    "metadata.json"
+  ],
+  "note": "Procedural approximation based on reference FBX analysis; not a vertex-exact conversion."
+}

@@ -1,0 +1,39 @@
+{
+  "source": "mesh/IL3DN_Plant_Flower_01.fbx",
+  "kind": "flower",
+  "lod_count": 3,
+  "lod_stats": [
+    {
+      "verts": 58,
+      "polys": 17,
+      "tris": 34,
+      "bark_polys": 5,
+      "leaf_polys": 12
+    },
+    {
+      "verts": 56,
+      "polys": 16,
+      "tris": 32,
+      "bark_polys": 4,
+      "leaf_polys": 12
+    },
+    {
+      "verts": 32,
+      "polys": 10,
+      "tris": 20,
+      "bark_polys": 4,
+      "leaf_polys": 6
+    }
+  ],
+  "parameters": {
+    "height_m": 0.95,
+    "petals": 6,
+    "variant": 1
+  },
+  "outputs": [
+    "model.fbx",
+    "render.png",
+    "metadata.json"
+  ],
+  "note": "Procedural approximation based on reference FBX analysis; not a vertex-exact conversion."
+}
