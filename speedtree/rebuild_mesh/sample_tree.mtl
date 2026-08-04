@@ -1,0 +1,12 @@
+# procedural stylized tree
+newmtl bark
+Kd 0.23 0.16 0.13
+Ks 0.0 0.0 0.0
+map_Kd ../mesh/IL3DN_Tree_Beech_02/IL3DN_Bark_Pine.png
+
+newmtl leaf
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+d 1.0
+map_Kd ../mesh/IL3DN_Tree_Beech_02/IL3DN_Leaf_01.png
+map_d ../mesh/IL3DN_Tree_Beech_02/IL3DN_Leaf_01.png
